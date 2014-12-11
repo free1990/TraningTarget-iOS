@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "ClassSet.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +17,9 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    [ClassSet sharedClassGallery];
+    
     return YES;
 }
 

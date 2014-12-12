@@ -9,11 +9,6 @@
 #import <Foundation/Foundation.h>
 #import "BaseViewController.h"
 
-@interface RuntimeMsgForWarding: BaseViewController {
-    id realObject1;
-    id realObject2;
-}
-
-- (id)initWithTarget1:(id)t1 target2:(id)t2;
+@interface RuntimeMsgForWarding: BaseViewController
 
 @end

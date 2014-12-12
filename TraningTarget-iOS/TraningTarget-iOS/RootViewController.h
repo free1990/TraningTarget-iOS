@@ -13,6 +13,5 @@
     NSMutableArray      *_dataArray;
 }
 
-
 @end
 

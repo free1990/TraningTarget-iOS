@@ -25,28 +25,6 @@
     _myTableView.dataSource = self;
     
     [self.view addSubview:_myTableView];
-    
-    
-    NSMutableString *string = [[NSMutableString alloc] init];
-    NSMutableArray *array = [[NSMutableArray alloc] init];
-    
-    id proxy = [[RuntimeMsgForWarding alloc] initWithTarget1:string target2:array];
-    
-    [proxy appendString:@"This "];
-    [proxy appendString:@"is "];
-    [proxy appendString:@"a "];
-    [proxy appendString:@"test!"];
-    
-    [proxy addObject:string];
-    [proxy addObject:string];
-    
-    NSLog(@"count should be 2, it is: %lu", (unsigned long)[proxy count]);
-    
-    if ([[proxy objectAtIndex:0] isEqualToString:@"This is a test!"]) {
-        NSLog(@"Appending successful.");
-    } else {
-        NSLog(@"Appending failed, got: '%@'", proxy);
-    }
 }
 
 #pragma mark - Tableview datasource & delegates
@@ -68,16 +46,19 @@
     ClassItem *item = [[ClassSet sharedClassGallery] objectAtIndex:indexPath.row];
     cell.textLabel.text = item.classTitleName;
     
-    NSLog(@"item.classTitleName:%@", item.classTitleName);
-    NSLog(@"item.className:%@", item.className);
-    
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
 //    [tableView deselectRowAtIndexPath:indexPath animated:YES];
-//    Class *class = [NSClassFromString(<#NSString *aClassName#>)]
+    
+    ClassItem *item = [[ClassSet sharedClassGallery] objectAtIndex:indexPath.row];
+    UIViewController *temp = [[NSClassFromString(item.className) alloc] init];
+    
+    [self.navigationController pushViewController:temp animated:YES];
+    
+//    Class *class = NSClassFromString();
 }
 
 

@@ -26,7 +26,6 @@
 - (void)viewDidLoad{
     
     self.view.backgroundColor = [UIColor whiteColor];
-    self.title = NSStringFromClass([self class]);
     
     UILabel *outLable = [[UILabel alloc] initWithFrame:self.view.frame];
     outLable.textAlignment = NSTextAlignmentCenter;

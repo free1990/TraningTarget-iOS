@@ -20,7 +20,7 @@
 
 +(void)registerClassItem:(id)item
 {
-    NSLog(@"registerPlotItem for class %@", [item class]);
+//    NSLog(@"registerPlotItem for class %@", [item class]);
     
     Class itemClass = [item class];
     
@@ -43,6 +43,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    self.view.backgroundColor = [UIColor whiteColor];
 }
 
 - (void)didReceiveMemoryWarning {

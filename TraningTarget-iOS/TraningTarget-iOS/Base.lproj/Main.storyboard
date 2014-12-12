@@ -8,6 +8,7 @@
         <scene sceneID="6go-eG-G3G">
             <objects>
                 <navigationController id="ia1-Ey-XAB" sceneMemberID="viewController">
+                    <nil key="simulatedStatusBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="mDc-VF-N3u">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -34,6 +35,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="OJD-bq-MUm"/>
+                    <nil key="simulatedStatusBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PeB-Qt-p46" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

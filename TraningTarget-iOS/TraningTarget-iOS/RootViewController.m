@@ -54,6 +54,7 @@
 //    [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
     ClassItem *item = [[ClassSet sharedClassGallery] objectAtIndex:indexPath.row];
+    
     UIViewController *temp = [[NSClassFromString(item.className) alloc] init];
     
     [self.navigationController pushViewController:temp animated:YES];

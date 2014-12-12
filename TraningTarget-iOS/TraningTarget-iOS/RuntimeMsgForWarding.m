@@ -53,6 +53,33 @@
     } else {
         NSLog(@"Appending failed, got: '%@'", proxy);
     }
+    
+//    void (*setter)(id, SEL, BOOL);
+//    int i;
+//    
+//    setter = (void (*)(id, SEL, BOOL))[target
+//                                       methodForSelector:@selector(setFilled:)];
+//    for ( i = 0 ; i < 1000 ; i++ )
+//        setter(targetList[i], @selector(setFilled:), YES);
+    
+    
+    //如果需要大量的调用方法可以通过直接获取方法的地址，然后进行调用Getting a Method Address
+    void (*setter)(id, SEL, BOOL);
+    int i;
+    
+    //10000次16:27:40.592-16:27:41.056
+    setter = (void (*)(id, SEL, BOOL))[self methodForSelector:@selector(test)];
+    for ( i = 0 ; i < 1000 ; i++ )
+        setter(self, @selector(test), YES);
+    
+//    //10000次16:23:04.161   16:23:08.333
+//    for ( i = 0 ; i < 10000 ; i++ )
+//        [self test];
 }
+
+- (void)test{
+    NSLog(@"test");
+}
+
 
 @end

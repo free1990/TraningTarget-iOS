@@ -8,6 +8,19 @@
 
 #import "BaseViewController.h"
 
-@interface DynamicMethodResolutionAndDynamicLoading : BaseViewController
+@interface DynamicMethodResolutionAndDynamicLoading : BaseViewController{
+
+    @private
+    
+    __strong NSString *_name;
+    
+    __strong NSString *_author;
+}
+
+@property(nonatomic, copy) NSString *name;
+
+@property(nonatomic, copy) NSString *author;
+
+@property(nonatomic, copy) NSString*version;
 
 @end

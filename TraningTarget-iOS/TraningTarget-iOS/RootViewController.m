@@ -28,9 +28,9 @@
 }
 
 #pragma mark - Tableview datasource & delegates
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
+    NSLog(@"----------123123");
     return [[ClassSet sharedClassGallery] count];
 }
 

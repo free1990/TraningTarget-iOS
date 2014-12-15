@@ -10,7 +10,6 @@
 
 @interface RootViewController : UIViewController<UITableViewDataSource, UITableViewDelegate>{
     UITableView         *_myTableView;
-    NSMutableArray      *_dataArray;
 }
 
 @end

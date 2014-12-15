@@ -8,6 +8,7 @@
 
 #import "RuntimeMsgForWarding.h"
 #import "MsgForWardingDemo.h"
+#import "EmptyClass.h"
 
 @implementation RuntimeMsgForWarding
 

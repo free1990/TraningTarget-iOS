@@ -18,6 +18,7 @@
 		D6422CF01A399587000D9759 /* ClassSet.m in Sources */ = {isa = PBXBuildFile; fileRef = D6422CEF1A399587000D9759 /* ClassSet.m */; };
 		D6422CF61A3996D5000D9759 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6422CF51A3996D5000D9759 /* BaseViewController.m */; };
 		D6422CF91A399798000D9759 /* ClassItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D6422CF81A399798000D9759 /* ClassItem.m */; };
+		D65AD0BF1A3EC6AA00D6E193 /* EmptyClass.m in Sources */ = {isa = PBXBuildFile; fileRef = D65AD0BE1A3EC6AA00D6E193 /* EmptyClass.m */; };
 		D6D943891A3AB7C800898FA3 /* MsgForWardingDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D943881A3AB7C800898FA3 /* MsgForWardingDemo.m */; };
 		D6D943901A3AC7E900898FA3 /* PropertyAndFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D9438F1A3AC7E900898FA3 /* PropertyAndFunction.m */; };
 		D6D943941A3AE19B00898FA3 /* DynamicMethodResolutionAndDynamicLoading.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D943931A3AE19B00898FA3 /* DynamicMethodResolutionAndDynamicLoading.m */; };
@@ -59,6 +60,8 @@
 		D6422CF51A3996D5000D9759 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		D6422CF71A399798000D9759 /* ClassItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassItem.h; sourceTree = "<group>"; };
 		D6422CF81A399798000D9759 /* ClassItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassItem.m; sourceTree = "<group>"; };
+		D65AD0BD1A3EC6AA00D6E193 /* EmptyClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmptyClass.h; sourceTree = "<group>"; };
+		D65AD0BE1A3EC6AA00D6E193 /* EmptyClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmptyClass.m; sourceTree = "<group>"; };
 		D6D943871A3AB7C800898FA3 /* MsgForWardingDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MsgForWardingDemo.h; sourceTree = "<group>"; };
 		D6D943881A3AB7C800898FA3 /* MsgForWardingDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MsgForWardingDemo.m; sourceTree = "<group>"; };
 		D6D9438E1A3AC7E900898FA3 /* PropertyAndFunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PropertyAndFunction.h; sourceTree = "<group>"; };
@@ -190,6 +193,8 @@
 				D6422CF81A399798000D9759 /* ClassItem.m */,
 				D6D943871A3AB7C800898FA3 /* MsgForWardingDemo.h */,
 				D6D943881A3AB7C800898FA3 /* MsgForWardingDemo.m */,
+				D65AD0BD1A3EC6AA00D6E193 /* EmptyClass.h */,
+				D65AD0BE1A3EC6AA00D6E193 /* EmptyClass.m */,
 			);
 			name = Handle;
 			sourceTree = "<group>";
@@ -330,6 +335,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D6422CCB1A397E85000D9759 /* RootViewController.m in Sources */,
+				D65AD0BF1A3EC6AA00D6E193 /* EmptyClass.m in Sources */,
 				D6422CC81A397E85000D9759 /* AppDelegate.m in Sources */,
 				D6422CED1A3990D4000D9759 /* RuntimeMsgForWarding.m in Sources */,
 				D6D943941A3AE19B00898FA3 /* DynamicMethodResolutionAndDynamicLoading.m in Sources */,
@@ -414,7 +420,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -449,7 +455,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;

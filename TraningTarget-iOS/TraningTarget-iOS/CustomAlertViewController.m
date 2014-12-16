@@ -7,6 +7,7 @@
 //
 
 #import "CustomAlertViewController.h"
+#import "JKUpdateAlertView.h"
 
 @interface CustomAlertViewController ()
 
@@ -21,7 +22,7 @@
 
 - (id)init{
     if ([super init]) {
-        self.className   = @"Property And Function";
+        self.className   = @"Custom AlertView";
     }
     return self;
 }
@@ -34,9 +35,16 @@
     
     [alert setTitle:@"自定义alert"
            forState:UIControlStateNormal];
+    alert.frame = CGRectMake(0, 0, 100, 50);
     alert.center = self.view.center;
+    [alert addTarget:self action:@selector(alert) forControlEvents:UIControlEventTouchDown];
+    alert.backgroundColor = [UIColor blueColor];
     
     [self.view addSubview:alert];
+}
+
+- (void)alert{
+    [JKUpdateAlertView initJKAlertWithTitle:@"test" message:@"content" cancelButtonTitle:@"canel" otherButtonTitles:@"ok"];
 }
 
 - (void)didReceiveMemoryWarning {

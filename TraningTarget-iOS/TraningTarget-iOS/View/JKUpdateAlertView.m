@@ -55,15 +55,6 @@ static JKUpdateAlertView *jkUpdate;
     
     isAlertHasShow = NO;
     
-    BOOL isCancelBtn = [[alertView buttonTitleAtIndex:buttonIndex] isEqualToString:NSLocalizedString(@"取消", nil)];
-    
-    if (isCancelBtn == NO) {
-        
-        NSString *iTunesString = [NSString stringWithFormat:@"https://itunes.apple.com/app/id%@", self.appId];
-        NSURL *iTunesURL = [NSURL URLWithString:iTunesString];
-        
-        [[UIApplication sharedApplication] openURL:iTunesURL];
-    }
 }
 
 

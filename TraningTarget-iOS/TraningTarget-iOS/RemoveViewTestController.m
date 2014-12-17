@@ -29,9 +29,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
-    UITableViewController
-    
+
     _testView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
     _testView.center = self.view.center;
     _testView.backgroundColor = [UIColor blueColor];

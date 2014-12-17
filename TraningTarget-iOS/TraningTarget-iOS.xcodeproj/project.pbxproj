@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D63ADF1D1A413007009CA874 /* RuntimeDemoOneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D63ADF1C1A413007009CA874 /* RuntimeDemoOneViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		D6422CC51A397E85000D9759 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D6422CC41A397E85000D9759 /* main.m */; };
 		D6422CC81A397E85000D9759 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D6422CC71A397E85000D9759 /* AppDelegate.m */; };
 		D6422CCB1A397E85000D9759 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6422CCA1A397E85000D9759 /* RootViewController.m */; };
@@ -42,6 +43,8 @@
 		32E9A4D9DB94E1EC8F2C4F93 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		5310E391BEB252286D0FDC14 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		9E51B3FDA7BC7E8AF676D062 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		D63ADF1B1A413007009CA874 /* RuntimeDemoOneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RuntimeDemoOneViewController.h; sourceTree = "<group>"; };
+		D63ADF1C1A413007009CA874 /* RuntimeDemoOneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RuntimeDemoOneViewController.m; sourceTree = "<group>"; };
 		D6422CBF1A397E85000D9759 /* TraningTarget-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TraningTarget-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6422CC31A397E85000D9759 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D6422CC41A397E85000D9759 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -192,6 +195,8 @@
 				D6F2254D1A400B0E00E3FCB2 /* CustomAlertViewController.m */,
 				D6F2255A1A41174000E3FCB2 /* RemoveViewTestController.h */,
 				D6F2255B1A41174000E3FCB2 /* RemoveViewTestController.m */,
+				D63ADF1B1A413007009CA874 /* RuntimeDemoOneViewController.h */,
+				D63ADF1C1A413007009CA874 /* RuntimeDemoOneViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -357,6 +362,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D63ADF1D1A413007009CA874 /* RuntimeDemoOneViewController.m in Sources */,
 				D6F2255C1A41174000E3FCB2 /* RemoveViewTestController.m in Sources */,
 				D6422CCB1A397E85000D9759 /* RootViewController.m in Sources */,
 				D65AD0BF1A3EC6AA00D6E193 /* EmptyClass.m in Sources */,

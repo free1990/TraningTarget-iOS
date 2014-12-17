@@ -6,14 +6,14 @@
 //  Copyright (c) 2014年 WorkMac. All rights reserved.
 //
 
-#import "CustomAlertViewController.h"
+#import "TestCustomAlertViewController.h"
 #import "JKUpdateAlertView.h"
 
-@interface CustomAlertViewController ()
+@interface TestCustomAlertViewController ()
 
 @end
 
-@implementation CustomAlertViewController
+@implementation TestCustomAlertViewController
 
 +(void)load
 {
@@ -22,7 +22,7 @@
 
 - (id)init{
     if (self = [super init]) {
-        self.className   = @"Custom AlertView";
+        self.className   = @"Test Custom AlertView";
     }
     return self;
 }

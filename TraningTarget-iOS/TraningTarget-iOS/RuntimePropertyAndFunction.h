@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "BaseViewController.h"
 
-@interface PropertyAndFunction : BaseViewController
+@interface RuntimePropertyAndFunction : BaseViewController
 
 @end

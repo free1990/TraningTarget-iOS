@@ -8,7 +8,7 @@
 
 #import "BaseViewController.h"
 
-@interface RemoveViewTestController : BaseViewController{
+@interface TestRemoveViewTestController : BaseViewController{
     
     UIView *_testView;
 }

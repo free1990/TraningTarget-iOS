@@ -24,11 +24,11 @@
 		D6422CF91A399798000D9759 /* ClassItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D6422CF81A399798000D9759 /* ClassItem.m */; };
 		D65AD0BF1A3EC6AA00D6E193 /* EmptyClass.m in Sources */ = {isa = PBXBuildFile; fileRef = D65AD0BE1A3EC6AA00D6E193 /* EmptyClass.m */; };
 		D6D943891A3AB7C800898FA3 /* MsgForWardingDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D943881A3AB7C800898FA3 /* MsgForWardingDemo.m */; };
-		D6D943901A3AC7E900898FA3 /* PropertyAndFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D9438F1A3AC7E900898FA3 /* PropertyAndFunction.m */; };
-		D6D943941A3AE19B00898FA3 /* DynamicMethodResolutionAndDynamicLoading.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D943931A3AE19B00898FA3 /* DynamicMethodResolutionAndDynamicLoading.m */; };
-		D6F2254E1A400B0E00E3FCB2 /* CustomAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6F2254D1A400B0E00E3FCB2 /* CustomAlertViewController.m */; };
+		D6D943901A3AC7E900898FA3 /* RuntimePropertyAndFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D9438F1A3AC7E900898FA3 /* RuntimePropertyAndFunction.m */; };
+		D6D943941A3AE19B00898FA3 /* RuntimeDynamicMethodResolutionAndDynamicLoading.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D943931A3AE19B00898FA3 /* RuntimeDynamicMethodResolutionAndDynamicLoading.m */; };
+		D6F2254E1A400B0E00E3FCB2 /* TestCustomAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6F2254D1A400B0E00E3FCB2 /* TestCustomAlertViewController.m */; };
 		D6F225531A40138000E3FCB2 /* JKUpdateAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = D6F225521A40138000E3FCB2 /* JKUpdateAlertView.m */; };
-		D6F2255C1A41174000E3FCB2 /* RemoveViewTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6F2255B1A41174000E3FCB2 /* RemoveViewTestController.m */; };
+		D6F2255C1A41174000E3FCB2 /* TestRemoveViewTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6F2255B1A41174000E3FCB2 /* TestRemoveViewTestController.m */; };
 		F814BB409CFB202F26CDEBDD /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 32E9A4D9DB94E1EC8F2C4F93 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -79,16 +79,16 @@
 		D65AD0BE1A3EC6AA00D6E193 /* EmptyClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmptyClass.m; sourceTree = "<group>"; };
 		D6D943871A3AB7C800898FA3 /* MsgForWardingDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MsgForWardingDemo.h; sourceTree = "<group>"; };
 		D6D943881A3AB7C800898FA3 /* MsgForWardingDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MsgForWardingDemo.m; sourceTree = "<group>"; };
-		D6D9438E1A3AC7E900898FA3 /* PropertyAndFunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PropertyAndFunction.h; sourceTree = "<group>"; };
-		D6D9438F1A3AC7E900898FA3 /* PropertyAndFunction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PropertyAndFunction.m; sourceTree = "<group>"; };
-		D6D943921A3AE19B00898FA3 /* DynamicMethodResolutionAndDynamicLoading.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DynamicMethodResolutionAndDynamicLoading.h; sourceTree = "<group>"; };
-		D6D943931A3AE19B00898FA3 /* DynamicMethodResolutionAndDynamicLoading.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DynamicMethodResolutionAndDynamicLoading.m; sourceTree = "<group>"; };
-		D6F2254C1A400B0E00E3FCB2 /* CustomAlertViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomAlertViewController.h; sourceTree = "<group>"; };
-		D6F2254D1A400B0E00E3FCB2 /* CustomAlertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomAlertViewController.m; sourceTree = "<group>"; };
+		D6D9438E1A3AC7E900898FA3 /* RuntimePropertyAndFunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RuntimePropertyAndFunction.h; sourceTree = "<group>"; };
+		D6D9438F1A3AC7E900898FA3 /* RuntimePropertyAndFunction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RuntimePropertyAndFunction.m; sourceTree = "<group>"; };
+		D6D943921A3AE19B00898FA3 /* RuntimeDynamicMethodResolutionAndDynamicLoading.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RuntimeDynamicMethodResolutionAndDynamicLoading.h; sourceTree = "<group>"; };
+		D6D943931A3AE19B00898FA3 /* RuntimeDynamicMethodResolutionAndDynamicLoading.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RuntimeDynamicMethodResolutionAndDynamicLoading.m; sourceTree = "<group>"; };
+		D6F2254C1A400B0E00E3FCB2 /* TestCustomAlertViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestCustomAlertViewController.h; sourceTree = "<group>"; };
+		D6F2254D1A400B0E00E3FCB2 /* TestCustomAlertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestCustomAlertViewController.m; sourceTree = "<group>"; };
 		D6F225511A40138000E3FCB2 /* JKUpdateAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKUpdateAlertView.h; sourceTree = "<group>"; };
 		D6F225521A40138000E3FCB2 /* JKUpdateAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKUpdateAlertView.m; sourceTree = "<group>"; };
-		D6F2255A1A41174000E3FCB2 /* RemoveViewTestController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RemoveViewTestController.h; sourceTree = "<group>"; };
-		D6F2255B1A41174000E3FCB2 /* RemoveViewTestController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RemoveViewTestController.m; sourceTree = "<group>"; };
+		D6F2255A1A41174000E3FCB2 /* TestRemoveViewTestController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestRemoveViewTestController.h; sourceTree = "<group>"; };
+		D6F2255B1A41174000E3FCB2 /* TestRemoveViewTestController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestRemoveViewTestController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,14 +196,14 @@
 				D6422CCA1A397E85000D9759 /* RootViewController.m */,
 				D6422CEB1A3990D4000D9759 /* RuntimeMsgForWarding.h */,
 				D6422CEC1A3990D4000D9759 /* RuntimeMsgForWarding.m */,
-				D6D9438E1A3AC7E900898FA3 /* PropertyAndFunction.h */,
-				D6D9438F1A3AC7E900898FA3 /* PropertyAndFunction.m */,
-				D6D943921A3AE19B00898FA3 /* DynamicMethodResolutionAndDynamicLoading.h */,
-				D6D943931A3AE19B00898FA3 /* DynamicMethodResolutionAndDynamicLoading.m */,
-				D6F2254C1A400B0E00E3FCB2 /* CustomAlertViewController.h */,
-				D6F2254D1A400B0E00E3FCB2 /* CustomAlertViewController.m */,
-				D6F2255A1A41174000E3FCB2 /* RemoveViewTestController.h */,
-				D6F2255B1A41174000E3FCB2 /* RemoveViewTestController.m */,
+				D6D9438E1A3AC7E900898FA3 /* RuntimePropertyAndFunction.h */,
+				D6D9438F1A3AC7E900898FA3 /* RuntimePropertyAndFunction.m */,
+				D6D943921A3AE19B00898FA3 /* RuntimeDynamicMethodResolutionAndDynamicLoading.h */,
+				D6D943931A3AE19B00898FA3 /* RuntimeDynamicMethodResolutionAndDynamicLoading.m */,
+				D6F2254C1A400B0E00E3FCB2 /* TestCustomAlertViewController.h */,
+				D6F2254D1A400B0E00E3FCB2 /* TestCustomAlertViewController.m */,
+				D6F2255A1A41174000E3FCB2 /* TestRemoveViewTestController.h */,
+				D6F2255B1A41174000E3FCB2 /* TestRemoveViewTestController.m */,
 				D63ADF1B1A413007009CA874 /* RuntimeDemoOneViewController.h */,
 				D63ADF1C1A413007009CA874 /* RuntimeDemoOneViewController.m */,
 				D63ADF1E1A415B74009CA874 /* RuntimeDemoTwoViewController.h */,
@@ -378,23 +378,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				D63ADF1D1A413007009CA874 /* RuntimeDemoOneViewController.m in Sources */,
-				D6F2255C1A41174000E3FCB2 /* RemoveViewTestController.m in Sources */,
+				D6F2255C1A41174000E3FCB2 /* TestRemoveViewTestController.m in Sources */,
 				D6422CCB1A397E85000D9759 /* RootViewController.m in Sources */,
 				D65AD0BF1A3EC6AA00D6E193 /* EmptyClass.m in Sources */,
 				D6422CC81A397E85000D9759 /* AppDelegate.m in Sources */,
 				D63ADF231A416B8E009CA874 /* RuntimeDemoThreeViewController.m in Sources */,
 				D6422CED1A3990D4000D9759 /* RuntimeMsgForWarding.m in Sources */,
 				D6F225531A40138000E3FCB2 /* JKUpdateAlertView.m in Sources */,
-				D6D943941A3AE19B00898FA3 /* DynamicMethodResolutionAndDynamicLoading.m in Sources */,
+				D6D943941A3AE19B00898FA3 /* RuntimeDynamicMethodResolutionAndDynamicLoading.m in Sources */,
 				D6422CF01A399587000D9759 /* ClassSet.m in Sources */,
 				D6422CF61A3996D5000D9759 /* BaseViewController.m in Sources */,
-				D6F2254E1A400B0E00E3FCB2 /* CustomAlertViewController.m in Sources */,
+				D6F2254E1A400B0E00E3FCB2 /* TestCustomAlertViewController.m in Sources */,
 				D63ADF201A415B74009CA874 /* RuntimeDemoTwoViewController.m in Sources */,
 				D6D943891A3AB7C800898FA3 /* MsgForWardingDemo.m in Sources */,
 				D63ADF261A416EF9009CA874 /* NSObject+AutoEncodeDecode.m in Sources */,
 				D6422CC51A397E85000D9759 /* main.m in Sources */,
 				D6422CF91A399798000D9759 /* ClassItem.m in Sources */,
-				D6D943901A3AC7E900898FA3 /* PropertyAndFunction.m in Sources */,
+				D6D943901A3AC7E900898FA3 /* RuntimePropertyAndFunction.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

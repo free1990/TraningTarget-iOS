@@ -8,7 +8,7 @@
 
 #import "BaseViewController.h"
 
-@interface DynamicMethodResolutionAndDynamicLoading : BaseViewController{
+@interface RuntimeDynamicMethodResolutionAndDynamicLoading : BaseViewController{
 
     @private
     

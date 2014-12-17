@@ -6,13 +6,13 @@
 //  Copyright (c) 2014年 WorkMac. All rights reserved.
 //
 
-#import "RemoveViewTestController.h"
+#import "TestRemoveViewTestController.h"
 
-@interface RemoveViewTestController ()
+@interface TestRemoveViewTestController ()
 
 @end
 
-@implementation RemoveViewTestController
+@implementation TestRemoveViewTestController
 
 +(void)load
 {
@@ -21,7 +21,7 @@
 
 - (id)init{
     if (self = [super init]) {
-        self.className   = @"Remove View Test";
+        self.className   = @"Test Remove View Test";
     }
     return self;
 }

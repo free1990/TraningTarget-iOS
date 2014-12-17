@@ -6,17 +6,17 @@
 //  Copyright (c) 2014年 WorkMac. All rights reserved.
 //
 
-#import "DynamicMethodResolutionAndDynamicLoading.h"
+#import "RuntimeDynamicMethodResolutionAndDynamicLoading.h"
 #import <objc/runtime.h>
 #import "EmptyClass.h"
 
 
 
-@interface DynamicMethodResolutionAndDynamicLoading ()
+@interface RuntimeDynamicMethodResolutionAndDynamicLoading ()
 
 @end
 
-@implementation DynamicMethodResolutionAndDynamicLoading
+@implementation RuntimeDynamicMethodResolutionAndDynamicLoading
 
 @dynamic name;
 
@@ -31,7 +31,7 @@
 
 - (id)init{
     if (self = [super init]) {
-        self.className   = @"Dynamic Method Resolution And Dynamic Loading";
+        self.className   = @"Runtime Dynamic Method Resolution And Dynamic Loading";
     }
     return self;
 }

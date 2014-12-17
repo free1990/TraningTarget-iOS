@@ -6,14 +6,14 @@
 //  Copyright (c) 2014年 WorkMac. All rights reserved.
 //
 
-#import "PropertyAndFunction.h"
+#import "RuntimePropertyAndFunction.h"
 #import <objc/runtime.h>
 
-@interface PropertyAndFunction ()
+@interface RuntimePropertyAndFunction ()
 
 @end
 
-@implementation PropertyAndFunction
+@implementation RuntimePropertyAndFunction
 
 +(void)load
 {
@@ -22,7 +22,7 @@
 
 - (id)init{
     if (self = [super init]) {
-        self.className   = @"Property And Function";
+        self.className   = @"Runtime Property And Function";
     }
     return self;
 }

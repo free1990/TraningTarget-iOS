@@ -21,7 +21,7 @@
 }
 
 - (id)init{
-    if ([super init]) {
+    if (self = [super init]) {
         self.className   = @"Property And Function";
     }
     return self;

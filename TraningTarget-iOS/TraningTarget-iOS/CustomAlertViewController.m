@@ -21,7 +21,7 @@
 }
 
 - (id)init{
-    if ([super init]) {
+    if (self = [super init]) {
         self.className   = @"Custom AlertView";
     }
     return self;

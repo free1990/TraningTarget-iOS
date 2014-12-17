@@ -18,7 +18,7 @@
 }
 
 - (id)init{
-    if ([super init]) {
+    if (self = [super init]) {
         self.className   = @"Runtime Msg ForWarding";
     }
     return self;

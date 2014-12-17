@@ -24,6 +24,7 @@
 		D6D943941A3AE19B00898FA3 /* DynamicMethodResolutionAndDynamicLoading.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D943931A3AE19B00898FA3 /* DynamicMethodResolutionAndDynamicLoading.m */; };
 		D6F2254E1A400B0E00E3FCB2 /* CustomAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6F2254D1A400B0E00E3FCB2 /* CustomAlertViewController.m */; };
 		D6F225531A40138000E3FCB2 /* JKUpdateAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = D6F225521A40138000E3FCB2 /* JKUpdateAlertView.m */; };
+		D6F2255C1A41174000E3FCB2 /* RemoveViewTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6F2255B1A41174000E3FCB2 /* RemoveViewTestController.m */; };
 		F814BB409CFB202F26CDEBDD /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 32E9A4D9DB94E1EC8F2C4F93 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -74,6 +75,8 @@
 		D6F2254D1A400B0E00E3FCB2 /* CustomAlertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomAlertViewController.m; sourceTree = "<group>"; };
 		D6F225511A40138000E3FCB2 /* JKUpdateAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKUpdateAlertView.h; sourceTree = "<group>"; };
 		D6F225521A40138000E3FCB2 /* JKUpdateAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKUpdateAlertView.m; sourceTree = "<group>"; };
+		D6F2255A1A41174000E3FCB2 /* RemoveViewTestController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RemoveViewTestController.h; sourceTree = "<group>"; };
+		D6F2255B1A41174000E3FCB2 /* RemoveViewTestController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RemoveViewTestController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,6 +190,8 @@
 				D6D943931A3AE19B00898FA3 /* DynamicMethodResolutionAndDynamicLoading.m */,
 				D6F2254C1A400B0E00E3FCB2 /* CustomAlertViewController.h */,
 				D6F2254D1A400B0E00E3FCB2 /* CustomAlertViewController.m */,
+				D6F2255A1A41174000E3FCB2 /* RemoveViewTestController.h */,
+				D6F2255B1A41174000E3FCB2 /* RemoveViewTestController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -352,6 +357,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6F2255C1A41174000E3FCB2 /* RemoveViewTestController.m in Sources */,
 				D6422CCB1A397E85000D9759 /* RootViewController.m in Sources */,
 				D65AD0BF1A3EC6AA00D6E193 /* EmptyClass.m in Sources */,
 				D6422CC81A397E85000D9759 /* AppDelegate.m in Sources */,
@@ -488,6 +494,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "TraningTarget-iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -499,6 +506,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "TraningTarget-iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

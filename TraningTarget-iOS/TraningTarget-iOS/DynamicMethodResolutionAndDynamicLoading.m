@@ -30,7 +30,7 @@
 }
 
 - (id)init{
-    if ([super init]) {
+    if (self = [super init]) {
         self.className   = @"Dynamic Method Resolution And Dynamic Loading";
     }
     return self;

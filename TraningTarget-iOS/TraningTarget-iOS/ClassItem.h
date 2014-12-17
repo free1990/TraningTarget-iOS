@@ -13,4 +13,5 @@
 @property (nonatomic, strong) NSString *classTitleName;
 @property (nonatomic, strong) NSString *className;
 
+-(NSComparisonResult)titleCompare:(ClassItem *)other;
 @end

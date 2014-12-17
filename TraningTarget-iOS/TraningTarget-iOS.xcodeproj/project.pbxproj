@@ -11,6 +11,7 @@
 		D63ADF201A415B74009CA874 /* RuntimeDemoTwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D63ADF1F1A415B74009CA874 /* RuntimeDemoTwoViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		D63ADF231A416B8E009CA874 /* RuntimeDemoThreeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D63ADF221A416B8E009CA874 /* RuntimeDemoThreeViewController.m */; };
 		D63ADF261A416EF9009CA874 /* NSObject+AutoEncodeDecode.m in Sources */ = {isa = PBXBuildFile; fileRef = D63ADF251A416EF9009CA874 /* NSObject+AutoEncodeDecode.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D63ADF391A41879A009CA874 /* TestArrayOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D63ADF381A41879A009CA874 /* TestArrayOrderViewController.m */; };
 		D6422CC51A397E85000D9759 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D6422CC41A397E85000D9759 /* main.m */; };
 		D6422CC81A397E85000D9759 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D6422CC71A397E85000D9759 /* AppDelegate.m */; };
 		D6422CCB1A397E85000D9759 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6422CCA1A397E85000D9759 /* RootViewController.m */; };
@@ -54,6 +55,8 @@
 		D63ADF221A416B8E009CA874 /* RuntimeDemoThreeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RuntimeDemoThreeViewController.m; sourceTree = "<group>"; };
 		D63ADF241A416EF9009CA874 /* NSObject+AutoEncodeDecode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+AutoEncodeDecode.h"; sourceTree = "<group>"; };
 		D63ADF251A416EF9009CA874 /* NSObject+AutoEncodeDecode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+AutoEncodeDecode.m"; sourceTree = "<group>"; };
+		D63ADF371A41879A009CA874 /* TestArrayOrderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestArrayOrderViewController.h; sourceTree = "<group>"; };
+		D63ADF381A41879A009CA874 /* TestArrayOrderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestArrayOrderViewController.m; sourceTree = "<group>"; };
 		D6422CBF1A397E85000D9759 /* TraningTarget-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TraningTarget-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6422CC31A397E85000D9759 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D6422CC41A397E85000D9759 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -210,6 +213,8 @@
 				D63ADF1F1A415B74009CA874 /* RuntimeDemoTwoViewController.m */,
 				D63ADF211A416B8E009CA874 /* RuntimeDemoThreeViewController.h */,
 				D63ADF221A416B8E009CA874 /* RuntimeDemoThreeViewController.m */,
+				D63ADF371A41879A009CA874 /* TestArrayOrderViewController.h */,
+				D63ADF381A41879A009CA874 /* TestArrayOrderViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -390,6 +395,7 @@
 				D6422CF61A3996D5000D9759 /* BaseViewController.m in Sources */,
 				D6F2254E1A400B0E00E3FCB2 /* TestCustomAlertViewController.m in Sources */,
 				D63ADF201A415B74009CA874 /* RuntimeDemoTwoViewController.m in Sources */,
+				D63ADF391A41879A009CA874 /* TestArrayOrderViewController.m in Sources */,
 				D6D943891A3AB7C800898FA3 /* MsgForWardingDemo.m in Sources */,
 				D63ADF261A416EF9009CA874 /* NSObject+AutoEncodeDecode.m in Sources */,
 				D6422CC51A397E85000D9759 /* main.m in Sources */,

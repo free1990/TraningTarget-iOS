@@ -27,11 +27,11 @@
     if ( itemClass ) {
         
         
-        BaseViewController *class = [[itemClass alloc] init];
+//        BaseViewController *class = [[itemClass alloc] init];
         
         ClassItem *item = [[ClassItem alloc] init];
         
-        item.classTitleName = class.className;
+        item.classTitleName = NSStringFromClass(itemClass);
         item.className = NSStringFromClass(itemClass);
         
         if ( item ) {

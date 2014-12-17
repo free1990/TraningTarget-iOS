@@ -17,9 +17,6 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    
-    [ClassSet sharedClassGallery];
-    
     return YES;
 }
 

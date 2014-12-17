@@ -11,7 +11,6 @@
 
 @interface ClassSet : NSObject
 {
-    @private
     NSMutableArray *classItems;
 }
 

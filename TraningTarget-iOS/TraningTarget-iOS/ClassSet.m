@@ -74,12 +74,27 @@ static ClassSet *sharedClassGallery = nil;
 
 -(void)sortByTitle
 {
-    [classItems sortedArrayUsingComparator: ^NSComparisonResult(ClassItem *a, ClassItem *b) {
-        return [a.className compare:b.className];
+
+    
+//    NSComparator cmptr;
+//    cmptr = ^(ClassItem *cssInfo_1, ClassItem *cssInfo_2){
+//        if (cssInfo_1.className > cssInfo_2.className)
+//            return (NSComparisonResult)NSOrderedAscending;
+//        
+//        if (cssInfo_1.className < cssInfo_2.className)
+//            return (NSComparisonResult)NSOrderedDescending;
+//        
+//        return (NSComparisonResult)NSOrderedDescending;
+//    };
+//    [classItems sortedArrayUsingComparator:cmptr];
+
+    
+    [classItems sortUsingComparator:^NSComparisonResult(__strong id obj1,__strong id obj2){
+        ClassItem *item1=(ClassItem *)obj1;
+        ClassItem *item2=(ClassItem *)obj2;
+        return [item1.className compare:item2.className];
     }];
-   
 
 }
-
 
 @end

@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		D63ADF1D1A413007009CA874 /* RuntimeDemoOneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D63ADF1C1A413007009CA874 /* RuntimeDemoOneViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		D63ADF201A415B74009CA874 /* RuntimeDemoTwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D63ADF1F1A415B74009CA874 /* RuntimeDemoTwoViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D63ADF231A416B8E009CA874 /* RuntimeDemoThreeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D63ADF221A416B8E009CA874 /* RuntimeDemoThreeViewController.m */; };
+		D63ADF261A416EF9009CA874 /* NSObject+AutoEncodeDecode.m in Sources */ = {isa = PBXBuildFile; fileRef = D63ADF251A416EF9009CA874 /* NSObject+AutoEncodeDecode.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		D6422CC51A397E85000D9759 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D6422CC41A397E85000D9759 /* main.m */; };
 		D6422CC81A397E85000D9759 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D6422CC71A397E85000D9759 /* AppDelegate.m */; };
 		D6422CCB1A397E85000D9759 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6422CCA1A397E85000D9759 /* RootViewController.m */; };
@@ -48,6 +50,10 @@
 		D63ADF1C1A413007009CA874 /* RuntimeDemoOneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RuntimeDemoOneViewController.m; sourceTree = "<group>"; };
 		D63ADF1E1A415B74009CA874 /* RuntimeDemoTwoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RuntimeDemoTwoViewController.h; sourceTree = "<group>"; };
 		D63ADF1F1A415B74009CA874 /* RuntimeDemoTwoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RuntimeDemoTwoViewController.m; sourceTree = "<group>"; };
+		D63ADF211A416B8E009CA874 /* RuntimeDemoThreeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RuntimeDemoThreeViewController.h; sourceTree = "<group>"; };
+		D63ADF221A416B8E009CA874 /* RuntimeDemoThreeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RuntimeDemoThreeViewController.m; sourceTree = "<group>"; };
+		D63ADF241A416EF9009CA874 /* NSObject+AutoEncodeDecode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+AutoEncodeDecode.h"; sourceTree = "<group>"; };
+		D63ADF251A416EF9009CA874 /* NSObject+AutoEncodeDecode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+AutoEncodeDecode.m"; sourceTree = "<group>"; };
 		D6422CBF1A397E85000D9759 /* TraningTarget-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TraningTarget-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6422CC31A397E85000D9759 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D6422CC41A397E85000D9759 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -202,6 +208,8 @@
 				D63ADF1C1A413007009CA874 /* RuntimeDemoOneViewController.m */,
 				D63ADF1E1A415B74009CA874 /* RuntimeDemoTwoViewController.h */,
 				D63ADF1F1A415B74009CA874 /* RuntimeDemoTwoViewController.m */,
+				D63ADF211A416B8E009CA874 /* RuntimeDemoThreeViewController.h */,
+				D63ADF221A416B8E009CA874 /* RuntimeDemoThreeViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -219,6 +227,8 @@
 				D6D943881A3AB7C800898FA3 /* MsgForWardingDemo.m */,
 				D65AD0BD1A3EC6AA00D6E193 /* EmptyClass.h */,
 				D65AD0BE1A3EC6AA00D6E193 /* EmptyClass.m */,
+				D63ADF241A416EF9009CA874 /* NSObject+AutoEncodeDecode.h */,
+				D63ADF251A416EF9009CA874 /* NSObject+AutoEncodeDecode.m */,
 			);
 			name = Handle;
 			sourceTree = "<group>";
@@ -372,6 +382,7 @@
 				D6422CCB1A397E85000D9759 /* RootViewController.m in Sources */,
 				D65AD0BF1A3EC6AA00D6E193 /* EmptyClass.m in Sources */,
 				D6422CC81A397E85000D9759 /* AppDelegate.m in Sources */,
+				D63ADF231A416B8E009CA874 /* RuntimeDemoThreeViewController.m in Sources */,
 				D6422CED1A3990D4000D9759 /* RuntimeMsgForWarding.m in Sources */,
 				D6F225531A40138000E3FCB2 /* JKUpdateAlertView.m in Sources */,
 				D6D943941A3AE19B00898FA3 /* DynamicMethodResolutionAndDynamicLoading.m in Sources */,
@@ -380,6 +391,7 @@
 				D6F2254E1A400B0E00E3FCB2 /* CustomAlertViewController.m in Sources */,
 				D63ADF201A415B74009CA874 /* RuntimeDemoTwoViewController.m in Sources */,
 				D6D943891A3AB7C800898FA3 /* MsgForWardingDemo.m in Sources */,
+				D63ADF261A416EF9009CA874 /* NSObject+AutoEncodeDecode.m in Sources */,
 				D6422CC51A397E85000D9759 /* main.m in Sources */,
 				D6422CF91A399798000D9759 /* ClassItem.m in Sources */,
 				D6D943901A3AC7E900898FA3 /* PropertyAndFunction.m in Sources */,

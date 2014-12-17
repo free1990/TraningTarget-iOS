@@ -74,7 +74,11 @@ static ClassSet *sharedClassGallery = nil;
 
 -(void)sortByTitle
 {
-    [classItems sortUsingSelector:@selector(titleCompare:)];
+    [classItems sortedArrayUsingComparator: ^NSComparisonResult(ClassItem *a, ClassItem *b) {
+        return [a.className compare:b.className];
+    }];
+   
+
 }
 
 

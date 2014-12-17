@@ -25,6 +25,8 @@
     _myTableView.dataSource = self;
     
     [self.view addSubview:_myTableView];
+    
+    [[ClassSet sharedClassGallery] sortByTitle];
 }
 
 #pragma mark - Tableview datasource & delegates

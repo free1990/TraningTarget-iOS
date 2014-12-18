@@ -37,6 +37,17 @@
     [self justLog2];
     [self justLog1];
     
+    //类的版本号
+//    __unsafe_unretained Class *temp = [RuntimeDemoThreeViewController class];
+    NSLog(@"version--old-----%d", class_getVersion([RuntimeDemoThreeViewController class]));
+    class_setVersion([RuntimeDemoThreeViewController class], 3);
+    NSLog(@"version--new-----%d", class_getVersion([RuntimeDemoThreeViewController class]));
+    
+    //系统替换方法
+    [self replaceMethod];
+    
+    [@"test" uppercaseString];
+    
 }
 
 - (void) methodExchange {
@@ -68,28 +79,45 @@
 //IMP cFuncPointer1;
 //IMP cFuncPointer2;
 //
+//void CustomUppercaseString(id self,SEL _cmd){
+//    printf("真正起作用的是本函数CustomUppercaseString\r\n");
+//    
+//    NSString *string = cFuncPointer(self,_cmd);
+//    return string;
+//}
+
+//void CustomComponentsSeparatedByString(id self, SEL _cmd){
+//     printf("真正起作用的是本函数CustomIsEqualToString\r\n");
+//}
+
+
+//DEMO
 //NSString* CustomUppercaseString(id self,SEL _cmd){
 //    printf("真正起作用的是本函数CustomUppercaseString\r\n");
 //    NSString *string = cFuncPointer(self,_cmd);
 //    return string;
 //}
+//
 //NSArray* CustomComponentsSeparatedByString(id self,SEL _cmd,NSString *str){
 //    printf("真正起作用的是本函数CustomIsEqualToString\r\n");
 //    return cFuncPointer1(self,_cmd, str);
 //}
-////不起作用，求解释
+//不起作用，求解释
 //bool CustomIsEqualToString(id self,SEL _cmd,NSString *str) {
-//printf("真正起作用的是本函数CustomIsEqualToString\r\n");
-//return cFuncPointer2(self,_cmd, str);
+//    printf("真正起作用的是本函数CustomIsEqualToString\r\n");
+//    return cFuncPointer2(self,_cmd, str);
 //}
-//- (void) replaceMethod{
+
+- (void) replaceMethod{
 //    cFuncPointer = [NSString instanceMethodForSelector:@selector(uppercaseString)];
 //    class_replaceMethod([NSString class],@selector(uppercaseString), (IMP)CustomUppercaseString,"@@:");
+    
 //    cFuncPointer1 = [NSString instanceMethodForSelector:@selector(componentsSeparatedByString:)];
 //    class_replaceMethod([NSString class],@selector(componentsSeparatedByString:), (IMP)CustomComponentsSeparatedByString,"@@:@");
+    
 //    cFuncPointer2 = [NSString instanceMethodForSelector:@selector(isEqualToString:)];
 //    class_replaceMethod([NSString class],@selector(isEqualToString:), (IMP)CustomIsEqualToString,"B@:@");
-//}
+}
 
 //C实现tableview
 //#import <objc/runtime.h>

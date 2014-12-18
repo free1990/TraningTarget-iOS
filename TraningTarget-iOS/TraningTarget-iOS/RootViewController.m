@@ -31,6 +31,8 @@
     _myTableView.rowHeight = 44;
     
     [self.view addSubview:_myTableView];
+    
+    
 }
 
 #pragma mark - Tableview datasource & delegates

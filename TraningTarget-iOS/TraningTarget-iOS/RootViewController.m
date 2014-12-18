@@ -24,9 +24,13 @@
     _myTableView.delegate = self;
     _myTableView.dataSource = self;
     
-    [self.view addSubview:_myTableView];
+    _myTableView.separatorInset = UIEdgeInsetsZero;
+    if ([_myTableView respondsToSelector:@selector(setLayoutMargins:)]) {
+        [_myTableView setLayoutMargins:UIEdgeInsetsZero];
+    }
+    _myTableView.rowHeight = 44;
     
-    [[ClassSet sharedClassGallery] sortByTitle];
+    [self.view addSubview:_myTableView];
 }
 
 #pragma mark - Tableview datasource & delegates
@@ -46,6 +50,10 @@
     
     ClassItem *item = [[ClassSet sharedClassGallery] objectAtIndex:indexPath.row];
     cell.textLabel.text = item.classTitleName;
+    
+//    if (indexPath.row == ([[ClassSet sharedClassGallery] count] - 1)) {
+//        cell.separatorInset = UIEdgeInsetsMake(0, 0, 0, cell.bounds.size.width);
+//    }
     
     return cell;
 }

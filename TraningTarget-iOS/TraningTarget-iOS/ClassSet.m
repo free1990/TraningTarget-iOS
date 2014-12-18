@@ -75,8 +75,10 @@ static ClassSet *sharedClassGallery = nil;
 -(void)sortByTitle
 {
 
-    
 //    NSComparator cmptr;
+//    cmptr = ^(ClassItem *cssInfo_1, ClassItem *cssInfo_2){
+//        return [cssInfo_1.className caseInsensitiveCompare:cssInfo_2.className];
+//    };
 //    cmptr = ^(ClassItem *cssInfo_1, ClassItem *cssInfo_2){
 //        if (cssInfo_1.className > cssInfo_2.className)
 //            return (NSComparisonResult)NSOrderedAscending;
@@ -86,15 +88,19 @@ static ClassSet *sharedClassGallery = nil;
 //        
 //        return (NSComparisonResult)NSOrderedDescending;
 //    };
-//    [classItems sortedArrayUsingComparator:cmptr];
-
+//    NSArray *temp = [classItems sortedArrayUsingComparator:cmptr];
+//    
+//    for (ClassItem *one in temp) {
+//        NSLog(@"--->%@", one.className);
+//    }
+    //    [classItems sortUsingComparator:cmptr];
     
     [classItems sortUsingComparator:^NSComparisonResult(__strong id obj1,__strong id obj2){
         ClassItem *item1=(ClassItem *)obj1;
         ClassItem *item2=(ClassItem *)obj2;
         return [item1.className compare:item2.className];
     }];
-
+    
 }
 
 @end

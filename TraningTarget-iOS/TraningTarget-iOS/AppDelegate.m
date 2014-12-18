@@ -17,6 +17,9 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    [[ClassSet sharedClassGallery] sortByTitle];
+    
     return YES;
 }
 

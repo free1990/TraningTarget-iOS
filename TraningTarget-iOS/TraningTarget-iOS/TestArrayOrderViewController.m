@@ -26,6 +26,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+//    sortedArrayUsingComparator  不改变原来的数组排序，但是返回一个已经排序的数组
+//    sortUsingComparator         改变现有的排序
+    
     NSMutableArray* arr = [NSMutableArray arrayWithObjects:@"C", @"A", @"H", @"I", @"B", @"D", @"J", @"E", @"F", @"G", @"K", nil];
     
     // 升序

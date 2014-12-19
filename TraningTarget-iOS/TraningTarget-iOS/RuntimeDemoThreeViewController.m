@@ -45,7 +45,6 @@
     
     //系统替换方法
     [self replaceMethod];
-    
     [@"test" uppercaseString];
     
 }
@@ -75,16 +74,14 @@
     method_setImplementation(m1, originalImp);
 }
 
-//IMP cFuncPointer;
+IMP cFuncPointer;
 //IMP cFuncPointer1;
 //IMP cFuncPointer2;
 //
-//void CustomUppercaseString(id self,SEL _cmd){
-//    printf("真正起作用的是本函数CustomUppercaseString\r\n");
-//    
-//    NSString *string = cFuncPointer(self,_cmd);
-//    return string;
-//}
+NSString* CustomUppercaseString(id self,SEL _cmd){
+    printf("真正起作用的是本函数CustomUppercaseString\r\n");
+    return @"-----------";
+}
 
 //void CustomComponentsSeparatedByString(id self, SEL _cmd){
 //     printf("真正起作用的是本函数CustomIsEqualToString\r\n");
@@ -110,7 +107,7 @@
 
 - (void) replaceMethod{
 //    cFuncPointer = [NSString instanceMethodForSelector:@selector(uppercaseString)];
-//    class_replaceMethod([NSString class],@selector(uppercaseString), (IMP)CustomUppercaseString,"@@:");
+    class_replaceMethod([NSString class],@selector(uppercaseString), (IMP)CustomUppercaseString,"@@:");
     
 //    cFuncPointer1 = [NSString instanceMethodForSelector:@selector(componentsSeparatedByString:)];
 //    class_replaceMethod([NSString class],@selector(componentsSeparatedByString:), (IMP)CustomComponentsSeparatedByString,"@@:@");
@@ -119,6 +116,7 @@
 //    class_replaceMethod([NSString class],@selector(isEqualToString:), (IMP)CustomIsEqualToString,"B@:@");
 }
 
+//---------------------------------------------------------
 //C实现tableview
 //#import <objc/runtime.h>
 //#import <objc/message.h>

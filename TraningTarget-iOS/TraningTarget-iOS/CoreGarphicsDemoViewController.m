@@ -7,6 +7,13 @@
 //
 
 #import "CoreGarphicsDemoViewController.h"
+#import "Line.h"
+#import "Arcs.h"
+#import "RectView.h"
+#import "Blend.h"
+#import "ImageAndTiling.h"
+#import "Pattern.h"
+#import "Gradient.h"
 
 @interface CoreGarphicsDemoViewController ()
 
@@ -30,7 +37,33 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+//    //划线
+//    Line *line = [[Line alloc] initWithFrame:self.view.frame];
+//    [self.view addSubview:line];
+//    
+//    //弧线和圆、椭圆
+//    Arcs *arcs = [[Arcs alloc] initWithFrame:self.view.frame];
+//    [self.view addSubview:arcs];
     
+//    //矩形
+//    RectView *rect = [[RectView alloc] initWithFrame:self.view.frame];
+//    [self.view addSubview:rect];
+    
+//    //混合模式
+//    Blend *blend = [[Blend alloc] initWithFrame:self.view.frame];
+//    [self.view addSubview:blend];
+    
+//    //CG使用图片
+//    ImageAndTiling *image = [[ImageAndTiling alloc] initWithFrame:self.view.frame];
+//    [self.view addSubview:image];
+    
+//    //Pattern
+//    Pattern *pattern = [[Pattern alloc] initWithFrame:self.view.frame];
+//    [self.view addSubview:pattern];
+    
+    //Gradient
+    Gradient *gradient = [[Gradient alloc] initWithFrame:self.view.frame];
+    [self.view addSubview:gradient];
     
 }
 

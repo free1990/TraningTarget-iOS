@@ -12,7 +12,6 @@
 
 -(void)drawInContext:(CGContextRef)context{
     
-    
     CGContextSetRGBStrokeColor(context, 1.0, 1.0, 1.0, 1.0);
     
     CGContextSetLineWidth(context, 2);

@@ -40,6 +40,9 @@
 		D6EADF7C1A4A528F00D46981 /* Clipping.m in Sources */ = {isa = PBXBuildFile; fileRef = D6EADF7B1A4A528F00D46981 /* Clipping.m */; };
 		D6EADF7E1A4A530400D46981 /* Ship.png in Resources */ = {isa = PBXBuildFile; fileRef = D6EADF7D1A4A530400D46981 /* Ship.png */; };
 		D6EADF841A4A5A8400D46981 /* Mask.m in Sources */ = {isa = PBXBuildFile; fileRef = D6EADF831A4A5A8400D46981 /* Mask.m */; };
+		D6EADF881A4AA30300D46981 /* UIViewController+AbnormalDisplay.m in Sources */ = {isa = PBXBuildFile; fileRef = D6EADF871A4AA30300D46981 /* UIViewController+AbnormalDisplay.m */; };
+		D6EADF8B1A4AA42600D46981 /* UIViewController+HUD.m in Sources */ = {isa = PBXBuildFile; fileRef = D6EADF8A1A4AA42600D46981 /* UIViewController+HUD.m */; };
+		D6EADF8E1A4AA45400D46981 /* CategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6EADF8D1A4AA45400D46981 /* CategoryViewController.m */; };
 		D6F2254E1A400B0E00E3FCB2 /* TestCustomAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6F2254D1A400B0E00E3FCB2 /* TestCustomAlertViewController.m */; };
 		D6F225531A40138000E3FCB2 /* JKUpdateAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = D6F225521A40138000E3FCB2 /* JKUpdateAlertView.m */; };
 		D6F2255C1A41174000E3FCB2 /* TestRemoveViewTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6F2255B1A41174000E3FCB2 /* TestRemoveViewTestController.m */; };
@@ -123,6 +126,12 @@
 		D6EADF7D1A4A530400D46981 /* Ship.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Ship.png; sourceTree = "<group>"; };
 		D6EADF821A4A5A8400D46981 /* Mask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mask.h; sourceTree = "<group>"; };
 		D6EADF831A4A5A8400D46981 /* Mask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mask.m; sourceTree = "<group>"; };
+		D6EADF861A4AA30300D46981 /* UIViewController+AbnormalDisplay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+AbnormalDisplay.h"; sourceTree = "<group>"; };
+		D6EADF871A4AA30300D46981 /* UIViewController+AbnormalDisplay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+AbnormalDisplay.m"; sourceTree = "<group>"; };
+		D6EADF891A4AA42500D46981 /* UIViewController+HUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+HUD.h"; sourceTree = "<group>"; };
+		D6EADF8A1A4AA42600D46981 /* UIViewController+HUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+HUD.m"; sourceTree = "<group>"; };
+		D6EADF8C1A4AA45400D46981 /* CategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryViewController.h; sourceTree = "<group>"; };
+		D6EADF8D1A4AA45400D46981 /* CategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryViewController.m; sourceTree = "<group>"; };
 		D6F2254C1A400B0E00E3FCB2 /* TestCustomAlertViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestCustomAlertViewController.h; sourceTree = "<group>"; };
 		D6F2254D1A400B0E00E3FCB2 /* TestCustomAlertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestCustomAlertViewController.m; sourceTree = "<group>"; };
 		D6F225511A40138000E3FCB2 /* JKUpdateAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKUpdateAlertView.h; sourceTree = "<group>"; };
@@ -256,6 +265,8 @@
 				D63ADF381A41879A009CA874 /* TestArrayOrderViewController.m */,
 				D656864F1A441BD400576E94 /* CoreGarphicsDemoViewController.h */,
 				D65686501A441BD400576E94 /* CoreGarphicsDemoViewController.m */,
+				D6EADF8C1A4AA45400D46981 /* CategoryViewController.h */,
+				D6EADF8D1A4AA45400D46981 /* CategoryViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -275,6 +286,10 @@
 				D65AD0BE1A3EC6AA00D6E193 /* EmptyClass.m */,
 				D63ADF241A416EF9009CA874 /* NSObject+AutoEncodeDecode.h */,
 				D63ADF251A416EF9009CA874 /* NSObject+AutoEncodeDecode.m */,
+				D6EADF861A4AA30300D46981 /* UIViewController+AbnormalDisplay.h */,
+				D6EADF871A4AA30300D46981 /* UIViewController+AbnormalDisplay.m */,
+				D6EADF891A4AA42500D46981 /* UIViewController+HUD.h */,
+				D6EADF8A1A4AA42600D46981 /* UIViewController+HUD.m */,
 			);
 			name = Handle;
 			sourceTree = "<group>";
@@ -462,6 +477,7 @@
 				D6F225531A40138000E3FCB2 /* JKUpdateAlertView.m in Sources */,
 				D6EADF841A4A5A8400D46981 /* Mask.m in Sources */,
 				D6D943941A3AE19B00898FA3 /* RuntimeDynamicMethodResolutionAndDynamicLoading.m in Sources */,
+				D6EADF881A4AA30300D46981 /* UIViewController+AbnormalDisplay.m in Sources */,
 				D6EADF7C1A4A528F00D46981 /* Clipping.m in Sources */,
 				D6422CF01A399587000D9759 /* ClassSet.m in Sources */,
 				D6422CF61A3996D5000D9759 /* BaseViewController.m in Sources */,
@@ -469,7 +485,9 @@
 				D6EADF791A496B5200D46981 /* Gradient.m in Sources */,
 				D63ADF201A415B74009CA874 /* RuntimeDemoTwoViewController.m in Sources */,
 				D63ADF391A41879A009CA874 /* TestArrayOrderViewController.m in Sources */,
+				D6EADF8E1A4AA45400D46981 /* CategoryViewController.m in Sources */,
 				D6D943891A3AB7C800898FA3 /* MsgForWardingDemo.m in Sources */,
+				D6EADF8B1A4AA42600D46981 /* UIViewController+HUD.m in Sources */,
 				D63ADF261A416EF9009CA874 /* NSObject+AutoEncodeDecode.m in Sources */,
 				D6422CC51A397E85000D9759 /* main.m in Sources */,
 				D6422CF91A399798000D9759 /* ClassItem.m in Sources */,

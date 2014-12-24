@@ -14,6 +14,8 @@
 #import "ImageAndTiling.h"
 #import "Pattern.h"
 #import "Gradient.h"
+#import "Clipping.h"
+#import "Mask.h"
 
 @interface CoreGarphicsDemoViewController ()
 
@@ -61,9 +63,17 @@
 //    Pattern *pattern = [[Pattern alloc] initWithFrame:self.view.frame];
 //    [self.view addSubview:pattern];
     
-    //Gradient
-    Gradient *gradient = [[Gradient alloc] initWithFrame:self.view.frame];
-    [self.view addSubview:gradient];
+//    //Gradient
+//    Gradient *gradient = [[Gradient alloc] initWithFrame:self.view.frame];
+//    [self.view addSubview:gradient];
+    
+//    //ClippingView
+//    Clipping *clip = [[Clipping alloc] initWithFrame:self.view.frame];
+//    [self.view addSubview:clip];
+    
+    //mask
+    Mask *mask = [[Mask alloc] initWithFrame:self.view.frame];
+    [self.view addSubview:mask];
     
 }
 

@@ -37,6 +37,9 @@
 		D6EADF731A49551000D46981 /* demo.png in Resources */ = {isa = PBXBuildFile; fileRef = D6EADF721A49551000D46981 /* demo.png */; };
 		D6EADF761A49646F00D46981 /* Pattern.m in Sources */ = {isa = PBXBuildFile; fileRef = D6EADF751A49646F00D46981 /* Pattern.m */; };
 		D6EADF791A496B5200D46981 /* Gradient.m in Sources */ = {isa = PBXBuildFile; fileRef = D6EADF781A496B5200D46981 /* Gradient.m */; };
+		D6EADF7C1A4A528F00D46981 /* Clipping.m in Sources */ = {isa = PBXBuildFile; fileRef = D6EADF7B1A4A528F00D46981 /* Clipping.m */; };
+		D6EADF7E1A4A530400D46981 /* Ship.png in Resources */ = {isa = PBXBuildFile; fileRef = D6EADF7D1A4A530400D46981 /* Ship.png */; };
+		D6EADF841A4A5A8400D46981 /* Mask.m in Sources */ = {isa = PBXBuildFile; fileRef = D6EADF831A4A5A8400D46981 /* Mask.m */; };
 		D6F2254E1A400B0E00E3FCB2 /* TestCustomAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6F2254D1A400B0E00E3FCB2 /* TestCustomAlertViewController.m */; };
 		D6F225531A40138000E3FCB2 /* JKUpdateAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = D6F225521A40138000E3FCB2 /* JKUpdateAlertView.m */; };
 		D6F2255C1A41174000E3FCB2 /* TestRemoveViewTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6F2255B1A41174000E3FCB2 /* TestRemoveViewTestController.m */; };
@@ -115,6 +118,11 @@
 		D6EADF751A49646F00D46981 /* Pattern.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Pattern.m; sourceTree = "<group>"; };
 		D6EADF771A496B5200D46981 /* Gradient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Gradient.h; sourceTree = "<group>"; };
 		D6EADF781A496B5200D46981 /* Gradient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Gradient.m; sourceTree = "<group>"; };
+		D6EADF7A1A4A528F00D46981 /* Clipping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Clipping.h; sourceTree = "<group>"; };
+		D6EADF7B1A4A528F00D46981 /* Clipping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Clipping.m; sourceTree = "<group>"; };
+		D6EADF7D1A4A530400D46981 /* Ship.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Ship.png; sourceTree = "<group>"; };
+		D6EADF821A4A5A8400D46981 /* Mask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mask.h; sourceTree = "<group>"; };
+		D6EADF831A4A5A8400D46981 /* Mask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mask.m; sourceTree = "<group>"; };
 		D6F2254C1A400B0E00E3FCB2 /* TestCustomAlertViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestCustomAlertViewController.h; sourceTree = "<group>"; };
 		D6F2254D1A400B0E00E3FCB2 /* TestCustomAlertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestCustomAlertViewController.m; sourceTree = "<group>"; };
 		D6F225511A40138000E3FCB2 /* JKUpdateAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKUpdateAlertView.h; sourceTree = "<group>"; };
@@ -201,6 +209,7 @@
 				D6422CC31A397E85000D9759 /* Info.plist */,
 				D6422CC41A397E85000D9759 /* main.m */,
 				D6EADF721A49551000D46981 /* demo.png */,
+				D6EADF7D1A4A530400D46981 /* Ship.png */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -291,6 +300,10 @@
 				D6EADF751A49646F00D46981 /* Pattern.m */,
 				D6EADF771A496B5200D46981 /* Gradient.h */,
 				D6EADF781A496B5200D46981 /* Gradient.m */,
+				D6EADF7A1A4A528F00D46981 /* Clipping.h */,
+				D6EADF7B1A4A528F00D46981 /* Clipping.m */,
+				D6EADF821A4A5A8400D46981 /* Mask.h */,
+				D6EADF831A4A5A8400D46981 /* Mask.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -379,6 +392,7 @@
 			files = (
 				D6EADF731A49551000D46981 /* demo.png in Resources */,
 				D6422CCE1A397E85000D9759 /* Main.storyboard in Resources */,
+				D6EADF7E1A4A530400D46981 /* Ship.png in Resources */,
 				D6422CD31A397E85000D9759 /* LaunchScreen.xib in Resources */,
 				D6422CD01A397E85000D9759 /* Images.xcassets in Resources */,
 			);
@@ -446,7 +460,9 @@
 				D6EADF761A49646F00D46981 /* Pattern.m in Sources */,
 				D6422CED1A3990D4000D9759 /* RuntimeMsgForWarding.m in Sources */,
 				D6F225531A40138000E3FCB2 /* JKUpdateAlertView.m in Sources */,
+				D6EADF841A4A5A8400D46981 /* Mask.m in Sources */,
 				D6D943941A3AE19B00898FA3 /* RuntimeDynamicMethodResolutionAndDynamicLoading.m in Sources */,
+				D6EADF7C1A4A528F00D46981 /* Clipping.m in Sources */,
 				D6422CF01A399587000D9759 /* ClassSet.m in Sources */,
 				D6422CF61A3996D5000D9759 /* BaseViewController.m in Sources */,
 				D6F2254E1A400B0E00E3FCB2 /* TestCustomAlertViewController.m in Sources */,

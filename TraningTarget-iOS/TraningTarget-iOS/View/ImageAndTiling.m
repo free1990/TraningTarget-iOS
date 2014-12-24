@@ -14,6 +14,9 @@
 
 -(void)drawInContext:(CGContextRef)context{
     
+    CGContextTranslateCTM(context, 0.0, self.bounds.size.height);
+    CGContextScaleCTM(context, 1.0, -1.0);
+    
     CGRect imageRect;
     imageRect.origin = CGPointMake(100, 100);
     imageRect.size = CGSizeMake(40, 40);

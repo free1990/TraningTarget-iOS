@@ -33,17 +33,17 @@
 //    [self showEmptyDataViewAtPosition:self.view.center];
     
     [self showReloadButtonAtPosition:self.view.center];
-    [self addReloadButtonAction:@"test:"];
-    
-//    [self showHudInView:self.view hint:@"Test..."];
-//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-//        
-//        [self hideHud];
-//    });
+    [self addReloadButtonAction:@"test"];
     
 }
 
-- (void)test:(id)sender{
+- (void)test{
+    
+    [self showHudInView:self.view hint:@"Test..."];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+
+        [self hideHud];
+    });
     NSLog(@"--->reload");
 }
 

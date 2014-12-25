@@ -18,6 +18,7 @@
 static const char *kMGEmptyDataViewKey = "kMGEmptyDataViewKey";
 static const char *kMGReloadButtonViewKey = "kMGReloadButtonViewKey";
 
+//custom set && get method
 - (void)setEmptyDataView:(UIImageView *)emptyDataView {
     objc_setAssociatedObject(self, kMGEmptyDataViewKey, emptyDataView, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
@@ -80,7 +81,11 @@ static const char *kMGReloadButtonViewKey = "kMGReloadButtonViewKey";
     return reloadButton;
 }
 
+//control interface
 -(void)showEmptyDataViewAtPosition:(CGPoint)point{
+    
+    [self.reloadButton setHidden:YES];
+    
     [self.emptyDataView setHidden:NO];
     [self.emptyDataView bringSubviewToFront:self.view];
     self.emptyDataView.center = point;
@@ -91,6 +96,9 @@ static const char *kMGReloadButtonViewKey = "kMGReloadButtonViewKey";
 }
 
 -(void)showReloadButtonAtPosition:(CGPoint)point{
+    
+    [self.emptyDataView setHidden:YES];
+    
     [self.reloadButton setHidden:NO];
     [self.reloadButton bringSubviewToFront:self.view];
     self.reloadButton.center = point;

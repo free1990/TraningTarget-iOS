@@ -109,6 +109,24 @@
     //apply mask to image layer￼
     _blueLayerTouch.mask = maskLayer;
     
+//    CGAffineTransform transform = CGAffineTransformMakeRotation(M_PI_4);
+//    _blueLayerTouch.affineTransform = transform;
+//    
+//    CGAffineTransform transformTwo = CGAffineTransformIdentity; //scale by 50%
+//    transformTwo = CGAffineTransformScale(transform, 0.5, 0.5); //rotate by 30 degrees
+//    transformTwo = CGAffineTransformRotate(transform, M_PI / 180.0 * 30.0); //translate by 200 points
+//    _blueLayerTouch.affineTransform = transformTwo;
+    
+//    CATransform3D transform = CATransform3DMakeRotation(M_PI_4, 0, 1, 0);
+//    _blueLayerTouch.transform = transform;
+    
+    CATransform3D transform = CATransform3DIdentity;
+    //apply perspective
+    transform.m34 = - 1.0 / 500.0;
+    //rotate by 45 degrees along the Y axis
+    transform = CATransform3DRotate(transform, M_PI_4, 0, 1, 0);
+    //apply to layer
+    _blueLayerTouch.transform = transform;
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event

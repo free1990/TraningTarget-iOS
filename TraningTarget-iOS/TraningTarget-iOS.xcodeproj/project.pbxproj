@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CFEAB54B1A597D2B00696D42 /* CoreAnimationDemoThreeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFEAB54A1A597D2B00696D42 /* CoreAnimationDemoThreeViewController.m */; };
 		D616686C1A49038B0067C179 /* Line.m in Sources */ = {isa = PBXBuildFile; fileRef = D616686B1A49038B0067C179 /* Line.m */; };
 		D616686F1A490BCB0067C179 /* Arcs.m in Sources */ = {isa = PBXBuildFile; fileRef = D616686E1A490BCB0067C179 /* Arcs.m */; };
 		D61668751A493EC10067C179 /* RectView.m in Sources */ = {isa = PBXBuildFile; fileRef = D61668741A493EC10067C179 /* RectView.m */; };
@@ -67,6 +68,8 @@
 		32E9A4D9DB94E1EC8F2C4F93 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		5310E391BEB252286D0FDC14 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		9E51B3FDA7BC7E8AF676D062 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		CFEAB5491A597D2B00696D42 /* CoreAnimationDemoThreeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreAnimationDemoThreeViewController.h; sourceTree = "<group>"; };
+		CFEAB54A1A597D2B00696D42 /* CoreAnimationDemoThreeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreAnimationDemoThreeViewController.m; sourceTree = "<group>"; };
 		D616686A1A49038B0067C179 /* Line.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Line.h; sourceTree = "<group>"; };
 		D616686B1A49038B0067C179 /* Line.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Line.m; sourceTree = "<group>"; };
 		D616686D1A490BCB0067C179 /* Arcs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Arcs.h; sourceTree = "<group>"; };
@@ -282,6 +285,8 @@
 				D6C3BDF11A58D5B300E0D405 /* CoreAnimationDemoViewController.m */,
 				D6C3BDF51A591EE400E0D405 /* CoreAnimationDemoTwoViewController.h */,
 				D6C3BDF61A591EE400E0D405 /* CoreAnimationDemoTwoViewController.m */,
+				CFEAB5491A597D2B00696D42 /* CoreAnimationDemoThreeViewController.h */,
+				CFEAB54A1A597D2B00696D42 /* CoreAnimationDemoThreeViewController.m */,
 				D6EADF8C1A4AA45400D46981 /* CategoryViewController.h */,
 				D6EADF8D1A4AA45400D46981 /* CategoryViewController.m */,
 			);
@@ -492,6 +497,7 @@
 				D6A9E76D1A49021F001448C0 /* QuartzView.m in Sources */,
 				D616686C1A49038B0067C179 /* Line.m in Sources */,
 				D6EADF761A49646F00D46981 /* Pattern.m in Sources */,
+				CFEAB54B1A597D2B00696D42 /* CoreAnimationDemoThreeViewController.m in Sources */,
 				D6422CED1A3990D4000D9759 /* RuntimeMsgForWarding.m in Sources */,
 				D6F225531A40138000E3FCB2 /* JKUpdateAlertView.m in Sources */,
 				D6EADF841A4A5A8400D46981 /* Mask.m in Sources */,

@@ -30,6 +30,8 @@
 		D65686511A441BD400576E94 /* CoreGarphicsDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D65686501A441BD400576E94 /* CoreGarphicsDemoViewController.m */; };
 		D65AD0BF1A3EC6AA00D6E193 /* EmptyClass.m in Sources */ = {isa = PBXBuildFile; fileRef = D65AD0BE1A3EC6AA00D6E193 /* EmptyClass.m */; };
 		D6A9E76D1A49021F001448C0 /* QuartzView.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A9E76C1A49021F001448C0 /* QuartzView.m */; };
+		D6C3BDF21A58D5B300E0D405 /* CoreAnimationDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C3BDF11A58D5B300E0D405 /* CoreAnimationDemoViewController.m */; };
+		D6C3BDF41A58D60000E0D405 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6C3BDF31A58D60000E0D405 /* QuartzCore.framework */; };
 		D6D943891A3AB7C800898FA3 /* MsgForWardingDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D943881A3AB7C800898FA3 /* MsgForWardingDemo.m */; };
 		D6D943901A3AC7E900898FA3 /* RuntimePropertyAndFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D9438F1A3AC7E900898FA3 /* RuntimePropertyAndFunction.m */; };
 		D6D943941A3AE19B00898FA3 /* RuntimeDynamicMethodResolutionAndDynamicLoading.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D943931A3AE19B00898FA3 /* RuntimeDynamicMethodResolutionAndDynamicLoading.m */; };
@@ -108,6 +110,9 @@
 		D65AD0BE1A3EC6AA00D6E193 /* EmptyClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmptyClass.m; sourceTree = "<group>"; };
 		D6A9E76B1A49021F001448C0 /* QuartzView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuartzView.h; sourceTree = "<group>"; };
 		D6A9E76C1A49021F001448C0 /* QuartzView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuartzView.m; sourceTree = "<group>"; };
+		D6C3BDF01A58D5B300E0D405 /* CoreAnimationDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreAnimationDemoViewController.h; sourceTree = "<group>"; };
+		D6C3BDF11A58D5B300E0D405 /* CoreAnimationDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreAnimationDemoViewController.m; sourceTree = "<group>"; };
+		D6C3BDF31A58D60000E0D405 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		D6D943871A3AB7C800898FA3 /* MsgForWardingDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MsgForWardingDemo.h; sourceTree = "<group>"; };
 		D6D943881A3AB7C800898FA3 /* MsgForWardingDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MsgForWardingDemo.m; sourceTree = "<group>"; };
 		D6D9438E1A3AC7E900898FA3 /* RuntimePropertyAndFunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RuntimePropertyAndFunction.h; sourceTree = "<group>"; };
@@ -145,6 +150,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6C3BDF41A58D60000E0D405 /* QuartzCore.framework in Frameworks */,
 				F814BB409CFB202F26CDEBDD /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -171,6 +177,7 @@
 		CED1B52E55DE5C890D53F36C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D6C3BDF31A58D60000E0D405 /* QuartzCore.framework */,
 				32E9A4D9DB94E1EC8F2C4F93 /* libPods.a */,
 			);
 			name = Frameworks;
@@ -265,6 +272,8 @@
 				D63ADF381A41879A009CA874 /* TestArrayOrderViewController.m */,
 				D656864F1A441BD400576E94 /* CoreGarphicsDemoViewController.h */,
 				D65686501A441BD400576E94 /* CoreGarphicsDemoViewController.m */,
+				D6C3BDF01A58D5B300E0D405 /* CoreAnimationDemoViewController.h */,
+				D6C3BDF11A58D5B300E0D405 /* CoreAnimationDemoViewController.m */,
 				D6EADF8C1A4AA45400D46981 /* CategoryViewController.h */,
 				D6EADF8D1A4AA45400D46981 /* CategoryViewController.m */,
 			);
@@ -463,6 +472,7 @@
 				D6EADF711A4952AB00D46981 /* ImageAndTiling.m in Sources */,
 				D63ADF1D1A413007009CA874 /* RuntimeDemoOneViewController.m in Sources */,
 				D6F2255C1A41174000E3FCB2 /* TestRemoveViewTestController.m in Sources */,
+				D6C3BDF21A58D5B300E0D405 /* CoreAnimationDemoViewController.m in Sources */,
 				D6422CCB1A397E85000D9759 /* RootViewController.m in Sources */,
 				D61668781A49459F0067C179 /* Blend.m in Sources */,
 				D65AD0BF1A3EC6AA00D6E193 /* EmptyClass.m in Sources */,

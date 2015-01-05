@@ -41,6 +41,7 @@
 		D6D0EACD1A5A64FE005C3A5D /* door.png in Resources */ = {isa = PBXBuildFile; fileRef = D6D0EACC1A5A64FE005C3A5D /* door.png */; };
 		D6D0EAD01A5A7386005C3A5D /* CoreAnimationCAMediaTimingFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D0EACF1A5A7386005C3A5D /* CoreAnimationCAMediaTimingFunction.m */; };
 		D6D0EAD21A5A7823005C3A5D /* qq.png in Resources */ = {isa = PBXBuildFile; fileRef = D6D0EAD11A5A7823005C3A5D /* qq.png */; };
+		D6D0EAD51A5A9533005C3A5D /* CoreAnimationCANiubilty.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D0EAD41A5A9533005C3A5D /* CoreAnimationCANiubilty.m */; };
 		D6D943891A3AB7C800898FA3 /* MsgForWardingDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D943881A3AB7C800898FA3 /* MsgForWardingDemo.m */; };
 		D6D943901A3AC7E900898FA3 /* RuntimePropertyAndFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D9438F1A3AC7E900898FA3 /* RuntimePropertyAndFunction.m */; };
 		D6D943941A3AE19B00898FA3 /* RuntimeDynamicMethodResolutionAndDynamicLoading.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D943931A3AE19B00898FA3 /* RuntimeDynamicMethodResolutionAndDynamicLoading.m */; };
@@ -136,6 +137,8 @@
 		D6D0EACE1A5A7386005C3A5D /* CoreAnimationCAMediaTimingFunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreAnimationCAMediaTimingFunction.h; sourceTree = "<group>"; };
 		D6D0EACF1A5A7386005C3A5D /* CoreAnimationCAMediaTimingFunction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreAnimationCAMediaTimingFunction.m; sourceTree = "<group>"; };
 		D6D0EAD11A5A7823005C3A5D /* qq.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = qq.png; sourceTree = "<group>"; };
+		D6D0EAD31A5A9533005C3A5D /* CoreAnimationCANiubilty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreAnimationCANiubilty.h; sourceTree = "<group>"; };
+		D6D0EAD41A5A9533005C3A5D /* CoreAnimationCANiubilty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreAnimationCANiubilty.m; sourceTree = "<group>"; };
 		D6D943871A3AB7C800898FA3 /* MsgForWardingDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MsgForWardingDemo.h; sourceTree = "<group>"; };
 		D6D943881A3AB7C800898FA3 /* MsgForWardingDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MsgForWardingDemo.m; sourceTree = "<group>"; };
 		D6D9438E1A3AC7E900898FA3 /* RuntimePropertyAndFunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RuntimePropertyAndFunction.h; sourceTree = "<group>"; };
@@ -311,6 +314,8 @@
 				D6D0EACA1A5A6264005C3A5D /* CoreAnimationCAMediaTiming.m */,
 				D6D0EACE1A5A7386005C3A5D /* CoreAnimationCAMediaTimingFunction.h */,
 				D6D0EACF1A5A7386005C3A5D /* CoreAnimationCAMediaTimingFunction.m */,
+				D6D0EAD31A5A9533005C3A5D /* CoreAnimationCANiubilty.h */,
+				D6D0EAD41A5A9533005C3A5D /* CoreAnimationCANiubilty.m */,
 				D6EADF8C1A4AA45400D46981 /* CategoryViewController.h */,
 				D6EADF8D1A4AA45400D46981 /* CategoryViewController.m */,
 			);
@@ -527,6 +532,7 @@
 				D6EADF761A49646F00D46981 /* Pattern.m in Sources */,
 				CFEAB54B1A597D2B00696D42 /* CoreAnimationImplicitCA.m in Sources */,
 				D6422CED1A3990D4000D9759 /* RuntimeMsgForWarding.m in Sources */,
+				D6D0EAD51A5A9533005C3A5D /* CoreAnimationCANiubilty.m in Sources */,
 				D6F225531A40138000E3FCB2 /* JKUpdateAlertView.m in Sources */,
 				D6EADF841A4A5A8400D46981 /* Mask.m in Sources */,
 				D6D0EACB1A5A6264005C3A5D /* CoreAnimationCAMediaTiming.m in Sources */,

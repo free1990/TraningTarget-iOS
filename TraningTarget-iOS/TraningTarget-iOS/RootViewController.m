@@ -19,6 +19,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.title = @"Tree New bee";
+    
     _myTableView = [[UITableView alloc] initWithFrame:self.view.frame style:UITableViewStylePlain];
     
     _myTableView.delegate = self;

@@ -39,6 +39,8 @@
 		D6D0EAC81A5A4477005C3A5D /* car.png in Resources */ = {isa = PBXBuildFile; fileRef = D6D0EAC71A5A4477005C3A5D /* car.png */; };
 		D6D0EACB1A5A6264005C3A5D /* CoreAnimationCAMediaTiming.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D0EACA1A5A6264005C3A5D /* CoreAnimationCAMediaTiming.m */; };
 		D6D0EACD1A5A64FE005C3A5D /* door.png in Resources */ = {isa = PBXBuildFile; fileRef = D6D0EACC1A5A64FE005C3A5D /* door.png */; };
+		D6D0EAD01A5A7386005C3A5D /* CoreAnimationCAMediaTimingFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D0EACF1A5A7386005C3A5D /* CoreAnimationCAMediaTimingFunction.m */; };
+		D6D0EAD21A5A7823005C3A5D /* qq.png in Resources */ = {isa = PBXBuildFile; fileRef = D6D0EAD11A5A7823005C3A5D /* qq.png */; };
 		D6D943891A3AB7C800898FA3 /* MsgForWardingDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D943881A3AB7C800898FA3 /* MsgForWardingDemo.m */; };
 		D6D943901A3AC7E900898FA3 /* RuntimePropertyAndFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D9438F1A3AC7E900898FA3 /* RuntimePropertyAndFunction.m */; };
 		D6D943941A3AE19B00898FA3 /* RuntimeDynamicMethodResolutionAndDynamicLoading.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D943931A3AE19B00898FA3 /* RuntimeDynamicMethodResolutionAndDynamicLoading.m */; };
@@ -131,6 +133,9 @@
 		D6D0EAC91A5A6264005C3A5D /* CoreAnimationCAMediaTiming.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreAnimationCAMediaTiming.h; sourceTree = "<group>"; };
 		D6D0EACA1A5A6264005C3A5D /* CoreAnimationCAMediaTiming.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreAnimationCAMediaTiming.m; sourceTree = "<group>"; };
 		D6D0EACC1A5A64FE005C3A5D /* door.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = door.png; sourceTree = "<group>"; };
+		D6D0EACE1A5A7386005C3A5D /* CoreAnimationCAMediaTimingFunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreAnimationCAMediaTimingFunction.h; sourceTree = "<group>"; };
+		D6D0EACF1A5A7386005C3A5D /* CoreAnimationCAMediaTimingFunction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreAnimationCAMediaTimingFunction.m; sourceTree = "<group>"; };
+		D6D0EAD11A5A7823005C3A5D /* qq.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = qq.png; sourceTree = "<group>"; };
 		D6D943871A3AB7C800898FA3 /* MsgForWardingDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MsgForWardingDemo.h; sourceTree = "<group>"; };
 		D6D943881A3AB7C800898FA3 /* MsgForWardingDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MsgForWardingDemo.m; sourceTree = "<group>"; };
 		D6D9438E1A3AC7E900898FA3 /* RuntimePropertyAndFunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RuntimePropertyAndFunction.h; sourceTree = "<group>"; };
@@ -246,6 +251,7 @@
 				D6EADF7D1A4A530400D46981 /* Ship.png */,
 				D6C3BDF81A5940B500E0D405 /* fire.png */,
 				D6D0EAC71A5A4477005C3A5D /* car.png */,
+				D6D0EAD11A5A7823005C3A5D /* qq.png */,
 				D6D0EACC1A5A64FE005C3A5D /* door.png */,
 			);
 			name = "Supporting Files";
@@ -303,6 +309,8 @@
 				D6D0EAC51A5A2D6F005C3A5D /* CoreAnimationExplicitCA.m */,
 				D6D0EAC91A5A6264005C3A5D /* CoreAnimationCAMediaTiming.h */,
 				D6D0EACA1A5A6264005C3A5D /* CoreAnimationCAMediaTiming.m */,
+				D6D0EACE1A5A7386005C3A5D /* CoreAnimationCAMediaTimingFunction.h */,
+				D6D0EACF1A5A7386005C3A5D /* CoreAnimationCAMediaTimingFunction.m */,
 				D6EADF8C1A4AA45400D46981 /* CategoryViewController.h */,
 				D6EADF8D1A4AA45400D46981 /* CategoryViewController.m */,
 			);
@@ -443,6 +451,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6D0EAD21A5A7823005C3A5D /* qq.png in Resources */,
 				D6D0EAC81A5A4477005C3A5D /* car.png in Resources */,
 				D6EADF731A49551000D46981 /* demo.png in Resources */,
 				D6422CCE1A397E85000D9759 /* Main.storyboard in Resources */,
@@ -503,6 +512,7 @@
 			files = (
 				D6EADF711A4952AB00D46981 /* ImageAndTiling.m in Sources */,
 				D63ADF1D1A413007009CA874 /* RuntimeDemoOneViewController.m in Sources */,
+				D6D0EAD01A5A7386005C3A5D /* CoreAnimationCAMediaTimingFunction.m in Sources */,
 				D6F2255C1A41174000E3FCB2 /* TestRemoveViewTestController.m in Sources */,
 				D6C3BDF21A58D5B300E0D405 /* CoreAnimationDemoViewController.m in Sources */,
 				D6422CCB1A397E85000D9759 /* RootViewController.m in Sources */,

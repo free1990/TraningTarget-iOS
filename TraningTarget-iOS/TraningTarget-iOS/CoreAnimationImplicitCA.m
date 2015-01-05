@@ -6,13 +6,13 @@
 //  Copyright (c) 2015年 WorkMac. All rights reserved.
 //
 
-#import "CoreAnimationDemoThreeViewController.h"
+#import "CoreAnimationImplicitCA.h"
 
-@interface CoreAnimationDemoThreeViewController ()
+@interface CoreAnimationImplicitCA ()
 
 @end
 
-@implementation CoreAnimationDemoThreeViewController
+@implementation CoreAnimationImplicitCA
 
 +(void)load
 {
@@ -21,7 +21,7 @@
 
 - (id)init{
     if (self = [super init]) {
-        self.className   = @"Core Animation Demo Three";
+        self.className   = @"隐式 动画";
     }
     return self;
 }

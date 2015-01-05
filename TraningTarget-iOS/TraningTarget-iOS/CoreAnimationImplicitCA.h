@@ -10,7 +10,7 @@
 #import "BaseViewController.h"
 #import <QuartzCore/QuartzCore.h>
 
-@interface CoreAnimationDemoThreeViewController : BaseViewController{
+@interface CoreAnimationImplicitCA : BaseViewController{
     CALayer *_colorLayer;
 }
 

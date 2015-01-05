@@ -14,4 +14,6 @@
     CALayer *_colorLayer;
 }
 
+@property (nonatomic, strong) UIView *layerView;
+@property (nonatomic, strong) CALayer *colorLayer;
 @end

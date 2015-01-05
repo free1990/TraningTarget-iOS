@@ -99,7 +99,6 @@
     [self animate];
 }
 
-
 - (void)animate
 {
     //reset ball to top of screen

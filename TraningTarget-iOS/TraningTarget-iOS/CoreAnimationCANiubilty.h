@@ -7,7 +7,14 @@
 //
 
 #import "BaseViewController.h"
+#import "CAShapeLayerDrawing.h"
+#import "DrawingView.h"
+#import <QuartzCore/QuartzCore.h>
 
 @interface CoreAnimationCANiubilty : BaseViewController
+
+@property (nonatomic, strong) CAShapeLayerDrawing *shapeDrawing;
+
+@property (nonatomic, strong) DrawingView *drawingView;
 
 @end

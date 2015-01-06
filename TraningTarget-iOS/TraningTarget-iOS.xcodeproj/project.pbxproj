@@ -42,6 +42,8 @@
 		D6D0EAD01A5A7386005C3A5D /* CoreAnimationCAMediaTimingFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D0EACF1A5A7386005C3A5D /* CoreAnimationCAMediaTimingFunction.m */; };
 		D6D0EAD21A5A7823005C3A5D /* qq.png in Resources */ = {isa = PBXBuildFile; fileRef = D6D0EAD11A5A7823005C3A5D /* qq.png */; };
 		D6D0EAD51A5A9533005C3A5D /* CoreAnimationCANiubilty.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D0EAD41A5A9533005C3A5D /* CoreAnimationCANiubilty.m */; };
+		D6D0EAD81A5B84F8005C3A5D /* CAShapeLayerDrawing.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D0EAD71A5B84F8005C3A5D /* CAShapeLayerDrawing.m */; };
+		D6D0EADB1A5B896F005C3A5D /* DrawingView.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D0EADA1A5B896F005C3A5D /* DrawingView.m */; };
 		D6D943891A3AB7C800898FA3 /* MsgForWardingDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D943881A3AB7C800898FA3 /* MsgForWardingDemo.m */; };
 		D6D943901A3AC7E900898FA3 /* RuntimePropertyAndFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D9438F1A3AC7E900898FA3 /* RuntimePropertyAndFunction.m */; };
 		D6D943941A3AE19B00898FA3 /* RuntimeDynamicMethodResolutionAndDynamicLoading.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D943931A3AE19B00898FA3 /* RuntimeDynamicMethodResolutionAndDynamicLoading.m */; };
@@ -139,6 +141,10 @@
 		D6D0EAD11A5A7823005C3A5D /* qq.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = qq.png; sourceTree = "<group>"; };
 		D6D0EAD31A5A9533005C3A5D /* CoreAnimationCANiubilty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreAnimationCANiubilty.h; sourceTree = "<group>"; };
 		D6D0EAD41A5A9533005C3A5D /* CoreAnimationCANiubilty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreAnimationCANiubilty.m; sourceTree = "<group>"; };
+		D6D0EAD61A5B84F8005C3A5D /* CAShapeLayerDrawing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAShapeLayerDrawing.h; sourceTree = "<group>"; };
+		D6D0EAD71A5B84F8005C3A5D /* CAShapeLayerDrawing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAShapeLayerDrawing.m; sourceTree = "<group>"; };
+		D6D0EAD91A5B896F005C3A5D /* DrawingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawingView.h; sourceTree = "<group>"; };
+		D6D0EADA1A5B896F005C3A5D /* DrawingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawingView.m; sourceTree = "<group>"; };
 		D6D943871A3AB7C800898FA3 /* MsgForWardingDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MsgForWardingDemo.h; sourceTree = "<group>"; };
 		D6D943881A3AB7C800898FA3 /* MsgForWardingDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MsgForWardingDemo.m; sourceTree = "<group>"; };
 		D6D9438E1A3AC7E900898FA3 /* RuntimePropertyAndFunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RuntimePropertyAndFunction.h; sourceTree = "<group>"; };
@@ -370,6 +376,10 @@
 				D6EADF7B1A4A528F00D46981 /* Clipping.m */,
 				D6EADF821A4A5A8400D46981 /* Mask.h */,
 				D6EADF831A4A5A8400D46981 /* Mask.m */,
+				D6D0EAD61A5B84F8005C3A5D /* CAShapeLayerDrawing.h */,
+				D6D0EAD71A5B84F8005C3A5D /* CAShapeLayerDrawing.m */,
+				D6D0EAD91A5B896F005C3A5D /* DrawingView.h */,
+				D6D0EADA1A5B896F005C3A5D /* DrawingView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -544,6 +554,7 @@
 				D6422CF61A3996D5000D9759 /* BaseViewController.m in Sources */,
 				D6F2254E1A400B0E00E3FCB2 /* TestCustomAlertViewController.m in Sources */,
 				D6EADF791A496B5200D46981 /* Gradient.m in Sources */,
+				D6D0EAD81A5B84F8005C3A5D /* CAShapeLayerDrawing.m in Sources */,
 				D63ADF201A415B74009CA874 /* RuntimeDemoTwoViewController.m in Sources */,
 				D63ADF391A41879A009CA874 /* TestArrayOrderViewController.m in Sources */,
 				D6EADF8E1A4AA45400D46981 /* CategoryViewController.m in Sources */,
@@ -555,6 +566,7 @@
 				D6D0EAC61A5A2D6F005C3A5D /* CoreAnimationExplicitCA.m in Sources */,
 				D65686511A441BD400576E94 /* CoreGarphicsDemoViewController.m in Sources */,
 				D6D943901A3AC7E900898FA3 /* RuntimePropertyAndFunction.m in Sources */,
+				D6D0EADB1A5B896F005C3A5D /* DrawingView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

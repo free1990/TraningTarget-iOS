@@ -94,10 +94,12 @@
     [self.view addSubview:self.scrollView];
     
     self.scrollView.contentSize = CGSizeMake((WIDTH - 1)*SPACING, (HEIGHT - 1)*SPACING);
+    
     //set up perspective transform
     CATransform3D transform = CATransform3DIdentity;
     transform.m34 = -1.0 / CAMERA_DISTANCE;
     self.scrollView.layer.sublayerTransform = transform;
+    
     //create layers
     for (int z = DEPTH - 1; z >= 0; z--) {
         for (int y = 0; y < HEIGHT; y++) {

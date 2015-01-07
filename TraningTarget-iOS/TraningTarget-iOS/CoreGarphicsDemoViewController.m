@@ -67,13 +67,14 @@
 //    Gradient *gradient = [[Gradient alloc] initWithFrame:self.view.frame];
 //    [self.view addSubview:gradient];
     
-//    //ClippingView
-//    Clipping *clip = [[Clipping alloc] initWithFrame:self.view.frame];
-//    [self.view addSubview:clip];
+    //ClippingView
+    Clipping *clip = [[Clipping alloc] initWithFrame:self.view.frame];
+    clip.backgroundColor = [UIColor whiteColor];
+    [self.view addSubview:clip];
     
     //mask
-    Mask *mask = [[Mask alloc] initWithFrame:self.view.frame];
-    [self.view addSubview:mask];
+//    Mask *mask = [[Mask alloc] initWithFrame:self.view.frame];
+//    [self.view addSubview:mask];
     
 }
 

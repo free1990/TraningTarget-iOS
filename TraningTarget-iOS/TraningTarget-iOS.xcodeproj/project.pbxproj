@@ -30,6 +30,7 @@
 		D6422CF91A399798000D9759 /* ClassItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D6422CF81A399798000D9759 /* ClassItem.m */; };
 		D65686511A441BD400576E94 /* CoreGarphicsDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D65686501A441BD400576E94 /* CoreGarphicsDemoViewController.m */; };
 		D65AD0BF1A3EC6AA00D6E193 /* EmptyClass.m in Sources */ = {isa = PBXBuildFile; fileRef = D65AD0BE1A3EC6AA00D6E193 /* EmptyClass.m */; };
+		D68411861A5CCA560078A807 /* test.png in Resources */ = {isa = PBXBuildFile; fileRef = D68411851A5CCA560078A807 /* test.png */; };
 		D6A9E76D1A49021F001448C0 /* QuartzView.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A9E76C1A49021F001448C0 /* QuartzView.m */; };
 		D6C3BDF21A58D5B300E0D405 /* CoreAnimationDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C3BDF11A58D5B300E0D405 /* CoreAnimationDemoViewController.m */; };
 		D6C3BDF41A58D60000E0D405 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6C3BDF31A58D60000E0D405 /* QuartzCore.framework */; };
@@ -122,6 +123,7 @@
 		D65686501A441BD400576E94 /* CoreGarphicsDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreGarphicsDemoViewController.m; sourceTree = "<group>"; };
 		D65AD0BD1A3EC6AA00D6E193 /* EmptyClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmptyClass.h; sourceTree = "<group>"; };
 		D65AD0BE1A3EC6AA00D6E193 /* EmptyClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmptyClass.m; sourceTree = "<group>"; };
+		D68411851A5CCA560078A807 /* test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test.png; sourceTree = "<group>"; };
 		D6A9E76B1A49021F001448C0 /* QuartzView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuartzView.h; sourceTree = "<group>"; };
 		D6A9E76C1A49021F001448C0 /* QuartzView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuartzView.m; sourceTree = "<group>"; };
 		D6C3BDF01A58D5B300E0D405 /* CoreAnimationDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreAnimationDemoViewController.h; sourceTree = "<group>"; };
@@ -256,6 +258,7 @@
 			children = (
 				D6422CC31A397E85000D9759 /* Info.plist */,
 				D6422CC41A397E85000D9759 /* main.m */,
+				D68411851A5CCA560078A807 /* test.png */,
 				D6EADF721A49551000D46981 /* demo.png */,
 				D6EADF7D1A4A530400D46981 /* Ship.png */,
 				D6C3BDF81A5940B500E0D405 /* fire.png */,
@@ -467,6 +470,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D6D0EAD21A5A7823005C3A5D /* qq.png in Resources */,
+				D68411861A5CCA560078A807 /* test.png in Resources */,
 				D6D0EAC81A5A4477005C3A5D /* car.png in Resources */,
 				D6EADF731A49551000D46981 /* demo.png in Resources */,
 				D6422CCE1A397E85000D9759 /* Main.storyboard in Resources */,

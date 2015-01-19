@@ -61,6 +61,7 @@
 		D6F2254E1A400B0E00E3FCB2 /* TestCustomAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6F2254D1A400B0E00E3FCB2 /* TestCustomAlertViewController.m */; };
 		D6F225531A40138000E3FCB2 /* JKUpdateAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = D6F225521A40138000E3FCB2 /* JKUpdateAlertView.m */; };
 		D6F2255C1A41174000E3FCB2 /* TestRemoveViewTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6F2255B1A41174000E3FCB2 /* TestRemoveViewTestController.m */; };
+		D6F307A31A6CDE0C008546F2 /* UIImage+UIImageExtras.m in Sources */ = {isa = PBXBuildFile; fileRef = D6F307A21A6CDE0C008546F2 /* UIImage+UIImageExtras.m */; };
 		F814BB409CFB202F26CDEBDD /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 32E9A4D9DB94E1EC8F2C4F93 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -177,6 +178,8 @@
 		D6F225521A40138000E3FCB2 /* JKUpdateAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKUpdateAlertView.m; sourceTree = "<group>"; };
 		D6F2255A1A41174000E3FCB2 /* TestRemoveViewTestController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestRemoveViewTestController.h; sourceTree = "<group>"; };
 		D6F2255B1A41174000E3FCB2 /* TestRemoveViewTestController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestRemoveViewTestController.m; sourceTree = "<group>"; };
+		D6F307A11A6CDE0C008546F2 /* UIImage+UIImageExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+UIImageExtras.h"; sourceTree = "<group>"; };
+		D6F307A21A6CDE0C008546F2 /* UIImage+UIImageExtras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+UIImageExtras.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -350,6 +353,8 @@
 				D6EADF871A4AA30300D46981 /* UIViewController+AbnormalDisplay.m */,
 				D6EADF891A4AA42500D46981 /* UIViewController+HUD.h */,
 				D6EADF8A1A4AA42600D46981 /* UIViewController+HUD.m */,
+				D6F307A11A6CDE0C008546F2 /* UIImage+UIImageExtras.h */,
+				D6F307A21A6CDE0C008546F2 /* UIImage+UIImageExtras.m */,
 			);
 			name = Handle;
 			sourceTree = "<group>";
@@ -563,6 +568,7 @@
 				D63ADF391A41879A009CA874 /* TestArrayOrderViewController.m in Sources */,
 				D6EADF8E1A4AA45400D46981 /* CategoryViewController.m in Sources */,
 				D6D943891A3AB7C800898FA3 /* MsgForWardingDemo.m in Sources */,
+				D6F307A31A6CDE0C008546F2 /* UIImage+UIImageExtras.m in Sources */,
 				D6EADF8B1A4AA42600D46981 /* UIViewController+HUD.m in Sources */,
 				D63ADF261A416EF9009CA874 /* NSObject+AutoEncodeDecode.m in Sources */,
 				D6422CC51A397E85000D9759 /* main.m in Sources */,

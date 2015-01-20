@@ -73,6 +73,7 @@
  ## NSCoding & NSCopying Conformance
 
  `AFURLConnectionOperation` conforms to the `NSCoding` and `NSCopying` protocols, allowing operations to be archived to disk, and copied in memory, respectively. However, because of the intrinsic limitations of capturing the exact state of an operation at a particular moment, there are some important caveats to keep in mind:
+ 
 
  ### NSCoding Caveats
 

@@ -151,12 +151,15 @@ int cfunction(id self, SEL _cmd, NSString *str) {
      */
     
     TestClass *instance = [[TestClass alloc] init];
-    //    方法添加
+    
+    //方法添加
     class_addMethod([TestClass class],@selector(ocMethod:), (IMP)cfunction,"i@:@");
     
     if ([instance respondsToSelector:@selector(ocMethod:)]) {
+        
         NSLog(@"Yes, instance respondsToSelector:@selector(ocMethod:)");
-    } else
+    }
+    else
     {
         NSLog(@"Sorry");
     }

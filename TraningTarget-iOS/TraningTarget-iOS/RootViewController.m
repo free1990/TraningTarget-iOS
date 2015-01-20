@@ -10,6 +10,9 @@
 #import "RuntimeMsgForWarding.h"
 #import "ClassSet.h"
 
+static int allocCount = 0;
+
+
 @interface RootViewController ()
 
 @end
@@ -80,7 +83,11 @@
     
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentiferId];
+        
+        allocCount ++ ;
     };
+    
+    NSLog(@"---------->   %d---- visiable = %ld", allocCount, [[tableView visibleCells] count]);
     
     ClassItem *item = [[ClassSet sharedClassGallery] objectAtIndex:indexPath.row];
     cell.textLabel.text = item.classTitleName;

@@ -68,6 +68,14 @@ static int allocCount = 0;
     
     [self.view addSubview:_myTableView];
     
+    
+    NSString *temp = @"33.41";
+    //float 转成double可以避免运算的时候的干扰
+    NSLog(@"----------> %f", [temp doubleValue]);
+    NSLog(@"----------> %f", [temp floatValue]*1000);
+    NSLog(@"----------> %f", ([temp floatValue]*1000)/10);
+    NSLog(@"----------> %f", (([temp floatValue]*1000)/10)/100);
+    
 }
 
 #pragma mark - Tableview datasource & delegates
@@ -86,8 +94,6 @@ static int allocCount = 0;
         
         allocCount ++ ;
     };
-    
-    NSLog(@"---------->   %d---- visiable = %ld", allocCount, [[tableView visibleCells] count]);
     
     ClassItem *item = [[ClassSet sharedClassGallery] objectAtIndex:indexPath.row];
     cell.textLabel.text = item.classTitleName;

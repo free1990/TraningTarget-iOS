@@ -96,6 +96,7 @@
 /**
  The run loop modes in which the operation will run on the network thread. By default, this is a single-member set containing `NSRunLoopCommonModes`.
  */
+//runloop模式作用
 @property (nonatomic, strong) NSSet *runLoopModes;
 
 ///-----------------------------------------

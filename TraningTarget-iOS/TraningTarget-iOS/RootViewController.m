@@ -69,13 +69,49 @@ static int allocCount = 0;
     [self.view addSubview:_myTableView];
     
     
-    NSString *temp = @"33.41";
-    //float 转成double可以避免运算的时候的干扰
-    NSLog(@"----------> %f", [temp doubleValue]);
-    NSLog(@"----------> %f", [temp floatValue]*1000);
-    NSLog(@"----------> %f", ([temp floatValue]*1000)/10);
-    NSLog(@"----------> %f", (([temp floatValue]*1000)/10)/100);
+//    NSString *temp = @"33.41";
+//    //float 转成double可以避免运算的时候的干扰
+//    NSLog(@"----------> %f", [temp doubleValue]);
+//    NSLog(@"----------> %f", [temp floatValue]*1000);
+//    NSLog(@"----------> %f", ([temp floatValue]*1000)/10);
+//    NSLog(@"----------> %f", (([temp floatValue]*1000)/10)/100);
     
+    //线程测试
+    NSThread *testThread = [[NSThread alloc] initWithTarget:self selector:@selector(testThread) object:nil];
+    [testThread start];
+    
+    
+}
+
+- (void)testThread
+{
+    @autoreleasepool {
+        
+        [[NSThread currentThread] setName:@"AFNetworking"];
+        
+        NSLog(@"线程开始了, happy！");
+        
+        if ([NSThread isMainThread]) {
+            NSLog(@"我是主线程");
+        }else{
+            NSLog(@"我不是主线程，我叫%@", [NSThread currentThread].name);
+        }
+        
+        
+        NSRunLoop *runLoop = [NSRunLoop currentRunLoop];
+        
+        if (runLoop == [NSRunLoop mainRunLoop]) {
+            NSLog(@"我是主loop");
+        }else{
+            NSLog(@"我是子loop");
+        }
+        
+        [runLoop addPort:[NSMachPort port] forMode:NSDefaultRunLoopMode];
+        
+        NSLog(@"Port----> %@", [NSMachPort port]);
+        
+        [runLoop run];
+    }
 }
 
 #pragma mark - Tableview datasource & delegates

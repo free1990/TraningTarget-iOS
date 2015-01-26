@@ -66,7 +66,7 @@ typedef NS_ENUM(NSUInteger, AFHTTPRequestQueryStringSerializationStyle) {
 @interface AFHTTPRequestSerializer : NSObject <AFURLRequestSerialization>
 
 /**
- The string encoding used to serialize parameters. `NSUTF8StringEncoding` by default.
+ The string encoding used to serialize parameters. `    ` by default.
  */
 @property (nonatomic, assign) NSStringEncoding stringEncoding;
 

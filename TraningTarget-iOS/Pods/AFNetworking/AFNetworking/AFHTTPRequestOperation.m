@@ -139,7 +139,7 @@ static dispatch_group_t http_request_operation_completion_group() {
                     }
                 }
             }
-
+            
             if (self.completionGroup) {
                 dispatch_group_leave(self.completionGroup);
             }
@@ -159,7 +159,7 @@ static dispatch_group_t http_request_operation_completion_group() {
     } else {
         offset = [(NSData *)[self.outputStream propertyForKey:NSStreamDataWrittenToMemoryStreamKey] length];
     }
-
+    
     NSMutableURLRequest *mutableURLRequest = [self.request mutableCopy];
     if ([self.response respondsToSelector:@selector(allHeaderFields)] && [[self.response allHeaderFields] valueForKey:@"ETag"]) {
         [mutableURLRequest setValue:[[self.response allHeaderFields] valueForKey:@"ETag"] forHTTPHeaderField:@"If-Range"];

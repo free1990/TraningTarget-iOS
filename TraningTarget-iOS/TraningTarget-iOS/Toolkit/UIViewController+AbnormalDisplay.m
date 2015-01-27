@@ -1,0 +1,162 @@
+//
+//  Teacher
+//  UIViewController+AbnormalDisplay.m
+//
+//  Created by John on 14-12-23.
+//  Copyright (c) 2014年 FClassroom. All rights reserved.
+//
+
+#import "UIViewController+AbnormalDisplay.h"
+#import <objc/runtime.h>
+#import "Config.h"
+#import "Macros.h"
+
+@implementation UIViewController (AbnormalDisplay)
+
+static const char *kMGEmptyDataViewKey = "kMGEmptyDataViewKey";
+static const char *kMGReloadButtonViewKey = "kMGReloadButtonViewKey";
+static const char *kMGTextTipViewKey = "kMGTextTipViewKey";
+
+//custom set && get method
+- (void)setEmptyDataView:(UIImageView *)emptyDataView {
+    objc_setAssociatedObject(self, kMGEmptyDataViewKey, emptyDataView, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
+- (UIImageView *)emptyDataView {
+    
+    UIImageView *emptyDataView = objc_getAssociatedObject(self, kMGEmptyDataViewKey);
+    
+    if (!emptyDataView) {
+        
+        UIImage *myImage = [UIImage imageNamed:@"no_result_common"];
+        self.emptyDataView = [[UIImageView alloc] initWithImage:myImage];
+        self.emptyDataView.center = WinCenter;
+        self.emptyDataView.backgroundColor = [UIColor clearColor];
+        self.emptyDataView.contentMode = UIViewContentModeCenter;
+        [self.emptyDataView setHidden:YES];
+        [self.view addSubview:self.emptyDataView];
+        
+        [self setEmptyDataView:self.emptyDataView];
+        [self.view addSubview:emptyDataView];
+        
+        emptyDataView = self.emptyDataView;
+    }
+    
+    return emptyDataView;
+}
+
+- (void)setReloadButton:(UIButton *)reloadButton {
+    objc_setAssociatedObject(self, kMGReloadButtonViewKey, reloadButton, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
+- (UIButton *)reloadButton {
+    
+    UIButton *reloadButton = objc_getAssociatedObject(self, kMGReloadButtonViewKey);
+    
+    if (!reloadButton) {
+        
+        self.reloadButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        
+        [self.reloadButton setTitle:NSLocalizedString(@"重新加载", nil)
+                        forState:UIControlStateNormal];
+        
+        self.reloadButton.titleLabel.font = [UIFont systemFontOfSize:13];
+        self.reloadButton.layer.cornerRadius = 2.0f;
+        self.reloadButton.layer.borderWidth = 0.5f;
+        self.reloadButton.frame = CGRectMake(0, 0, 107, 41);
+        self.reloadButton.center = WinCenter;
+        self.reloadButton.layer.borderColor = RGBA_COLOR(0x89, 0x89, 0x89, 0xFF).CGColor;
+        [self.reloadButton setTitleColor:RGBA_COLOR(0x8E, 0x8E, 0x8E, 0xFF) forState:UIControlStateNormal];
+        self.reloadButton.titleLabel.font = [UIFont systemFontOfSize:13];
+        self.reloadButton.backgroundColor = [UIColor whiteColor];
+        
+        [self.reloadButton setHidden:YES];
+        [self.view addSubview:self.reloadButton];
+        
+        reloadButton = self.reloadButton;
+        
+        [self setReloadButton:self.reloadButton];
+    }
+    return reloadButton;
+}
+
+- (void)setTextTip:(UILabel *)textTip {
+    objc_setAssociatedObject(self, kMGTextTipViewKey, textTip, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
+- (UILabel *)textTip {
+    
+    UILabel *textTip = objc_getAssociatedObject(self, kMGTextTipViewKey);
+    
+    if (!textTip) {
+        
+        self.textTip = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.view.width, 64)];
+        self.textTip.center = CGPointMake(self.view.width*3/2, (self.view.height)/2 - 64);
+        self.textTip.textAlignment = NSTextAlignmentCenter;
+        self.textTip.text = NSLocalizedString(@"暂无考试统计信息", nil);
+        self.textTip.font = [UIFont systemFontOfSize:16];
+        self.textTip.textColor = RGBA_COLOR(0xCD, 0xD5, 0xDD, 0xFF);
+        self.textTip.backgroundColor = [UIColor whiteColor];
+        [self.view addSubview:self.textTip];
+
+        [self.textTip setHidden:YES];
+        
+        [self.view addSubview:self.textTip];
+        
+        textTip = self.textTip;
+        
+        [self setTextTip:self.textTip];
+    }
+    return textTip;
+}
+
+//imageview tip
+-(void)showEmptyDataViewAtPosition:(CGPoint)point{
+    
+    [self.reloadButton setHidden:YES];
+    
+    [self.emptyDataView setHidden:NO];
+    [self.emptyDataView bringSubviewToFront:self.view];
+    self.emptyDataView.center = point;
+}
+
+-(void)hideEmptyDataView{
+    [self.emptyDataView setHidden:YES];
+}
+
+//reload button
+-(void)showReloadButtonAtPosition:(CGPoint)point{
+    
+    [self.emptyDataView setHidden:YES];
+    [self.textTip setHidden:YES];
+    
+    [self.reloadButton setHidden:NO];
+    [self.reloadButton bringSubviewToFront:self.view];
+    self.reloadButton.center = point;
+}
+
+-(void)addReloadButtonAction:(NSString *)selectorString{
+    SEL sel = NSSelectorFromString(selectorString);
+    [self.reloadButton addTarget:self action:sel forControlEvents:UIControlEventTouchDown];
+}
+
+-(void)hideReloadButton{
+    [self.reloadButton setHidden:YES];
+}
+
+//text tip
+-(void)showEmptyDataTextAtPosition:(CGPoint)point{
+    
+    [self.reloadButton setHidden:YES];
+    
+    [self.textTip setHidden:NO];
+    [self.textTip bringSubviewToFront:self.view];
+    self.textTip.center = point;
+}
+
+-(void)hideEmptyDataText{
+    [self.textTip setHidden:YES];
+}
+
+
+@end

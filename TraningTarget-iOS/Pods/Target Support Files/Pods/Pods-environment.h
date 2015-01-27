@@ -48,6 +48,30 @@
 #define COCOAPODS_VERSION_MINOR_AFNetworking_UIKit 4
 #define COCOAPODS_VERSION_PATCH_AFNetworking_UIKit 1
 
+// BFKit
+#define COCOAPODS_POD_AVAILABLE_BFKit
+#define COCOAPODS_VERSION_MAJOR_BFKit 1
+#define COCOAPODS_VERSION_MINOR_BFKit 3
+#define COCOAPODS_VERSION_PATCH_BFKit 1
+
+// CocoaLumberjack
+#define COCOAPODS_POD_AVAILABLE_CocoaLumberjack
+#define COCOAPODS_VERSION_MAJOR_CocoaLumberjack 1
+#define COCOAPODS_VERSION_MINOR_CocoaLumberjack 9
+#define COCOAPODS_VERSION_PATCH_CocoaLumberjack 2
+
+// CocoaLumberjack/Core
+#define COCOAPODS_POD_AVAILABLE_CocoaLumberjack_Core
+#define COCOAPODS_VERSION_MAJOR_CocoaLumberjack_Core 1
+#define COCOAPODS_VERSION_MINOR_CocoaLumberjack_Core 9
+#define COCOAPODS_VERSION_PATCH_CocoaLumberjack_Core 2
+
+// CocoaLumberjack/Extensions
+#define COCOAPODS_POD_AVAILABLE_CocoaLumberjack_Extensions
+#define COCOAPODS_VERSION_MAJOR_CocoaLumberjack_Extensions 1
+#define COCOAPODS_VERSION_MINOR_CocoaLumberjack_Extensions 9
+#define COCOAPODS_VERSION_PATCH_CocoaLumberjack_Extensions 2
+
 // CrashlyticsFramework
 #define COCOAPODS_POD_AVAILABLE_CrashlyticsFramework
 #define COCOAPODS_VERSION_MAJOR_CrashlyticsFramework 2
@@ -59,6 +83,12 @@
 #define COCOAPODS_VERSION_MAJOR_FXImageView 1
 #define COCOAPODS_VERSION_MINOR_FXImageView 3
 #define COCOAPODS_VERSION_PATCH_FXImageView 3
+
+// FlatUIKit
+#define COCOAPODS_POD_AVAILABLE_FlatUIKit
+#define COCOAPODS_VERSION_MAJOR_FlatUIKit 1
+#define COCOAPODS_VERSION_MINOR_FlatUIKit 5
+#define COCOAPODS_VERSION_PATCH_FlatUIKit 0
 
 // FlurrySDK
 #define COCOAPODS_POD_AVAILABLE_FlurrySDK

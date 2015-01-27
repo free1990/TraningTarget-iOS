@@ -163,7 +163,7 @@ static inline BOOL AFStateTransitionIsValid(AFOperationState fromState, AFOperat
 @implementation AFURLConnectionOperation
 @synthesize outputStream = _outputStream;
 
-//启动线程的RunLoop?  开启一个runloop，进行专业的工作
+//启动线程的RunLoop?  开启一个runloop，进行专业的工作(编译之后就启动这个线程)
 + (void)networkRequestThreadEntryPoint:(id)__unused object {
     @autoreleasepool {
         [[NSThread currentThread] setName:@"AFNetworking"];
@@ -436,6 +436,9 @@ static inline BOOL AFStateTransitionIsValid(AFOperationState fromState, AFOperat
 //在 NSOperation 的实现里，completionBlock 是 NSOperation 对象的一个成员，NSOperation 对象持有着 completionBlock，若传进来的 block 用到了 NSOperation 对象，或者 block 用到的对象持有了这个 NSOperation 对象，就会造成循环引用。这里执行完 block 后调用 [strongSelf setCompletionBlock:nil] 把 completionBlock 设成 nil，手动释放 self(NSOperation对象) 持有的 completionBlock 对象，打破循环引用。
 //可以理解成对外保证传进来的block一定会被释放，解决外部使用使很容易出现的因对象关系复杂导致循环引用的问题，让使用者不知道循环引用这个概念都能正确使用。
 - (void)setCompletionBlock:(void (^)(void))block {
+    
+    NSLog(@"子类调用，设置setCompletionBlock的值");
+    
     [self.lock lock];
     if (!block) {
         [super setCompletionBlock:nil];
@@ -482,6 +485,8 @@ static inline BOOL AFStateTransitionIsValid(AFOperationState fromState, AFOperat
 
 //开始执行operation
 - (void)start {
+    NSLog(@"operatio----开始发起请求");
+    
     [self.lock lock];
     
     //是否是取消状态
@@ -506,6 +511,7 @@ static inline BOOL AFStateTransitionIsValid(AFOperationState fromState, AFOperat
     //大家都特别害怕出现了isCancell的状态
     if (![self isCancelled]) {
         
+        NSLog(@"operatio----初始化connetion");
         self.connection = [[NSURLConnection alloc] initWithRequest:self.request delegate:self startImmediately:NO];
         
         //使用了initWithRequest:delegate:startImmediately: 创建一个connection并且指定startImmediately = NO
@@ -535,6 +541,8 @@ static inline BOOL AFStateTransitionIsValid(AFOperationState fromState, AFOperat
 }
 
 - (void)finish {
+    
+    NSLog(@"operatio----结束connetion");
     [self.lock lock];
     self.state = AFOperationFinishedState;
     [self.lock unlock];
@@ -680,7 +688,8 @@ willSendRequestForAuthenticationChallenge:(NSURLAuthenticationChallenge *)challe
         return;
     }
     
-    //
+    NSLog(@"operatio----开始AuthenticationChallenge");
+    
     if ([challenge.protectionSpace.authenticationMethod isEqualToString:NSURLAuthenticationMethodServerTrust]) {
         
         if ([self.securityPolicy evaluateServerTrust:challenge.protectionSpace.serverTrust forDomain:challenge.protectionSpace.host]) {
@@ -714,13 +723,20 @@ willSendRequestForAuthenticationChallenge:(NSURLAuthenticationChallenge *)challe
              willSendRequest:(NSURLRequest *)request
             redirectResponse:(NSURLResponse *)redirectResponse
 {
+    NSLog(@"operatio----开始redirectResponse");
+    
     if (self.redirectResponse) {
+        
+         NSLog(@"operatio----处理redirectResponse");
         return self.redirectResponse(connection, request, redirectResponse);
     } else {
+        
+        NSLog(@"operatio----不处理redirectResponse");
         return request;
     }
 }
 
+//发送数据的进度
 - (void)connection:(NSURLConnection __unused *)connection
    didSendBodyData:(NSInteger)bytesWritten
  totalBytesWritten:(NSInteger)totalBytesWritten
@@ -778,6 +794,9 @@ didReceiveResponse:(NSURLResponse *)response
 }
 
 - (void)connectionDidFinishLoading:(NSURLConnection __unused *)connection {
+    
+    NSLog(@"operatio----完成Loading");
+    
     self.responseData = [self.outputStream propertyForKey:NSStreamDataWrittenToMemoryStreamKey];
 
     [self.outputStream close];
@@ -807,7 +826,7 @@ didReceiveResponse:(NSURLResponse *)response
 
 - (NSCachedURLResponse *)connection:(NSURLConnection *)connection
                   willCacheResponse:(NSCachedURLResponse *)cachedResponse
-{
+{    
     if (self.cacheResponse) {
         return self.cacheResponse(connection, cachedResponse);
     } else {

@@ -50,6 +50,10 @@ static NSString * const kServerDomain = @"http://182.92.194.136:10002/";
     [httpManager.requestSerializer setValue:@"APP" forHTTPHeaderField:@"jike-client-from"];
     [httpManager.requestSerializer setValue:@"APP" forHTTPHeaderField:@"from"];
     
+    [httpManager.requestSerializer setValue:@"name" forHTTPHeaderField:@"zhao-yang"];
+    
+    NSLog(@"头部字典的字段: %@", httpManager.requestSerializer.HTTPRequestHeaders);
+    
     __weak __typeof(self)weakSelf = self;
     //        NSOperationQueue *operationQueue = _requestManager.operationQueue;
     [httpManager.reachabilityManager setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
@@ -70,7 +74,6 @@ static NSString * const kServerDomain = @"http://182.92.194.136:10002/";
     }];
     
     [httpManager.reachabilityManager startMonitoring];
-    
     
     
     [self versionInfoWithCompletion:^(VersionResponse *response){

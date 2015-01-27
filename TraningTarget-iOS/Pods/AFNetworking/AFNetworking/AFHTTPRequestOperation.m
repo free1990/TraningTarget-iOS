@@ -64,7 +64,8 @@ static dispatch_group_t http_request_operation_completion_group() {
     if (!self) {
         return nil;
     }
-
+    
+    NSLog(@"默认AFHTTPResponseSerializer");
     self.responseSerializer = [AFHTTPResponseSerializer serializer];
 
     return self;
@@ -111,12 +112,24 @@ static dispatch_group_t http_request_operation_completion_group() {
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Warc-retain-cycles"
 #pragma clang diagnostic ignored "-Wgnu"
+    
+    
+    NSLog(@"*********** setCompletionBlockWithSuccess");
+    
     self.completionBlock = ^{
+        
+        NSLog(@"self.completionGroup = %@", self.completionGroup);
+        
+        //判断使用者是否指派了线程来处理这个
         if (self.completionGroup) {
             dispatch_group_enter(self.completionGroup);
         }
-
+        
+        NSLog(@"http_request_operation_processing_queue() name = %@", http_request_operation_processing_queue());
+        
         dispatch_async(http_request_operation_processing_queue(), ^{
+            
+            //使用AFHTTPRequestOperation里面的http_request_operation_completion_group来处理opration结束的反馈回调
             if (self.error) {
                 if (failure) {
                     dispatch_group_async(self.completionGroup ?: http_request_operation_completion_group(), self.completionQueue ?: dispatch_get_main_queue(), ^{

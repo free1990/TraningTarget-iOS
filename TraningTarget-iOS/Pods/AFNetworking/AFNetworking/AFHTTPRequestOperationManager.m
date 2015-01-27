@@ -56,18 +56,27 @@
     if ([[url path] length] > 0 && ![[url absoluteString] hasSuffix:@"/"]) {
         url = [url URLByAppendingPathComponent:@""];
     }
-
+    
+    NSLog(@"向这个URL发起连接--%@",url);
+    
     self.baseURL = url;
 
+    NSLog(@"请求的http request序列化");
     self.requestSerializer = [AFHTTPRequestSerializer serializer];
+    
+    NSLog(@"响应数据response序列化");
     self.responseSerializer = [AFJSONResponseSerializer serializer];
-
+    
+    NSLog(@"设置安全策略securityPolicy");
     self.securityPolicy = [AFSecurityPolicy defaultPolicy];
-
+    
+    NSLog(@"利用单例去初始化网络观测类");
     self.reachabilityManager = [AFNetworkReachabilityManager sharedManager];
-
+    
+    NSLog(@"创建自己的队列");
     self.operationQueue = [[NSOperationQueue alloc] init];
-
+    
+    NSLog(@"设置使用CredentialStorage");
     self.shouldUseCredentialStorage = YES;
 
     return self;
@@ -99,8 +108,11 @@
                                                     failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure
 {
     //创建一个请求的任务
+    
+    NSLog(@"创建operation");
     AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
     
+    NSLog(@"operation.responseSerializer设置为 self.responseSerializer");
     operation.responseSerializer = self.responseSerializer;
     
     operation.shouldUseCredentialStorage = self.shouldUseCredentialStorage;
@@ -108,6 +120,9 @@
     operation.securityPolicy = self.securityPolicy;
     
     [operation setCompletionBlockWithSuccess:success failure:failure];
+    
+    NSLog(@"创建operation， operation.completionQueue = %@", self.completionQueue);
+    NSLog(@"创建operation， operation.completionGroup = %@", self.completionGroup);
     
     operation.completionQueue = self.completionQueue;
     operation.completionGroup = self.completionGroup;
@@ -127,6 +142,10 @@
                                                                    URLString:[[NSURL URLWithString:URLString relativeToURL:self.baseURL] absoluteString]
                                                                   parameters:parameters
                                                                        error:nil];
+    
+    NSLog(@"发送的http hrader = %@", request.allHTTPHeaderFields);
+    
+    NSLog(@"发送的http method = %@", request.HTTPMethod);
     
     AFHTTPRequestOperation *operation = [self HTTPRequestOperationWithRequest:request success:success failure:failure];
     

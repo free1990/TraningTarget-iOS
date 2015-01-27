@@ -433,6 +433,7 @@ static inline BOOL AFStateTransitionIsValid(AFOperationState fromState, AFOperat
 
 #pragma mark - NSOperation
 
+//设置NSOperation结束后运行的block代码，由于NSOperation有可能被取消，所以这个block运行的代码应该和NSOperation的核心任务无关。
 //在 NSOperation 的实现里，completionBlock 是 NSOperation 对象的一个成员，NSOperation 对象持有着 completionBlock，若传进来的 block 用到了 NSOperation 对象，或者 block 用到的对象持有了这个 NSOperation 对象，就会造成循环引用。这里执行完 block 后调用 [strongSelf setCompletionBlock:nil] 把 completionBlock 设成 nil，手动释放 self(NSOperation对象) 持有的 completionBlock 对象，打破循环引用。
 //可以理解成对外保证传进来的block一定会被释放，解决外部使用使很容易出现的因对象关系复杂导致循环引用的问题，让使用者不知道循环引用这个概念都能正确使用。
 - (void)setCompletionBlock:(void (^)(void))block {

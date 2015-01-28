@@ -22,12 +22,12 @@
 		D619AE6B1A7728990001CC97 /* UIImage+Color.m in Sources */ = {isa = PBXBuildFile; fileRef = D619AE5A1A7728990001CC97 /* UIImage+Color.m */; };
 		D619AE6C1A7728990001CC97 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = D619AE5C1A7728990001CC97 /* UIView+Frame.m */; };
 		D619AE6D1A7728990001CC97 /* UIView+MGBadgeView.m in Sources */ = {isa = PBXBuildFile; fileRef = D619AE5E1A7728990001CC97 /* UIView+MGBadgeView.m */; };
-		D619AE6E1A7728990001CC97 /* UIViewController+AbnormalDisplay.m in Sources */ = {isa = PBXBuildFile; fileRef = D619AE601A7728990001CC97 /* UIViewController+AbnormalDisplay.m */; };
 		D619AE6F1A7728990001CC97 /* UIViewController+DismissKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = D619AE621A7728990001CC97 /* UIViewController+DismissKeyboard.m */; };
 		D619AE701A7728990001CC97 /* UIViewController+HUD.m in Sources */ = {isa = PBXBuildFile; fileRef = D619AE641A7728990001CC97 /* UIViewController+HUD.m */; };
 		D619AE771A772AAD0001CC97 /* AppUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = D619AE761A772AAD0001CC97 /* AppUtil.m */; };
 		D619AE7A1A772BA90001CC97 /* PropertiesManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D619AE791A772BA90001CC97 /* PropertiesManager.m */; };
 		D619AE7C1A772C3D0001CC97 /* HTTPResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = D619AE7B1A772C3D0001CC97 /* HTTPResponse.m */; };
+		D61E33B31A78D7DE00105117 /* UIViewController+AbnormalDisplay.m in Sources */ = {isa = PBXBuildFile; fileRef = D61E33B21A78D7DE00105117 /* UIViewController+AbnormalDisplay.m */; };
 		D63ADF1D1A413007009CA874 /* RuntimeDemoOneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D63ADF1C1A413007009CA874 /* RuntimeDemoOneViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		D63ADF201A415B74009CA874 /* RuntimeDemoTwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D63ADF1F1A415B74009CA874 /* RuntimeDemoTwoViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		D63ADF231A416B8E009CA874 /* RuntimeDemoThreeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D63ADF221A416B8E009CA874 /* RuntimeDemoThreeViewController.m */; };
@@ -46,6 +46,7 @@
 		D6422CF91A399798000D9759 /* ClassItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D6422CF81A399798000D9759 /* ClassItem.m */; };
 		D65686511A441BD400576E94 /* CoreGarphicsDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D65686501A441BD400576E94 /* CoreGarphicsDemoViewController.m */; };
 		D65AD0BF1A3EC6AA00D6E193 /* EmptyClass.m in Sources */ = {isa = PBXBuildFile; fileRef = D65AD0BE1A3EC6AA00D6E193 /* EmptyClass.m */; };
+		D65CC5FD1A78CC4E003AD059 /* TipTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D65CC5FC1A78CC4E003AD059 /* TipTestViewController.m */; };
 		D68411861A5CCA560078A807 /* test.png in Resources */ = {isa = PBXBuildFile; fileRef = D68411851A5CCA560078A807 /* test.png */; };
 		D6A9E76D1A49021F001448C0 /* QuartzView.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A9E76C1A49021F001448C0 /* QuartzView.m */; };
 		D6C3BDF21A58D5B300E0D405 /* CoreAnimationDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C3BDF11A58D5B300E0D405 /* CoreAnimationDemoViewController.m */; };
@@ -71,7 +72,6 @@
 		D6EADF7C1A4A528F00D46981 /* Clipping.m in Sources */ = {isa = PBXBuildFile; fileRef = D6EADF7B1A4A528F00D46981 /* Clipping.m */; };
 		D6EADF7E1A4A530400D46981 /* Ship.png in Resources */ = {isa = PBXBuildFile; fileRef = D6EADF7D1A4A530400D46981 /* Ship.png */; };
 		D6EADF841A4A5A8400D46981 /* Mask.m in Sources */ = {isa = PBXBuildFile; fileRef = D6EADF831A4A5A8400D46981 /* Mask.m */; };
-		D6EADF881A4AA30300D46981 /* UIViewController+AbnormalDisplay.m in Sources */ = {isa = PBXBuildFile; fileRef = D6EADF871A4AA30300D46981 /* UIViewController+AbnormalDisplay.m */; };
 		D6EADF8B1A4AA42600D46981 /* UIViewController+HUD.m in Sources */ = {isa = PBXBuildFile; fileRef = D6EADF8A1A4AA42600D46981 /* UIViewController+HUD.m */; };
 		D6EADF8E1A4AA45400D46981 /* CategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6EADF8D1A4AA45400D46981 /* CategoryViewController.m */; };
 		D6F2254E1A400B0E00E3FCB2 /* TestCustomAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6F2254D1A400B0E00E3FCB2 /* TestCustomAlertViewController.m */; };
@@ -127,8 +127,6 @@
 		D619AE5C1A7728990001CC97 /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
 		D619AE5D1A7728990001CC97 /* UIView+MGBadgeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MGBadgeView.h"; sourceTree = "<group>"; };
 		D619AE5E1A7728990001CC97 /* UIView+MGBadgeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MGBadgeView.m"; sourceTree = "<group>"; };
-		D619AE5F1A7728990001CC97 /* UIViewController+AbnormalDisplay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+AbnormalDisplay.h"; sourceTree = "<group>"; };
-		D619AE601A7728990001CC97 /* UIViewController+AbnormalDisplay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+AbnormalDisplay.m"; sourceTree = "<group>"; };
 		D619AE611A7728990001CC97 /* UIViewController+DismissKeyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+DismissKeyboard.h"; sourceTree = "<group>"; };
 		D619AE621A7728990001CC97 /* UIViewController+DismissKeyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+DismissKeyboard.m"; sourceTree = "<group>"; };
 		D619AE631A7728990001CC97 /* UIViewController+HUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+HUD.h"; sourceTree = "<group>"; };
@@ -140,6 +138,8 @@
 		D619AE781A772BA90001CC97 /* PropertiesManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PropertiesManager.h; sourceTree = "<group>"; };
 		D619AE791A772BA90001CC97 /* PropertiesManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PropertiesManager.m; sourceTree = "<group>"; };
 		D619AE7B1A772C3D0001CC97 /* HTTPResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPResponse.m; sourceTree = "<group>"; };
+		D61E33B11A78D7DE00105117 /* UIViewController+AbnormalDisplay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+AbnormalDisplay.h"; sourceTree = "<group>"; };
+		D61E33B21A78D7DE00105117 /* UIViewController+AbnormalDisplay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+AbnormalDisplay.m"; sourceTree = "<group>"; };
 		D63ADF1B1A413007009CA874 /* RuntimeDemoOneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RuntimeDemoOneViewController.h; sourceTree = "<group>"; };
 		D63ADF1C1A413007009CA874 /* RuntimeDemoOneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RuntimeDemoOneViewController.m; sourceTree = "<group>"; };
 		D63ADF1E1A415B74009CA874 /* RuntimeDemoTwoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RuntimeDemoTwoViewController.h; sourceTree = "<group>"; };
@@ -175,6 +175,8 @@
 		D65686501A441BD400576E94 /* CoreGarphicsDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreGarphicsDemoViewController.m; sourceTree = "<group>"; };
 		D65AD0BD1A3EC6AA00D6E193 /* EmptyClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmptyClass.h; sourceTree = "<group>"; };
 		D65AD0BE1A3EC6AA00D6E193 /* EmptyClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmptyClass.m; sourceTree = "<group>"; };
+		D65CC5FB1A78CC4E003AD059 /* TipTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TipTestViewController.h; sourceTree = "<group>"; };
+		D65CC5FC1A78CC4E003AD059 /* TipTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TipTestViewController.m; sourceTree = "<group>"; };
 		D68411851A5CCA560078A807 /* test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test.png; sourceTree = "<group>"; };
 		D6A9E76B1A49021F001448C0 /* QuartzView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuartzView.h; sourceTree = "<group>"; };
 		D6A9E76C1A49021F001448C0 /* QuartzView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuartzView.m; sourceTree = "<group>"; };
@@ -217,8 +219,6 @@
 		D6EADF7D1A4A530400D46981 /* Ship.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Ship.png; sourceTree = "<group>"; };
 		D6EADF821A4A5A8400D46981 /* Mask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mask.h; sourceTree = "<group>"; };
 		D6EADF831A4A5A8400D46981 /* Mask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mask.m; sourceTree = "<group>"; };
-		D6EADF861A4AA30300D46981 /* UIViewController+AbnormalDisplay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+AbnormalDisplay.h"; sourceTree = "<group>"; };
-		D6EADF871A4AA30300D46981 /* UIViewController+AbnormalDisplay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+AbnormalDisplay.m"; sourceTree = "<group>"; };
 		D6EADF891A4AA42500D46981 /* UIViewController+HUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+HUD.h"; sourceTree = "<group>"; };
 		D6EADF8A1A4AA42600D46981 /* UIViewController+HUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+HUD.m"; sourceTree = "<group>"; };
 		D6EADF8C1A4AA45400D46981 /* CategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryViewController.h; sourceTree = "<group>"; };
@@ -294,8 +294,6 @@
 				D619AE5C1A7728990001CC97 /* UIView+Frame.m */,
 				D619AE5D1A7728990001CC97 /* UIView+MGBadgeView.h */,
 				D619AE5E1A7728990001CC97 /* UIView+MGBadgeView.m */,
-				D619AE5F1A7728990001CC97 /* UIViewController+AbnormalDisplay.h */,
-				D619AE601A7728990001CC97 /* UIViewController+AbnormalDisplay.m */,
 				D619AE611A7728990001CC97 /* UIViewController+DismissKeyboard.h */,
 				D619AE621A7728990001CC97 /* UIViewController+DismissKeyboard.m */,
 				D619AE631A7728990001CC97 /* UIViewController+HUD.h */,
@@ -417,6 +415,8 @@
 				D6EADF8D1A4AA45400D46981 /* CategoryViewController.m */,
 				D619AE441A7725300001CC97 /* AFDemoViewController.h */,
 				D619AE451A7725300001CC97 /* AFDemoViewController.m */,
+				D65CC5FB1A78CC4E003AD059 /* TipTestViewController.h */,
+				D65CC5FC1A78CC4E003AD059 /* TipTestViewController.m */,
 				D619AE471A7727B40001CC97 /* Macros.h */,
 			);
 			name = Controller;
@@ -443,12 +443,12 @@
 				D619AE491A77286B0001CC97 /* VersionResponse.m */,
 				D63ADF241A416EF9009CA874 /* NSObject+AutoEncodeDecode.h */,
 				D63ADF251A416EF9009CA874 /* NSObject+AutoEncodeDecode.m */,
-				D6EADF861A4AA30300D46981 /* UIViewController+AbnormalDisplay.h */,
-				D6EADF871A4AA30300D46981 /* UIViewController+AbnormalDisplay.m */,
 				D6EADF891A4AA42500D46981 /* UIViewController+HUD.h */,
 				D6EADF8A1A4AA42600D46981 /* UIViewController+HUD.m */,
 				D6F307A11A6CDE0C008546F2 /* UIImage+UIImageExtras.h */,
 				D6F307A21A6CDE0C008546F2 /* UIImage+UIImageExtras.m */,
+				D61E33B11A78D7DE00105117 /* UIViewController+AbnormalDisplay.h */,
+				D61E33B21A78D7DE00105117 /* UIViewController+AbnormalDisplay.m */,
 			);
 			name = Handle;
 			sourceTree = "<group>";
@@ -637,7 +637,6 @@
 				D619AE4A1A77286B0001CC97 /* VersionResponse.m in Sources */,
 				D6D0EAD01A5A7386005C3A5D /* CoreAnimationCAMediaTimingFunction.m in Sources */,
 				D619AE6A1A7728990001CC97 /* PathUtil.m in Sources */,
-				D619AE6E1A7728990001CC97 /* UIViewController+AbnormalDisplay.m in Sources */,
 				D6F2255C1A41174000E3FCB2 /* TestRemoveViewTestController.m in Sources */,
 				D6C3BDF21A58D5B300E0D405 /* CoreAnimationDemoViewController.m in Sources */,
 				D6422CCB1A397E85000D9759 /* RootViewController.m in Sources */,
@@ -646,6 +645,7 @@
 				D6422CC81A397E85000D9759 /* AppDelegate.m in Sources */,
 				D63ADF231A416B8E009CA874 /* RuntimeDemoThreeViewController.m in Sources */,
 				D61668751A493EC10067C179 /* RectView.m in Sources */,
+				D65CC5FD1A78CC4E003AD059 /* TipTestViewController.m in Sources */,
 				D616686F1A490BCB0067C179 /* Arcs.m in Sources */,
 				D6A9E76D1A49021F001448C0 /* QuartzView.m in Sources */,
 				D616686C1A49038B0067C179 /* Line.m in Sources */,
@@ -660,7 +660,6 @@
 				D6D0EACB1A5A6264005C3A5D /* CoreAnimationCAMediaTiming.m in Sources */,
 				D619AE6C1A7728990001CC97 /* UIView+Frame.m in Sources */,
 				D6D943941A3AE19B00898FA3 /* RuntimeDynamicMethodResolutionAndDynamicLoading.m in Sources */,
-				D6EADF881A4AA30300D46981 /* UIViewController+AbnormalDisplay.m in Sources */,
 				D6C3BDF71A591EE400E0D405 /* CoreAnimationDemoTwoViewController.m in Sources */,
 				D6EADF7C1A4A528F00D46981 /* Clipping.m in Sources */,
 				D6422CF01A399587000D9759 /* ClassSet.m in Sources */,
@@ -687,6 +686,7 @@
 				D6D943901A3AC7E900898FA3 /* RuntimePropertyAndFunction.m in Sources */,
 				D6D0EADB1A5B896F005C3A5D /* DrawingView.m in Sources */,
 				D619AE681A7728990001CC97 /* NSDate+Utilities.m in Sources */,
+				D61E33B31A78D7DE00105117 /* UIViewController+AbnormalDisplay.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

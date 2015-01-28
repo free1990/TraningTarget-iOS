@@ -85,42 +85,54 @@ static NSString * const kServerDomain = @"http://182.92.194.136:10002/";
 
 
 - (void)GET:(NSString *)URLString parameters:(id)parameters completion:(void (^)(NSDictionary *responseInfo))completion {
-    [httpManager GET:URLString
-              parameters:parameters
-                 success:^(AFHTTPRequestOperation *operation, id responseObject) {
-                     
-                     DLOG(@"%@, %@", operation, responseObject);
-                     if ([responseObject isKindOfClass:[NSDictionary class]]) {
-                         completion(responseObject);
-                     } else {
-                         DLOGERROR(@"%@, %@", operation, responseObject);
-                         completion(nil);
-                     }
-                     
-                 }
-                 failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-                     DLOGERROR(@"%@, %@", operation, error);
-                     /*
-                      -1001, The request timed out.
-                      -1003, A server with the specified hostname could not be found.
-                      -1004, Could not connect to the server.
-                      -1009, The Internet connection appears to be offline.
-                      */
-                     switch (error.code) {
-                         case -1001:
-                         case -1009:
-                         {
-                             NSDictionary *dict = @{@"error_code":@(error.code), @"error_msg":error.localizedDescription};
-                             completion(dict);
-                         }
-                             break;
-                             
-                         default: {
-                             completion(nil);
-                         }
-                             break;
-                     }
-                 }];
+//    [httpManager GET:URLString
+//              parameters:parameters
+//                 success:^(AFHTTPRequestOperation *operation, id responseObject) {
+//                     
+//                     DLOG(@"%@, %@", operation, responseObject);
+//                     if ([responseObject isKindOfClass:[NSDictionary class]]) {
+//                         completion(responseObject);
+//                     } else {
+//                         DLOGERROR(@"%@, %@", operation, responseObject);
+//                         completion(nil);
+//                     }
+//                     
+//                 }
+//                 failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+//                     DLOGERROR(@"%@, %@", operation, error);
+////                     switch (error.code) 
+//                    }];
+    
+//    [httpManager HEAD:URLString
+//           parameters:parameters
+//              success:^(AFHTTPRequestOperation *operation) {
+//                  
+//                  //HEAD 请求操作上于GET类似，但是区别在于，这个请求是用来判断是够存在某个资源，并不返回内容，而GET返回内容
+//                  NSLog(@"成功了");
+//              }
+//              failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+//                  DLOGERROR(@"%@, %@", operation, error);
+//                  //                     switch (error.code)
+//            }];
+    
+    //POST一个表单（测试）
+    [httpManager POST:URLString
+           parameters:parameters
+              success:^(AFHTTPRequestOperation *operation, id responseObject) {
+            
+                  DLOG(@"%@, %@", operation, responseObject);
+                  if ([responseObject isKindOfClass:[NSDictionary class]]) {
+                      completion(responseObject);
+                  } else {
+                      DLOGERROR(@"%@, %@", operation, responseObject);
+                      completion(nil);
+                  }
+                  
+              }
+              failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+                  DLOGERROR(@"%@, %@", operation, error);
+                  //                     switch (error.code)
+              }];
 }
 
 

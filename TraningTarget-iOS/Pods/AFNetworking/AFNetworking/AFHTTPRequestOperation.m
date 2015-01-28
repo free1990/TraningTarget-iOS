@@ -113,7 +113,6 @@ static dispatch_group_t http_request_operation_completion_group() {
 #pragma clang diagnostic ignored "-Warc-retain-cycles"
 #pragma clang diagnostic ignored "-Wgnu"
     
-    
     NSLog(@"*********** setCompletionBlockWithSuccess");
     
     self.completionBlock = ^{

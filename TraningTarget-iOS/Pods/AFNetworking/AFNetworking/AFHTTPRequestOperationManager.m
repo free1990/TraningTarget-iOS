@@ -165,6 +165,10 @@
                                                                   parameters:parameters
                                                                        error:nil];
     
+    NSLog(@"发送的http hrader = %@", request.allHTTPHeaderFields);
+    
+    NSLog(@"发送的http method = %@", request.HTTPMethod);
+    
     AFHTTPRequestOperation *operation = [self HTTPRequestOperationWithRequest:request success:^(AFHTTPRequestOperation *requestOperation, __unused id responseObject) {
         if (success) {
             success(requestOperation);
@@ -232,12 +236,16 @@
 }
 
 // Creates and runs an `AFHTTPRequestOperation` with a `PATCH` request.
+//部分内容修改
 - (AFHTTPRequestOperation *)PATCH:(NSString *)URLString
                        parameters:(id)parameters
                           success:(void (^)(AFHTTPRequestOperation *operation, id responseObject))success
                           failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure
 {
-    NSMutableURLRequest *request = [self.requestSerializer requestWithMethod:@"PATCH" URLString:[[NSURL URLWithString:URLString relativeToURL:self.baseURL] absoluteString] parameters:parameters error:nil];
+    NSMutableURLRequest *request = [self.requestSerializer requestWithMethod:@"PATCH"
+                                                                   URLString:[[NSURL URLWithString:URLString relativeToURL:self.baseURL] absoluteString]
+                                                                  parameters:parameters error:nil];
+    
     AFHTTPRequestOperation *operation = [self HTTPRequestOperationWithRequest:request success:success failure:failure];
 
     [self.operationQueue addOperation:operation];

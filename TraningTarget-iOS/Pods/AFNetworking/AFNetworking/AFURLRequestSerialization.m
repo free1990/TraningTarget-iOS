@@ -384,10 +384,12 @@ forHTTPHeaderField:(NSString *)field
     NSParameterAssert(method);
     NSParameterAssert(![method isEqualToString:@"GET"] && ![method isEqualToString:@"HEAD"]);
 
+    //只设置请求的方法和URL的地址
     NSMutableURLRequest *mutableRequest = [self requestWithMethod:method URLString:URLString parameters:nil error:error];
-
+    
     __block AFStreamingMultipartFormData *formData = [[AFStreamingMultipartFormData alloc] initWithURLRequest:mutableRequest stringEncoding:NSUTF8StringEncoding];
-
+    
+    //如果parameter值不为空，那么就这些数据封装成data放到发送的数据段里面
     if (parameters) {
         for (AFQueryStringPair *pair in AFQueryStringPairsFromDictionary(parameters)) {
             NSData *data = nil;
@@ -404,7 +406,8 @@ forHTTPHeaderField:(NSString *)field
             }
         }
     }
-
+    
+    //把外面的数据加进来
     if (block) {
         block(formData);
     }

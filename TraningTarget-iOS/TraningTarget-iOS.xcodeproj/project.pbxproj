@@ -23,7 +23,6 @@
 		D619AE6C1A7728990001CC97 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = D619AE5C1A7728990001CC97 /* UIView+Frame.m */; };
 		D619AE6D1A7728990001CC97 /* UIView+MGBadgeView.m in Sources */ = {isa = PBXBuildFile; fileRef = D619AE5E1A7728990001CC97 /* UIView+MGBadgeView.m */; };
 		D619AE6F1A7728990001CC97 /* UIViewController+DismissKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = D619AE621A7728990001CC97 /* UIViewController+DismissKeyboard.m */; };
-		D619AE701A7728990001CC97 /* UIViewController+HUD.m in Sources */ = {isa = PBXBuildFile; fileRef = D619AE641A7728990001CC97 /* UIViewController+HUD.m */; };
 		D619AE771A772AAD0001CC97 /* AppUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = D619AE761A772AAD0001CC97 /* AppUtil.m */; };
 		D619AE7A1A772BA90001CC97 /* PropertiesManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D619AE791A772BA90001CC97 /* PropertiesManager.m */; };
 		D619AE7C1A772C3D0001CC97 /* HTTPResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = D619AE7B1A772C3D0001CC97 /* HTTPResponse.m */; };
@@ -129,8 +128,6 @@
 		D619AE5E1A7728990001CC97 /* UIView+MGBadgeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MGBadgeView.m"; sourceTree = "<group>"; };
 		D619AE611A7728990001CC97 /* UIViewController+DismissKeyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+DismissKeyboard.h"; sourceTree = "<group>"; };
 		D619AE621A7728990001CC97 /* UIViewController+DismissKeyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+DismissKeyboard.m"; sourceTree = "<group>"; };
-		D619AE631A7728990001CC97 /* UIViewController+HUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+HUD.h"; sourceTree = "<group>"; };
-		D619AE641A7728990001CC97 /* UIViewController+HUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+HUD.m"; sourceTree = "<group>"; };
 		D619AE711A77291E0001CC97 /* HTTPResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPResponse.h; sourceTree = "<group>"; };
 		D619AE741A7729A60001CC97 /* Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
 		D619AE751A772AAD0001CC97 /* AppUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppUtil.h; sourceTree = "<group>"; };
@@ -138,16 +135,16 @@
 		D619AE781A772BA90001CC97 /* PropertiesManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PropertiesManager.h; sourceTree = "<group>"; };
 		D619AE791A772BA90001CC97 /* PropertiesManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PropertiesManager.m; sourceTree = "<group>"; };
 		D619AE7B1A772C3D0001CC97 /* HTTPResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPResponse.m; sourceTree = "<group>"; };
-		D61E33B11A78D7DE00105117 /* UIViewController+AbnormalDisplay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+AbnormalDisplay.h"; sourceTree = "<group>"; };
-		D61E33B21A78D7DE00105117 /* UIViewController+AbnormalDisplay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+AbnormalDisplay.m"; sourceTree = "<group>"; };
+		D61E33B11A78D7DE00105117 /* UIViewController+AbnormalDisplay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIViewController+AbnormalDisplay.h"; path = "../UIViewController+AbnormalDisplay.h"; sourceTree = "<group>"; };
+		D61E33B21A78D7DE00105117 /* UIViewController+AbnormalDisplay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+AbnormalDisplay.m"; path = "../UIViewController+AbnormalDisplay.m"; sourceTree = "<group>"; };
 		D63ADF1B1A413007009CA874 /* RuntimeDemoOneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RuntimeDemoOneViewController.h; sourceTree = "<group>"; };
 		D63ADF1C1A413007009CA874 /* RuntimeDemoOneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RuntimeDemoOneViewController.m; sourceTree = "<group>"; };
 		D63ADF1E1A415B74009CA874 /* RuntimeDemoTwoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RuntimeDemoTwoViewController.h; sourceTree = "<group>"; };
 		D63ADF1F1A415B74009CA874 /* RuntimeDemoTwoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RuntimeDemoTwoViewController.m; sourceTree = "<group>"; };
 		D63ADF211A416B8E009CA874 /* RuntimeDemoThreeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RuntimeDemoThreeViewController.h; sourceTree = "<group>"; };
 		D63ADF221A416B8E009CA874 /* RuntimeDemoThreeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RuntimeDemoThreeViewController.m; sourceTree = "<group>"; };
-		D63ADF241A416EF9009CA874 /* NSObject+AutoEncodeDecode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+AutoEncodeDecode.h"; sourceTree = "<group>"; };
-		D63ADF251A416EF9009CA874 /* NSObject+AutoEncodeDecode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+AutoEncodeDecode.m"; sourceTree = "<group>"; };
+		D63ADF241A416EF9009CA874 /* NSObject+AutoEncodeDecode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject+AutoEncodeDecode.h"; path = "../NSObject+AutoEncodeDecode.h"; sourceTree = "<group>"; };
+		D63ADF251A416EF9009CA874 /* NSObject+AutoEncodeDecode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+AutoEncodeDecode.m"; path = "../NSObject+AutoEncodeDecode.m"; sourceTree = "<group>"; };
 		D63ADF371A41879A009CA874 /* TestArrayOrderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestArrayOrderViewController.h; sourceTree = "<group>"; };
 		D63ADF381A41879A009CA874 /* TestArrayOrderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestArrayOrderViewController.m; sourceTree = "<group>"; };
 		D6422CBF1A397E85000D9759 /* TraningTarget-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TraningTarget-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -219,8 +216,8 @@
 		D6EADF7D1A4A530400D46981 /* Ship.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Ship.png; sourceTree = "<group>"; };
 		D6EADF821A4A5A8400D46981 /* Mask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mask.h; sourceTree = "<group>"; };
 		D6EADF831A4A5A8400D46981 /* Mask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mask.m; sourceTree = "<group>"; };
-		D6EADF891A4AA42500D46981 /* UIViewController+HUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+HUD.h"; sourceTree = "<group>"; };
-		D6EADF8A1A4AA42600D46981 /* UIViewController+HUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+HUD.m"; sourceTree = "<group>"; };
+		D6EADF891A4AA42500D46981 /* UIViewController+HUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIViewController+HUD.h"; path = "../UIViewController+HUD.h"; sourceTree = "<group>"; };
+		D6EADF8A1A4AA42600D46981 /* UIViewController+HUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+HUD.m"; path = "../UIViewController+HUD.m"; sourceTree = "<group>"; };
 		D6EADF8C1A4AA45400D46981 /* CategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryViewController.h; sourceTree = "<group>"; };
 		D6EADF8D1A4AA45400D46981 /* CategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryViewController.m; sourceTree = "<group>"; };
 		D6F2254C1A400B0E00E3FCB2 /* TestCustomAlertViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestCustomAlertViewController.h; sourceTree = "<group>"; };
@@ -229,8 +226,8 @@
 		D6F225521A40138000E3FCB2 /* JKUpdateAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKUpdateAlertView.m; sourceTree = "<group>"; };
 		D6F2255A1A41174000E3FCB2 /* TestRemoveViewTestController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestRemoveViewTestController.h; sourceTree = "<group>"; };
 		D6F2255B1A41174000E3FCB2 /* TestRemoveViewTestController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestRemoveViewTestController.m; sourceTree = "<group>"; };
-		D6F307A11A6CDE0C008546F2 /* UIImage+UIImageExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+UIImageExtras.h"; sourceTree = "<group>"; };
-		D6F307A21A6CDE0C008546F2 /* UIImage+UIImageExtras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+UIImageExtras.m"; sourceTree = "<group>"; };
+		D6F307A11A6CDE0C008546F2 /* UIImage+UIImageExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+UIImageExtras.h"; path = "../UIImage+UIImageExtras.h"; sourceTree = "<group>"; };
+		D6F307A21A6CDE0C008546F2 /* UIImage+UIImageExtras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+UIImageExtras.m"; path = "../UIImage+UIImageExtras.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -274,6 +271,14 @@
 		D619AE4B1A7728990001CC97 /* Toolkit */ = {
 			isa = PBXGroup;
 			children = (
+				D63ADF241A416EF9009CA874 /* NSObject+AutoEncodeDecode.h */,
+				D63ADF251A416EF9009CA874 /* NSObject+AutoEncodeDecode.m */,
+				D6EADF891A4AA42500D46981 /* UIViewController+HUD.h */,
+				D6EADF8A1A4AA42600D46981 /* UIViewController+HUD.m */,
+				D6F307A11A6CDE0C008546F2 /* UIImage+UIImageExtras.h */,
+				D6F307A21A6CDE0C008546F2 /* UIImage+UIImageExtras.m */,
+				D61E33B11A78D7DE00105117 /* UIViewController+AbnormalDisplay.h */,
+				D61E33B21A78D7DE00105117 /* UIViewController+AbnormalDisplay.m */,
 				D619AE741A7729A60001CC97 /* Config.h */,
 				D619AE4E1A7728990001CC97 /* DebugUtil.h */,
 				D619AE4F1A7728990001CC97 /* DebugUtil.m */,
@@ -296,8 +301,6 @@
 				D619AE5E1A7728990001CC97 /* UIView+MGBadgeView.m */,
 				D619AE611A7728990001CC97 /* UIViewController+DismissKeyboard.h */,
 				D619AE621A7728990001CC97 /* UIViewController+DismissKeyboard.m */,
-				D619AE631A7728990001CC97 /* UIViewController+HUD.h */,
-				D619AE641A7728990001CC97 /* UIViewController+HUD.m */,
 			);
 			path = Toolkit;
 			sourceTree = "<group>";
@@ -341,7 +344,6 @@
 		D6422CC21A397E85000D9759 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				D619AE4B1A7728990001CC97 /* Toolkit */,
 				D6422CC31A397E85000D9759 /* Info.plist */,
 				D6422CC41A397E85000D9759 /* main.m */,
 				D68411851A5CCA560078A807 /* test.png */,
@@ -441,14 +443,7 @@
 				D619AE7B1A772C3D0001CC97 /* HTTPResponse.m */,
 				D619AE481A77286B0001CC97 /* VersionResponse.h */,
 				D619AE491A77286B0001CC97 /* VersionResponse.m */,
-				D63ADF241A416EF9009CA874 /* NSObject+AutoEncodeDecode.h */,
-				D63ADF251A416EF9009CA874 /* NSObject+AutoEncodeDecode.m */,
-				D6EADF891A4AA42500D46981 /* UIViewController+HUD.h */,
-				D6EADF8A1A4AA42600D46981 /* UIViewController+HUD.m */,
-				D6F307A11A6CDE0C008546F2 /* UIImage+UIImageExtras.h */,
-				D6F307A21A6CDE0C008546F2 /* UIImage+UIImageExtras.m */,
-				D61E33B11A78D7DE00105117 /* UIViewController+AbnormalDisplay.h */,
-				D61E33B21A78D7DE00105117 /* UIViewController+AbnormalDisplay.m */,
+				D619AE4B1A7728990001CC97 /* Toolkit */,
 			);
 			name = Handle;
 			sourceTree = "<group>";
@@ -652,7 +647,6 @@
 				D6EADF761A49646F00D46981 /* Pattern.m in Sources */,
 				CFEAB54B1A597D2B00696D42 /* CoreAnimationImplicitCA.m in Sources */,
 				D6422CED1A3990D4000D9759 /* RuntimeMsgForWarding.m in Sources */,
-				D619AE701A7728990001CC97 /* UIViewController+HUD.m in Sources */,
 				D6D0EAD51A5A9533005C3A5D /* CoreAnimationCANiubilty.m in Sources */,
 				D6F225531A40138000E3FCB2 /* JKUpdateAlertView.m in Sources */,
 				D6EADF841A4A5A8400D46981 /* Mask.m in Sources */,

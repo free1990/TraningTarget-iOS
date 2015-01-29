@@ -136,6 +136,9 @@ static dispatch_group_t http_request_operation_completion_group() {
                     });
                 }
             } else {
+                
+                //回调的时self.responseObject
+                //self.responseObject = [self.responseSerializer responseObjectForResponse:self.response data:self.responseData error:&error];
                 id responseObject = self.responseObject;
                 if (self.error) {
                     if (failure) {

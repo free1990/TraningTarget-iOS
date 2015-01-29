@@ -93,9 +93,9 @@ static id AFJSONObjectByRemovingKeysWithNullValues(id JSONObject, NSJSONReadingO
     if (!self) {
         return nil;
     }
-
+    
     self.stringEncoding = NSUTF8StringEncoding;
-
+    
     self.acceptableStatusCodes = [NSIndexSet indexSetWithIndexesInRange:NSMakeRange(200, 100)];
     self.acceptableContentTypes = nil;
 
@@ -110,8 +110,11 @@ static id AFJSONObjectByRemovingKeysWithNullValues(id JSONObject, NSJSONReadingO
 {
     BOOL responseIsValid = YES;
     NSError *validationError = nil;
-
+    
+    //验证是否数据是否异常
     if (response && [response isKindOfClass:[NSHTTPURLResponse class]]) {
+        
+        //The acceptable MIME types for responses
         if (self.acceptableContentTypes && ![self.acceptableContentTypes containsObject:[response MIMEType]]) {
             if ([data length] > 0) {
                 NSMutableDictionary *mutableUserInfo = [@{
@@ -125,7 +128,7 @@ static id AFJSONObjectByRemovingKeysWithNullValues(id JSONObject, NSJSONReadingO
 
                 validationError = AFErrorWithUnderlyingError([NSError errorWithDomain:AFURLResponseSerializationErrorDomain code:NSURLErrorCannotDecodeContentData userInfo:mutableUserInfo], validationError);
             }
-
+            
             responseIsValid = NO;
         }
 
@@ -159,6 +162,8 @@ static id AFJSONObjectByRemovingKeysWithNullValues(id JSONObject, NSJSONReadingO
                            data:(NSData *)data
                           error:(NSError *__autoreleasing *)error
 {
+    NSLog(@"父方法esponseObjectForResponse");
+    
     [self validateResponse:(NSHTTPURLResponse *)response data:data error:error];
 
     return data;
@@ -232,6 +237,9 @@ static id AFJSONObjectByRemovingKeysWithNullValues(id JSONObject, NSJSONReadingO
                            data:(NSData *)data
                           error:(NSError *__autoreleasing *)error
 {
+    
+    NSLog(@"子方法esponseObjectForResponse");
+    
     if (![self validateResponse:(NSHTTPURLResponse *)response data:data error:error]) {
         if (!error || AFErrorOrUnderlyingErrorHasCodeInDomain(*error, NSURLErrorCannotDecodeContentData, AFURLResponseSerializationErrorDomain)) {
             return nil;

@@ -453,12 +453,12 @@ static inline BOOL AFStateTransitionIsValid(AFOperationState fromState, AFOperat
             dispatch_group_t group = strongSelf.completionGroup ?: url_request_operation_completion_group();
             dispatch_queue_t queue = strongSelf.completionQueue ?: dispatch_get_main_queue();
 #pragma clang diagnostic pop
-            
+
             //把block交给主队列来做
             dispatch_group_async(group, queue, ^{
                 block();
             });
-            
+
             //为啥要单独起一个队列，来处理block引用的问题，直接用main队列，不行么??
             dispatch_group_notify(group, url_request_operation_completion_queue(), ^{
                 [strongSelf setCompletionBlock:nil];
@@ -547,7 +547,7 @@ static inline BOOL AFStateTransitionIsValid(AFOperationState fromState, AFOperat
     [self.lock lock];
     self.state = AFOperationFinishedState;
     [self.lock unlock];
-
+    
     dispatch_async(dispatch_get_main_queue(), ^{
         [[NSNotificationCenter defaultCenter] postNotificationName:AFNetworkingOperationDidFinishNotification object:self];
     });
@@ -804,7 +804,10 @@ didReceiveResponse:(NSURLResponse *)response
     if (self.responseData) {
        self.outputStream = nil;
     }
-
+    
+    NSLog(@"self.responseData = %@", self.responseData);
+    NSLog(@"self.response = %@", self.response);
+    
     self.connection = nil;
 
     [self finish];
@@ -814,7 +817,7 @@ didReceiveResponse:(NSURLResponse *)response
   didFailWithError:(NSError *)error
 {
     self.error = error;
-
+    
     [self.outputStream close];
     if (self.responseData) {
         self.outputStream = nil;

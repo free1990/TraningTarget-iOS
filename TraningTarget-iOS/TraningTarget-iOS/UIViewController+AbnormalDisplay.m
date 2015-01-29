@@ -17,6 +17,11 @@ static const char *kMGEmptyDataViewKey = "kMGEmptyDataViewKey";
 static const char *kMGReloadButtonViewKey = "kMGReloadButtonViewKey";
 static const char *kMGTextTipViewKey = "kMGTextTipViewKey";
 
+
+static int emptyDataViewTag = 10001;
+static int reloadButtonTag = 10002;
+static int textTipViewTag = 10003;
+
 //custom set && get method
 - (void)setEmptyDataView:(UIImageView *)emptyDataView {
     objc_setAssociatedObject(self, kMGEmptyDataViewKey, emptyDataView, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
@@ -27,12 +32,13 @@ static const char *kMGTextTipViewKey = "kMGTextTipViewKey";
     UIImageView *emptyDataView = objc_getAssociatedObject(self, kMGEmptyDataViewKey);
     
     if (!emptyDataView) {
-    
+        
         UIImage *myImage = [UIImage imageNamed:@"no_result_common"];
         emptyDataView = [[UIImageView alloc] initWithImage:myImage];
         emptyDataView.center = WinCenter;
         emptyDataView.backgroundColor = [UIColor clearColor];
         emptyDataView.contentMode = UIViewContentModeCenter;
+        emptyDataView.tag = emptyDataViewTag;
         [emptyDataView setHidden:YES];
         [self.view addSubview:emptyDataView];
         
@@ -65,6 +71,7 @@ static const char *kMGTextTipViewKey = "kMGTextTipViewKey";
         [reloadButton setTitleColor:RGBA_COLOR(0x8E, 0x8E, 0x8E, 0xFF) forState:UIControlStateNormal];
         reloadButton.titleLabel.font = [UIFont systemFontOfSize:13];
         reloadButton.backgroundColor = [UIColor whiteColor];
+        reloadButton.tag = reloadButtonTag;
         
         [reloadButton setHidden:YES];
         [self.view addSubview:reloadButton];
@@ -92,8 +99,9 @@ static const char *kMGTextTipViewKey = "kMGTextTipViewKey";
         textTip.font = [UIFont systemFontOfSize:16];
         textTip.textColor = RGBA_COLOR(0xCD, 0xD5, 0xDD, 0xFF);
         textTip.backgroundColor = [UIColor whiteColor];
+        textTip.tag = textTipViewTag;
         [self.view addSubview:textTip];
-
+        
         [textTip setHidden:YES];
         
         [self.view addSubview:textTip];

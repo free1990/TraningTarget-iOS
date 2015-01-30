@@ -106,12 +106,17 @@ typedef void (^AFURLSessionTaskCompletionHandler)(NSURLResponse *response, id re
 #pragma mark -
 
 @interface AFURLSessionManagerTaskDelegate : NSObject <NSURLSessionTaskDelegate, NSURLSessionDataDelegate, NSURLSessionDownloadDelegate>
+
 @property (nonatomic, weak) AFURLSessionManager *manager;
+
 @property (nonatomic, strong) NSMutableData *mutableData;
 @property (nonatomic, strong) NSProgress *progress;
+
 @property (nonatomic, copy) NSURL *downloadFileURL;
+
 @property (nonatomic, copy) AFURLSessionDownloadTaskDidFinishDownloadingBlock downloadTaskDidFinishDownloading;
 @property (nonatomic, copy) AFURLSessionTaskCompletionHandler completionHandler;
+
 @end
 
 @implementation AFURLSessionManagerTaskDelegate
@@ -121,7 +126,9 @@ typedef void (^AFURLSessionTaskCompletionHandler)(NSURLResponse *response, id re
     if (!self) {
         return nil;
     }
-
+    
+    NSLog(@"创建AFURLSessionManagerTaskDelegate");
+    
     self.mutableData = [NSMutableData data];
 
     self.progress = [NSProgress progressWithTotalUnitCount:0];
@@ -312,7 +319,9 @@ expectedTotalBytes:(int64_t)expectedTotalBytes {
     self.lock = [[NSLock alloc] init];
     self.lock.name = AFURLSessionManagerLockName;
     
+    //??
     [self.session getTasksWithCompletionHandler:^(NSArray *dataTasks, NSArray *uploadTasks, NSArray *downloadTasks) {
+        
         for (NSURLSessionDataTask *task in dataTasks) {
             [self addDelegateForDataTask:task completionHandler:nil];
         }
@@ -325,12 +334,13 @@ expectedTotalBytes:(int64_t)expectedTotalBytes {
             [self addDelegateForDownloadTask:downloadTask progress:nil destination:nil completionHandler:nil];
         }
     }];
-
+    
     return self;
 }
 
 #pragma mark -
 
+//获得代理的task
 - (AFURLSessionManagerTaskDelegate *)delegateForTask:(NSURLSessionTask *)task {
     NSParameterAssert(task);
 
@@ -347,8 +357,16 @@ expectedTotalBytes:(int64_t)expectedTotalBytes {
 {
     NSParameterAssert(task);
     NSParameterAssert(delegate);
-
-    [task addObserver:self forKeyPath:NSStringFromSelector(@selector(state)) options:(NSKeyValueObservingOptions)(NSKeyValueObservingOptionOld |NSKeyValueObservingOptionNew) context:AFTaskStateChangedContext];
+    
+    //观察task的状态是运行还是暂停或者结束
+    NSLog(@"观察的路径=%@", NSStringFromSelector(@selector(state)));
+    NSLog(@"task id = %d", (int)task.taskIdentifier);
+    
+    [task addObserver:self
+           forKeyPath:NSStringFromSelector(@selector(state))
+              options:(NSKeyValueObservingOptions)(NSKeyValueObservingOptionOld |NSKeyValueObservingOptionNew)
+              context:AFTaskStateChangedContext];
+    
     [self.lock lock];
     self.mutableTaskDelegatesKeyedByTaskIdentifier[@(task.taskIdentifier)] = delegate;
     [self.lock unlock];
@@ -357,7 +375,10 @@ expectedTotalBytes:(int64_t)expectedTotalBytes {
 - (void)addDelegateForDataTask:(NSURLSessionDataTask *)dataTask
              completionHandler:(void (^)(NSURLResponse *response, id responseObject, NSError *error))completionHandler
 {
+    
+    NSLog(@"给task指定真正的AFURLSessionManagerTaskDelegate");
     AFURLSessionManagerTaskDelegate *delegate = [[AFURLSessionManagerTaskDelegate alloc] init];
+    
     delegate.manager = self;
     delegate.completionHandler = completionHandler;
 
@@ -498,6 +519,10 @@ expectedTotalBytes:(int64_t)expectedTotalBytes {
                             completionHandler:(void (^)(NSURLResponse *response, id responseObject, NSError *error))completionHandler
 {
     __block NSURLSessionDataTask *dataTask = nil;
+    
+    //把这个工作交给url_session_manager_creation_queue来进行处理，结束之后，在添加代理
+    
+    NSLog(@"真正创建task");
     dispatch_sync(url_session_manager_creation_queue(), ^{
         dataTask = [self.session dataTaskWithRequest:request];
     });

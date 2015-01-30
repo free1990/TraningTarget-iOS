@@ -17,7 +17,8 @@ static NSString * const kServerDomain = @"http://182.92.194.136:10002/";
 
 @interface AFDemoViewController (){
     
-    AFHTTPRequestOperationManager *httpManager;
+    AFHTTPRequestOperationManager *httpRequestManager;
+    AFHTTPSessionManager *httpSessionManager;
 }
 
 @property (nonatomic, assign) BOOL isReachable;
@@ -43,44 +44,64 @@ static NSString * const kServerDomain = @"http://182.92.194.136:10002/";
     
     NSURL *baseURL = [NSURL URLWithString:kServerDomain];
     
-    httpManager = [[AFHTTPRequestOperationManager alloc] initWithBaseURL:baseURL];
+//    httpRequestManager = [[AFHTTPRequestOperationManager alloc] initWithBaseURL:baseURL];
+//    
+//    [httpRequestManager.requestSerializer setTimeoutInterval:30];
+//    
+//    [httpRequestManager.requestSerializer setValue:@"APP" forHTTPHeaderField:@"jike-client-from"];
+//    [httpRequestManager.requestSerializer setValue:@"APP" forHTTPHeaderField:@"from"];
+//    
+//    [httpRequestManager.requestSerializer setValue:@"name" forHTTPHeaderField:@"zhao-yang"];
+//    
+//    NSLog(@"头部字典的字段: %@", httpRequestManager.requestSerializer.HTTPRequestHeaders);
     
-    [httpManager.requestSerializer setTimeoutInterval:30];
+//    __weak __typeof(self)weakSelf = self;
+//    //        NSOperationQueue *operationQueue = _requestManager.operationQueue;
+//    [httpManager.reachabilityManager setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
+//        switch (status) {
+//            case AFNetworkReachabilityStatusReachableViaWWAN:
+//            case AFNetworkReachabilityStatusReachableViaWiFi: {
+//                //                    [operationQueue setSuspended:NO];
+//                weakSelf.isReachable = YES;
+//            }
+//                break;
+//            case AFNetworkReachabilityStatusNotReachable:
+//            default: {
+//                //                    [operationQueue setSuspended:YES];
+//                weakSelf.isReachable = NO;
+//            }
+//                break;
+//        }
+//    }];
+//    
+//    [httpManager.reachabilityManager startMonitoring];
+//    [self versionInfoWithCompletion:^(VersionResponse *response){
+//        
+//        NSLog(@"----- %@", response.versionName);
+//        
+//    }];
     
-    [httpManager.requestSerializer setValue:@"APP" forHTTPHeaderField:@"jike-client-from"];
-    [httpManager.requestSerializer setValue:@"APP" forHTTPHeaderField:@"from"];
+    NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
     
-    [httpManager.requestSerializer setValue:@"name" forHTTPHeaderField:@"zhao-yang"];
+    httpSessionManager = [[AFHTTPSessionManager alloc] initWithBaseURL:baseURL
+                                                  sessionConfiguration:configuration];
     
-    NSLog(@"头部字典的字段: %@", httpManager.requestSerializer.HTTPRequestHeaders);
+    [httpSessionManager.requestSerializer setTimeoutInterval:30];
+
+    [httpSessionManager.requestSerializer setValue:@"APP" forHTTPHeaderField:@"jike-client-from"];
+    [httpSessionManager.requestSerializer setValue:@"APP" forHTTPHeaderField:@"from"];
     
-    __weak __typeof(self)weakSelf = self;
-    //        NSOperationQueue *operationQueue = _requestManager.operationQueue;
-    [httpManager.reachabilityManager setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
-        switch (status) {
-            case AFNetworkReachabilityStatusReachableViaWWAN:
-            case AFNetworkReachabilityStatusReachableViaWiFi: {
-                //                    [operationQueue setSuspended:NO];
-                weakSelf.isReachable = YES;
-            }
-                break;
-            case AFNetworkReachabilityStatusNotReachable:
-            default: {
-                //                    [operationQueue setSuspended:YES];
-                weakSelf.isReachable = NO;
-            }
-                break;
-        }
-    }];
+    [self sessionVersionInfoWithCompletion:^(VersionResponse *response){
     
-    [httpManager.reachabilityManager startMonitoring];
-    
-    
-    [self versionInfoWithCompletion:^(VersionResponse *response){
-        
         NSLog(@"----- %@", response.versionName);
         
+        NSHTTPCookieStorage *cookieJar = [NSHTTPCookieStorage sharedHTTPCookieStorage];
+        for (NSHTTPCookie *cookie in [cookieJar cookies]) {
+            NSLog(@"cockie = %@", cookie);
+        }
+        
     }];
+    
 }
 
 
@@ -116,7 +137,7 @@ static NSString * const kServerDomain = @"http://182.92.194.136:10002/";
 //            }];
     
     //POST一个表单（测试）
-    [httpManager POST:URLString
+    [httpRequestManager POST:URLString
            parameters:parameters
               success:^(AFHTTPRequestOperation *operation, id responseObject) {
             
@@ -155,6 +176,49 @@ static NSString * const kServerDomain = @"http://182.92.194.136:10002/";
         
            }];
 }
+
+- (void)sessionGET:(NSString *)URLString parameters:(id)parameters completion:(void (^)(NSDictionary *responseInfo))completion {
+    
+    //POST一个表单（测试）
+    [httpSessionManager GET:URLString
+                 parameters:parameters
+                    success:^(NSURLSessionDataTask *task, id responseObject){
+                        
+                        if ([responseObject isKindOfClass:[NSDictionary class]]) {
+                            completion(responseObject);
+                        } else {
+                            DLOGERROR(@"%@, %@", task, responseObject);
+                            completion(nil);
+                        }
+                        
+                    }
+                    failure:^(NSURLSessionDataTask *operation, NSError *error) {
+                        DLOGERROR(@"%@, %@", operation, error);
+                        
+                    }];
+}
+
+
+- (void)sessionVersionInfoWithCompletion:(void (^)(VersionResponse *response))completion{
+    
+    NSString *appVersion  = [AppUtil appVersion];
+    NSString *urlString = @"ckeckAppVersionState.json";
+    NSDictionary *parameters = @{@"appType": @(2),
+                                 @"versionName": appVersion};
+    
+    [self sessionGET:urlString parameters:parameters completion:^(NSDictionary *responseInfo){
+        
+        VersionResponse *response = nil;
+        if (responseInfo) {
+            response = [[VersionResponse alloc] init];
+            [response parseResponse:responseInfo];
+        }
+        
+        completion(response);
+        
+    }];
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

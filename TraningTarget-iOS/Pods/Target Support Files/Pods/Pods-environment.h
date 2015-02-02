@@ -6,6 +6,12 @@
 // project.
 
 
+// AFDownloadRequestOperation
+#define COCOAPODS_POD_AVAILABLE_AFDownloadRequestOperation
+#define COCOAPODS_VERSION_MAJOR_AFDownloadRequestOperation 2
+#define COCOAPODS_VERSION_MINOR_AFDownloadRequestOperation 0
+#define COCOAPODS_VERSION_PATCH_AFDownloadRequestOperation 1
+
 // AFNetworking
 #define COCOAPODS_POD_AVAILABLE_AFNetworking
 #define COCOAPODS_VERSION_MAJOR_AFNetworking 2
@@ -74,32 +80,39 @@
 
 // CrashlyticsFramework
 #define COCOAPODS_POD_AVAILABLE_CrashlyticsFramework
-#define COCOAPODS_VERSION_MAJOR_CrashlyticsFramework 2
-#define COCOAPODS_VERSION_MINOR_CrashlyticsFramework 2
-#define COCOAPODS_VERSION_PATCH_CrashlyticsFramework 3
+// This library does not follow semantic-versioning,
+// so we were not able to define version macros.
+// Please contact the author.
+// Version: 2.2.5.2.
 
 // FXImageView
 #define COCOAPODS_POD_AVAILABLE_FXImageView
 #define COCOAPODS_VERSION_MAJOR_FXImageView 1
 #define COCOAPODS_VERSION_MINOR_FXImageView 3
-#define COCOAPODS_VERSION_PATCH_FXImageView 3
+#define COCOAPODS_VERSION_PATCH_FXImageView 5
+
+// FastImageCache
+#define COCOAPODS_POD_AVAILABLE_FastImageCache
+#define COCOAPODS_VERSION_MAJOR_FastImageCache 1
+#define COCOAPODS_VERSION_MINOR_FastImageCache 3
+#define COCOAPODS_VERSION_PATCH_FastImageCache 0
 
 // FlatUIKit
 #define COCOAPODS_POD_AVAILABLE_FlatUIKit
 #define COCOAPODS_VERSION_MAJOR_FlatUIKit 1
-#define COCOAPODS_VERSION_MINOR_FlatUIKit 5
+#define COCOAPODS_VERSION_MINOR_FlatUIKit 6
 #define COCOAPODS_VERSION_PATCH_FlatUIKit 0
 
 // FlurrySDK
 #define COCOAPODS_POD_AVAILABLE_FlurrySDK
 #define COCOAPODS_VERSION_MAJOR_FlurrySDK 5
-#define COCOAPODS_VERSION_MINOR_FlurrySDK 3
+#define COCOAPODS_VERSION_MINOR_FlurrySDK 4
 #define COCOAPODS_VERSION_PATCH_FlurrySDK 0
 
 // FlurrySDK/FlurrySDK
 #define COCOAPODS_POD_AVAILABLE_FlurrySDK_FlurrySDK
 #define COCOAPODS_VERSION_MAJOR_FlurrySDK_FlurrySDK 5
-#define COCOAPODS_VERSION_MINOR_FlurrySDK_FlurrySDK 3
+#define COCOAPODS_VERSION_MINOR_FlurrySDK_FlurrySDK 4
 #define COCOAPODS_VERSION_PATCH_FlurrySDK_FlurrySDK 0
 
 // HMSegmentedControl
@@ -107,6 +120,12 @@
 #define COCOAPODS_VERSION_MAJOR_HMSegmentedControl 1
 #define COCOAPODS_VERSION_MINOR_HMSegmentedControl 4
 #define COCOAPODS_VERSION_PATCH_HMSegmentedControl 0
+
+// JSONModel
+#define COCOAPODS_POD_AVAILABLE_JSONModel
+#define COCOAPODS_VERSION_MAJOR_JSONModel 1
+#define COCOAPODS_VERSION_MINOR_JSONModel 0
+#define COCOAPODS_VERSION_PATCH_JSONModel 2
 
 // MBProgressHUD
 #define COCOAPODS_POD_AVAILABLE_MBProgressHUD
@@ -126,6 +145,18 @@
 #define COCOAPODS_VERSION_MINOR_MagicalRecord_Core 2
 #define COCOAPODS_VERSION_PATCH_MagicalRecord_Core 0
 
+// Mantle
+#define COCOAPODS_POD_AVAILABLE_Mantle
+#define COCOAPODS_VERSION_MAJOR_Mantle 1
+#define COCOAPODS_VERSION_MINOR_Mantle 5
+#define COCOAPODS_VERSION_PATCH_Mantle 4
+
+// Mantle/extobjc
+#define COCOAPODS_POD_AVAILABLE_Mantle_extobjc
+#define COCOAPODS_VERSION_MAJOR_Mantle_extobjc 1
+#define COCOAPODS_VERSION_MINOR_Mantle_extobjc 5
+#define COCOAPODS_VERSION_PATCH_Mantle_extobjc 4
+
 // SDWebImage
 #define COCOAPODS_POD_AVAILABLE_SDWebImage
 #define COCOAPODS_VERSION_MAJOR_SDWebImage 3
@@ -137,4 +168,10 @@
 #define COCOAPODS_VERSION_MAJOR_SDWebImage_Core 3
 #define COCOAPODS_VERSION_MINOR_SDWebImage_Core 7
 #define COCOAPODS_VERSION_PATCH_SDWebImage_Core 1
+
+// YTKNetwork
+#define COCOAPODS_POD_AVAILABLE_YTKNetwork
+#define COCOAPODS_VERSION_MAJOR_YTKNetwork 0
+#define COCOAPODS_VERSION_MINOR_YTKNetwork 2
+#define COCOAPODS_VERSION_PATCH_YTKNetwork 0
 

@@ -53,6 +53,7 @@ install_resource()
                     install_resource "BFKit/BFKit/Languages/ru.lproj"
                     install_resource "BFKit/BFKit/Languages/uk.lproj"
                     install_resource "BFKit/BFKit/Languages/zh-Hans.lproj"
+                    install_resource "FlatUIKit/Resources/flat-ui-icons-regular.ttf"
                     install_resource "FlatUIKit/Resources/Lato-Bold.ttf"
                     install_resource "FlatUIKit/Resources/Lato-Italic.ttf"
                     install_resource "FlatUIKit/Resources/Lato-Light.ttf"

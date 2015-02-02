@@ -137,7 +137,6 @@ typedef void (^AFURLSessionTaskCompletionHandler)(NSURLResponse *response, id re
 }
 
 #pragma mark - NSURLSessionTaskDelegate
-
 - (void)URLSession:(__unused NSURLSession *)session
               task:(__unused NSURLSessionTask *)task
    didSendBodyData:(__unused int64_t)bytesSent
@@ -741,6 +740,10 @@ expectedTotalBytes:(int64_t)expectedTotalBytes {
         }
 
         if (notificationName) {
+            
+            NSLog(@"notificationName-------->   %@", notificationName);
+            
+            //这玩意是和AFNetworkActivityIndicatorManager玩耍的，用来通知指示器的状态
             dispatch_async(dispatch_get_main_queue(), ^{
                 [[NSNotificationCenter defaultCenter] postNotificationName:notificationName object:object];
             });

@@ -110,7 +110,6 @@
                       failure:(void (^)(NSURLSessionDataTask *task, NSError *error))failure
 {
     //创建task
-    
     NSLog(@"根据URLString、parameters创建task");
     NSURLSessionDataTask *dataTask = [self dataTaskWithHTTPMethod:@"GET"
                                                         URLString:URLString
@@ -337,8 +336,9 @@
 
 - (void)encodeWithCoder:(NSCoder *)coder {
     [super encodeWithCoder:coder];
-
+    
     [coder encodeObject:self.baseURL forKey:NSStringFromSelector(@selector(baseURL))];
+    
     if ([self.session.configuration conformsToProtocol:@protocol(NSCoding)]) {
         [coder encodeObject:self.session.configuration forKey:@"sessionConfiguration"];
     } else {

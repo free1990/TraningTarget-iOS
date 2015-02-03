@@ -169,6 +169,12 @@
 #define COCOAPODS_VERSION_MINOR_SDWebImage_Core 7
 #define COCOAPODS_VERSION_PATCH_SDWebImage_Core 1
 
+// XHTwitterPaggingViewer
+#define COCOAPODS_POD_AVAILABLE_XHTwitterPaggingViewer
+#define COCOAPODS_VERSION_MAJOR_XHTwitterPaggingViewer 0
+#define COCOAPODS_VERSION_MINOR_XHTwitterPaggingViewer 5
+#define COCOAPODS_VERSION_PATCH_XHTwitterPaggingViewer 0
+
 // YTKNetwork
 #define COCOAPODS_POD_AVAILABLE_YTKNetwork
 #define COCOAPODS_VERSION_MAJOR_YTKNetwork 0

@@ -58,6 +58,8 @@ install_resource()
                     install_resource "FlatUIKit/Resources/Lato-Italic.ttf"
                     install_resource "FlatUIKit/Resources/Lato-Light.ttf"
                     install_resource "FlatUIKit/Resources/Lato-Regular.ttf"
+                    install_resource "XHTwitterPaggingViewer/XHTwitterPaggingViewer/Assets/thumbnail_normal@2x.png"
+                    install_resource "XHTwitterPaggingViewer/XHTwitterPaggingViewer/Assets/thumbnail_selected@2x.png"
           
 rsync -avr --copy-links --no-relative --exclude '*/.svn/*' --files-from="$RESOURCES_TO_COPY" / "${CONFIGURATION_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}"
 if [[ "${ACTION}" == "install" ]]; then

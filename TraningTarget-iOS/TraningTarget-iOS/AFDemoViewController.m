@@ -13,6 +13,8 @@
 #import "VersionResponse.h"
 #import "PropertiesManager.h"
 
+#import "MyRequestProtocol.h"
+
 static NSString * const kServerDomain = @"http://182.92.194.136:10002/";
 
 @interface AFDemoViewController (){
@@ -42,65 +44,67 @@ static NSString * const kServerDomain = @"http://182.92.194.136:10002/";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [NSURLProtocol registerClass:[MyRequestProtocol class]];
+    
     NSURL *baseURL = [NSURL URLWithString:kServerDomain];
     
-//    httpRequestManager = [[AFHTTPRequestOperationManager alloc] initWithBaseURL:baseURL];
-//    
-//    [httpRequestManager.requestSerializer setTimeoutInterval:30];
-//    
-//    [httpRequestManager.requestSerializer setValue:@"APP" forHTTPHeaderField:@"jike-client-from"];
-//    [httpRequestManager.requestSerializer setValue:@"APP" forHTTPHeaderField:@"from"];
-//    
-//    [httpRequestManager.requestSerializer setValue:@"name" forHTTPHeaderField:@"zhao-yang"];
-//    
-//    NSLog(@"头部字典的字段: %@", httpRequestManager.requestSerializer.HTTPRequestHeaders);
+    httpRequestManager = [[AFHTTPRequestOperationManager alloc] initWithBaseURL:baseURL];
     
-//    __weak __typeof(self)weakSelf = self;
-//    //        NSOperationQueue *operationQueue = _requestManager.operationQueue;
-//    [httpManager.reachabilityManager setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
-//        switch (status) {
-//            case AFNetworkReachabilityStatusReachableViaWWAN:
-//            case AFNetworkReachabilityStatusReachableViaWiFi: {
-//                //                    [operationQueue setSuspended:NO];
-//                weakSelf.isReachable = YES;
-//            }
-//                break;
-//            case AFNetworkReachabilityStatusNotReachable:
-//            default: {
-//                //                    [operationQueue setSuspended:YES];
-//                weakSelf.isReachable = NO;
-//            }
-//                break;
-//        }
-//    }];
-//    
-//    [httpManager.reachabilityManager startMonitoring];
-//    [self versionInfoWithCompletion:^(VersionResponse *response){
-//        
-//        NSLog(@"----- %@", response.versionName);
-//        
-//    }];
+    [httpRequestManager.requestSerializer setTimeoutInterval:30];
     
-    NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
+    [httpRequestManager.requestSerializer setValue:@"APP" forHTTPHeaderField:@"jike-client-from"];
+    [httpRequestManager.requestSerializer setValue:@"APP" forHTTPHeaderField:@"from"];
     
-    httpSessionManager = [[AFHTTPSessionManager alloc] initWithBaseURL:baseURL
-                                                  sessionConfiguration:configuration];
+    [httpRequestManager.requestSerializer setValue:@"name" forHTTPHeaderField:@"zhao-yang"];
     
-    [httpSessionManager.requestSerializer setTimeoutInterval:30];
-
-    [httpSessionManager.requestSerializer setValue:@"APP" forHTTPHeaderField:@"jike-client-from"];
-    [httpSessionManager.requestSerializer setValue:@"APP" forHTTPHeaderField:@"from"];
+    NSLog(@"头部字典的字段: %@", httpRequestManager.requestSerializer.HTTPRequestHeaders);
     
-    [self sessionVersionInfoWithCompletion:^(VersionResponse *response){
+    __weak __typeof(self)weakSelf = self;
+    //        NSOperationQueue *operationQueue = _requestManager.operationQueue;
+    [httpRequestManager.reachabilityManager setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
+        switch (status) {
+            case AFNetworkReachabilityStatusReachableViaWWAN:
+            case AFNetworkReachabilityStatusReachableViaWiFi: {
+                //                    [operationQueue setSuspended:NO];
+                weakSelf.isReachable = YES;
+            }
+                break;
+            case AFNetworkReachabilityStatusNotReachable:
+            default: {
+                //                    [operationQueue setSuspended:YES];
+                weakSelf.isReachable = NO;
+            }
+                break;
+        }
+    }];
     
+    [httpRequestManager.reachabilityManager startMonitoring];
+    [self versionInfoWithCompletion:^(VersionResponse *response){
+        
         NSLog(@"----- %@", response.versionName);
         
-        NSHTTPCookieStorage *cookieJar = [NSHTTPCookieStorage sharedHTTPCookieStorage];
-        for (NSHTTPCookie *cookie in [cookieJar cookies]) {
-            NSLog(@"cockie = %@", cookie);
-        }
-        
     }];
+    
+//    NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
+//    
+//    httpSessionManager = [[AFHTTPSessionManager alloc] initWithBaseURL:baseURL
+//                                                  sessionConfiguration:configuration];
+//    
+//    [httpSessionManager.requestSerializer setTimeoutInterval:30];
+//
+//    [httpSessionManager.requestSerializer setValue:@"APP" forHTTPHeaderField:@"jike-client-from"];
+//    [httpSessionManager.requestSerializer setValue:@"APP" forHTTPHeaderField:@"from"];
+//    
+//    [self sessionVersionInfoWithCompletion:^(VersionResponse *response){
+//    
+//        NSLog(@"----- %@", response.versionName);
+//        
+//        NSHTTPCookieStorage *cookieJar = [NSHTTPCookieStorage sharedHTTPCookieStorage];
+//        for (NSHTTPCookie *cookie in [cookieJar cookies]) {
+//            NSLog(@"cockie = %@", cookie);
+//        }
+//        
+//    }];
     
 }
 

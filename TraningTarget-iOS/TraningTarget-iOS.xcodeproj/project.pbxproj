@@ -46,6 +46,7 @@
 		D65686511A441BD400576E94 /* CoreGarphicsDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D65686501A441BD400576E94 /* CoreGarphicsDemoViewController.m */; };
 		D65AD0BF1A3EC6AA00D6E193 /* EmptyClass.m in Sources */ = {isa = PBXBuildFile; fileRef = D65AD0BE1A3EC6AA00D6E193 /* EmptyClass.m */; };
 		D65CC5FD1A78CC4E003AD059 /* TipTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D65CC5FC1A78CC4E003AD059 /* TipTestViewController.m */; };
+		D674FDD21A81F2DC00CAE789 /* MyRequestProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = D674FDD11A81F2DC00CAE789 /* MyRequestProtocol.m */; };
 		D68411861A5CCA560078A807 /* test.png in Resources */ = {isa = PBXBuildFile; fileRef = D68411851A5CCA560078A807 /* test.png */; };
 		D6A9E76D1A49021F001448C0 /* QuartzView.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A9E76C1A49021F001448C0 /* QuartzView.m */; };
 		D6C3BDF21A58D5B300E0D405 /* CoreAnimationDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C3BDF11A58D5B300E0D405 /* CoreAnimationDemoViewController.m */; };
@@ -174,6 +175,8 @@
 		D65AD0BE1A3EC6AA00D6E193 /* EmptyClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmptyClass.m; sourceTree = "<group>"; };
 		D65CC5FB1A78CC4E003AD059 /* TipTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TipTestViewController.h; sourceTree = "<group>"; };
 		D65CC5FC1A78CC4E003AD059 /* TipTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TipTestViewController.m; sourceTree = "<group>"; };
+		D674FDD01A81F2DC00CAE789 /* MyRequestProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyRequestProtocol.h; sourceTree = "<group>"; };
+		D674FDD11A81F2DC00CAE789 /* MyRequestProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyRequestProtocol.m; sourceTree = "<group>"; };
 		D68411851A5CCA560078A807 /* test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test.png; sourceTree = "<group>"; };
 		D6A9E76B1A49021F001448C0 /* QuartzView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuartzView.h; sourceTree = "<group>"; };
 		D6A9E76C1A49021F001448C0 /* QuartzView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuartzView.m; sourceTree = "<group>"; };
@@ -419,6 +422,8 @@
 				D619AE451A7725300001CC97 /* AFDemoViewController.m */,
 				D65CC5FB1A78CC4E003AD059 /* TipTestViewController.h */,
 				D65CC5FC1A78CC4E003AD059 /* TipTestViewController.m */,
+				D674FDD01A81F2DC00CAE789 /* MyRequestProtocol.h */,
+				D674FDD11A81F2DC00CAE789 /* MyRequestProtocol.m */,
 				D619AE471A7727B40001CC97 /* Macros.h */,
 			);
 			name = Controller;
@@ -657,6 +662,7 @@
 				D6C3BDF71A591EE400E0D405 /* CoreAnimationDemoTwoViewController.m in Sources */,
 				D6EADF7C1A4A528F00D46981 /* Clipping.m in Sources */,
 				D6422CF01A399587000D9759 /* ClassSet.m in Sources */,
+				D674FDD21A81F2DC00CAE789 /* MyRequestProtocol.m in Sources */,
 				D619AE671A7728990001CC97 /* JSONUtil.m in Sources */,
 				D6422CF61A3996D5000D9759 /* BaseViewController.m in Sources */,
 				D6F2254E1A400B0E00E3FCB2 /* TestCustomAlertViewController.m in Sources */,

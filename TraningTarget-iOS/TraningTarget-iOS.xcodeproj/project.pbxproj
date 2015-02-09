@@ -43,9 +43,12 @@
 		D6422CF01A399587000D9759 /* ClassSet.m in Sources */ = {isa = PBXBuildFile; fileRef = D6422CEF1A399587000D9759 /* ClassSet.m */; };
 		D6422CF61A3996D5000D9759 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6422CF51A3996D5000D9759 /* BaseViewController.m */; };
 		D6422CF91A399798000D9759 /* ClassItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D6422CF81A399798000D9759 /* ClassItem.m */; };
+		D6492A6C1A8855B3007FC85C /* RotateImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6492A6B1A8855B3007FC85C /* RotateImageViewController.m */; };
+		D6492A6E1A885614007FC85C /* rotate.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D6492A6D1A885614007FC85C /* rotate.jpg */; };
 		D65686511A441BD400576E94 /* CoreGarphicsDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D65686501A441BD400576E94 /* CoreGarphicsDemoViewController.m */; };
 		D65AD0BF1A3EC6AA00D6E193 /* EmptyClass.m in Sources */ = {isa = PBXBuildFile; fileRef = D65AD0BE1A3EC6AA00D6E193 /* EmptyClass.m */; };
 		D65CC5FD1A78CC4E003AD059 /* TipTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D65CC5FC1A78CC4E003AD059 /* TipTestViewController.m */; };
+		D65DDE671A885911005F3AB5 /* UIImage+Rotate.m in Sources */ = {isa = PBXBuildFile; fileRef = D65DDE661A885911005F3AB5 /* UIImage+Rotate.m */; };
 		D674FDD21A81F2DC00CAE789 /* MyRequestProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = D674FDD11A81F2DC00CAE789 /* MyRequestProtocol.m */; };
 		D68411861A5CCA560078A807 /* test.png in Resources */ = {isa = PBXBuildFile; fileRef = D68411851A5CCA560078A807 /* test.png */; };
 		D6A9E76D1A49021F001448C0 /* QuartzView.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A9E76C1A49021F001448C0 /* QuartzView.m */; };
@@ -169,12 +172,17 @@
 		D6422CF51A3996D5000D9759 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		D6422CF71A399798000D9759 /* ClassItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassItem.h; sourceTree = "<group>"; };
 		D6422CF81A399798000D9759 /* ClassItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassItem.m; sourceTree = "<group>"; };
+		D6492A6A1A8855B3007FC85C /* RotateImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RotateImageViewController.h; sourceTree = "<group>"; };
+		D6492A6B1A8855B3007FC85C /* RotateImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RotateImageViewController.m; sourceTree = "<group>"; };
+		D6492A6D1A885614007FC85C /* rotate.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = rotate.jpg; sourceTree = "<group>"; };
 		D656864F1A441BD400576E94 /* CoreGarphicsDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreGarphicsDemoViewController.h; sourceTree = "<group>"; };
 		D65686501A441BD400576E94 /* CoreGarphicsDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreGarphicsDemoViewController.m; sourceTree = "<group>"; };
 		D65AD0BD1A3EC6AA00D6E193 /* EmptyClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmptyClass.h; sourceTree = "<group>"; };
 		D65AD0BE1A3EC6AA00D6E193 /* EmptyClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmptyClass.m; sourceTree = "<group>"; };
 		D65CC5FB1A78CC4E003AD059 /* TipTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TipTestViewController.h; sourceTree = "<group>"; };
 		D65CC5FC1A78CC4E003AD059 /* TipTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TipTestViewController.m; sourceTree = "<group>"; };
+		D65DDE651A885911005F3AB5 /* UIImage+Rotate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Rotate.h"; sourceTree = "<group>"; };
+		D65DDE661A885911005F3AB5 /* UIImage+Rotate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Rotate.m"; sourceTree = "<group>"; };
 		D674FDD01A81F2DC00CAE789 /* MyRequestProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyRequestProtocol.h; sourceTree = "<group>"; };
 		D674FDD11A81F2DC00CAE789 /* MyRequestProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyRequestProtocol.m; sourceTree = "<group>"; };
 		D68411851A5CCA560078A807 /* test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test.png; sourceTree = "<group>"; };
@@ -304,6 +312,8 @@
 				D619AE5E1A7728990001CC97 /* UIView+MGBadgeView.m */,
 				D619AE611A7728990001CC97 /* UIViewController+DismissKeyboard.h */,
 				D619AE621A7728990001CC97 /* UIViewController+DismissKeyboard.m */,
+				D65DDE651A885911005F3AB5 /* UIImage+Rotate.h */,
+				D65DDE661A885911005F3AB5 /* UIImage+Rotate.m */,
 			);
 			path = Toolkit;
 			sourceTree = "<group>";
@@ -350,6 +360,7 @@
 				D6422CC31A397E85000D9759 /* Info.plist */,
 				D6422CC41A397E85000D9759 /* main.m */,
 				D68411851A5CCA560078A807 /* test.png */,
+				D6492A6D1A885614007FC85C /* rotate.jpg */,
 				D6EADF721A49551000D46981 /* demo.png */,
 				D6EADF7D1A4A530400D46981 /* Ship.png */,
 				D6C3BDF81A5940B500E0D405 /* fire.png */,
@@ -422,6 +433,8 @@
 				D619AE451A7725300001CC97 /* AFDemoViewController.m */,
 				D65CC5FB1A78CC4E003AD059 /* TipTestViewController.h */,
 				D65CC5FC1A78CC4E003AD059 /* TipTestViewController.m */,
+				D6492A6A1A8855B3007FC85C /* RotateImageViewController.h */,
+				D6492A6B1A8855B3007FC85C /* RotateImageViewController.m */,
 				D674FDD01A81F2DC00CAE789 /* MyRequestProtocol.h */,
 				D674FDD11A81F2DC00CAE789 /* MyRequestProtocol.m */,
 				D619AE471A7727B40001CC97 /* Macros.h */,
@@ -574,6 +587,7 @@
 				D6EADF731A49551000D46981 /* demo.png in Resources */,
 				D6422CCE1A397E85000D9759 /* Main.storyboard in Resources */,
 				D6EADF7E1A4A530400D46981 /* Ship.png in Resources */,
+				D6492A6E1A885614007FC85C /* rotate.jpg in Resources */,
 				D6422CD31A397E85000D9759 /* LaunchScreen.xib in Resources */,
 				D6422CD01A397E85000D9759 /* Images.xcassets in Resources */,
 				D6C3BDF91A5940B500E0D405 /* fire.png in Resources */,
@@ -646,6 +660,7 @@
 				D63ADF231A416B8E009CA874 /* RuntimeDemoThreeViewController.m in Sources */,
 				D61668751A493EC10067C179 /* RectView.m in Sources */,
 				D65CC5FD1A78CC4E003AD059 /* TipTestViewController.m in Sources */,
+				D65DDE671A885911005F3AB5 /* UIImage+Rotate.m in Sources */,
 				D616686F1A490BCB0067C179 /* Arcs.m in Sources */,
 				D6A9E76D1A49021F001448C0 /* QuartzView.m in Sources */,
 				D616686C1A49038B0067C179 /* Line.m in Sources */,
@@ -683,6 +698,7 @@
 				D619AE6F1A7728990001CC97 /* UIViewController+DismissKeyboard.m in Sources */,
 				D6D0EAC61A5A2D6F005C3A5D /* CoreAnimationExplicitCA.m in Sources */,
 				D65686511A441BD400576E94 /* CoreGarphicsDemoViewController.m in Sources */,
+				D6492A6C1A8855B3007FC85C /* RotateImageViewController.m in Sources */,
 				D6D943901A3AC7E900898FA3 /* RuntimePropertyAndFunction.m in Sources */,
 				D6D0EADB1A5B896F005C3A5D /* DrawingView.m in Sources */,
 				D619AE681A7728990001CC97 /* NSDate+Utilities.m in Sources */,

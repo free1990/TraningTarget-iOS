@@ -11,6 +11,7 @@
 @implementation MyRequestProtocol
 
 //遍历到我们自定义的NSURLProtocol时，系统先会调用canInitWithRequest:这个方法。顾名思义，这是整个流程的入口，只有这个方法返回YES我们才能够继续后续的处理。我们可以在这个方法的实现里面进行请求的过滤，筛选出需要进行处理的请求。
+
 + (BOOL)canInitWithRequest:(NSURLRequest *)request
 {
     

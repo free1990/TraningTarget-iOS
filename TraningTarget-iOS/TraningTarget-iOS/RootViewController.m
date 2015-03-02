@@ -81,6 +81,16 @@ static int allocCount = 0;
     [testThread start];
     
     
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(beginRecognize)
+                                                 name:@"CapturedImage" object:nil];
+
+    
+}
+
+- (void)beginRecognize{
+    
+    NSLog(@"通知出现了");
 }
 
 - (void)testThread

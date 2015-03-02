@@ -52,6 +52,10 @@
 		D674FDD21A81F2DC00CAE789 /* MyRequestProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = D674FDD11A81F2DC00CAE789 /* MyRequestProtocol.m */; };
 		D68411861A5CCA560078A807 /* test.png in Resources */ = {isa = PBXBuildFile; fileRef = D68411851A5CCA560078A807 /* test.png */; };
 		D6A9E76D1A49021F001448C0 /* QuartzView.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A9E76C1A49021F001448C0 /* QuartzView.m */; };
+		D6B90B0C1AA03FBA00B8A080 /* AssetsLibraryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B90B0B1AA03FBA00B8A080 /* AssetsLibraryViewController.m */; };
+		D6B90B0E1AA03FCE00B8A080 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6B90B0D1AA03FCE00B8A080 /* AssetsLibrary.framework */; };
+		D6B90B111AA05CA500B8A080 /* PictureObject.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B90B101AA05CA500B8A080 /* PictureObject.m */; };
+		D6B90B231AA411A400B8A080 /* dispatch_group_tAndNotificationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B90B221AA411A400B8A080 /* dispatch_group_tAndNotificationViewController.m */; };
 		D6C3BDF21A58D5B300E0D405 /* CoreAnimationDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C3BDF11A58D5B300E0D405 /* CoreAnimationDemoViewController.m */; };
 		D6C3BDF41A58D60000E0D405 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6C3BDF31A58D60000E0D405 /* QuartzCore.framework */; };
 		D6C3BDF71A591EE400E0D405 /* CoreAnimationDemoTwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C3BDF61A591EE400E0D405 /* CoreAnimationDemoTwoViewController.m */; };
@@ -188,6 +192,13 @@
 		D68411851A5CCA560078A807 /* test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test.png; sourceTree = "<group>"; };
 		D6A9E76B1A49021F001448C0 /* QuartzView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuartzView.h; sourceTree = "<group>"; };
 		D6A9E76C1A49021F001448C0 /* QuartzView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuartzView.m; sourceTree = "<group>"; };
+		D6B90B0A1AA03FBA00B8A080 /* AssetsLibraryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AssetsLibraryViewController.h; sourceTree = "<group>"; };
+		D6B90B0B1AA03FBA00B8A080 /* AssetsLibraryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AssetsLibraryViewController.m; sourceTree = "<group>"; };
+		D6B90B0D1AA03FCE00B8A080 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		D6B90B0F1AA05CA500B8A080 /* PictureObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PictureObject.h; sourceTree = "<group>"; };
+		D6B90B101AA05CA500B8A080 /* PictureObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PictureObject.m; sourceTree = "<group>"; };
+		D6B90B211AA411A400B8A080 /* dispatch_group_tAndNotificationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dispatch_group_tAndNotificationViewController.h; sourceTree = "<group>"; };
+		D6B90B221AA411A400B8A080 /* dispatch_group_tAndNotificationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = dispatch_group_tAndNotificationViewController.m; sourceTree = "<group>"; };
 		D6C3BDF01A58D5B300E0D405 /* CoreAnimationDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreAnimationDemoViewController.h; sourceTree = "<group>"; };
 		D6C3BDF11A58D5B300E0D405 /* CoreAnimationDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreAnimationDemoViewController.m; sourceTree = "<group>"; };
 		D6C3BDF31A58D60000E0D405 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -246,6 +257,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6B90B0E1AA03FCE00B8A080 /* AssetsLibrary.framework in Frameworks */,
 				D6C3BDF41A58D60000E0D405 /* QuartzCore.framework in Frameworks */,
 				F814BB409CFB202F26CDEBDD /* libPods.a in Frameworks */,
 			);
@@ -273,6 +285,7 @@
 		CED1B52E55DE5C890D53F36C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D6B90B0D1AA03FCE00B8A080 /* AssetsLibrary.framework */,
 				D6C3BDF31A58D60000E0D405 /* QuartzCore.framework */,
 				32E9A4D9DB94E1EC8F2C4F93 /* libPods.a */,
 			);
@@ -437,6 +450,12 @@
 				D6492A6B1A8855B3007FC85C /* RotateImageViewController.m */,
 				D674FDD01A81F2DC00CAE789 /* MyRequestProtocol.h */,
 				D674FDD11A81F2DC00CAE789 /* MyRequestProtocol.m */,
+				D6B90B0A1AA03FBA00B8A080 /* AssetsLibraryViewController.h */,
+				D6B90B0B1AA03FBA00B8A080 /* AssetsLibraryViewController.m */,
+				D6B90B211AA411A400B8A080 /* dispatch_group_tAndNotificationViewController.h */,
+				D6B90B221AA411A400B8A080 /* dispatch_group_tAndNotificationViewController.m */,
+				D6B90B0F1AA05CA500B8A080 /* PictureObject.h */,
+				D6B90B101AA05CA500B8A080 /* PictureObject.m */,
 				D619AE471A7727B40001CC97 /* Macros.h */,
 			);
 			name = Controller;
@@ -643,8 +662,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D619AE661A7728990001CC97 /* DebugUtil.m in Sources */,
+				D6B90B111AA05CA500B8A080 /* PictureObject.m in Sources */,
 				D6EADF711A4952AB00D46981 /* ImageAndTiling.m in Sources */,
 				D619AE691A7728990001CC97 /* NSString+MD5.m in Sources */,
+				D6B90B0C1AA03FBA00B8A080 /* AssetsLibraryViewController.m in Sources */,
 				D619AE771A772AAD0001CC97 /* AppUtil.m in Sources */,
 				D619AE6D1A7728990001CC97 /* UIView+MGBadgeView.m in Sources */,
 				D63ADF1D1A413007009CA874 /* RuntimeDemoOneViewController.m in Sources */,
@@ -690,6 +711,7 @@
 				D6D943891A3AB7C800898FA3 /* MsgForWardingDemo.m in Sources */,
 				D619AE7A1A772BA90001CC97 /* PropertiesManager.m in Sources */,
 				D6F307A31A6CDE0C008546F2 /* UIImage+UIImageExtras.m in Sources */,
+				D6B90B231AA411A400B8A080 /* dispatch_group_tAndNotificationViewController.m in Sources */,
 				D6EADF8B1A4AA42600D46981 /* UIViewController+HUD.m in Sources */,
 				D619AE7C1A772C3D0001CC97 /* HTTPResponse.m in Sources */,
 				D63ADF261A416EF9009CA874 /* NSObject+AutoEncodeDecode.m in Sources */,

@@ -56,9 +56,6 @@
     CGContextDrawImage(context, CGRectMake(100.0, height - 400.0, 190.0, 190.0), self.image);
     
     CGContextRestoreGState(context);
-    
-
-    
 }
 
 

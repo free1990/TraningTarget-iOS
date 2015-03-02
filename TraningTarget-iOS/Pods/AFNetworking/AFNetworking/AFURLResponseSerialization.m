@@ -93,9 +93,9 @@ static id AFJSONObjectByRemovingKeysWithNullValues(id JSONObject, NSJSONReadingO
     if (!self) {
         return nil;
     }
-    
+
     self.stringEncoding = NSUTF8StringEncoding;
-    
+
     self.acceptableStatusCodes = [NSIndexSet indexSetWithIndexesInRange:NSMakeRange(200, 100)];
     self.acceptableContentTypes = nil;
 
@@ -110,13 +110,10 @@ static id AFJSONObjectByRemovingKeysWithNullValues(id JSONObject, NSJSONReadingO
 {
     BOOL responseIsValid = YES;
     NSError *validationError = nil;
-    
-    //验证是否数据是否异常
+
     if (response && [response isKindOfClass:[NSHTTPURLResponse class]]) {
-        
-        //The acceptable MIME types for responses
         if (self.acceptableContentTypes && ![self.acceptableContentTypes containsObject:[response MIMEType]]) {
-            if ([data length] > 0) {
+            if ([data length] > 0 && [response URL]) {
                 NSMutableDictionary *mutableUserInfo = [@{
                                                           NSLocalizedDescriptionKey: [NSString stringWithFormat:NSLocalizedStringFromTable(@"Request failed: unacceptable content-type: %@", @"AFNetworking", nil), [response MIMEType]],
                                                           NSURLErrorFailingURLErrorKey:[response URL],
@@ -128,11 +125,11 @@ static id AFJSONObjectByRemovingKeysWithNullValues(id JSONObject, NSJSONReadingO
 
                 validationError = AFErrorWithUnderlyingError([NSError errorWithDomain:AFURLResponseSerializationErrorDomain code:NSURLErrorCannotDecodeContentData userInfo:mutableUserInfo], validationError);
             }
-            
+
             responseIsValid = NO;
         }
 
-        if (self.acceptableStatusCodes && ![self.acceptableStatusCodes containsIndex:(NSUInteger)response.statusCode]) {
+        if (self.acceptableStatusCodes && ![self.acceptableStatusCodes containsIndex:(NSUInteger)response.statusCode] && [response URL]) {
             NSMutableDictionary *mutableUserInfo = [@{
                                                NSLocalizedDescriptionKey: [NSString stringWithFormat:NSLocalizedStringFromTable(@"Request failed: %@ (%ld)", @"AFNetworking", nil), [NSHTTPURLResponse localizedStringForStatusCode:response.statusCode], (long)response.statusCode],
                                                NSURLErrorFailingURLErrorKey:[response URL],
@@ -162,8 +159,6 @@ static id AFJSONObjectByRemovingKeysWithNullValues(id JSONObject, NSJSONReadingO
                            data:(NSData *)data
                           error:(NSError *__autoreleasing *)error
 {
-    NSLog(@"父方法esponseObjectForResponse");
-    
     [self validateResponse:(NSHTTPURLResponse *)response data:data error:error];
 
     return data;
@@ -224,8 +219,7 @@ static id AFJSONObjectByRemovingKeysWithNullValues(id JSONObject, NSJSONReadingO
     if (!self) {
         return nil;
     }
-    
-    NSLog(@"接受的内容对象的格式为 application/json text/json text/javascript");
+
     self.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript", nil];
 
     return self;
@@ -237,9 +231,6 @@ static id AFJSONObjectByRemovingKeysWithNullValues(id JSONObject, NSJSONReadingO
                            data:(NSData *)data
                           error:(NSError *__autoreleasing *)error
 {
-    
-    NSLog(@"子方法esponseObjectForResponse");
-    
     if (![self validateResponse:(NSHTTPURLResponse *)response data:data error:error]) {
         if (!error || AFErrorOrUnderlyingErrorHasCodeInDomain(*error, NSURLErrorCannotDecodeContentData, AFURLResponseSerializationErrorDomain)) {
             return nil;

@@ -114,9 +114,7 @@ static NSString * AFPercentEscapedQueryStringValueFromStringWithEncoding(NSStrin
 extern NSArray * AFQueryStringPairsFromDictionary(NSDictionary *dictionary);
 extern NSArray * AFQueryStringPairsFromKeyAndValue(NSString *key, id value);
 
-//把字典类型转成，url参数的字符串
 static NSString * AFQueryStringFromParametersWithEncoding(NSDictionary *parameters, NSStringEncoding stringEncoding) {
-    
     NSMutableArray *mutablePairs = [NSMutableArray array];
     for (AFQueryStringPair *pair in AFQueryStringPairsFromDictionary(parameters)) {
         [mutablePairs addObject:[pair URLEncodedStringValueWithEncoding:stringEncoding]];
@@ -201,81 +199,48 @@ static void *AFHTTPRequestSerializerObserverContext = &AFHTTPRequestSerializerOb
     if (!self) {
         return nil;
     }
-    
-    
-    NSLog(@"request 序列化开始");
-    
+
     self.stringEncoding = NSUTF8StringEncoding;
-    
-    NSLog(@"创建http header字典");
+
     self.mutableHTTPRequestHeaders = [NSMutableDictionary dictionary];
-    
-    for (id temp  in [NSLocale preferredLanguages]) {
-        NSLog(@"--->%@", temp);
-    }
 
     // Accept-Language HTTP Header; see http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.4
     NSMutableArray *acceptLanguagesComponents = [NSMutableArray array];
-    
     [[NSLocale preferredLanguages] enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
         float q = 1.0f - (idx * 0.1f);
         [acceptLanguagesComponents addObject:[NSString stringWithFormat:@"%@;q=%0.1g", obj, q]];
         *stop = q <= 0.5f;
     }];
-    
-    for (id temp  in acceptLanguagesComponents) {
-        NSLog(@"acceptLanguagesComponents--->%@", temp);
-    }
-    
     [self setValue:[acceptLanguagesComponents componentsJoinedByString:@", "] forHTTPHeaderField:@"Accept-Language"];
-    
-    NSLog(@"加入头部的accept 语言字段--%@", [acceptLanguagesComponents componentsJoinedByString:@", "]);
-    
-    //把数组里面的内容两两之间，加上-，输出字符串
-    NSArray *pathArray = [NSArray arrayWithObjects:@"here", @"be", @"dragons", nil];
-    NSLog(@"%@",[pathArray componentsJoinedByString:@"-"]);
-    
+
     NSString *userAgent = nil;
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wgnu"
 #if defined(__IPHONE_OS_VERSION_MIN_REQUIRED)
     // User-Agent Header; see http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.43
-    userAgent = [NSString stringWithFormat:@"%@/%@ (%@; iOS %@; Scale/%0.2f)", [[[NSBundle mainBundle] infoDictionary] objectForKey:(__bridge NSString *)kCFBundleExecutableKey] ?: [[[NSBundle mainBundle] infoDictionary] objectForKey:(__bridge NSString *)kCFBundleIdentifierKey], (__bridge id)CFBundleGetValueForInfoDictionaryKey(CFBundleGetMainBundle(), kCFBundleVersionKey) ?: [[[NSBundle mainBundle] infoDictionary] objectForKey:(__bridge NSString *)kCFBundleVersionKey], [[UIDevice currentDevice] model], [[UIDevice currentDevice] systemVersion], [[UIScreen mainScreen] scale]];
+    userAgent = [NSString stringWithFormat:@"%@/%@ (%@; iOS %@; Scale/%0.2f)", [[[NSBundle mainBundle] infoDictionary] objectForKey:(__bridge NSString *)kCFBundleExecutableKey] ?: [[[NSBundle mainBundle] infoDictionary] objectForKey:(__bridge NSString *)kCFBundleIdentifierKey], [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"] ?: [[[NSBundle mainBundle] infoDictionary] objectForKey:(__bridge NSString *)kCFBundleVersionKey], [[UIDevice currentDevice] model], [[UIDevice currentDevice] systemVersion], [[UIScreen mainScreen] scale]];
 #elif defined(__MAC_OS_X_VERSION_MIN_REQUIRED)
     userAgent = [NSString stringWithFormat:@"%@/%@ (Mac OS X %@)", [[[NSBundle mainBundle] infoDictionary] objectForKey:(__bridge NSString *)kCFBundleExecutableKey] ?: [[[NSBundle mainBundle] infoDictionary] objectForKey:(__bridge NSString *)kCFBundleIdentifierKey], [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"] ?: [[[NSBundle mainBundle] infoDictionary] objectForKey:(__bridge NSString *)kCFBundleVersionKey], [[NSProcessInfo processInfo] operatingSystemVersionString]];
 #endif
 #pragma clang diagnostic pop
-    
-    NSLog(@"初始化userAgent = %@", userAgent);
-    
     if (userAgent) {
         if (![userAgent canBeConvertedToEncoding:NSASCIIStringEncoding]) {
-            
-            NSLog(@"不能转成NSASCII STRING");
-            
             NSMutableString *mutableUserAgent = [userAgent mutableCopy];
             if (CFStringTransform((__bridge CFMutableStringRef)(mutableUserAgent), NULL, (__bridge CFStringRef)@"Any-Latin; Latin-ASCII; [:^ASCII:] Remove", false)) {
                 userAgent = mutableUserAgent;
             }
         }
-        
-        NSLog(@"最终userAgent = %@", userAgent);
-        
         [self setValue:userAgent forHTTPHeaderField:@"User-Agent"];
     }
 
     // HTTP Method Definitions; see http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html
-    
-    //??
     self.HTTPMethodsEncodingParametersInURI = [NSSet setWithObjects:@"GET", @"HEAD", @"DELETE", nil];
 
     self.mutableObservedChangedKeyPaths = [NSMutableSet set];
-    
     for (NSString *keyPath in AFHTTPRequestSerializerObservedKeyPaths()) {
-        
-        NSLog(@"观察这些个keypath----%@", keyPath);
-        
-        [self addObserver:self forKeyPath:keyPath options:NSKeyValueObservingOptionNew context:AFHTTPRequestSerializerObserverContext];
+        if ([self respondsToSelector:NSSelectorFromString(keyPath)]) {
+            [self addObserver:self forKeyPath:keyPath options:NSKeyValueObservingOptionNew context:AFHTTPRequestSerializerObserverContext];
+        }
     }
 
     return self;
@@ -283,7 +248,9 @@ static void *AFHTTPRequestSerializerObserverContext = &AFHTTPRequestSerializerOb
 
 - (void)dealloc {
     for (NSString *keyPath in AFHTTPRequestSerializerObservedKeyPaths()) {
-        [self removeObserver:self forKeyPath:keyPath context:AFHTTPRequestSerializerObserverContext];
+        if ([self respondsToSelector:NSSelectorFromString(keyPath)]) {
+            [self removeObserver:self forKeyPath:keyPath context:AFHTTPRequestSerializerObserverContext];
+        }
     }
 }
 
@@ -351,15 +318,12 @@ forHTTPHeaderField:(NSString *)field
     NSParameterAssert(url);
 
     NSMutableURLRequest *mutableRequest = [[NSMutableURLRequest alloc] initWithURL:url];
-    
     mutableRequest.HTTPMethod = method;
 
     for (NSString *keyPath in AFHTTPRequestSerializerObservedKeyPaths()) {
-        
         if ([self.mutableObservedChangedKeyPaths containsObject:keyPath]) {
             [mutableRequest setValue:[self valueForKeyPath:keyPath] forKey:keyPath];
         }
-        
     }
 
     mutableRequest = [[self requestBySerializingRequest:mutableRequest withParameters:parameters error:error] mutableCopy];
@@ -384,12 +348,10 @@ forHTTPHeaderField:(NSString *)field
     NSParameterAssert(method);
     NSParameterAssert(![method isEqualToString:@"GET"] && ![method isEqualToString:@"HEAD"]);
 
-    //只设置请求的方法和URL的地址
     NSMutableURLRequest *mutableRequest = [self requestWithMethod:method URLString:URLString parameters:nil error:error];
-    
+
     __block AFStreamingMultipartFormData *formData = [[AFStreamingMultipartFormData alloc] initWithURLRequest:mutableRequest stringEncoding:NSUTF8StringEncoding];
-    
-    //如果parameter值不为空，那么就这些数据封装成data放到发送的数据段里面
+
     if (parameters) {
         for (AFQueryStringPair *pair in AFQueryStringPairsFromDictionary(parameters)) {
             NSData *data = nil;
@@ -406,8 +368,7 @@ forHTTPHeaderField:(NSString *)field
             }
         }
     }
-    
-    //把外面的数据加进来
+
     if (block) {
         block(formData);
     }
@@ -490,9 +451,6 @@ forHTTPHeaderField:(NSString *)field
 
     if (parameters) {
         NSString *query = nil;
-        
-        NSLog(@"self.queryStringSerialization = %@", self.queryStringSerialization);
-        
         if (self.queryStringSerialization) {
             NSError *serializationError;
             query = self.queryStringSerialization(request, parameters, &serializationError);
@@ -505,36 +463,20 @@ forHTTPHeaderField:(NSString *)field
                 return nil;
             }
         } else {
-            
-            NSLog(@"self.queryStringSerializationStyle = %ld", self.queryStringSerializationStyle);
-            
             switch (self.queryStringSerializationStyle) {
                 case AFHTTPRequestQueryStringDefaultStyle:
                     query = AFQueryStringFromParametersWithEncoding(parameters, self.stringEncoding);
                     break;
             }
         }
-        
-        NSLog(@"mutableRequest.URL.query %@", mutableRequest.URL.query);
-        NSLog(@"AFQueryStringFromParametersWithEncoding - query %@", query);
-        
-        //使用GET\HEAD\DELETE方法就把参数转化成带参数的URL
+
         if ([self.HTTPMethodsEncodingParametersInURI containsObject:[[request HTTPMethod] uppercaseString]]) {
-            
             mutableRequest.URL = [NSURL URLWithString:[[mutableRequest.URL absoluteString] stringByAppendingFormat:mutableRequest.URL.query ? @"&%@" : @"?%@", query]];
-            
-            NSLog(@"mutableRequest.URL--- %@", mutableRequest.URL);
-        }
-        else
-        {
+        } else {
             if (![mutableRequest valueForHTTPHeaderField:@"Content-Type"]) {
                 [mutableRequest setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
             }
-            
             [mutableRequest setHTTPBody:[query dataUsingEncoding:self.stringEncoding]];
-            
-            NSLog(@"mutableRequest.HTTPBody--- %@", mutableRequest.HTTPBody);
-            
         }
     }
 
@@ -1189,7 +1131,9 @@ typedef enum {
 
 - (BOOL)transitionToNextPhase {
     if (![[NSThread currentThread] isMainThread]) {
-        [self performSelectorOnMainThread:@selector(transitionToNextPhase) withObject:nil waitUntilDone:YES];
+        dispatch_sync(dispatch_get_main_queue(), ^{
+            [self transitionToNextPhase];
+        });
         return YES;
     }
 
@@ -1273,8 +1217,7 @@ typedef enum {
     
     if (parameters) {
         if (![mutableRequest valueForHTTPHeaderField:@"Content-Type"]) {
-            NSString *charset = (__bridge NSString *)CFStringConvertEncodingToIANACharSetName(CFStringConvertNSStringEncodingToEncoding(NSUTF8StringEncoding));
-            [mutableRequest setValue:[NSString stringWithFormat:@"application/json; charset=%@", charset] forHTTPHeaderField:@"Content-Type"];
+            [mutableRequest setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
         }
 
         [mutableRequest setHTTPBody:[NSJSONSerialization dataWithJSONObject:parameters options:self.writingOptions error:error]];
@@ -1353,8 +1296,7 @@ typedef enum {
 
     if (parameters) {
         if (![mutableRequest valueForHTTPHeaderField:@"Content-Type"]) {
-            NSString *charset = (__bridge NSString *)CFStringConvertEncodingToIANACharSetName(CFStringConvertNSStringEncodingToEncoding(NSUTF8StringEncoding));
-            [mutableRequest setValue:[NSString stringWithFormat:@"application/x-plist; charset=%@", charset] forHTTPHeaderField:@"Content-Type"];
+            [mutableRequest setValue:@"application/x-plist" forHTTPHeaderField:@"Content-Type"];
         }
 
         [mutableRequest setHTTPBody:[NSPropertyListSerialization dataWithPropertyList:parameters format:self.format options:self.writeOptions error:error]];

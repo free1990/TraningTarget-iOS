@@ -284,8 +284,6 @@
 
  @see -HTTPRequestOperationWithRequest:success:failure:
  */
-
-//??不懂什么是patch
 - (AFHTTPRequestOperation *)PATCH:(NSString *)URLString
                        parameters:(id)parameters
                           success:(void (^)(AFHTTPRequestOperation *operation, id responseObject))success

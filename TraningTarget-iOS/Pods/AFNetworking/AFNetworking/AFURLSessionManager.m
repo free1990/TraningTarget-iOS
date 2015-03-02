@@ -21,6 +21,7 @@
 // THE SOFTWARE.
 
 #import "AFURLSessionManager.h"
+#import <objc/runtime.h>
 
 #if (defined(__IPHONE_OS_VERSION_MAX_ALLOWED) && __IPHONE_OS_VERSION_MAX_ALLOWED >= 70000) || (defined(__MAC_OS_X_VERSION_MAX_ALLOWED) && __MAC_OS_X_VERSION_MAX_ALLOWED >= 1090)
 
@@ -106,17 +107,12 @@ typedef void (^AFURLSessionTaskCompletionHandler)(NSURLResponse *response, id re
 #pragma mark -
 
 @interface AFURLSessionManagerTaskDelegate : NSObject <NSURLSessionTaskDelegate, NSURLSessionDataDelegate, NSURLSessionDownloadDelegate>
-
 @property (nonatomic, weak) AFURLSessionManager *manager;
-
 @property (nonatomic, strong) NSMutableData *mutableData;
 @property (nonatomic, strong) NSProgress *progress;
-
 @property (nonatomic, copy) NSURL *downloadFileURL;
-
 @property (nonatomic, copy) AFURLSessionDownloadTaskDidFinishDownloadingBlock downloadTaskDidFinishDownloading;
 @property (nonatomic, copy) AFURLSessionTaskCompletionHandler completionHandler;
-
 @end
 
 @implementation AFURLSessionManagerTaskDelegate
@@ -126,9 +122,7 @@ typedef void (^AFURLSessionTaskCompletionHandler)(NSURLResponse *response, id re
     if (!self) {
         return nil;
     }
-    
-    NSLog(@"创建AFURLSessionManagerTaskDelegate");
-    
+
     self.mutableData = [NSMutableData data];
 
     self.progress = [NSProgress progressWithTotalUnitCount:0];
@@ -137,6 +131,7 @@ typedef void (^AFURLSessionTaskCompletionHandler)(NSURLResponse *response, id re
 }
 
 #pragma mark - NSURLSessionTaskDelegate
+
 - (void)URLSession:(__unused NSURLSession *)session
               task:(__unused NSURLSessionTask *)task
    didSendBodyData:(__unused int64_t)bytesSent
@@ -261,6 +256,62 @@ expectedTotalBytes:(int64_t)expectedTotalBytes {
 
 #pragma mark -
 
+/*
+ A workaround for issues related to key-value observing the `state` of an `NSURLSessionTask`.
+
+ See https://github.com/AFNetworking/AFNetworking/issues/1477
+ */
+
+static inline void af_swizzleSelector(Class class, SEL originalSelector, SEL swizzledSelector) {
+    Method originalMethod = class_getInstanceMethod(class, originalSelector);
+    Method swizzledMethod = class_getInstanceMethod(class, swizzledSelector);
+    if (class_addMethod(class, originalSelector, method_getImplementation(swizzledMethod), method_getTypeEncoding(swizzledMethod))) {
+        class_replaceMethod(class, swizzledSelector, method_getImplementation(originalMethod), method_getTypeEncoding(originalMethod));
+    } else {
+        method_exchangeImplementations(originalMethod, swizzledMethod);
+    }
+}
+
+static NSString * const AFNSURLSessionTaskDidResumeNotification  = @"com.alamofire.networking.nsurlsessiontask.resume";
+static NSString * const AFNSURLSessionTaskDidSuspendNotification = @"com.alamofire.networking.nsurlsessiontask.suspend";
+
+@interface NSURLSessionTask (_AFStateObserving)
+@end
+
+@implementation NSURLSessionTask (_AFStateObserving)
+
++ (void)load {
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        af_swizzleSelector([self class], @selector(resume), @selector(af_resume));
+        af_swizzleSelector([self class], @selector(suspend), @selector(af_suspend));
+    });
+}
+
+#pragma mark -
+
+- (void)af_resume {
+    NSURLSessionTaskState state = self.state;
+    [self af_resume];
+
+    if (state != NSURLSessionTaskStateRunning) {
+        [[NSNotificationCenter defaultCenter] postNotificationName:AFNSURLSessionTaskDidResumeNotification object:self];
+    }
+}
+
+- (void)af_suspend {
+    NSURLSessionTaskState state = self.state;
+    [self af_suspend];
+
+    if (state != NSURLSessionTaskStateSuspended) {
+        [[NSNotificationCenter defaultCenter] postNotificationName:AFNSURLSessionTaskDidSuspendNotification object:self];
+    }
+}
+
+@end
+
+#pragma mark -
+
 @interface AFURLSessionManager ()
 @property (readwrite, nonatomic, strong) NSURLSessionConfiguration *sessionConfiguration;
 @property (readwrite, nonatomic, strong) NSOperationQueue *operationQueue;
@@ -318,9 +369,7 @@ expectedTotalBytes:(int64_t)expectedTotalBytes {
     self.lock = [[NSLock alloc] init];
     self.lock.name = AFURLSessionManagerLockName;
     
-    //??
     [self.session getTasksWithCompletionHandler:^(NSArray *dataTasks, NSArray *uploadTasks, NSArray *downloadTasks) {
-        
         for (NSURLSessionDataTask *task in dataTasks) {
             [self addDelegateForDataTask:task completionHandler:nil];
         }
@@ -333,13 +382,43 @@ expectedTotalBytes:(int64_t)expectedTotalBytes {
             [self addDelegateForDownloadTask:downloadTask progress:nil destination:nil completionHandler:nil];
         }
     }];
-    
+
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(taskDidResume:) name:AFNSURLSessionTaskDidResumeNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(taskDidSuspend:) name:AFNSURLSessionTaskDidSuspendNotification object:nil];
+
     return self;
+}
+
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+- (void)taskDidResume:(NSNotification *)notification {
+    NSURLSessionTask *task = notification.object;
+    if ([task isKindOfClass:[NSURLSessionTask class]]) {
+        AFURLSessionManager *manager = [self delegateForTask:task].manager;
+        if ([manager isEqual:self]) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [[NSNotificationCenter defaultCenter] postNotificationName:AFNetworkingTaskDidResumeNotification object:task];
+            });
+        }
+    }
+}
+
+- (void)taskDidSuspend:(NSNotification *)notification {
+    NSURLSessionTask *task = notification.object;
+    if ([task isKindOfClass:[NSURLSessionTask class]]) {
+        AFURLSessionManager *manager = [self delegateForTask:task].manager;
+        if ([manager isEqual:self]) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [[NSNotificationCenter defaultCenter] postNotificationName:AFNetworkingTaskDidSuspendNotification object:task];
+            });
+        }
+    }
 }
 
 #pragma mark -
 
-//获得代理的task
 - (AFURLSessionManagerTaskDelegate *)delegateForTask:(NSURLSessionTask *)task {
     NSParameterAssert(task);
 
@@ -356,16 +435,7 @@ expectedTotalBytes:(int64_t)expectedTotalBytes {
 {
     NSParameterAssert(task);
     NSParameterAssert(delegate);
-    
-    //观察task的状态是运行还是暂停或者结束
-    NSLog(@"观察的路径=%@", NSStringFromSelector(@selector(state)));
-    NSLog(@"task id = %d", (int)task.taskIdentifier);
-    
-    [task addObserver:self
-           forKeyPath:NSStringFromSelector(@selector(state))
-              options:(NSKeyValueObservingOptions)(NSKeyValueObservingOptionOld |NSKeyValueObservingOptionNew)
-              context:AFTaskStateChangedContext];
-    
+
     [self.lock lock];
     self.mutableTaskDelegatesKeyedByTaskIdentifier[@(task.taskIdentifier)] = delegate;
     [self.lock unlock];
@@ -374,10 +444,7 @@ expectedTotalBytes:(int64_t)expectedTotalBytes {
 - (void)addDelegateForDataTask:(NSURLSessionDataTask *)dataTask
              completionHandler:(void (^)(NSURLResponse *response, id responseObject, NSError *error))completionHandler
 {
-    
-    NSLog(@"给task指定真正的AFURLSessionManagerTaskDelegate");
     AFURLSessionManagerTaskDelegate *delegate = [[AFURLSessionManagerTaskDelegate alloc] init];
-    
     delegate.manager = self;
     delegate.completionHandler = completionHandler;
 
@@ -440,7 +507,6 @@ expectedTotalBytes:(int64_t)expectedTotalBytes {
 - (void)removeDelegateForTask:(NSURLSessionTask *)task {
     NSParameterAssert(task);
 
-    [task removeObserver:self forKeyPath:NSStringFromSelector(@selector(state)) context:AFTaskStateChangedContext];
     [self.lock lock];
     [self.mutableTaskDelegatesKeyedByTaskIdentifier removeObjectForKey:@(task.taskIdentifier)];
     [self.lock unlock];
@@ -518,10 +584,6 @@ expectedTotalBytes:(int64_t)expectedTotalBytes {
                             completionHandler:(void (^)(NSURLResponse *response, id responseObject, NSError *error))completionHandler
 {
     __block NSURLSessionDataTask *dataTask = nil;
-    
-    //把这个工作交给url_session_manager_creation_queue来进行处理，结束之后，在添加代理
-    
-    NSLog(@"真正创建task");
     dispatch_sync(url_session_manager_creation_queue(), ^{
         dataTask = [self.session dataTaskWithRequest:request];
     });
@@ -713,46 +775,6 @@ expectedTotalBytes:(int64_t)expectedTotalBytes {
     return [[self class] instancesRespondToSelector:selector];
 }
 
-#pragma mark - NSKeyValueObserving
-
-- (void)observeValueForKeyPath:(NSString *)keyPath
-                      ofObject:(id)object
-                        change:(NSDictionary *)change
-                       context:(void *)context
-{
-    if (context == AFTaskStateChangedContext && [keyPath isEqualToString:@"state"]) {
-        if (change[NSKeyValueChangeOldKey] && change[NSKeyValueChangeNewKey] && [change[NSKeyValueChangeNewKey] isEqual:change[NSKeyValueChangeOldKey]]) {
-            return;
-        }
-
-        NSString *notificationName = nil;
-        switch ([(NSURLSessionTask *)object state]) {
-            case NSURLSessionTaskStateRunning:
-                notificationName = AFNetworkingTaskDidResumeNotification;
-                break;
-            case NSURLSessionTaskStateSuspended:
-                notificationName = AFNetworkingTaskDidSuspendNotification;
-                break;
-            case NSURLSessionTaskStateCompleted:
-                // AFNetworkingTaskDidFinishNotification posted by task completion handlers
-            default:
-                break;
-        }
-
-        if (notificationName) {
-            
-            NSLog(@"notificationName-------->   %@", notificationName);
-            
-            //这玩意是和AFNetworkActivityIndicatorManager玩耍的，用来通知指示器的状态
-            dispatch_async(dispatch_get_main_queue(), ^{
-                [[NSNotificationCenter defaultCenter] postNotificationName:notificationName object:object];
-            });
-        }
-    } else {
-        [super observeValueForKeyPath:keyPath ofObject:object change:change context:context];
-    }
-}
-
 #pragma mark - NSURLSessionDelegate
 
 - (void)URLSession:(NSURLSession *)session
@@ -762,15 +784,7 @@ didBecomeInvalidWithError:(NSError *)error
         self.sessionDidBecomeInvalid(session, error);
     }
 
-    [self.session getTasksWithCompletionHandler:^(NSArray *dataTasks, NSArray *uploadTasks, NSArray *downloadTasks) {
-        NSArray *tasks = [@[dataTasks, uploadTasks, downloadTasks] valueForKeyPath:@"@unionOfArrays.self"];
-        for (NSURLSessionTask *task in tasks) {
-            [task removeObserver:self forKeyPath:NSStringFromSelector(@selector(state)) context:AFTaskStateChangedContext];
-        }
-
-        [self removeAllDelegates];
-    }];
-
+    [self removeAllDelegates];
     [[NSNotificationCenter defaultCenter] postNotificationName:AFURLSessionDidInvalidateNotification object:session];
 }
 
@@ -986,9 +1000,11 @@ didBecomeDownloadTask:(NSURLSessionDownloadTask *)downloadTask
       downloadTask:(NSURLSessionDownloadTask *)downloadTask
 didFinishDownloadingToURL:(NSURL *)location
 {
+    AFURLSessionManagerTaskDelegate *delegate = [self delegateForTask:downloadTask];
     if (self.downloadTaskDidFinishDownloading) {
         NSURL *fileURL = self.downloadTaskDidFinishDownloading(session, downloadTask, location);
         if (fileURL) {
+            delegate.downloadFileURL = fileURL;
             NSError *error = nil;
             [[NSFileManager defaultManager] moveItemAtURL:location toURL:fileURL error:&error];
             if (error) {
@@ -998,8 +1014,7 @@ didFinishDownloadingToURL:(NSURL *)location
             return;
         }
     }
-	
-    AFURLSessionManagerTaskDelegate *delegate = [self delegateForTask:downloadTask];
+    
     if (delegate) {
         [delegate URLSession:session downloadTask:downloadTask didFinishDownloadingToURL:location];
     }

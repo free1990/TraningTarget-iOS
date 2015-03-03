@@ -52,6 +52,9 @@ PODS:
   - YTKNetwork (0.2.0):
     - AFDownloadRequestOperation (~> 2.0)
     - AFNetworking (~> 2.0)
+  - ZXingObjC (3.0.3):
+    - ZXingObjC/All (= 3.0.3)
+  - ZXingObjC/All (3.0.3)
 
 DEPENDENCIES:
   - AFNetworking
@@ -71,6 +74,7 @@ DEPENDENCIES:
   - SDWebImage (~> 3.7)
   - XHTwitterPaggingViewer (~> 0.5)
   - YTKNetwork
+  - ZXingObjC (~> 3.0)
 
 SPEC CHECKSUMS:
   AFDownloadRequestOperation: e223a65bc56fb8e6ae5d289b649c7bcc6b307f0d
@@ -91,5 +95,6 @@ SPEC CHECKSUMS:
   SDWebImage: 116e88633b5b416ea0ca4b334a4ac59cf72dd38d
   XHTwitterPaggingViewer: 5fd6b5cd85e460de8d00934fd4b774c0ca606722
   YTKNetwork: a01d2ac5bc03171917adf2856ec0fca2b0d00f8b
+  ZXingObjC: 1eebdf4334b7de660ae42ddd23bd97b6d777b07d
 
 COCOAPODS: 0.35.0

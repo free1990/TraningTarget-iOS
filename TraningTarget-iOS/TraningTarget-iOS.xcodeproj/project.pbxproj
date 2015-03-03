@@ -72,6 +72,8 @@
 		D6D943891A3AB7C800898FA3 /* MsgForWardingDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D943881A3AB7C800898FA3 /* MsgForWardingDemo.m */; };
 		D6D943901A3AC7E900898FA3 /* RuntimePropertyAndFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D9438F1A3AC7E900898FA3 /* RuntimePropertyAndFunction.m */; };
 		D6D943941A3AE19B00898FA3 /* RuntimeDynamicMethodResolutionAndDynamicLoading.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D943931A3AE19B00898FA3 /* RuntimeDynamicMethodResolutionAndDynamicLoading.m */; };
+		D6EA5CF71AA598FA00BA68D4 /* ZXingOBJCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6EA5CF61AA598FA00BA68D4 /* ZXingOBJCViewController.m */; };
+		D6EA5CF91AA59A1800BA68D4 /* barcode.png in Resources */ = {isa = PBXBuildFile; fileRef = D6EA5CF81AA59A1800BA68D4 /* barcode.png */; };
 		D6EADF711A4952AB00D46981 /* ImageAndTiling.m in Sources */ = {isa = PBXBuildFile; fileRef = D6EADF701A4952AB00D46981 /* ImageAndTiling.m */; };
 		D6EADF731A49551000D46981 /* demo.png in Resources */ = {isa = PBXBuildFile; fileRef = D6EADF721A49551000D46981 /* demo.png */; };
 		D6EADF761A49646F00D46981 /* Pattern.m in Sources */ = {isa = PBXBuildFile; fileRef = D6EADF751A49646F00D46981 /* Pattern.m */; };
@@ -226,6 +228,9 @@
 		D6D9438F1A3AC7E900898FA3 /* RuntimePropertyAndFunction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RuntimePropertyAndFunction.m; sourceTree = "<group>"; };
 		D6D943921A3AE19B00898FA3 /* RuntimeDynamicMethodResolutionAndDynamicLoading.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RuntimeDynamicMethodResolutionAndDynamicLoading.h; sourceTree = "<group>"; };
 		D6D943931A3AE19B00898FA3 /* RuntimeDynamicMethodResolutionAndDynamicLoading.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RuntimeDynamicMethodResolutionAndDynamicLoading.m; sourceTree = "<group>"; };
+		D6EA5CF51AA598FA00BA68D4 /* ZXingOBJCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXingOBJCViewController.h; sourceTree = "<group>"; };
+		D6EA5CF61AA598FA00BA68D4 /* ZXingOBJCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZXingOBJCViewController.m; sourceTree = "<group>"; };
+		D6EA5CF81AA59A1800BA68D4 /* barcode.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = barcode.png; sourceTree = "<group>"; };
 		D6EADF6F1A4952AB00D46981 /* ImageAndTiling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageAndTiling.h; sourceTree = "<group>"; };
 		D6EADF701A4952AB00D46981 /* ImageAndTiling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageAndTiling.m; sourceTree = "<group>"; };
 		D6EADF721A49551000D46981 /* demo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = demo.png; sourceTree = "<group>"; };
@@ -370,6 +375,7 @@
 		D6422CC21A397E85000D9759 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D6EA5CF81AA59A1800BA68D4 /* barcode.png */,
 				D6422CC31A397E85000D9759 /* Info.plist */,
 				D6422CC41A397E85000D9759 /* main.m */,
 				D68411851A5CCA560078A807 /* test.png */,
@@ -454,6 +460,8 @@
 				D6B90B0B1AA03FBA00B8A080 /* AssetsLibraryViewController.m */,
 				D6B90B211AA411A400B8A080 /* dispatch_group_tAndNotificationViewController.h */,
 				D6B90B221AA411A400B8A080 /* dispatch_group_tAndNotificationViewController.m */,
+				D6EA5CF51AA598FA00BA68D4 /* ZXingOBJCViewController.h */,
+				D6EA5CF61AA598FA00BA68D4 /* ZXingOBJCViewController.m */,
 				D6B90B0F1AA05CA500B8A080 /* PictureObject.h */,
 				D6B90B101AA05CA500B8A080 /* PictureObject.m */,
 				D619AE471A7727B40001CC97 /* Macros.h */,
@@ -606,6 +614,7 @@
 				D6EADF731A49551000D46981 /* demo.png in Resources */,
 				D6422CCE1A397E85000D9759 /* Main.storyboard in Resources */,
 				D6EADF7E1A4A530400D46981 /* Ship.png in Resources */,
+				D6EA5CF91AA59A1800BA68D4 /* barcode.png in Resources */,
 				D6492A6E1A885614007FC85C /* rotate.jpg in Resources */,
 				D6422CD31A397E85000D9759 /* LaunchScreen.xib in Resources */,
 				D6422CD01A397E85000D9759 /* Images.xcassets in Resources */,
@@ -724,6 +733,7 @@
 				D6D943901A3AC7E900898FA3 /* RuntimePropertyAndFunction.m in Sources */,
 				D6D0EADB1A5B896F005C3A5D /* DrawingView.m in Sources */,
 				D619AE681A7728990001CC97 /* NSDate+Utilities.m in Sources */,
+				D6EA5CF71AA598FA00BA68D4 /* ZXingOBJCViewController.m in Sources */,
 				D61E33B31A78D7DE00105117 /* UIViewController+AbnormalDisplay.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

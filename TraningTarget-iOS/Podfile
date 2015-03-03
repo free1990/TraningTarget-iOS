@@ -23,6 +23,7 @@ pod 'JSONModel', '~> 1.0.2'
 pod 'XHTwitterPaggingViewer', '~> 0.5'
 pod 'NYXImagesKit', '~> 2.3'
 
+pod 'ZXingObjC', '~> 3.0'
 #end
 
 #target "ZYZoneTests" do

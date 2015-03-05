@@ -42,7 +42,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    textLable  = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 200, 50)];
+    textLable  = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 300, 50)];
     
     [textLable setTextColor:[UIColor blackColor]];
     [textLable setCenter:self.view.center];
@@ -55,9 +55,12 @@
     [self test];
 }
 
+
 - (void)test{
     
-    UIImage *barcode = [UIImage imageNamed:@"barcode"];
+    NSLog(@"----开始处理");
+    
+    UIImage *barcode = [UIImage imageNamed:@"A4.jpg"];
     
     CGImageRef imageToDecode = barcode.CGImage;  // Given a CGImage in which we are looking for barcodes
     
@@ -93,6 +96,8 @@
         // Use error to determine why we didn't get a result, such as a barcode
         // not being found, an invalid checksum, or a format inconsistency.
     }
+    
+    NSLog(@"----处理结束");
     
 }
 

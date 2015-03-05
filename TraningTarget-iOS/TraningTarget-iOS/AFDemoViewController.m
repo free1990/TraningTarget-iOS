@@ -15,7 +15,12 @@
 
 #import "MyRequestProtocol.h"
 
-static NSString * const kServerDomain = @"http://182.92.194.136:10002/";
+#import "PaperInfoResponse.h"
+
+//手机app
+//static NSString * const kServerDomain = @"http://182.92.194.136:10002/";
+
+static NSString * const kServerDomain = @"http://120.131.64.134:20002/";
 
 @interface AFDemoViewController (){
     
@@ -55,7 +60,7 @@ static NSString * const kServerDomain = @"http://182.92.194.136:10002/";
     [httpRequestManager.requestSerializer setValue:@"APP" forHTTPHeaderField:@"jike-client-from"];
     [httpRequestManager.requestSerializer setValue:@"APP" forHTTPHeaderField:@"from"];
     
-    [httpRequestManager.requestSerializer setValue:@"name" forHTTPHeaderField:@"zhao-yang"];
+//    [httpRequestManager.requestSerializer setValue:@"name" forHTTPHeaderField:@"zhao-yang"];
     
     NSLog(@"头部字典的字段: %@", httpRequestManager.requestSerializer.HTTPRequestHeaders);
     
@@ -79,9 +84,24 @@ static NSString * const kServerDomain = @"http://182.92.194.136:10002/";
     }];
     
     [httpRequestManager.reachabilityManager startMonitoring];
-    [self versionInfoWithCompletion:^(VersionResponse *response){
+//    [self versionInfoWithCompletion:^(VersionResponse *response){
+//        
+//        NSLog(@"----- %@", response.versionName);
+//        
+//    }];
+    
+    [self paperInfoWithCompletion:^(PaperInfoResponse *response){
         
-        NSLog(@"----- %@", response.versionName);
+        NSLog(@"-----> %@", response);
+        
+        NSLog(@"paper_parents count--------> %ld", [response.paper_parents count]);
+        
+        if ([response.paper_parents count] > 0 ) {
+            
+            Paper_parent *temp = [response.paper_parents objectAtIndex:0];
+            
+            NSLog(@"paper_parent_child_parent_count = ------> %ld", [temp.paper_parent_children count]);
+        }
         
     }];
     
@@ -110,23 +130,25 @@ static NSString * const kServerDomain = @"http://182.92.194.136:10002/";
 
 
 - (void)GET:(NSString *)URLString parameters:(id)parameters completion:(void (^)(NSDictionary *responseInfo))completion {
-//    [httpManager GET:URLString
-//              parameters:parameters
-//                 success:^(AFHTTPRequestOperation *operation, id responseObject) {
-//                     
-//                     DLOG(@"%@, %@", operation, responseObject);
-//                     if ([responseObject isKindOfClass:[NSDictionary class]]) {
-//                         completion(responseObject);
-//                     } else {
-//                         DLOGERROR(@"%@, %@", operation, responseObject);
-//                         completion(nil);
-//                     }
-//                     
-//                 }
-//                 failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-//                     DLOGERROR(@"%@, %@", operation, error);
-////                     switch (error.code) 
-//                    }];
+   
+    [httpRequestManager GET:URLString
+              parameters:parameters
+                 success:^(AFHTTPRequestOperation *operation, id responseObject) {
+                     
+                     DLOG(@"%@, %@", operation, responseObject);
+                     if ([responseObject isKindOfClass:[NSDictionary class]]) {
+                         completion(responseObject);
+                     } else {
+                         DLOGERROR(@"%@, %@", operation, responseObject);
+                         completion(nil);
+                     }
+                     
+                 }
+                 failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+                     
+                     DLOGERROR(@"%@, %@", operation, error);
+                     
+                 }];
     
 //    [httpManager HEAD:URLString
 //           parameters:parameters
@@ -140,24 +162,24 @@ static NSString * const kServerDomain = @"http://182.92.194.136:10002/";
 //                  //                     switch (error.code)
 //            }];
     
-    //POST一个表单（测试）
-    [httpRequestManager POST:URLString
-           parameters:parameters
-              success:^(AFHTTPRequestOperation *operation, id responseObject) {
-            
-                  DLOG(@"%@, %@", operation, responseObject);
-                  if ([responseObject isKindOfClass:[NSDictionary class]]) {
-                      completion(responseObject);
-                  } else {
-                      DLOGERROR(@"%@, %@", operation, responseObject);
-                      completion(nil);
-                  }
-                  
-              }
-              failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-                  DLOGERROR(@"%@, %@", operation, error);
-                  //                     switch (error.code)
-              }];
+//    //POST一个表单（测试）
+//    [httpRequestManager POST:URLString
+//           parameters:parameters
+//              success:^(AFHTTPRequestOperation *operation, id responseObject) {
+//            
+//                  DLOG(@"%@, %@", operation, responseObject);
+//                  if ([responseObject isKindOfClass:[NSDictionary class]]) {
+//                      completion(responseObject);
+//                  } else {
+//                      DLOGERROR(@"%@, %@", operation, responseObject);
+//                      completion(nil);
+//                  }
+//                  
+//              }
+//              failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+//                  DLOGERROR(@"%@, %@", operation, error);
+//                  //                     switch (error.code)
+//              }];
 }
 
 
@@ -180,6 +202,30 @@ static NSString * const kServerDomain = @"http://182.92.194.136:10002/";
         
            }];
 }
+
+
+- (void)paperInfoWithCompletion:(void (^)(PaperInfoResponse *response))completion{
+    
+    NSString *urlString = @"exam/queryById.json";
+    NSDictionary *parameters = @{@"accessToken": @(33211),
+                                 @"id": @(2787)
+                                 };
+    
+    [self GET:urlString parameters:parameters completion:^(NSDictionary *responseInfo){
+        
+        PaperInfoResponse *response = nil;
+        if (responseInfo) {
+            response = [[PaperInfoResponse alloc] init];
+            
+            [response parseResponse:responseInfo];
+        }
+        
+        completion(response);
+        
+    }];
+}
+
+
 
 - (void)sessionGET:(NSString *)URLString parameters:(id)parameters completion:(void (^)(NSDictionary *responseInfo))completion {
     

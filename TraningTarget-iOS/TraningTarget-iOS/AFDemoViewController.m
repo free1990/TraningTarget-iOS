@@ -94,14 +94,10 @@ static NSString * const kServerDomain = @"http://120.131.64.134:20002/";
         
         NSLog(@"-----> %@", response);
         
+        NSLog(@"paper_examPapers count--------> %ld", [response.paper_examPapers count]);
         NSLog(@"paper_parents count--------> %ld", [response.paper_parents count]);
         
-        if ([response.paper_parents count] > 0 ) {
-            
-            Paper_parent *temp = [response.paper_parents objectAtIndex:0];
-            
-            NSLog(@"paper_parent_child_parent_count = ------> %ld", [temp.paper_parent_children count]);
-        }
+        [self parseParentsData:response.paper_parents];
         
     }];
     
@@ -128,6 +124,21 @@ static NSString * const kServerDomain = @"http://120.131.64.134:20002/";
     
 }
 
+-(void)parseParentsData:(NSArray *)data{
+    
+    if (data && [data count] > 0) {
+        
+        for (Paper_parent *temp in data) {
+            NSLog(@"---------> %ld", temp.paper_parent_id);
+            
+            [self parseParentsData:temp.paper_parent_children];
+        }
+        
+    }else{
+        NSLog(@"最内层");
+    }
+    
+}
 
 - (void)GET:(NSString *)URLString parameters:(id)parameters completion:(void (^)(NSDictionary *responseInfo))completion {
    

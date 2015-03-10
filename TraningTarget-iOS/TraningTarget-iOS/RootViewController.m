@@ -50,8 +50,17 @@ static int allocCount = 0;
     NSLog(@"我被初始化了");
 }
 
+#define PT    5.5
+#define S(x)  PT*x*x
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    int a=1,b=2;
+    printf("%f\n",S(a+b));
+    
+    //5.5 * 1 + 2*1 +2;宏，全部乘开
+    
     
     self.title = @"Tree New bee";
     

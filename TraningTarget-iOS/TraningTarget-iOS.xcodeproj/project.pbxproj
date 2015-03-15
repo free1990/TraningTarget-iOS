@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CF2BF0AC1AB5D2A400FED55D /* PopLearnViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2BF0AB1AB5D2A400FED55D /* PopLearnViewController.m */; };
 		CFEAB54B1A597D2B00696D42 /* CoreAnimationImplicitCA.m in Sources */ = {isa = PBXBuildFile; fileRef = CFEAB54A1A597D2B00696D42 /* CoreAnimationImplicitCA.m */; };
 		D616686C1A49038B0067C179 /* Line.m in Sources */ = {isa = PBXBuildFile; fileRef = D616686B1A49038B0067C179 /* Line.m */; };
 		D616686F1A490BCB0067C179 /* Arcs.m in Sources */ = {isa = PBXBuildFile; fileRef = D616686E1A490BCB0067C179 /* Arcs.m */; };
@@ -116,6 +117,8 @@
 		32E9A4D9DB94E1EC8F2C4F93 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		5310E391BEB252286D0FDC14 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		9E51B3FDA7BC7E8AF676D062 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		CF2BF0AA1AB5D2A400FED55D /* PopLearnViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopLearnViewController.h; sourceTree = "<group>"; };
+		CF2BF0AB1AB5D2A400FED55D /* PopLearnViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopLearnViewController.m; sourceTree = "<group>"; };
 		CFEAB5491A597D2B00696D42 /* CoreAnimationImplicitCA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreAnimationImplicitCA.h; sourceTree = "<group>"; };
 		CFEAB54A1A597D2B00696D42 /* CoreAnimationImplicitCA.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreAnimationImplicitCA.m; sourceTree = "<group>"; };
 		D616686A1A49038B0067C179 /* Line.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Line.h; sourceTree = "<group>"; };
@@ -498,6 +501,8 @@
 				D6B90B221AA411A400B8A080 /* dispatch_group_tAndNotificationViewController.m */,
 				D6EA5CF51AA598FA00BA68D4 /* ZXingOBJCViewController.h */,
 				D6EA5CF61AA598FA00BA68D4 /* ZXingOBJCViewController.m */,
+				CF2BF0AA1AB5D2A400FED55D /* PopLearnViewController.h */,
+				CF2BF0AB1AB5D2A400FED55D /* PopLearnViewController.m */,
 				D6B90B0F1AA05CA500B8A080 /* PictureObject.h */,
 				D6B90B101AA05CA500B8A080 /* PictureObject.m */,
 				D619AE471A7727B40001CC97 /* Macros.h */,
@@ -727,6 +732,7 @@
 				D619AE661A7728990001CC97 /* DebugUtil.m in Sources */,
 				D6B90B111AA05CA500B8A080 /* PictureObject.m in Sources */,
 				D6EADF711A4952AB00D46981 /* ImageAndTiling.m in Sources */,
+				CF2BF0AC1AB5D2A400FED55D /* PopLearnViewController.m in Sources */,
 				D619AE691A7728990001CC97 /* NSString+MD5.m in Sources */,
 				D6B90B0C1AA03FBA00B8A080 /* AssetsLibraryViewController.m in Sources */,
 				D6EB75191AA7FE4F00801853 /* PaperInfoResponse.m in Sources */,

@@ -29,7 +29,27 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    [self.view setBackgroundColor:[UIColor whiteColor]];
+    
+    UIView *cat = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
+    
+    [cat setCenter:self.view.center];
+    [cat setBackgroundColor:[UIColor redColor]];
+    
+    [self.view addSubview:cat];
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        
+        POPSpringAnimation *basicAnimation = [POPSpringAnimation animation];
+        
+        basicAnimation.property = [POPAnimatableProperty propertyWithName:kPOPViewFrame];
+        basicAnimation.toValue = [NSValue valueWithCGRect:CGRectMake(100, 200, 90, 190)];
+        basicAnimation.name = @"kPOPLayerScaleXY";
+        basicAnimation.delegate = self;
+        
+        [cat pop_addAnimation:basicAnimation forKey:@"kPOPLayerScaleXY"];
+    });
 }
 
 - (void)didReceiveMemoryWarning {

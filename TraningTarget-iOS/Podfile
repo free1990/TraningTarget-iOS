@@ -24,6 +24,7 @@ pod 'XHTwitterPaggingViewer', '~> 0.5'
 pod 'NYXImagesKit', '~> 2.3'
 pod 'pop', '~> 1.0'
 pod 'ZXingObjC', '~> 3.0'
+pod 'SVProgressHUD'
 #end
 
 #target "ZYZoneTests" do

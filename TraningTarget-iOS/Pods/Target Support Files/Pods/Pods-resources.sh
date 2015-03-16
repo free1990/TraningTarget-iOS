@@ -58,6 +58,7 @@ install_resource()
                     install_resource "FlatUIKit/Resources/Lato-Italic.ttf"
                     install_resource "FlatUIKit/Resources/Lato-Light.ttf"
                     install_resource "FlatUIKit/Resources/Lato-Regular.ttf"
+                    install_resource "SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle"
                     install_resource "XHTwitterPaggingViewer/XHTwitterPaggingViewer/Assets/thumbnail_normal@2x.png"
                     install_resource "XHTwitterPaggingViewer/XHTwitterPaggingViewer/Assets/thumbnail_selected@2x.png"
           

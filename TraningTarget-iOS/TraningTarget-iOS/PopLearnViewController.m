@@ -7,6 +7,7 @@
 //
 
 #import "PopLearnViewController.h"
+#import <pop/POP.h>
 
 @interface PopLearnViewController ()
 

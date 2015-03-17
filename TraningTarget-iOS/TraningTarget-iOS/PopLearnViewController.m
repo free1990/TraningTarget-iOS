@@ -51,6 +51,7 @@
         [cat pop_addAnimation:basicAnimation forKey:@"kPOPLayerScaleXY"];
     });
     
+    NSLog(@"-------pop");
 }
 
 - (void)didReceiveMemoryWarning {

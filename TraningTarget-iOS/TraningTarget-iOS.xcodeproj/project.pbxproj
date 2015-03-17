@@ -73,6 +73,8 @@
 		D6D943891A3AB7C800898FA3 /* MsgForWardingDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D943881A3AB7C800898FA3 /* MsgForWardingDemo.m */; };
 		D6D943901A3AC7E900898FA3 /* RuntimePropertyAndFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D9438F1A3AC7E900898FA3 /* RuntimePropertyAndFunction.m */; };
 		D6D943941A3AE19B00898FA3 /* RuntimeDynamicMethodResolutionAndDynamicLoading.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D943931A3AE19B00898FA3 /* RuntimeDynamicMethodResolutionAndDynamicLoading.m */; };
+		D6DA9ECA1AB7F63C00AF1E96 /* JSONHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D6DA9EC91AB7F63C00AF1E96 /* JSONHelper.m */; };
+		D6DA9ECC1AB7F65800AF1E96 /* test.json in Resources */ = {isa = PBXBuildFile; fileRef = D6DA9ECB1AB7F65800AF1E96 /* test.json */; };
 		D6EA5CF71AA598FA00BA68D4 /* ZXingOBJCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6EA5CF61AA598FA00BA68D4 /* ZXingOBJCViewController.m */; };
 		D6EA5CF91AA59A1800BA68D4 /* barcode.png in Resources */ = {isa = PBXBuildFile; fileRef = D6EA5CF81AA59A1800BA68D4 /* barcode.png */; };
 		D6EA5D041AA6A9D300BA68D4 /* allPhoto.png in Resources */ = {isa = PBXBuildFile; fileRef = D6EA5D031AA6A9D300BA68D4 /* allPhoto.png */; };
@@ -243,6 +245,9 @@
 		D6D9438F1A3AC7E900898FA3 /* RuntimePropertyAndFunction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RuntimePropertyAndFunction.m; sourceTree = "<group>"; };
 		D6D943921A3AE19B00898FA3 /* RuntimeDynamicMethodResolutionAndDynamicLoading.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RuntimeDynamicMethodResolutionAndDynamicLoading.h; sourceTree = "<group>"; };
 		D6D943931A3AE19B00898FA3 /* RuntimeDynamicMethodResolutionAndDynamicLoading.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RuntimeDynamicMethodResolutionAndDynamicLoading.m; sourceTree = "<group>"; };
+		D6DA9EC81AB7F63C00AF1E96 /* JSONHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONHelper.h; sourceTree = "<group>"; };
+		D6DA9EC91AB7F63C00AF1E96 /* JSONHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONHelper.m; sourceTree = "<group>"; };
+		D6DA9ECB1AB7F65800AF1E96 /* test.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = test.json; sourceTree = "<group>"; };
 		D6EA5CF51AA598FA00BA68D4 /* ZXingOBJCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXingOBJCViewController.h; sourceTree = "<group>"; };
 		D6EA5CF61AA598FA00BA68D4 /* ZXingOBJCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZXingOBJCViewController.m; sourceTree = "<group>"; };
 		D6EA5CF81AA59A1800BA68D4 /* barcode.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = barcode.png; sourceTree = "<group>"; };
@@ -505,6 +510,9 @@
 				CF2BF0AB1AB5D2A400FED55D /* PopLearnViewController.m */,
 				D6B90B0F1AA05CA500B8A080 /* PictureObject.h */,
 				D6B90B101AA05CA500B8A080 /* PictureObject.m */,
+				D6DA9EC81AB7F63C00AF1E96 /* JSONHelper.h */,
+				D6DA9EC91AB7F63C00AF1E96 /* JSONHelper.m */,
+				D6DA9ECB1AB7F65800AF1E96 /* test.json */,
 				D619AE471A7727B40001CC97 /* Macros.h */,
 			);
 			name = Controller;
@@ -664,6 +672,7 @@
 				D6D0EAD21A5A7823005C3A5D /* qq.png in Resources */,
 				D68411861A5CCA560078A807 /* test.png in Resources */,
 				D6D0EAC81A5A4477005C3A5D /* car.png in Resources */,
+				D6DA9ECC1AB7F65800AF1E96 /* test.json in Resources */,
 				D6EADF731A49551000D46981 /* demo.png in Resources */,
 				D6422CCE1A397E85000D9759 /* Main.storyboard in Resources */,
 				D6EADF7E1A4A530400D46981 /* Ship.png in Resources */,
@@ -731,6 +740,7 @@
 			files = (
 				D619AE661A7728990001CC97 /* DebugUtil.m in Sources */,
 				D6B90B111AA05CA500B8A080 /* PictureObject.m in Sources */,
+				D6DA9ECA1AB7F63C00AF1E96 /* JSONHelper.m in Sources */,
 				D6EADF711A4952AB00D46981 /* ImageAndTiling.m in Sources */,
 				CF2BF0AC1AB5D2A400FED55D /* PopLearnViewController.m in Sources */,
 				D619AE691A7728990001CC97 /* NSString+MD5.m in Sources */,

@@ -50,6 +50,7 @@
         
         [cat pop_addAnimation:basicAnimation forKey:@"kPOPLayerScaleXY"];
     });
+    
 }
 
 - (void)didReceiveMemoryWarning {

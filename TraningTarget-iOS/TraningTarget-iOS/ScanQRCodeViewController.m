@@ -17,7 +17,7 @@
 
 - (id)init{
     if (self = [super init]) {
-        self.className   = @"Pop Learn";
+        self.className   = @"Scan QRCode";
     }
     return self;
 }
@@ -26,7 +26,6 @@
     [super viewDidLoad];
     
     [self.view setBackgroundColor:[UIColor whiteColor]];
-    
 
 }
 

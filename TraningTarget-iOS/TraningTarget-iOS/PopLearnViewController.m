@@ -52,6 +52,8 @@
     });
     
     NSLog(@"-------pop");
+    
+    NSLog(@"test------in office");
 }
 
 - (void)didReceiveMemoryWarning {

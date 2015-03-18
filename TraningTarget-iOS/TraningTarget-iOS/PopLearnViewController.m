@@ -51,9 +51,6 @@
         [cat pop_addAnimation:basicAnimation forKey:@"kPOPLayerScaleXY"];
     });
     
-    NSLog(@"-------pop");
-    
-    NSLog(@"test------in office");
 }
 
 - (void)didReceiveMemoryWarning {

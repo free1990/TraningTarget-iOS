@@ -28,6 +28,7 @@
 		D619AE7A1A772BA90001CC97 /* PropertiesManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D619AE791A772BA90001CC97 /* PropertiesManager.m */; };
 		D619AE7C1A772C3D0001CC97 /* HTTPResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = D619AE7B1A772C3D0001CC97 /* HTTPResponse.m */; };
 		D61E33B31A78D7DE00105117 /* UIViewController+AbnormalDisplay.m in Sources */ = {isa = PBXBuildFile; fileRef = D61E33B21A78D7DE00105117 /* UIViewController+AbnormalDisplay.m */; };
+		D634B7401AB981660061AC15 /* ScanQRCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D634B73F1AB981660061AC15 /* ScanQRCodeViewController.m */; };
 		D63ADF1D1A413007009CA874 /* RuntimeDemoOneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D63ADF1C1A413007009CA874 /* RuntimeDemoOneViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		D63ADF201A415B74009CA874 /* RuntimeDemoTwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D63ADF1F1A415B74009CA874 /* RuntimeDemoTwoViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		D63ADF231A416B8E009CA874 /* RuntimeDemoThreeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D63ADF221A416B8E009CA874 /* RuntimeDemoThreeViewController.m */; };
@@ -164,6 +165,8 @@
 		D619AE7B1A772C3D0001CC97 /* HTTPResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPResponse.m; sourceTree = "<group>"; };
 		D61E33B11A78D7DE00105117 /* UIViewController+AbnormalDisplay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIViewController+AbnormalDisplay.h"; path = "../UIViewController+AbnormalDisplay.h"; sourceTree = "<group>"; };
 		D61E33B21A78D7DE00105117 /* UIViewController+AbnormalDisplay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+AbnormalDisplay.m"; path = "../UIViewController+AbnormalDisplay.m"; sourceTree = "<group>"; };
+		D634B73E1AB981660061AC15 /* ScanQRCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanQRCodeViewController.h; sourceTree = "<group>"; };
+		D634B73F1AB981660061AC15 /* ScanQRCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScanQRCodeViewController.m; sourceTree = "<group>"; };
 		D63ADF1B1A413007009CA874 /* RuntimeDemoOneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RuntimeDemoOneViewController.h; sourceTree = "<group>"; };
 		D63ADF1C1A413007009CA874 /* RuntimeDemoOneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RuntimeDemoOneViewController.m; sourceTree = "<group>"; };
 		D63ADF1E1A415B74009CA874 /* RuntimeDemoTwoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RuntimeDemoTwoViewController.h; sourceTree = "<group>"; };
@@ -508,6 +511,8 @@
 				D6EA5CF61AA598FA00BA68D4 /* ZXingOBJCViewController.m */,
 				CF2BF0AA1AB5D2A400FED55D /* PopLearnViewController.h */,
 				CF2BF0AB1AB5D2A400FED55D /* PopLearnViewController.m */,
+				D634B73E1AB981660061AC15 /* ScanQRCodeViewController.h */,
+				D634B73F1AB981660061AC15 /* ScanQRCodeViewController.m */,
 				D6B90B0F1AA05CA500B8A080 /* PictureObject.h */,
 				D6B90B101AA05CA500B8A080 /* PictureObject.m */,
 				D6DA9EC81AB7F63C00AF1E96 /* JSONHelper.h */,
@@ -799,6 +804,7 @@
 				D619AE7C1A772C3D0001CC97 /* HTTPResponse.m in Sources */,
 				D63ADF261A416EF9009CA874 /* NSObject+AutoEncodeDecode.m in Sources */,
 				D6422CC51A397E85000D9759 /* main.m in Sources */,
+				D634B7401AB981660061AC15 /* ScanQRCodeViewController.m in Sources */,
 				D6422CF91A399798000D9759 /* ClassItem.m in Sources */,
 				D619AE6F1A7728990001CC97 /* UIViewController+DismissKeyboard.m in Sources */,
 				D6EB75251AA8098400801853 /* Paper_parent.m in Sources */,

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		CF2BF0AC1AB5D2A400FED55D /* PopLearnViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2BF0AB1AB5D2A400FED55D /* PopLearnViewController.m */; };
+		CF2BF0AF1AB9AF8A00FED55D /* ScanView.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2BF0AE1AB9AF8A00FED55D /* ScanView.m */; };
 		CFEAB54B1A597D2B00696D42 /* CoreAnimationImplicitCA.m in Sources */ = {isa = PBXBuildFile; fileRef = CFEAB54A1A597D2B00696D42 /* CoreAnimationImplicitCA.m */; };
 		D616686C1A49038B0067C179 /* Line.m in Sources */ = {isa = PBXBuildFile; fileRef = D616686B1A49038B0067C179 /* Line.m */; };
 		D616686F1A490BCB0067C179 /* Arcs.m in Sources */ = {isa = PBXBuildFile; fileRef = D616686E1A490BCB0067C179 /* Arcs.m */; };
@@ -122,6 +123,8 @@
 		9E51B3FDA7BC7E8AF676D062 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		CF2BF0AA1AB5D2A400FED55D /* PopLearnViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopLearnViewController.h; sourceTree = "<group>"; };
 		CF2BF0AB1AB5D2A400FED55D /* PopLearnViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopLearnViewController.m; sourceTree = "<group>"; };
+		CF2BF0AD1AB9AF8A00FED55D /* ScanView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanView.h; sourceTree = "<group>"; };
+		CF2BF0AE1AB9AF8A00FED55D /* ScanView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScanView.m; sourceTree = "<group>"; };
 		CFEAB5491A597D2B00696D42 /* CoreAnimationImplicitCA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreAnimationImplicitCA.h; sourceTree = "<group>"; };
 		CFEAB54A1A597D2B00696D42 /* CoreAnimationImplicitCA.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreAnimationImplicitCA.m; sourceTree = "<group>"; };
 		D616686A1A49038B0067C179 /* Line.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Line.h; sourceTree = "<group>"; };
@@ -513,6 +516,8 @@
 				CF2BF0AB1AB5D2A400FED55D /* PopLearnViewController.m */,
 				D634B73E1AB981660061AC15 /* ScanQRCodeViewController.h */,
 				D634B73F1AB981660061AC15 /* ScanQRCodeViewController.m */,
+				CF2BF0AD1AB9AF8A00FED55D /* ScanView.h */,
+				CF2BF0AE1AB9AF8A00FED55D /* ScanView.m */,
 				D6B90B0F1AA05CA500B8A080 /* PictureObject.h */,
 				D6B90B101AA05CA500B8A080 /* PictureObject.m */,
 				D6DA9EC81AB7F63C00AF1E96 /* JSONHelper.h */,
@@ -789,6 +794,7 @@
 				D6422CF61A3996D5000D9759 /* BaseViewController.m in Sources */,
 				D6F2254E1A400B0E00E3FCB2 /* TestCustomAlertViewController.m in Sources */,
 				D619AE461A7725300001CC97 /* AFDemoViewController.m in Sources */,
+				CF2BF0AF1AB9AF8A00FED55D /* ScanView.m in Sources */,
 				D6EADF791A496B5200D46981 /* Gradient.m in Sources */,
 				D6D0EAD81A5B84F8005C3A5D /* CAShapeLayerDrawing.m in Sources */,
 				D63ADF201A415B74009CA874 /* RuntimeDemoTwoViewController.m in Sources */,

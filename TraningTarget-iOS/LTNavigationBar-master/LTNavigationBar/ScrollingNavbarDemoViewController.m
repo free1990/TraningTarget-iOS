@@ -37,8 +37,8 @@
             [self setNavigationBarTransformProgress:(offsetY / 44)];
         }
     } else {
-        [self setNavigationBarTransformProgress:0];
-        self.navigationController.navigationBar.backIndicatorImage = [UIImage new];
+//        [self setNavigationBarTransformProgress:0];
+//        self.navigationController.navigationBar.backIndicatorImage = [UIImage new];
     }
 }
 
@@ -46,6 +46,7 @@
 {
     [self.navigationController.navigationBar lt_setTranslationY:(-44 * progress)];
     [self.navigationController.navigationBar lt_setContentAlpha:(1-progress)];
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated

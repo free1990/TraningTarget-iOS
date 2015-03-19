@@ -31,6 +31,7 @@
 		D61E33B31A78D7DE00105117 /* UIViewController+AbnormalDisplay.m in Sources */ = {isa = PBXBuildFile; fileRef = D61E33B21A78D7DE00105117 /* UIViewController+AbnormalDisplay.m */; };
 		D634B7401AB981660061AC15 /* ScanQRCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D634B73F1AB981660061AC15 /* ScanQRCodeViewController.m */; };
 		D634B74A1ABAADEF0061AC15 /* ZYNavigationBarDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = D634B7491ABAADEF0061AC15 /* ZYNavigationBarDemo.m */; };
+		D634B74E1ABAC91D0061AC15 /* UINavigationBar+Awesome.m in Sources */ = {isa = PBXBuildFile; fileRef = D634B74D1ABAC91D0061AC15 /* UINavigationBar+Awesome.m */; };
 		D63ADF1D1A413007009CA874 /* RuntimeDemoOneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D63ADF1C1A413007009CA874 /* RuntimeDemoOneViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		D63ADF201A415B74009CA874 /* RuntimeDemoTwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D63ADF1F1A415B74009CA874 /* RuntimeDemoTwoViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		D63ADF231A416B8E009CA874 /* RuntimeDemoThreeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D63ADF221A416B8E009CA874 /* RuntimeDemoThreeViewController.m */; };
@@ -173,6 +174,8 @@
 		D634B73F1AB981660061AC15 /* ScanQRCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScanQRCodeViewController.m; sourceTree = "<group>"; };
 		D634B7481ABAADEF0061AC15 /* ZYNavigationBarDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYNavigationBarDemo.h; sourceTree = "<group>"; };
 		D634B7491ABAADEF0061AC15 /* ZYNavigationBarDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYNavigationBarDemo.m; sourceTree = "<group>"; };
+		D634B74C1ABAC91D0061AC15 /* UINavigationBar+Awesome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+Awesome.h"; sourceTree = "<group>"; };
+		D634B74D1ABAC91D0061AC15 /* UINavigationBar+Awesome.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+Awesome.m"; sourceTree = "<group>"; };
 		D63ADF1B1A413007009CA874 /* RuntimeDemoOneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RuntimeDemoOneViewController.h; sourceTree = "<group>"; };
 		D63ADF1C1A413007009CA874 /* RuntimeDemoOneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RuntimeDemoOneViewController.m; sourceTree = "<group>"; };
 		D63ADF1E1A415B74009CA874 /* RuntimeDemoTwoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RuntimeDemoTwoViewController.h; sourceTree = "<group>"; };
@@ -564,6 +567,8 @@
 				D6EB75241AA8098400801853 /* Paper_parent.m */,
 				D6EB75261AA8414600801853 /* NSObject+GetintegerValue.h */,
 				D6EB75271AA8414600801853 /* NSObject+GetintegerValue.m */,
+				D634B74C1ABAC91D0061AC15 /* UINavigationBar+Awesome.h */,
+				D634B74D1ABAC91D0061AC15 /* UINavigationBar+Awesome.m */,
 				D619AE4B1A7728990001CC97 /* Toolkit */,
 			);
 			name = Handle;
@@ -805,6 +810,7 @@
 				D634B74A1ABAADEF0061AC15 /* ZYNavigationBarDemo.m in Sources */,
 				D63ADF201A415B74009CA874 /* RuntimeDemoTwoViewController.m in Sources */,
 				D63ADF391A41879A009CA874 /* TestArrayOrderViewController.m in Sources */,
+				D634B74E1ABAC91D0061AC15 /* UINavigationBar+Awesome.m in Sources */,
 				D6EADF8E1A4AA45400D46981 /* CategoryViewController.m in Sources */,
 				D6EB75281AA8414600801853 /* NSObject+GetintegerValue.m in Sources */,
 				D6EB75221AA8056800801853 /* Paper_examPaper.m in Sources */,

@@ -48,6 +48,8 @@
     
     [self initCapture];
     
+    NSLog(@"------>开始了");
+    
     //添加动画
     if (self.scanAnimationView == nil) {
         
@@ -58,7 +60,6 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    [self.captureSession stopRunning];
     [self.scanAnimationView startScanAnimation];
 }
 
@@ -95,6 +96,8 @@
     
     [self.captureSession addOutput:captureOutput];
     
+    NSLog(@"captureSession----->%@", self.captureSession);
+    
     NSString *preset = 0;
     if (NSClassFromString(@"NSOrderedSet") &&
         [UIScreen mainScreen].scale > 1 &&
@@ -107,14 +110,15 @@
     }
     self.captureSession.sessionPreset = preset;
     
-    if (!self.captureVideoPreviewLayer) {
-        self.captureVideoPreviewLayer = [AVCaptureVideoPreviewLayer layerWithSession:self.captureSession];
-    }
+    self.captureVideoPreviewLayer = [AVCaptureVideoPreviewLayer layerWithSession:self.captureSession];
     
     CGRect videoFrame = self.view.bounds;
     self.captureVideoPreviewLayer.frame = videoFrame;
     self.captureVideoPreviewLayer.videoGravity = AVLayerVideoGravityResizeAspectFill;
+    
     [self.view.layer addSublayer:self.captureVideoPreviewLayer];
+    
+     NSLog(@"captureSession----->%@", self.captureSession);
     
     [self.captureSession startRunning];
 }
@@ -155,7 +159,12 @@
 //扫描产生的数据
 - (void)captureOutput:(AVCaptureOutput *)captureOutput didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer fromConnection:(AVCaptureConnection *)connection {
     UIImage *image = [self imageFromSampleBuffer:sampleBuffer];
-    [self decodeImage:image];
+    
+    NSLog(@"%f----%f", image.size.width, image.size.height);
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self decodeImage:image];
+    });
 }
 
 //图片解码
@@ -184,9 +193,19 @@
         NSLog(@"-------->  %@", contents);
         
         ZXBarcodeFormat format = result.barcodeFormat;
+        
+        UIAlertView *temp = [[UIAlertView alloc] initWithTitle:@"结果"
+                                                       message:result.text
+                                                      delegate:nil
+                                             cancelButtonTitle:@"Yes"
+                                             otherButtonTitles:nil];
+        [temp show];
+        [self.navigationController popToRootViewControllerAnimated:YES];
         NSLog(@"ZXBarcodeFormat = %d", format);
         
     } else {
+        
+        UIImageWriteToSavedPhotosAlbum(image, self, nil, NULL);
         
         NSLog(@"error:%@", error);
     }

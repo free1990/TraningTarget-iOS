@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		CF2BF0AC1AB5D2A400FED55D /* PopLearnViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2BF0AB1AB5D2A400FED55D /* PopLearnViewController.m */; };
 		CF2BF0AF1AB9AF8A00FED55D /* ScanView.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2BF0AE1AB9AF8A00FED55D /* ScanView.m */; };
+		CF2BF0B21ABB090300FED55D /* QRScanLine@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF2BF0B11ABB090300FED55D /* QRScanLine@2x.png */; };
+		CF2BF0B41ABB0A6200FED55D /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF2BF0B31ABB0A6200FED55D /* AVFoundation.framework */; };
 		CFEAB54B1A597D2B00696D42 /* CoreAnimationImplicitCA.m in Sources */ = {isa = PBXBuildFile; fileRef = CFEAB54A1A597D2B00696D42 /* CoreAnimationImplicitCA.m */; };
 		D616686C1A49038B0067C179 /* Line.m in Sources */ = {isa = PBXBuildFile; fileRef = D616686B1A49038B0067C179 /* Line.m */; };
 		D616686F1A490BCB0067C179 /* Arcs.m in Sources */ = {isa = PBXBuildFile; fileRef = D616686E1A490BCB0067C179 /* Arcs.m */; };
@@ -127,6 +129,8 @@
 		CF2BF0AB1AB5D2A400FED55D /* PopLearnViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopLearnViewController.m; sourceTree = "<group>"; };
 		CF2BF0AD1AB9AF8A00FED55D /* ScanView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanView.h; sourceTree = "<group>"; };
 		CF2BF0AE1AB9AF8A00FED55D /* ScanView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScanView.m; sourceTree = "<group>"; };
+		CF2BF0B11ABB090300FED55D /* QRScanLine@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QRScanLine@2x.png"; sourceTree = "<group>"; };
+		CF2BF0B31ABB0A6200FED55D /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		CFEAB5491A597D2B00696D42 /* CoreAnimationImplicitCA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreAnimationImplicitCA.h; sourceTree = "<group>"; };
 		CFEAB54A1A597D2B00696D42 /* CoreAnimationImplicitCA.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreAnimationImplicitCA.m; sourceTree = "<group>"; };
 		D616686A1A49038B0067C179 /* Line.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Line.h; sourceTree = "<group>"; };
@@ -312,6 +316,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF2BF0B41ABB0A6200FED55D /* AVFoundation.framework in Frameworks */,
 				D6B90B0E1AA03FCE00B8A080 /* AssetsLibrary.framework in Frameworks */,
 				D6C3BDF41A58D60000E0D405 /* QuartzCore.framework in Frameworks */,
 				F814BB409CFB202F26CDEBDD /* libPods.a in Frameworks */,
@@ -340,6 +345,7 @@
 		CED1B52E55DE5C890D53F36C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CF2BF0B31ABB0A6200FED55D /* AVFoundation.framework */,
 				D6B90B0D1AA03FCE00B8A080 /* AssetsLibrary.framework */,
 				D6C3BDF31A58D60000E0D405 /* QuartzCore.framework */,
 				32E9A4D9DB94E1EC8F2C4F93 /* libPods.a */,
@@ -436,6 +442,7 @@
 				D6EA5D0C1AA6ABDC00BA68D4 /* 3.jpg */,
 				D6EA5D0F1AA6AF6B00BA68D4 /* A4.jpg */,
 				D6EADF721A49551000D46981 /* demo.png */,
+				CF2BF0B11ABB090300FED55D /* QRScanLine@2x.png */,
 				D6EADF7D1A4A530400D46981 /* Ship.png */,
 				D6C3BDF81A5940B500E0D405 /* fire.png */,
 				D6D0EAC71A5A4477005C3A5D /* car.png */,
@@ -699,6 +706,7 @@
 				D6EA5D0E1AA6ABDC00BA68D4 /* 3.jpg in Resources */,
 				D6EA5D0D1AA6ABDC00BA68D4 /* 2.jpg in Resources */,
 				D6EA5D041AA6A9D300BA68D4 /* allPhoto.png in Resources */,
+				CF2BF0B21ABB090300FED55D /* QRScanLine@2x.png in Resources */,
 				D6EA5CF91AA59A1800BA68D4 /* barcode.png in Resources */,
 				D6EA5D101AA6AF6B00BA68D4 /* A4.jpg in Resources */,
 				D6492A6E1A885614007FC85C /* rotate.jpg in Resources */,

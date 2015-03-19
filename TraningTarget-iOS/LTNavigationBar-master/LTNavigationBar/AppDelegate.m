@@ -1,13 +1,12 @@
 //
 //  AppDelegate.m
-//  TraningTarget-iOS
+//  LTNavigationBar
 //
-//  Created by John on 14/12/11.
-//  Copyright (c) 2014年 WorkMac. All rights reserved.
+//  Created by ltebean on 15-2-15.
+//  Copyright (c) 2015年 ltebean. All rights reserved.
 //
 
 #import "AppDelegate.h"
-#import "ClassSet.h"
 
 @interface AppDelegate ()
 
@@ -17,16 +16,13 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    
-    [[ClassSet sharedClassGallery] sortByTitle];
+    // Override point for customization after application launch.
     
     [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
     [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:0/255.0 green:175/255.0 blue:240/255.0 alpha:1]];
     [[UINavigationBar appearance] setTitleTextAttributes: [NSDictionary dictionaryWithObjectsAndKeys:
-                                                           [UIColor whiteColor], NSForegroundColorAttributeName,
-                                                           [UIFont systemFontOfSize:21], NSFontAttributeName, nil]];
+                                                           [UIColor whiteColor], NSForegroundColorAttributeName, [UIFont systemFontOfSize:21], NSFontAttributeName, nil]];
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
-    
     return YES;
 }
 

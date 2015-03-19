@@ -7,7 +7,7 @@
 //
 
 #import "JSONHelper.h"
-#import "ExamPaperInfo.h"
+//#import "ExamPaperInfo.h"
 
 @implementation JSONHelper
 

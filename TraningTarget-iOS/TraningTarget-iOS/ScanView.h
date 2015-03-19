@@ -10,4 +10,7 @@
 
 @interface ScanView : UIView
 
+- (void)startScanAnimation;
+- (void)stopScanAnimation;
+
 @end

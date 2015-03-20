@@ -26,13 +26,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self.view setBackgroundColor:[UIColor whiteColor]];
+    [self.view setBackgroundColor:[UIColor blueColor]];
     
-    //设置背景为透明
-    self.navigationController.navigationBar.backgroundColor = [UIColor clearColor];
-    self.navigationController.navigationBar.barTintColor = [UIColor clearColor];
-    
-    self.navigationController.navigationBar.tintColor = [UIColor redColor];
+//    //设置背景为透明
+//    self.navigationController.navigationBar.backgroundColor = [UIColor clearColor];
+//    self.navigationController.navigationBar.barTintColor = [UIColor clearColor];
+//    
+//    self.navigationController.navigationBar.tintColor = [UIColor redColor];
     
     //_UINavigationBarBackground
     //UINavigationItemView

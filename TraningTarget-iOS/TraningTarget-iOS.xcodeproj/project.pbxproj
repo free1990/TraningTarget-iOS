@@ -35,6 +35,9 @@
 		D634B74A1ABAADEF0061AC15 /* ZYNavigationBarDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = D634B7491ABAADEF0061AC15 /* ZYNavigationBarDemo.m */; };
 		D634B74E1ABAC91D0061AC15 /* UINavigationBar+Awesome.m in Sources */ = {isa = PBXBuildFile; fileRef = D634B74D1ABAC91D0061AC15 /* UINavigationBar+Awesome.m */; };
 		D634B7531ABBB1100061AC15 /* QRTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D634B7521ABBB1100061AC15 /* QRTestViewController.m */; };
+		D634B75F1ABBD0EC0061AC15 /* torch_off@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D634B75D1ABBD0EC0061AC15 /* torch_off@2x.png */; };
+		D634B7601ABBD0EC0061AC15 /* torch_on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D634B75E1ABBD0EC0061AC15 /* torch_on@2x.png */; };
+		D634B7631ABBD32D0061AC15 /* ScanTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = D634B7621ABBD32D0061AC15 /* ScanTitleView.m */; };
 		D63ADF1D1A413007009CA874 /* RuntimeDemoOneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D63ADF1C1A413007009CA874 /* RuntimeDemoOneViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		D63ADF201A415B74009CA874 /* RuntimeDemoTwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D63ADF1F1A415B74009CA874 /* RuntimeDemoTwoViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		D63ADF231A416B8E009CA874 /* RuntimeDemoThreeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D63ADF221A416B8E009CA874 /* RuntimeDemoThreeViewController.m */; };
@@ -183,6 +186,10 @@
 		D634B74D1ABAC91D0061AC15 /* UINavigationBar+Awesome.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+Awesome.m"; sourceTree = "<group>"; };
 		D634B7511ABBB1100061AC15 /* QRTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRTestViewController.h; sourceTree = "<group>"; };
 		D634B7521ABBB1100061AC15 /* QRTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRTestViewController.m; sourceTree = "<group>"; };
+		D634B75D1ABBD0EC0061AC15 /* torch_off@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "torch_off@2x.png"; sourceTree = "<group>"; };
+		D634B75E1ABBD0EC0061AC15 /* torch_on@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "torch_on@2x.png"; sourceTree = "<group>"; };
+		D634B7611ABBD32D0061AC15 /* ScanTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanTitleView.h; sourceTree = "<group>"; };
+		D634B7621ABBD32D0061AC15 /* ScanTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScanTitleView.m; sourceTree = "<group>"; };
 		D63ADF1B1A413007009CA874 /* RuntimeDemoOneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RuntimeDemoOneViewController.h; sourceTree = "<group>"; };
 		D63ADF1C1A413007009CA874 /* RuntimeDemoOneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RuntimeDemoOneViewController.m; sourceTree = "<group>"; };
 		D63ADF1E1A415B74009CA874 /* RuntimeDemoTwoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RuntimeDemoTwoViewController.h; sourceTree = "<group>"; };
@@ -434,6 +441,8 @@
 		D6422CC21A397E85000D9759 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D634B75D1ABBD0EC0061AC15 /* torch_off@2x.png */,
+				D634B75E1ABBD0EC0061AC15 /* torch_on@2x.png */,
 				D6EA5CF81AA59A1800BA68D4 /* barcode.png */,
 				D6EA5D051AA6AA6D00BA68D4 /* moreBig.png */,
 				D6422CC31A397E85000D9759 /* Info.plist */,
@@ -615,6 +624,8 @@
 				D6D0EAD71A5B84F8005C3A5D /* CAShapeLayerDrawing.m */,
 				D6D0EAD91A5B896F005C3A5D /* DrawingView.h */,
 				D6D0EADA1A5B896F005C3A5D /* DrawingView.m */,
+				D634B7611ABBD32D0061AC15 /* ScanTitleView.h */,
+				D634B7621ABBD32D0061AC15 /* ScanTitleView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -710,6 +721,7 @@
 				D6EADF7E1A4A530400D46981 /* Ship.png in Resources */,
 				D6EA5D0E1AA6ABDC00BA68D4 /* 3.jpg in Resources */,
 				D6EA5D0D1AA6ABDC00BA68D4 /* 2.jpg in Resources */,
+				D634B75F1ABBD0EC0061AC15 /* torch_off@2x.png in Resources */,
 				D6EA5D041AA6A9D300BA68D4 /* allPhoto.png in Resources */,
 				CF2BF0B21ABB090300FED55D /* QRScanLine@2x.png in Resources */,
 				D6EA5CF91AA59A1800BA68D4 /* barcode.png in Resources */,
@@ -720,6 +732,7 @@
 				D6422CD01A397E85000D9759 /* Images.xcassets in Resources */,
 				D6C3BDF91A5940B500E0D405 /* fire.png in Resources */,
 				D6D0EACD1A5A64FE005C3A5D /* door.png in Resources */,
+				D634B7601ABBD0EC0061AC15 /* torch_on@2x.png in Resources */,
 				D6EA5D061AA6AA6D00BA68D4 /* moreBig.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -774,6 +787,7 @@
 				D619AE661A7728990001CC97 /* DebugUtil.m in Sources */,
 				D6B90B111AA05CA500B8A080 /* PictureObject.m in Sources */,
 				D6DA9ECA1AB7F63C00AF1E96 /* JSONHelper.m in Sources */,
+				D634B7631ABBD32D0061AC15 /* ScanTitleView.m in Sources */,
 				D6EADF711A4952AB00D46981 /* ImageAndTiling.m in Sources */,
 				CF2BF0AC1AB5D2A400FED55D /* PopLearnViewController.m in Sources */,
 				D619AE691A7728990001CC97 /* NSString+MD5.m in Sources */,

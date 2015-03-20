@@ -9,7 +9,7 @@
 #import "ScanView.h"
 
 #define kAnimationKeyPath @"position"
-#define kCornerLength 10.0f
+#define kCornerLength 20.0f
 
 #define SCREEN_WIDTH  [UIScreen mainScreen].bounds.size.width
 #define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
@@ -78,17 +78,17 @@
     CGContextRef context = UIGraphicsGetCurrentContext();
     CGContextSaveGState(context);
     
-    UIColor *color = [[UIColor blackColor] colorWithAlphaComponent:0.7];
-    [color set];
-    UIRectFill(self.bounds);
+//    UIColor *color = [[UIColor blackColor] colorWithAlphaComponent:0.7];
+//    [color set];
+//    UIRectFill(self.bounds);
     
-    UIColor *clearColor = [UIColor clearColor];
-    [clearColor set];
-    UIRectFill(self.scanFrame);
+//    UIColor *clearColor = [UIColor clearColor];
+//    [clearColor set];
+//    UIRectFill(self.scanFrame);
     
     //画边框
-    CGContextSetStrokeColorWithColor(context, [UIColor whiteColor].CGColor);
-    CGContextStrokeRectWithWidth(context, CGRectInset(self.scanFrame, -1, -1), 1.0);
+//    CGContextSetStrokeColorWithColor(context, [UIColor whiteColor].CGColor);
+//    CGContextStrokeRectWithWidth(context, CGRectInset(self.scanFrame, -1, -1), 1.0);
     
     //画边角
     CGPoint leftUp = self.scanFrame.origin;
@@ -112,14 +112,40 @@
     CGPathAddLineToPoint(path, NULL, leftUp.x, rightDown.y);
     CGPathAddLineToPoint(path, NULL, leftUp.x + kCornerLength, rightDown.y);
     
-    CGContextSetStrokeColorWithColor(context, [UIColor colorWithRed:0.2 green:1.0 blue:0.2 alpha:1.0].CGColor);
+    CGContextSetStrokeColorWithColor(context, [UIColor lightGrayColor].CGColor);
     CGContextSetLineWidth(context, 4.0);
     CGContextAddPath(context, path);
     CGContextStrokePath(context);
     
-    CGContextRestoreGState(context);
+    CGMutablePathRef divPath = CGPathCreateMutable();
+    
+    CGFloat divWidth = self.bounds.size.width/3;
+    
+    for (int i = 1; i < 3; i++) {
+        
+        
+        CGPathMoveToPoint(divPath, NULL, divWidth * i, 0 );
+        CGPathAddLineToPoint(divPath, NULL, divWidth * i, 0 );
+        CGPathAddLineToPoint(divPath, NULL, divWidth * i, self.bounds.size.height);
+    }
+    
+    for (int i = 0; i < self.bounds.size.height/divWidth ; i++) {
+        
+        CGPathMoveToPoint(divPath, NULL, 0, divWidth * i );
+        CGPathAddLineToPoint(divPath, NULL, 0, divWidth * i);
+        CGPathAddLineToPoint(divPath, NULL, self.bounds.size.width, divWidth * i);
+    }
+    
+    CGContextSetStrokeColorWithColor(context, [UIColor lightGrayColor].CGColor);
+    CGContextSetLineWidth(context, 0.5);
+    CGContextAddPath(context, divPath);
+    CGContextStrokePath(context);
+    
+    CGContextSaveGState(context);
     
     CGPathRelease(path);
+    
+    CGPathRelease(divPath);
 }
 
 

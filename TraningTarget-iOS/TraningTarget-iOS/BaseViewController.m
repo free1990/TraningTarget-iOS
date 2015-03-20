@@ -45,6 +45,14 @@
     // Do any additional setup after loading the view.
     self.title = self.className;
     self.view.backgroundColor = [UIColor whiteColor];
+ 
+    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc]
+                                             initWithTitle:@""
+                                             style:UIBarButtonItemStylePlain
+                                             target:self
+                                             action:nil];
+    
+
 }
 
 - (void)didReceiveMemoryWarning {

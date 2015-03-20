@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BaseViewController.h"
 
-@interface RootViewController : UIViewController<UITableViewDataSource, UITableViewDelegate>{
+@interface RootViewController : BaseViewController<UITableViewDataSource, UITableViewDelegate>{
     UITableView         *_myTableView;
 }
 

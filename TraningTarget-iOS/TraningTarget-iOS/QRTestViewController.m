@@ -9,10 +9,13 @@
 #import "QRTestViewController.h"
 #import <ZXingObjC.h>
 #import "ScanView.h"
+#import "UINavigationBar+Awesome.h"
+#import "ScanTitleView.h"
 
 @interface QRTestViewController ()<ZXCaptureDelegate>
 @property (nonatomic, strong) ScanView *scanAnimationView;
 @property (nonatomic, strong) ZXCapture * capture;
+@property (nonatomic, strong) UIButton *torchSwitch;
 @end
 
 @implementation QRTestViewController
@@ -24,7 +27,7 @@
 
 - (id)init{
     if (self = [super init]) {
-        self.className   = @"Scan QRCode Test";
+        self.className   = @"";
     }
     return self;
 }
@@ -34,6 +37,22 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    UIButton *torchSwitch = [UIButton buttonWithType:UIButtonTypeCustom];
+    
+    self.torchSwitch = [UIButton buttonWithType:UIButtonTypeCustom];
+    
+    UIImage *backImage = [UIImage imageNamed:@"torch_off"];
+    [self.torchSwitch setFrame:CGRectMake(0, 0, backImage.size.width, backImage.size.height)];
+    [self.torchSwitch setBackgroundImage:[UIImage imageNamed:@"torch_off"]
+                                forState:UIControlStateNormal];
+    [self.torchSwitch addTarget:self
+                         action:@selector(torchSwitchChange)
+               forControlEvents:UIControlEventTouchDown];
+    
+    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithCustomView:self.torchSwitch];
+    self.navigationItem.rightBarButtonItem = rightItem;
+    
+    
     self.capture = [[ZXCapture alloc] init];
     self.capture.camera = self.capture.back;
     self.capture.focusMode = AVCaptureFocusModeContinuousAutoFocus;
@@ -41,11 +60,20 @@
     self.capture.rotation = 90.0f;
     [self.view.layer addSublayer:self.capture.layer];
     
+    
+    ScanTitleView *titleView = [[ScanTitleView alloc] initWithFrame:CGRectMake(0, 0, 200, 44)];
+    
+    self.navigationItem.titleView = titleView;
+    
+//    self.navigationItem.titleView = ;
+    
     //添加动画
     if (self.scanAnimationView == nil) {
         self.scanAnimationView = [[ScanView alloc] initWithFrame:self.view.bounds];
         [self.view addSubview:self.scanAnimationView];
     }
+    
+    [self.navigationController.navigationBar lt_setBackgroundColor:[UIColor clearColor]];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -55,9 +83,10 @@
     [self.scanAnimationView startScanAnimation];
 }
 
--(void)viewWillDisappear:(BOOL)animated{
+-(void)viewDidDisappear:(BOOL)animated{
     [super viewWillDisappear:animated];
     
+    [self.navigationController.navigationBar lt_reset];
     self.capture.delegate = nil;
     [self.scanAnimationView stopScanAnimation];
 }
@@ -77,7 +106,19 @@
     
 }
 
-
+- (void)torchSwitchChange
+{
+    BOOL isTorch = self.capture.torch;
+    
+    if (isTorch) {
+        [self.torchSwitch setBackgroundImage:[UIImage imageNamed:@"torch_off"]
+                                    forState:UIControlStateNormal];
+    }else {
+        [self.torchSwitch setBackgroundImage:[UIImage imageNamed:@"torch_on"]
+                                    forState:UIControlStateNormal];
+    }
+    [self.capture setTorch:!isTorch];
+}
 
 - (void)dealloc
 {

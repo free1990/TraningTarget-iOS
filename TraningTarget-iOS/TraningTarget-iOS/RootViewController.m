@@ -10,6 +10,7 @@
 #import "RuntimeMsgForWarding.h"
 #import "ClassSet.h"
 
+#import "UINavigationBar+Awesome.h"
 static int allocCount = 0;
 
 
@@ -100,6 +101,11 @@ static int allocCount = 0;
 - (void)beginRecognize{
     
     NSLog(@"通知出现了");
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [self.navigationController.navigationBar lt_reset];
 }
 
 - (void)testThread

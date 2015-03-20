@@ -84,6 +84,8 @@
         
         NSLog(@"-------->  %@", contents);
         
+        UIImageWriteToSavedPhotosAlbum(barcode, self, nil, NULL);
+        
         [textLable setText:[NSString stringWithFormat:@"识别结果: %@",result.text]];
         // The barcode format, such as a QR code or UPC-A
         ZXBarcodeFormat format = result.barcodeFormat;

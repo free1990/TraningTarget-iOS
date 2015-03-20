@@ -48,7 +48,6 @@
     
     [self.navigationController.navigationBar lt_setBackgroundColor:[UIColor clearColor]];
     
-    
 //    for (UIView *subview in [self.navigationController.navigationBar subviews]) {
 //        subview.alpha = 0.5;
 //    }

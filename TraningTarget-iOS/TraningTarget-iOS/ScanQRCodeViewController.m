@@ -162,9 +162,9 @@
     
     NSLog(@"%f----%f", image.size.width, image.size.height);
     
-    dispatch_async(dispatch_get_main_queue(), ^{
-        [self decodeImage:image];
-    });
+//    dispatch_async(dispatch_get_main_queue(), ^{
+//        [self decodeImage:image];
+//    });
 }
 
 //图片解码

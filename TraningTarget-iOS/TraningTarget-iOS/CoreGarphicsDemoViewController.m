@@ -39,15 +39,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    
+    self.view.backgroundColor = [UIColor lightGrayColor];
+    
 //    //划线
 //    Line *line = [[Line alloc] initWithFrame:self.view.frame];
 //    [self.view addSubview:line];
 //    
-//    //弧线和圆、椭圆
-//    Arcs *arcs = [[Arcs alloc] initWithFrame:self.view.frame];
-//    [self.view addSubview:arcs];
+    //弧线和圆、椭圆
+    Arcs *arcs = [[Arcs alloc] initWithFrame:self.view.frame];
+    [self.view addSubview:arcs];
     
-//    //矩形
+    //矩形
 //    RectView *rect = [[RectView alloc] initWithFrame:self.view.frame];
 //    [self.view addSubview:rect];
     
@@ -68,10 +71,10 @@
 //    [self.view addSubview:gradient];
     
     //ClippingView
-    Clipping *clip = [[Clipping alloc] initWithFrame:self.view.frame];
-    clip.backgroundColor = [UIColor whiteColor];
-    [self.view addSubview:clip];
-    
+//    Clipping *clip = [[Clipping alloc] initWithFrame:self.view.frame];
+//    clip.backgroundColor = [UIColor whiteColor];
+//    [self.view addSubview:clip];
+//    
     //mask
 //    Mask *mask = [[Mask alloc] initWithFrame:self.view.frame];
 //    [self.view addSubview:mask];

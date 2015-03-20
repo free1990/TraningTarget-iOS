@@ -12,4 +12,6 @@
 
 @property (strong, nonatomic) UILabel *titleLbl;
 
+- (id)initWithFrame:(CGRect)frame;
+
 @end

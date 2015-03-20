@@ -14,6 +14,8 @@
 static char overlayKey;
 static char emptyImageKey;
 
+#pragma mark --myNavVC.navigationBar.translucent = NO;会影响隐藏navbar
+
 - (UIView *)overlay
 {
     return objc_getAssociatedObject(self, &overlayKey);

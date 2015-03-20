@@ -62,6 +62,7 @@ static int allocCount = 0;
     
     //5.5 * 1 + 2*1 +2;宏，全部乘开
     
+//    [self.navigationController setNavigationBarHidden:YES];
     
     self.title = @"Tree New bee";
     

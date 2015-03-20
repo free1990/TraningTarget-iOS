@@ -12,6 +12,9 @@
 #import "UINavigationBar+Awesome.h"
 #import "ScanTitleView.h"
 
+#define SCREEN_WIDTH  [UIScreen mainScreen].bounds.size.width
+#define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
+
 @interface QRTestViewController ()<ZXCaptureDelegate>
 @property (nonatomic, strong) ScanView *scanAnimationView;
 @property (nonatomic, strong) ZXCapture * capture;
@@ -37,6 +40,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    [self.view setBackgroundColor:[UIColor redColor]];
+    
     UIButton *torchSwitch = [UIButton buttonWithType:UIButtonTypeCustom];
     
     self.torchSwitch = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -58,14 +63,20 @@
     self.capture.focusMode = AVCaptureFocusModeContinuousAutoFocus;
     self.capture.layer.frame = self.view.bounds;
     self.capture.rotation = 90.0f;
-    [self.view.layer addSublayer:self.capture.layer];
     
+    float scanFrameWidth  = SCREEN_WIDTH  * 2.0f / 3.0f;
+    float scanFrameheight = SCREEN_WIDTH  * 2.0f / 3.0f;
+    CGRect bounds = self.view.bounds;
+    
+    CGRect scanFrame = CGRectMake((bounds.size.width - scanFrameWidth) / 2.0f, (bounds.size.height - scanFrameheight) / 2.0f, scanFrameWidth, scanFrameheight);
+    
+    self.capture.scanRect = scanFrame;
+    
+    [self.view.layer addSublayer:self.capture.layer];
     
     ScanTitleView *titleView = [[ScanTitleView alloc] initWithFrame:CGRectMake(0, 0, 200, 44)];
     
     self.navigationItem.titleView = titleView;
-    
-//    self.navigationItem.titleView = ;
     
     //添加动画
     if (self.scanAnimationView == nil) {

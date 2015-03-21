@@ -1,0 +1,217 @@
+//
+//  JKPickView.m
+//  MyPick
+//
+//  Created by John on 14-9-26.
+//  Copyright (c) 2014年 WorkMac. All rights reserved.
+//
+
+#define HEIGHT_TOP_EMPTY_AREA  34
+#define HEIGHT_PICKERVIEW      216
+#define kAssociatedBtn @"kAssociatedBtn"
+#import "JKPickView.h"
+#import <objc/runtime.h>
+
+#define RGBA_COLOR(r, g, b, a) [UIColor colorWithRed:(r) / 255.0 green:(g) / 255.0 blue:(b) / 255.0 alpha:(a) / 255.0]
+
+#define COLOR_TITLE RGBA_COLOR(0x00, 0x85, 0xFF, 0xFF)
+
+@implementation JKPickView
+@synthesize settedTime;
+
+- (id)initWithFrame:(CGRect)frame
+{
+    self = [super initWithFrame:frame];
+    if (self) {
+    }
+    return self;
+}
+
+- (id)initWithFrame:(CGRect)frame withBtn:(UIButton *)btn
+{
+    self = [super initWithFrame:frame];
+    if (self) {
+        [self setUpViewElement];
+        self.tempBtn = btn;
+//        //没有很多btn，暂时放弃Associated
+//        objc_setAssociatedObject(self, kAssociatedBtn, self.tempBtn, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+        [self.tempBtn setUserInteractionEnabled:NO];
+    }
+    return self;
+}
+
+- (void)setUpViewElement
+{
+    self.pickerView = [[UIPickerView alloc] initWithFrame:
+                       CGRectMake(
+                                  0, HEIGHT_TOP_EMPTY_AREA,self.frame.size.width,
+                                                                     HEIGHT_PICKERVIEW)];
+    [self.pickerView setDelegate:self];
+    [self.pickerView setDataSource:self];
+    self.pickerView.showsSelectionIndicator = YES;
+    self.pickerView.autoresizingMask = UIViewAutoresizingFlexibleHeight|
+                                        UIViewAutoresizingFlexibleWidth;
+    [self addSubview:self.pickerView];
+    
+    self.completeBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [self.completeBtn setTitleColor:COLOR_TITLE
+                           forState:UIControlStateNormal];
+    [self.completeBtn setTitle:NSLocalizedString(@"完成", nil)
+                      forState:UIControlStateNormal];
+    [self.completeBtn setTitleColor:[UIColor blueColor]
+                           forState:UIControlStateNormal];
+    [self.completeBtn setFrame:CGRectMake(self.frame.size.width -50, 3, 50, 35)];
+    self.completeBtn.titleLabel.textAlignment = NSTextAlignmentCenter;
+    [self.completeBtn addTarget:self
+                         action:@selector(completePickerView)
+               forControlEvents:UIControlEventTouchUpInside];
+    [self addSubview:self.completeBtn];
+    
+    NSMutableArray *year = [[NSMutableArray alloc] initWithCapacity:12];
+    for (int i= 1; i <= 4; i++)
+        [year addObject:[NSString stringWithFormat:@"%d", 2010+i]];
+    
+    NSMutableArray *month = [[NSMutableArray alloc] initWithCapacity:12];
+    for (int i= 1; i <= 12; i++)
+        [month addObject:[NSString stringWithFormat:@"%d", i]];
+    
+    NSMutableArray *day = [[NSMutableArray alloc] initWithCapacity:31];
+    for (int i= 1; i <= 31; i++) {
+        [day addObject:[NSString stringWithFormat:@"%d", i]];
+    }
+    
+    self.dataArray = [[NSMutableArray alloc] initWithObjects:year, month, day, nil];
+    
+    NSDate *now = [NSDate date];
+    
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    NSUInteger unitFlags = NSYearCalendarUnit | NSMonthCalendarUnit |
+    NSDayCalendarUnit | NSHourCalendarUnit |
+    NSMinuteCalendarUnit | NSSecondCalendarUnit;
+    
+    NSDateComponents *dateComponent = [calendar components:unitFlags fromDate:now];
+    int cureentYear = (int)[dateComponent year];
+    int cureentMonth = (int)[dateComponent month];
+    int cureentday = (int)[dateComponent day];
+    
+    self.yearString = [year objectAtIndex:cureentYear - 2011];
+    self.monthString = [month objectAtIndex:cureentMonth-1];
+    self.dayString = [day objectAtIndex:cureentday-1];
+    
+    [self.pickerView selectRow:cureentYear - 2011 inComponent:0 animated:NO];
+    [self.pickerView selectRow:cureentMonth-1 inComponent:1 animated:NO];
+    [self.pickerView selectRow:cureentday-1 inComponent:2 animated:NO];
+}
+
+- (void)completePickerView
+{
+    [self.tempBtn setUserInteractionEnabled:YES];
+    if (self.complete) {
+        self.complete();
+//        objc_removeAssociatedObjects(self);
+        
+    }
+}
+
+- (void)completeView:(completeView)block
+{
+    self.complete = block;
+}
+
+//- (void)selectIndexComtent:(update)block
+//{
+//    self.update = block;
+//}
+
+#pragma picker view data protocol
+- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
+{
+    return [self.dataArray count];
+}
+
+- (NSInteger)pickerView:(UIPickerView *)pickerView
+    numberOfRowsInComponent:(NSInteger)component
+{
+    return [[self.dataArray objectAtIndex:component] count];
+}
+
+-(NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row
+            forComponent:(NSInteger)component
+{
+    NSString *title;
+    switch (component) {
+        case 0:
+            title = [NSString stringWithFormat:@"%@年",
+             (NSString *)[[self.dataArray objectAtIndex:component] objectAtIndex:row]];
+            break;
+        case 1:
+            title = [NSString stringWithFormat:@"%@月",
+             (NSString *)[[self.dataArray objectAtIndex:component] objectAtIndex:row]];
+            break;
+        case 2:
+            title = [NSString stringWithFormat:@"%@日",
+             (NSString *)[[self.dataArray objectAtIndex:component] objectAtIndex:row]];
+            break;
+        default:
+            NSAssert(1, @"out array bound!!!");
+            break;
+    }
+    return title;
+}
+
+- (CGFloat)pickerView:(UIPickerView *)pickerView widthForComponent:(NSInteger)component {
+    return 100;
+}
+
+
+#pragma picker view protocol
+- (void)pickerView:(UIPickerView *)pickerView
+        didSelectRow:(NSInteger)row
+        inComponent:(NSInteger)component
+{
+    
+    switch (component) {
+        case 0:
+            self.yearString = [[self.dataArray objectAtIndex:component] objectAtIndex:row];
+            break;
+        case 1:
+            self.monthString = [[self.dataArray objectAtIndex:component] objectAtIndex:row];
+            break;
+        case 2:
+            self.dayString = [[self.dataArray objectAtIndex:component] objectAtIndex:row];
+            break;
+            
+        default:
+            break;
+    }
+//    UIButton *btn = objc_getAssociatedObject(self, kAssociatedBtn);
+    
+//    NSString *temp = [NSString stringWithFormat:@"%@年%@月%@日",
+//                      self.yearString, self.monthString, self.dayString];
+    
+    NSLog(@"----%@-----%@-----%@", self.dayString, self.monthString, self.yearString);
+    
+    if ([self.dayString length] == 1)
+        self.dayString = [NSString stringWithFormat:@"0%@", self.dayString];
+    
+    if ([self.monthString length] == 1)
+        self.monthString = [NSString stringWithFormat:@"0%@", self.monthString];
+    
+    self.settedTime = [NSString stringWithFormat:@"%@-%@-%@",
+                           self.yearString, self.monthString, self.dayString];
+    
+    NSLog(@"---------%@", self.settedTime);
+    
+    if ([self.settedTime length] == 0)return;
+    
+    [self.tempBtn setTitle:self.settedTime forState:UIControlStateNormal];
+    
+//    //暂停回调，直接每次赋值给settedTime
+//    if (self.update)
+//        self.update(self.yearString, self.monthString, self.dayString);
+}
+
+- (void)dealloc {
+}
+
+@end

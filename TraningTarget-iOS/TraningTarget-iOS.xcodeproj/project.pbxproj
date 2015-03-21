@@ -11,6 +11,10 @@
 		CF2BF0AF1AB9AF8A00FED55D /* ScanView.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2BF0AE1AB9AF8A00FED55D /* ScanView.m */; };
 		CF2BF0B21ABB090300FED55D /* QRScanLine@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF2BF0B11ABB090300FED55D /* QRScanLine@2x.png */; };
 		CF2BF0B41ABB0A6200FED55D /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF2BF0B31ABB0A6200FED55D /* AVFoundation.framework */; };
+		CF2BF0BE1ABDAA5A00FED55D /* UIScrollView+SVInfiniteScrolling.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2BF0BB1ABDAA5A00FED55D /* UIScrollView+SVInfiniteScrolling.m */; };
+		CF2BF0BF1ABDAA5A00FED55D /* UIScrollView+SVPullToRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2BF0BD1ABDAA5A00FED55D /* UIScrollView+SVPullToRefresh.m */; };
+		CF2BF0D51ABDAA9200FED55D /* JKOrderButton.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2BF0C51ABDAA9200FED55D /* JKOrderButton.m */; };
+		CF2BF0D61ABDAA9200FED55D /* JKPickView.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2BF0C81ABDAA9200FED55D /* JKPickView.m */; };
 		CFEAB54B1A597D2B00696D42 /* CoreAnimationImplicitCA.m in Sources */ = {isa = PBXBuildFile; fileRef = CFEAB54A1A597D2B00696D42 /* CoreAnimationImplicitCA.m */; };
 		D616686C1A49038B0067C179 /* Line.m in Sources */ = {isa = PBXBuildFile; fileRef = D616686B1A49038B0067C179 /* Line.m */; };
 		D616686F1A490BCB0067C179 /* Arcs.m in Sources */ = {isa = PBXBuildFile; fileRef = D616686E1A490BCB0067C179 /* Arcs.m */; };
@@ -136,6 +140,15 @@
 		CF2BF0AE1AB9AF8A00FED55D /* ScanView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScanView.m; sourceTree = "<group>"; };
 		CF2BF0B11ABB090300FED55D /* QRScanLine@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QRScanLine@2x.png"; sourceTree = "<group>"; };
 		CF2BF0B31ABB0A6200FED55D /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		CF2BF0B91ABDAA5A00FED55D /* SVPullToRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVPullToRefresh.h; sourceTree = "<group>"; };
+		CF2BF0BA1ABDAA5A00FED55D /* UIScrollView+SVInfiniteScrolling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+SVInfiniteScrolling.h"; sourceTree = "<group>"; };
+		CF2BF0BB1ABDAA5A00FED55D /* UIScrollView+SVInfiniteScrolling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+SVInfiniteScrolling.m"; sourceTree = "<group>"; };
+		CF2BF0BC1ABDAA5A00FED55D /* UIScrollView+SVPullToRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+SVPullToRefresh.h"; sourceTree = "<group>"; };
+		CF2BF0BD1ABDAA5A00FED55D /* UIScrollView+SVPullToRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+SVPullToRefresh.m"; sourceTree = "<group>"; };
+		CF2BF0C41ABDAA9200FED55D /* JKOrderButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKOrderButton.h; sourceTree = "<group>"; };
+		CF2BF0C51ABDAA9200FED55D /* JKOrderButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKOrderButton.m; sourceTree = "<group>"; };
+		CF2BF0C71ABDAA9200FED55D /* JKPickView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKPickView.h; sourceTree = "<group>"; };
+		CF2BF0C81ABDAA9200FED55D /* JKPickView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKPickView.m; sourceTree = "<group>"; };
 		CFEAB5491A597D2B00696D42 /* CoreAnimationImplicitCA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreAnimationImplicitCA.h; sourceTree = "<group>"; };
 		CFEAB54A1A597D2B00696D42 /* CoreAnimationImplicitCA.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreAnimationImplicitCA.m; sourceTree = "<group>"; };
 		D616686A1A49038B0067C179 /* Line.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Line.h; sourceTree = "<group>"; };
@@ -366,6 +379,46 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		CF2BF0B71ABDAA3C00FED55D /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				CF2BF0C31ABDAA9200FED55D /* JKOrderButton */,
+				CF2BF0C61ABDAA9200FED55D /* JKPickerView */,
+				CF2BF0B81ABDAA5A00FED55D /* SVPullToRefresh */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		CF2BF0B81ABDAA5A00FED55D /* SVPullToRefresh */ = {
+			isa = PBXGroup;
+			children = (
+				CF2BF0B91ABDAA5A00FED55D /* SVPullToRefresh.h */,
+				CF2BF0BA1ABDAA5A00FED55D /* UIScrollView+SVInfiniteScrolling.h */,
+				CF2BF0BB1ABDAA5A00FED55D /* UIScrollView+SVInfiniteScrolling.m */,
+				CF2BF0BC1ABDAA5A00FED55D /* UIScrollView+SVPullToRefresh.h */,
+				CF2BF0BD1ABDAA5A00FED55D /* UIScrollView+SVPullToRefresh.m */,
+			);
+			path = SVPullToRefresh;
+			sourceTree = "<group>";
+		};
+		CF2BF0C31ABDAA9200FED55D /* JKOrderButton */ = {
+			isa = PBXGroup;
+			children = (
+				CF2BF0C41ABDAA9200FED55D /* JKOrderButton.h */,
+				CF2BF0C51ABDAA9200FED55D /* JKOrderButton.m */,
+			);
+			path = JKOrderButton;
+			sourceTree = "<group>";
+		};
+		CF2BF0C61ABDAA9200FED55D /* JKPickerView */ = {
+			isa = PBXGroup;
+			children = (
+				CF2BF0C71ABDAA9200FED55D /* JKPickView.h */,
+				CF2BF0C81ABDAA9200FED55D /* JKPickView.m */,
+			);
+			path = JKPickerView;
+			sourceTree = "<group>";
+		};
 		D619AE4B1A7728990001CC97 /* Toolkit */ = {
 			isa = PBXGroup;
 			children = (
@@ -430,6 +483,7 @@
 			children = (
 				D6422CC61A397E85000D9759 /* AppDelegate.h */,
 				D6422CC71A397E85000D9759 /* AppDelegate.m */,
+				CF2BF0B71ABDAA3C00FED55D /* lib */,
 				D6F225501A400DCF00E3FCB2 /* View */,
 				D6D9438B1A3ABD0600898FA3 /* Controller */,
 				D6D9438C1A3ABD2900898FA3 /* Handle */,
@@ -789,6 +843,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF2BF0BF1ABDAA5A00FED55D /* UIScrollView+SVPullToRefresh.m in Sources */,
 				D619AE661A7728990001CC97 /* DebugUtil.m in Sources */,
 				D6B90B111AA05CA500B8A080 /* PictureObject.m in Sources */,
 				D6DA9ECA1AB7F63C00AF1E96 /* JSONHelper.m in Sources */,
@@ -803,6 +858,7 @@
 				D63ADF1D1A413007009CA874 /* RuntimeDemoOneViewController.m in Sources */,
 				D619AE4A1A77286B0001CC97 /* VersionResponse.m in Sources */,
 				D6D0EAD01A5A7386005C3A5D /* CoreAnimationCAMediaTimingFunction.m in Sources */,
+				CF2BF0D51ABDAA9200FED55D /* JKOrderButton.m in Sources */,
 				D619AE6A1A7728990001CC97 /* PathUtil.m in Sources */,
 				D6F2255C1A41174000E3FCB2 /* TestRemoveViewTestController.m in Sources */,
 				D6C3BDF21A58D5B300E0D405 /* CoreAnimationDemoViewController.m in Sources */,
@@ -827,6 +883,7 @@
 				D6EB751F1AA8045C00801853 /* Paper_examGroup.m in Sources */,
 				D619AE6B1A7728990001CC97 /* UIImage+Color.m in Sources */,
 				D6D0EACB1A5A6264005C3A5D /* CoreAnimationCAMediaTiming.m in Sources */,
+				CF2BF0BE1ABDAA5A00FED55D /* UIScrollView+SVInfiniteScrolling.m in Sources */,
 				D619AE6C1A7728990001CC97 /* UIView+Frame.m in Sources */,
 				D6D943941A3AE19B00898FA3 /* RuntimeDynamicMethodResolutionAndDynamicLoading.m in Sources */,
 				D6C3BDF71A591EE400E0D405 /* CoreAnimationDemoTwoViewController.m in Sources */,
@@ -855,6 +912,7 @@
 				D6EADF8B1A4AA42600D46981 /* UIViewController+HUD.m in Sources */,
 				D619AE7C1A772C3D0001CC97 /* HTTPResponse.m in Sources */,
 				D63ADF261A416EF9009CA874 /* NSObject+AutoEncodeDecode.m in Sources */,
+				CF2BF0D61ABDAA9200FED55D /* JKPickView.m in Sources */,
 				D6422CC51A397E85000D9759 /* main.m in Sources */,
 				D634B7401AB981660061AC15 /* ScanQRCodeViewController.m in Sources */,
 				D6422CF91A399798000D9759 /* ClassItem.m in Sources */,

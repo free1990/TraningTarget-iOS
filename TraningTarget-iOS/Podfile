@@ -25,6 +25,7 @@ pod 'NYXImagesKit', '~> 2.3'
 pod 'pop', '~> 1.0'
 pod 'ZXingObjC', '~> 3.0'
 pod 'SVProgressHUD'
+pod 'ReactiveCocoa'
 #end
 
 #target "ZYZoneTests" do

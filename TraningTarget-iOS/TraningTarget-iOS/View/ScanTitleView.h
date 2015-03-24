@@ -14,4 +14,6 @@
 
 - (id)initWithFrame:(CGRect)frame;
 
+- (void)setLableBadgeViewWithNum:(int)num;
+
 @end

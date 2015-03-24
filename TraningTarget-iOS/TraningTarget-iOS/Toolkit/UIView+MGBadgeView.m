@@ -9,11 +9,6 @@
 #import "UIView+MGBadgeView.h"
 #import <objc/runtime.h>
 #import "AppDelegate.h"
-#import "Macros.h"
-#import "Config.h"
-#import "AppDelegate.h"
-#import "Macros.h"
-#import "Config.h"
 
 @implementation MGBadgeView
 
@@ -46,45 +41,47 @@ static int const kMGBadgeViewTag = 9876;
 
 - (void)drawRect:(CGRect)rect {
     
-//    [self mg_updateBadgeViewPosition];
-//    
-//    CGRect superviewFrame = self.superview.frame;
-//    
-//    CGFloat factor = ApplicationDelegate.scaleFactor;
-//    if (_minDiameter != 0) {
-//        self.frame = CGRectMake(0 , 0, factor * _minDiameter, factor * _minDiameter);
-//        self.center = CGPointMake(superviewFrame.size.width - 10*factor , 10*factor);
-//#pragma mark - force to set text draw color to clear color
-//        self.textColor  = [UIColor clearColor];
-//    }
-//    
-//    if(_badgeValue != 0 || _displayIfZero) {
-//        
-//        NSString *stringToDraw = [NSString stringWithFormat:@"%ld", (long)_badgeValue];
-//        
-//        CGContextRef context = UIGraphicsGetCurrentContext();
-//        
-//        [_outlineColor set];
-//        CGContextFillEllipseInRect(context, CGRectInset(rect, 1.0, 1.0));
-//        
-//        [_badgeColor set];
-//        CGContextFillEllipseInRect(context, CGRectInset(rect, _outlineWidth + 1.0, _outlineWidth + 1.0));
-//        
-//        CGSize numberSize = [stringToDraw sizeWithAttributes:@{NSFontAttributeName: _font}];
-//        
-//        [_textColor set];
-//        NSMutableParagraphStyle *paragrapStyle = [NSMutableParagraphStyle new];
-//        paragrapStyle.lineBreakMode = NSLineBreakByClipping;
-//        paragrapStyle.alignment = NSTextAlignmentCenter;
-//        
-//        CGRect lblRect = CGRectMake(rect.origin.x, (rect.size.height / 2.0) - (numberSize.height / 2.0), rect.size.width, numberSize.height);
-//        
-//        [stringToDraw drawInRect:lblRect withAttributes:@{
-//                                                          NSFontAttributeName : _font,
-//                                                          NSParagraphStyleAttributeName : paragrapStyle,
-//                                                          NSForegroundColorAttributeName : _textColor
-//                                                          }];
-//    }
+    [self mg_updateBadgeViewPosition];
+    
+    CGRect superviewFrame = self.superview.frame;
+    
+    CGFloat factor = 1;
+    if (_minDiameter != 0) {
+        self.frame = CGRectMake(0 , 0, factor * _minDiameter, factor * _minDiameter);
+        self.center = CGPointMake(superviewFrame.size.width - 10*factor , 10*factor);
+#pragma mark - force to set text draw color to clear color
+        self.textColor  = [UIColor clearColor];
+    }
+    
+    CGRect temp = CGRectMake(rect.origin.x, rect.origin.y , rect.size.width, 15);
+
+    if(_badgeValue != 0 || _displayIfZero) {
+        
+        NSString *stringToDraw = [NSString stringWithFormat:@"%ld", (long)_badgeValue];
+        
+        CGContextRef context = UIGraphicsGetCurrentContext();
+        
+        [_outlineColor set];
+        CGContextFillEllipseInRect(context, CGRectInset(temp, 1.0, 0.8));
+        
+        [_badgeColor set];
+        CGContextFillEllipseInRect(context, CGRectInset(temp, _outlineWidth + 1.0, _outlineWidth + 1.0));
+        
+        CGSize numberSize = [stringToDraw sizeWithAttributes:@{NSFontAttributeName: _font}];
+        
+        [_textColor set];
+        NSMutableParagraphStyle *paragrapStyle = [NSMutableParagraphStyle new];
+        paragrapStyle.lineBreakMode = NSLineBreakByClipping;
+        paragrapStyle.alignment = NSTextAlignmentCenter;
+        
+        CGRect lblRect = CGRectMake(temp.origin.x, (temp.size.height / 2.0) - (numberSize.height / 2.0), temp.size.width, numberSize.height);
+        
+        [stringToDraw drawInRect:lblRect withAttributes:@{
+                                                          NSFontAttributeName : _font,
+                                                          NSParagraphStyleAttributeName : paragrapStyle,
+                                                          NSForegroundColorAttributeName : _textColor
+                                                          }];
+    }
 }
 
 #pragma mark - Properties accessor methods
@@ -204,49 +201,49 @@ static int const kMGBadgeViewTag = 9876;
 
 
 - (void)mg_updateBadgeViewPosition {
-//    CGRect superviewFrame = self.superview.frame;
-//    
-//    CGSize badgeSize = self.bounds.size;
-//    
-//    MGBadgePosition position = _position;
-//    
-//    //Set the best position before
-//    if(position == MGBadgePositionBest) {
-//        CGPoint topRightInWindow = [self.superview convertPoint:CGPointMake(superviewFrame.origin.x + superviewFrame.size.width + (badgeSize.width / 2.0), -(badgeSize.height / 2.0)) fromView:nil];
-//        
-//        CGSize appFrameSize = [[UIScreen mainScreen] applicationFrame].size;
-//        
-//        if(topRightInWindow.x > appFrameSize.width) {
-//            position = (topRightInWindow.y < appFrameSize.height) ? MGBadgePositionBottomLeft : MGBadgePositionTopLeft;
-//        } else {
-//            position = (topRightInWindow.y < appFrameSize.height) ? MGBadgePositionBottomRight : MGBadgePositionTopRight;
-//        }
-//    }
-//    
-//    CGFloat factor = ApplicationDelegate.scaleFactor;
-//    
-//    self.center = CGPointMake(superviewFrame.size.width - 8*factor, 8*factor);
+    CGRect superviewFrame = self.superview.frame;
     
-//    switch (position) {
-//        case MGBadgePositionTopRight: {
-//            self.center = CGPointMake(superviewFrame.size.width - 8*factor, 8*factor);
-//            break;
-//        }
-//        case MGBadgePositionTopLeft: {
-//            self.center = CGPointMake(0, 0);
-//            break;
-//        }
-//        case MGBadgePositionBottomRight: {
-//            self.center = CGPointMake(superviewFrame.size.width, superviewFrame.size.height);
-//            break;
-//        }
-//        case MGBadgePositionBottomLeft: {
-//            self.center = CGPointMake(0, superviewFrame.size.height);
-//            break;
-//        }
-//        default:
-//            break;
-//    }
+    CGSize badgeSize = self.bounds.size;
+    
+    MGBadgePosition position = _position;
+    
+    //Set the best position before
+    if(position == MGBadgePositionBest) {
+        CGPoint topRightInWindow = [self.superview convertPoint:CGPointMake(superviewFrame.origin.x + superviewFrame.size.width + (badgeSize.width / 2.0), -(badgeSize.height / 2.0)) fromView:nil];
+        
+        CGSize appFrameSize = [[UIScreen mainScreen] applicationFrame].size;
+        
+        if(topRightInWindow.x > appFrameSize.width) {
+            position = (topRightInWindow.y < appFrameSize.height) ? MGBadgePositionBottomLeft : MGBadgePositionTopLeft;
+        } else {
+            position = (topRightInWindow.y < appFrameSize.height) ? MGBadgePositionBottomRight : MGBadgePositionTopRight;
+        }
+    }
+    
+    CGFloat factor = 1;
+    
+    self.center = CGPointMake(superviewFrame.size.width - 8*factor, 8*factor);
+    
+    //    switch (position) {
+    //        case MGBadgePositionTopRight: {
+    //            self.center = CGPointMake(superviewFrame.size.width - 8*factor, 8*factor);
+    //            break;
+    //        }
+    //        case MGBadgePositionTopLeft: {
+    //            self.center = CGPointMake(0, 0);
+    //            break;
+    //        }
+    //        case MGBadgePositionBottomRight: {
+    //            self.center = CGPointMake(superviewFrame.size.width, superviewFrame.size.height);
+    //            break;
+    //        }
+    //        case MGBadgePositionBottomLeft: {
+    //            self.center = CGPointMake(0, superviewFrame.size.height);
+    //            break;
+    //        }
+    //        default:
+    //            break;
+    //    }
 }
 
 @end
@@ -268,6 +265,7 @@ static const char *kMGBadgeViewPropertyKey = "kMGBadgeViewPropertyKey";
     if (!badgeView) {
         self.badgeView = [[MGBadgeView alloc] initWithFrame:CGRectZero];
         badgeView = objc_getAssociatedObject(self, kMGBadgeViewPropertyKey);
+        badgeView.contentMode = UIViewContentModeRedraw;
         [self addSubview:badgeView];
     }
     

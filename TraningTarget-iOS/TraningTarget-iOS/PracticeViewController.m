@@ -8,6 +8,7 @@
 
 #import "PracticeViewController.h"
 #import "ScanTitleView.h"
+#import "UIView+MGBadgeView.h"
 
 @interface PracticeViewController ()
 
@@ -31,11 +32,14 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 
-    ScanTitleView *temp = [[ScanTitleView alloc] initWithFrame:CGRectMake(0, 0, 150, 30)];
+    ScanTitleView *temp = [[ScanTitleView alloc] initWithFrame:CGRectMake(0, 0, 110, 44)];
+    
+    [temp setLableBadgeViewWithNum:1000];
     
     [temp setCenter:self.view.center];
     
     [self.view addSubview:temp];
+    
 }
 
 - (void)didReceiveMemoryWarning {

@@ -30,7 +30,6 @@
 		D619AE6A1A7728990001CC97 /* PathUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = D619AE581A7728990001CC97 /* PathUtil.m */; };
 		D619AE6B1A7728990001CC97 /* UIImage+Color.m in Sources */ = {isa = PBXBuildFile; fileRef = D619AE5A1A7728990001CC97 /* UIImage+Color.m */; };
 		D619AE6C1A7728990001CC97 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = D619AE5C1A7728990001CC97 /* UIView+Frame.m */; };
-		D619AE6D1A7728990001CC97 /* UIView+MGBadgeView.m in Sources */ = {isa = PBXBuildFile; fileRef = D619AE5E1A7728990001CC97 /* UIView+MGBadgeView.m */; };
 		D619AE6F1A7728990001CC97 /* UIViewController+DismissKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = D619AE621A7728990001CC97 /* UIViewController+DismissKeyboard.m */; };
 		D619AE771A772AAD0001CC97 /* AppUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = D619AE761A772AAD0001CC97 /* AppUtil.m */; };
 		D619AE7A1A772BA90001CC97 /* PropertiesManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D619AE791A772BA90001CC97 /* PropertiesManager.m */; };
@@ -66,6 +65,7 @@
 		D65AD0BF1A3EC6AA00D6E193 /* EmptyClass.m in Sources */ = {isa = PBXBuildFile; fileRef = D65AD0BE1A3EC6AA00D6E193 /* EmptyClass.m */; };
 		D65CC5FD1A78CC4E003AD059 /* TipTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D65CC5FC1A78CC4E003AD059 /* TipTestViewController.m */; };
 		D65DDE671A885911005F3AB5 /* UIImage+Rotate.m in Sources */ = {isa = PBXBuildFile; fileRef = D65DDE661A885911005F3AB5 /* UIImage+Rotate.m */; };
+		D663E16E1AC1520D00A3AA9E /* UIView+MGBadgeView.m in Sources */ = {isa = PBXBuildFile; fileRef = D663E16D1AC1520D00A3AA9E /* UIView+MGBadgeView.m */; };
 		D674FDD21A81F2DC00CAE789 /* MyRequestProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = D674FDD11A81F2DC00CAE789 /* MyRequestProtocol.m */; };
 		D68411861A5CCA560078A807 /* test.png in Resources */ = {isa = PBXBuildFile; fileRef = D68411851A5CCA560078A807 /* test.png */; };
 		D6A9E76D1A49021F001448C0 /* QuartzView.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A9E76C1A49021F001448C0 /* QuartzView.m */; };
@@ -182,8 +182,6 @@
 		D619AE5A1A7728990001CC97 /* UIImage+Color.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Color.m"; sourceTree = "<group>"; };
 		D619AE5B1A7728990001CC97 /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
 		D619AE5C1A7728990001CC97 /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
-		D619AE5D1A7728990001CC97 /* UIView+MGBadgeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MGBadgeView.h"; sourceTree = "<group>"; };
-		D619AE5E1A7728990001CC97 /* UIView+MGBadgeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MGBadgeView.m"; sourceTree = "<group>"; };
 		D619AE611A7728990001CC97 /* UIViewController+DismissKeyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+DismissKeyboard.h"; sourceTree = "<group>"; };
 		D619AE621A7728990001CC97 /* UIViewController+DismissKeyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+DismissKeyboard.m"; sourceTree = "<group>"; };
 		D619AE711A77291E0001CC97 /* HTTPResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPResponse.h; sourceTree = "<group>"; };
@@ -251,6 +249,8 @@
 		D65CC5FC1A78CC4E003AD059 /* TipTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TipTestViewController.m; sourceTree = "<group>"; };
 		D65DDE651A885911005F3AB5 /* UIImage+Rotate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Rotate.h"; sourceTree = "<group>"; };
 		D65DDE661A885911005F3AB5 /* UIImage+Rotate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Rotate.m"; sourceTree = "<group>"; };
+		D663E16C1AC1520D00A3AA9E /* UIView+MGBadgeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MGBadgeView.h"; sourceTree = "<group>"; };
+		D663E16D1AC1520D00A3AA9E /* UIView+MGBadgeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MGBadgeView.m"; sourceTree = "<group>"; };
 		D674FDD01A81F2DC00CAE789 /* MyRequestProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyRequestProtocol.h; sourceTree = "<group>"; };
 		D674FDD11A81F2DC00CAE789 /* MyRequestProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyRequestProtocol.m; sourceTree = "<group>"; };
 		D68411851A5CCA560078A807 /* test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test.png; sourceTree = "<group>"; };
@@ -449,10 +449,10 @@
 				D619AE581A7728990001CC97 /* PathUtil.m */,
 				D619AE591A7728990001CC97 /* UIImage+Color.h */,
 				D619AE5A1A7728990001CC97 /* UIImage+Color.m */,
+				D663E16C1AC1520D00A3AA9E /* UIView+MGBadgeView.h */,
+				D663E16D1AC1520D00A3AA9E /* UIView+MGBadgeView.m */,
 				D619AE5B1A7728990001CC97 /* UIView+Frame.h */,
 				D619AE5C1A7728990001CC97 /* UIView+Frame.m */,
-				D619AE5D1A7728990001CC97 /* UIView+MGBadgeView.h */,
-				D619AE5E1A7728990001CC97 /* UIView+MGBadgeView.m */,
 				D619AE611A7728990001CC97 /* UIViewController+DismissKeyboard.h */,
 				D619AE621A7728990001CC97 /* UIViewController+DismissKeyboard.m */,
 				D65DDE651A885911005F3AB5 /* UIImage+Rotate.h */,
@@ -859,7 +859,6 @@
 				D6B90B0C1AA03FBA00B8A080 /* AssetsLibraryViewController.m in Sources */,
 				D6EB75191AA7FE4F00801853 /* PaperInfoResponse.m in Sources */,
 				D619AE771A772AAD0001CC97 /* AppUtil.m in Sources */,
-				D619AE6D1A7728990001CC97 /* UIView+MGBadgeView.m in Sources */,
 				D63ADF1D1A413007009CA874 /* RuntimeDemoOneViewController.m in Sources */,
 				D619AE4A1A77286B0001CC97 /* VersionResponse.m in Sources */,
 				D6D0EAD01A5A7386005C3A5D /* CoreAnimationCAMediaTimingFunction.m in Sources */,
@@ -929,6 +928,7 @@
 				D6D943901A3AC7E900898FA3 /* RuntimePropertyAndFunction.m in Sources */,
 				D6D0EADB1A5B896F005C3A5D /* DrawingView.m in Sources */,
 				D619AE681A7728990001CC97 /* NSDate+Utilities.m in Sources */,
+				D663E16E1AC1520D00A3AA9E /* UIView+MGBadgeView.m in Sources */,
 				D60D40271ABFA1E700FA2317 /* PullAndScrollRefreshViewController.m in Sources */,
 				D6EA5CF71AA598FA00BA68D4 /* ZXingOBJCViewController.m in Sources */,
 				D6EB751C1AA8028C00801853 /* Paper_Content.m in Sources */,

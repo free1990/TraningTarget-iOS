@@ -45,7 +45,7 @@ static int const kMGBadgeViewTag = 9876;
     
     CGRect superviewFrame = self.superview.frame;
     
-    CGFloat factor = 1;
+    CGFloat factor = ApplicationDelegate.scaleFactor;
     if (_minDiameter != 0) {
         self.frame = CGRectMake(0 , 0, factor * _minDiameter, factor * _minDiameter);
         self.center = CGPointMake(superviewFrame.size.width - 10*factor , 10*factor);
@@ -221,7 +221,7 @@ static int const kMGBadgeViewTag = 9876;
         }
     }
     
-    CGFloat factor = 1;
+    CGFloat factor = ApplicationDelegate.scaleFactor;
     
     self.center = CGPointMake(superviewFrame.size.width - 8*factor, 8*factor);
     

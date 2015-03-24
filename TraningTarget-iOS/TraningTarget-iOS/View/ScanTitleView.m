@@ -36,23 +36,37 @@
         self.titleLbl.backgroundColor = [UIColor clearColor];
         
         [self addSubview:self.titleLbl];
+        
+        UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+        
+        [btn setBackgroundColor:[UIColor clearColor]];
+        [btn addTarget:self action:@selector(click) forControlEvents:UIControlEventTouchDown];
+        [btn setFrame:self.frame];
+        
+        [self addSubview:btn];
     }
     return self;
 }
 
 - (void)setLableBadgeViewWithNum:(int)num
 {
-    
+    [self.titleLbl.badgeView setFixedHeight:15];
     [self.titleLbl.badgeView setDisplayIfZero:NO];
     [self.titleLbl.badgeView setBadgeValue:num];
     [self.titleLbl.badgeView setOutlineWidth:0.0];
     [self.titleLbl.badgeView setFont:[UIFont systemFontOfSize:10]];
-    [self.titleLbl.badgeView setOutlineColor:[UIColor whiteColor]];
+    [self.titleLbl.badgeView setOutlineColor:[UIColor redColor]];
     [self.titleLbl.badgeView setBadgeColor:[UIColor redColor]];
     [self.titleLbl.badgeView setTextColor:[UIColor whiteColor]];
     [self.titleLbl.badgeView setPosition:MGBadgePositionTopRight];
 }
 
+- (void)click
+{
+    if (self.callback) {
+        self.callback();
+    }
+}
 
 - (void)drawRect:(CGRect)rect
 {

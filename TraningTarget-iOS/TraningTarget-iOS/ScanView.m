@@ -51,7 +51,10 @@
     [self.layer addSublayer:scanLineLayer_];
     self.scanFrame = scanFrame;
     
-    [self drawRect:self.frame];
+    //不能直接渲染
+//    [self drawRect:self.frame];
+    
+    [self setNeedsDisplay];
 }
 
 //- (void)commonInit {

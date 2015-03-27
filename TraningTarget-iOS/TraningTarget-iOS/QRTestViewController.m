@@ -106,6 +106,8 @@
 
 -(void)captureResult:(ZXCapture *)capture result:(ZXResult *)result{
     
+    [self.capture setDelegate:nil];
+    
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"扫描内容"
                                                     message:result.text
                                                    delegate:nil

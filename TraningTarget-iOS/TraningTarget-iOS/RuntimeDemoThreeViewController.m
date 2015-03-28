@@ -14,11 +14,6 @@
 
 @implementation RuntimeDemoThreeViewController
 
-+(void)load
-{
-    [super registerClassItem:self];
-}
-
 - (id)init{
     if (self = [super init]) {
         self.className   = @"Runtime Demo Three";

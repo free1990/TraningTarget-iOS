@@ -15,11 +15,6 @@
 
 @implementation RuntimePropertyAndFunction
 
-+(void)load
-{
-    [super registerClassItem:self];
-}
-
 - (id)init{
     if (self = [super init]) {
         self.className   = @"Runtime Property And Function";

@@ -14,11 +14,6 @@
 
 @implementation CoreAnimationImplicitCA
 
-+(void)load
-{
-    [super registerClassItem:self];
-}
-
 - (id)init{
     if (self = [super init]) {
         self.className   = @"隐式 动画";

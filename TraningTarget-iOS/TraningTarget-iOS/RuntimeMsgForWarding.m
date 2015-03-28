@@ -12,11 +12,6 @@
 
 @implementation RuntimeMsgForWarding
 
-+(void)load
-{
-    [super registerClassItem:self];
-}
-
 - (id)init{
     if (self = [super init]) {
         self.className   = @"Runtime Msg ForWarding";

@@ -17,10 +17,6 @@
 
 @implementation CoreAnimationDemoTwoViewController
 
-+(void)load
-{
-    [super registerClassItem:self];
-}
 
 - (id)init{
     if (self = [super init]) {

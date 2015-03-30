@@ -122,6 +122,9 @@
 		D6F225531A40138000E3FCB2 /* JKUpdateAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = D6F225521A40138000E3FCB2 /* JKUpdateAlertView.m */; };
 		D6F2255C1A41174000E3FCB2 /* TestRemoveViewTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6F2255B1A41174000E3FCB2 /* TestRemoveViewTestController.m */; };
 		D6F307A31A6CDE0C008546F2 /* UIImage+UIImageExtras.m in Sources */ = {isa = PBXBuildFile; fileRef = D6F307A21A6CDE0C008546F2 /* UIImage+UIImageExtras.m */; };
+		D6FC798D1AC937740058AC9E /* xcode.png in Resources */ = {isa = PBXBuildFile; fileRef = D6FC798C1AC937740058AC9E /* xcode.png */; };
+		D6FC79901AC93ACD0058AC9E /* ZYSandBoxCache.m in Sources */ = {isa = PBXBuildFile; fileRef = D6FC798E1AC93ACD0058AC9E /* ZYSandBoxCache.m */; };
+		D6FC79931AC93B430058AC9E /* SaveDataToLocalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6FC79921AC93B430058AC9E /* SaveDataToLocalViewController.m */; };
 		F814BB409CFB202F26CDEBDD /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 32E9A4D9DB94E1EC8F2C4F93 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -350,6 +353,11 @@
 		D6F2255B1A41174000E3FCB2 /* TestRemoveViewTestController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestRemoveViewTestController.m; sourceTree = "<group>"; };
 		D6F307A11A6CDE0C008546F2 /* UIImage+UIImageExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+UIImageExtras.h"; path = "../UIImage+UIImageExtras.h"; sourceTree = "<group>"; };
 		D6F307A21A6CDE0C008546F2 /* UIImage+UIImageExtras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+UIImageExtras.m"; path = "../UIImage+UIImageExtras.m"; sourceTree = "<group>"; };
+		D6FC798C1AC937740058AC9E /* xcode.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = xcode.png; sourceTree = "<group>"; };
+		D6FC798E1AC93ACD0058AC9E /* ZYSandBoxCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYSandBoxCache.m; sourceTree = "<group>"; };
+		D6FC798F1AC93ACD0058AC9E /* ZYSandBoxCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYSandBoxCache.h; sourceTree = "<group>"; };
+		D6FC79911AC93B430058AC9E /* SaveDataToLocalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SaveDataToLocalViewController.h; sourceTree = "<group>"; };
+		D6FC79921AC93B430058AC9E /* SaveDataToLocalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SaveDataToLocalViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -439,7 +447,6 @@
 			isa = PBXGroup;
 			children = (
 				CF44233F1AC6F0B0001B712C /* ModelHelper */,
-				D619AE4B1A7728990001CC97 /* Toolkit */,
 				CF44233E1AC6F03D001B712C /* pratise */,
 			);
 			name = helper;
@@ -517,6 +524,7 @@
 				D634B75D1ABBD0EC0061AC15 /* torch_off@2x.png */,
 				D634B75E1ABBD0EC0061AC15 /* torch_on@2x.png */,
 				D6EA5CF81AA59A1800BA68D4 /* barcode.png */,
+				D6FC798C1AC937740058AC9E /* xcode.png */,
 				D6EA5D051AA6AA6D00BA68D4 /* moreBig.png */,
 				D6422CC31A397E85000D9759 /* Info.plist */,
 				D6422CC41A397E85000D9759 /* main.m */,
@@ -583,6 +591,8 @@
 				CF2BF14D1AC4334900FED55D /* FBEncryptorAES.m */,
 				CF2BF1521AC4366900FED55D /* NSData+Encryption.h */,
 				CF2BF1531AC4366900FED55D /* NSData+Encryption.m */,
+				D6FC798E1AC93ACD0058AC9E /* ZYSandBoxCache.m */,
+				D6FC798F1AC93ACD0058AC9E /* ZYSandBoxCache.h */,
 			);
 			path = Toolkit;
 			sourceTree = "<group>";
@@ -689,6 +699,8 @@
 				D634B76D1ABC16450061AC15 /* PracticeViewController.m */,
 				D60D40251ABFA1E700FA2317 /* PullAndScrollRefreshViewController.h */,
 				D60D40261ABFA1E700FA2317 /* PullAndScrollRefreshViewController.m */,
+				D6FC79911AC93B430058AC9E /* SaveDataToLocalViewController.h */,
+				D6FC79921AC93B430058AC9E /* SaveDataToLocalViewController.m */,
 				CF2BF0AD1AB9AF8A00FED55D /* ScanView.h */,
 				CF2BF0AE1AB9AF8A00FED55D /* ScanView.m */,
 				D6B90B0F1AA05CA500B8A080 /* PictureObject.h */,
@@ -706,6 +718,7 @@
 		D6D9438C1A3ABD2900898FA3 /* Handler */ = {
 			isa = PBXGroup;
 			children = (
+				D619AE4B1A7728990001CC97 /* Toolkit */,
 				CF2BF14B1AC4333100FED55D /* helper */,
 			);
 			name = Handler;
@@ -832,6 +845,7 @@
 				D6D0EAD21A5A7823005C3A5D /* qq.png in Resources */,
 				D68411861A5CCA560078A807 /* test.png in Resources */,
 				D6D0EAC81A5A4477005C3A5D /* car.png in Resources */,
+				D6FC798D1AC937740058AC9E /* xcode.png in Resources */,
 				D6DA9ECC1AB7F65800AF1E96 /* test.json in Resources */,
 				D6EADF731A49551000D46981 /* demo.png in Resources */,
 				D6422CCE1A397E85000D9759 /* Main.storyboard in Resources */,
@@ -949,6 +963,7 @@
 				D6C3BDF71A591EE400E0D405 /* CoreAnimationDemoTwoViewController.m in Sources */,
 				D6EADF7C1A4A528F00D46981 /* Clipping.m in Sources */,
 				D6422CF01A399587000D9759 /* ClassSet.m in Sources */,
+				D6FC79931AC93B430058AC9E /* SaveDataToLocalViewController.m in Sources */,
 				D674FDD21A81F2DC00CAE789 /* MyRequestProtocol.m in Sources */,
 				D619AE671A7728990001CC97 /* JSONUtil.m in Sources */,
 				D6422CF61A3996D5000D9759 /* BaseViewController.m in Sources */,
@@ -976,6 +991,7 @@
 				CF2BF0D61ABDAA9200FED55D /* JKPickView.m in Sources */,
 				D6422CC51A397E85000D9759 /* main.m in Sources */,
 				D634B7401AB981660061AC15 /* ScanQRCodeViewController.m in Sources */,
+				D6FC79901AC93ACD0058AC9E /* ZYSandBoxCache.m in Sources */,
 				D6422CF91A399798000D9759 /* ClassItem.m in Sources */,
 				D619AE6F1A7728990001CC97 /* UIViewController+DismissKeyboard.m in Sources */,
 				D6EB75251AA8098400801853 /* Paper_parent.m in Sources */,

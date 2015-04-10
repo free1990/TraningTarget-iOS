@@ -35,6 +35,7 @@ PODS:
     - FlurrySDK/FlurrySDK (= 5.4.0)
   - FlurrySDK/FlurrySDK (5.4.0)
   - FXImageView (1.3.5)
+  - GoldRaccoon (1.0.2)
   - HMSegmentedControl (1.4.0)
   - JSONModel (1.0.2)
   - MagicalRecord (2.2):
@@ -74,6 +75,7 @@ DEPENDENCIES:
   - FlatUIKit
   - FlurrySDK (~> 5.3)
   - FXImageView (~> 1.3)
+  - GoldRaccoon
   - HMSegmentedControl (~> 1.4)
   - JSONModel (~> 1.0.2)
   - MagicalRecord (~> 2.2)
@@ -98,6 +100,7 @@ SPEC CHECKSUMS:
   FlatUIKit: 48b78e6d026c2f2c8a733425aaa5015c99ffc079
   FlurrySDK: bed9e5598353f867508d164795a451e3ada92cb6
   FXImageView: be49853e2f7ac281ad9312ead922edafa19cdd5c
+  GoldRaccoon: d113e556626b0887b1210ee3838e549dc40a4dbc
   HMSegmentedControl: c0517a8d4b80c978b8386f863f1c44729cfd7d6f
   JSONModel: cbdef0fdff1cc70e913a860861d3072860efd3a1
   MagicalRecord: 2b471584fc9e3137f3d0a56967917baa4979e224

@@ -115,6 +115,12 @@
 #define COCOAPODS_VERSION_MINOR_FlurrySDK_FlurrySDK 4
 #define COCOAPODS_VERSION_PATCH_FlurrySDK_FlurrySDK 0
 
+// GoldRaccoon
+#define COCOAPODS_POD_AVAILABLE_GoldRaccoon
+#define COCOAPODS_VERSION_MAJOR_GoldRaccoon 1
+#define COCOAPODS_VERSION_MINOR_GoldRaccoon 0
+#define COCOAPODS_VERSION_PATCH_GoldRaccoon 2
+
 // HMSegmentedControl
 #define COCOAPODS_POD_AVAILABLE_HMSegmentedControl
 #define COCOAPODS_VERSION_MAJOR_HMSegmentedControl 1

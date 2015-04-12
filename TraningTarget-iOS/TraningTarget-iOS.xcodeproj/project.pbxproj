@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CF1910271ADAA8EC001750FB /* ZYButton.m in Sources */ = {isa = PBXBuildFile; fileRef = CF1910261ADAA8EC001750FB /* ZYButton.m */; };
+		CF19102A1ADAB06D001750FB /* ZYSegmentView.m in Sources */ = {isa = PBXBuildFile; fileRef = CF1910291ADAB06D001750FB /* ZYSegmentView.m */; };
 		CF2BF0AC1AB5D2A400FED55D /* PopLearnViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2BF0AB1AB5D2A400FED55D /* PopLearnViewController.m */; };
 		CF2BF0AF1AB9AF8A00FED55D /* ScanView.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2BF0AE1AB9AF8A00FED55D /* ScanView.m */; };
 		CF2BF0B21ABB090300FED55D /* QRScanLine@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF2BF0B11ABB090300FED55D /* QRScanLine@2x.png */; };
@@ -39,9 +41,6 @@
 		D619AE7A1A772BA90001CC97 /* PropertiesManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D619AE791A772BA90001CC97 /* PropertiesManager.m */; };
 		D619AE7C1A772C3D0001CC97 /* HTTPResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = D619AE7B1A772C3D0001CC97 /* HTTPResponse.m */; };
 		D61E33B31A78D7DE00105117 /* UIViewController+AbnormalDisplay.m in Sources */ = {isa = PBXBuildFile; fileRef = D61E33B21A78D7DE00105117 /* UIViewController+AbnormalDisplay.m */; };
-		D634022D1AD6744C00329859 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = D63402291AD6744C00329859 /* LICENSE */; };
-		D634022E1AD6744C00329859 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = D634022A1AD6744C00329859 /* README.md */; };
-		D634022F1AD6744C00329859 /* WhiteRaccoon.m in Sources */ = {isa = PBXBuildFile; fileRef = D634022C1AD6744C00329859 /* WhiteRaccoon.m */; };
 		D634B7401AB981660061AC15 /* ScanQRCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D634B73F1AB981660061AC15 /* ScanQRCodeViewController.m */; };
 		D634B74A1ABAADEF0061AC15 /* ZYNavigationBarDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = D634B7491ABAADEF0061AC15 /* ZYNavigationBarDemo.m */; };
 		D634B74E1ABAC91D0061AC15 /* UINavigationBar+Awesome.m in Sources */ = {isa = PBXBuildFile; fileRef = D634B74D1ABAC91D0061AC15 /* UINavigationBar+Awesome.m */; };
@@ -145,6 +144,10 @@
 		32E9A4D9DB94E1EC8F2C4F93 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		5310E391BEB252286D0FDC14 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		9E51B3FDA7BC7E8AF676D062 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		CF1910251ADAA8EC001750FB /* ZYButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYButton.h; sourceTree = "<group>"; };
+		CF1910261ADAA8EC001750FB /* ZYButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYButton.m; sourceTree = "<group>"; };
+		CF1910281ADAB06D001750FB /* ZYSegmentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYSegmentView.h; sourceTree = "<group>"; };
+		CF1910291ADAB06D001750FB /* ZYSegmentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYSegmentView.m; sourceTree = "<group>"; };
 		CF2BF0AA1AB5D2A400FED55D /* PopLearnViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopLearnViewController.h; sourceTree = "<group>"; };
 		CF2BF0AB1AB5D2A400FED55D /* PopLearnViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopLearnViewController.m; sourceTree = "<group>"; };
 		CF2BF0AD1AB9AF8A00FED55D /* ScanView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanView.h; sourceTree = "<group>"; };
@@ -211,10 +214,6 @@
 		D619AE7B1A772C3D0001CC97 /* HTTPResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPResponse.m; sourceTree = "<group>"; };
 		D61E33B11A78D7DE00105117 /* UIViewController+AbnormalDisplay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIViewController+AbnormalDisplay.h"; path = "../UIViewController+AbnormalDisplay.h"; sourceTree = "<group>"; };
 		D61E33B21A78D7DE00105117 /* UIViewController+AbnormalDisplay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+AbnormalDisplay.m"; path = "../UIViewController+AbnormalDisplay.m"; sourceTree = "<group>"; };
-		D63402291AD6744C00329859 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		D634022A1AD6744C00329859 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		D634022B1AD6744C00329859 /* WhiteRaccoon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WhiteRaccoon.h; sourceTree = "<group>"; };
-		D634022C1AD6744C00329859 /* WhiteRaccoon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WhiteRaccoon.m; sourceTree = "<group>"; };
 		D634B73E1AB981660061AC15 /* ScanQRCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanQRCodeViewController.h; sourceTree = "<group>"; };
 		D634B73F1AB981660061AC15 /* ScanQRCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScanQRCodeViewController.m; sourceTree = "<group>"; };
 		D634B7481ABAADEF0061AC15 /* ZYNavigationBarDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYNavigationBarDemo.h; sourceTree = "<group>"; };
@@ -412,7 +411,6 @@
 		CF2BF0B71ABDAA3C00FED55D /* lib */ = {
 			isa = PBXGroup;
 			children = (
-				D63402281AD6744C00329859 /* WhiteRaccoon */,
 				D6D9438C1A3ABD2900898FA3 /* Handler */,
 				CF2BF0C31ABDAA9200FED55D /* JKOrderButton */,
 				CF2BF0C61ABDAA9200FED55D /* JKPickerView */,
@@ -605,17 +603,6 @@
 			path = Toolkit;
 			sourceTree = "<group>";
 		};
-		D63402281AD6744C00329859 /* WhiteRaccoon */ = {
-			isa = PBXGroup;
-			children = (
-				D63402291AD6744C00329859 /* LICENSE */,
-				D634022A1AD6744C00329859 /* README.md */,
-				D634022B1AD6744C00329859 /* WhiteRaccoon.h */,
-				D634022C1AD6744C00329859 /* WhiteRaccoon.m */,
-			);
-			path = WhiteRaccoon;
-			sourceTree = "<group>";
-		};
 		D6422CB61A397E85000D9759 = {
 			isa = PBXGroup;
 			children = (
@@ -730,6 +717,10 @@
 				D619AE471A7727B40001CC97 /* Macros.h */,
 				D6422CF41A3996D5000D9759 /* BaseViewController.h */,
 				D6422CF51A3996D5000D9759 /* BaseViewController.m */,
+				CF1910251ADAA8EC001750FB /* ZYButton.h */,
+				CF1910261ADAA8EC001750FB /* ZYButton.m */,
+				CF1910281ADAB06D001750FB /* ZYSegmentView.h */,
+				CF1910291ADAB06D001750FB /* ZYSegmentView.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -879,7 +870,6 @@
 				D6492A6E1A885614007FC85C /* rotate.jpg in Resources */,
 				D6EA5D0A1AA6AB8300BA68D4 /* 1.jpg in Resources */,
 				D6422CD31A397E85000D9759 /* LaunchScreen.xib in Resources */,
-				D634022D1AD6744C00329859 /* LICENSE in Resources */,
 				D6422CD01A397E85000D9759 /* Images.xcassets in Resources */,
 				D6C3BDF91A5940B500E0D405 /* fire.png in Resources */,
 				D6D0EACD1A5A64FE005C3A5D /* door.png in Resources */,
@@ -954,6 +944,7 @@
 				D619AE6A1A7728990001CC97 /* PathUtil.m in Sources */,
 				D6F2255C1A41174000E3FCB2 /* TestRemoveViewTestController.m in Sources */,
 				D6C3BDF21A58D5B300E0D405 /* CoreAnimationDemoViewController.m in Sources */,
+				CF19102A1ADAB06D001750FB /* ZYSegmentView.m in Sources */,
 				D6422CCB1A397E85000D9759 /* RootViewController.m in Sources */,
 				D61668781A49459F0067C179 /* Blend.m in Sources */,
 				D65AD0BF1A3EC6AA00D6E193 /* EmptyClass.m in Sources */,
@@ -971,7 +962,6 @@
 				CF2BF14A1AC4332200FED55D /* Base64ViewController.m in Sources */,
 				D634B7531ABBB1100061AC15 /* QRTestViewController.m in Sources */,
 				D6422CED1A3990D4000D9759 /* RuntimeMsgForWarding.m in Sources */,
-				D634022F1AD6744C00329859 /* WhiteRaccoon.m in Sources */,
 				D6D0EAD51A5A9533005C3A5D /* CoreAnimationCANiubilty.m in Sources */,
 				D6F225531A40138000E3FCB2 /* JKUpdateAlertView.m in Sources */,
 				D6EADF841A4A5A8400D46981 /* Mask.m in Sources */,
@@ -990,7 +980,6 @@
 				D6422CF61A3996D5000D9759 /* BaseViewController.m in Sources */,
 				CF2BF1541AC4366900FED55D /* NSData+Encryption.m in Sources */,
 				D6F2254E1A400B0E00E3FCB2 /* TestCustomAlertViewController.m in Sources */,
-				D634022E1AD6744C00329859 /* README.md in Sources */,
 				D619AE461A7725300001CC97 /* AFDemoViewController.m in Sources */,
 				CF2BF0AF1AB9AF8A00FED55D /* ScanView.m in Sources */,
 				D6EADF791A496B5200D46981 /* Gradient.m in Sources */,
@@ -1009,6 +998,7 @@
 				D6B90B231AA411A400B8A080 /* dispatch_group_tAndNotificationViewController.m in Sources */,
 				D6EADF8B1A4AA42600D46981 /* UIViewController+HUD.m in Sources */,
 				D619AE7C1A772C3D0001CC97 /* HTTPResponse.m in Sources */,
+				CF1910271ADAA8EC001750FB /* ZYButton.m in Sources */,
 				D63ADF261A416EF9009CA874 /* NSObject+AutoEncodeDecode.m in Sources */,
 				CF2BF0D61ABDAA9200FED55D /* JKPickView.m in Sources */,
 				D6422CC51A397E85000D9759 /* main.m in Sources */,

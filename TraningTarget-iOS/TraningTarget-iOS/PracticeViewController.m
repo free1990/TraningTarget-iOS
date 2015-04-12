@@ -9,10 +9,11 @@
 #import "PracticeViewController.h"
 #import "ScanTitleView.h"
 #import "UIView+MGBadgeView.h"
-#import "WhiteRaccoon.h"
 #import "GRRequestsManager.h"
+#import "ZYButton.h"
+#import "ZYSegmentView.h"
 
-@interface PracticeViewController ()<WRRequestDelegate, GRRequestsManagerDelegate>
+@interface PracticeViewController ()< GRRequestsManagerDelegate>
 
 @property (nonatomic, strong) GRRequestsManager *requestsManager;
 
@@ -36,14 +37,26 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 
-    ScanTitleView *temp = [[ScanTitleView alloc] initWithFrame:CGRectMake(0, 0, 110, 44)];
+    ScanTitleView *temp = [[ScanTitleView alloc] initWithFrame:CGRectMake(200, 200, 110, 44)];
     
     [temp setLableBadgeViewWithNum:1000];
     
-    [temp setCenter:self.view.center];
+//    [temp setCenter:self.view.center];
     
     [self.view addSubview:temp];
     
+    
+//    ZYButton *button = [[ZYButton alloc] initWithFrame:CGRectMake(0, 0, 100, 80)];
+//    button.center = self.view.center;
+//    [self.view addSubview:button];
+    
+    ZYSegmentView *mySeg = [[ZYSegmentView alloc] initWithFrame:CGRectMake(0, 0, 200, 70)];
+    
+    [mySeg displayContent];
+    
+    mySeg.center = self.view.center;
+    
+    [self.view addSubview:mySeg];
     
 //    //the upload request needs the input data to be NSData
 //    //so we first convert the image to NSData
@@ -72,34 +85,34 @@
 //    //we start the request
 //    [uploadImage start];
     
-    self.requestsManager = [[GRRequestsManager alloc] initWithHostname:@"SIP"
-                                                                  user:@"yizhong"
-                                                              password:@"admin"];
-    self.requestsManager.delegate = self;
+//    self.requestsManager = [[GRRequestsManager alloc] initWithHostname:@"SIP"
+//                                                                  user:@"yizhong"
+//                                                              password:@"admin"];
+//    self.requestsManager.delegate = self;
 }
 
--(void) requestCompleted:(WRRequest *) request{
-    
-    //called if 'request' is completed successfully
-    NSLog(@"%@ completed!", request);
-    
-}
-
--(void) requestFailed:(WRRequest *) request{
-    
-    //called after 'request' ends in error
-    //we can print the error message
-    NSLog(@"%@", request.error.message);
-    
-}
-
--(BOOL) shouldOverwriteFileWithRequest:(WRRequest *)request {
-    
-    //if the file (ftp://xxx.xxx.xxx.xxx/space.jpg) is already on the FTP server,the delegate is asked if the file should be overwritten
-    //'request' is the request that intended to create the file
-    return YES;
-    
-}
+//-(void) requestCompleted:(WRRequest *) request{
+//    
+//    //called if 'request' is completed successfully
+//    NSLog(@"%@ completed!", request);
+//    
+//}
+//
+//-(void) requestFailed:(WRRequest *) request{
+//    
+//    //called after 'request' ends in error
+//    //we can print the error message
+//    NSLog(@"%@", request.error.message);
+//    
+//}
+//
+//-(BOOL) shouldOverwriteFileWithRequest:(WRRequest *)request {
+//    
+//    //if the file (ftp://xxx.xxx.xxx.xxx/space.jpg) is already on the FTP server,the delegate is asked if the file should be overwritten
+//    //'request' is the request that intended to create the file
+//    return YES;
+//    
+//}
 
 - (void)viewDidAppear:(BOOL)animated
 {

@@ -65,6 +65,9 @@
 		D6422CF01A399587000D9759 /* ClassSet.m in Sources */ = {isa = PBXBuildFile; fileRef = D6422CEF1A399587000D9759 /* ClassSet.m */; };
 		D6422CF61A3996D5000D9759 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6422CF51A3996D5000D9759 /* BaseViewController.m */; };
 		D6422CF91A399798000D9759 /* ClassItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D6422CF81A399798000D9759 /* ClassItem.m */; };
+		D6477E561AE5EA4C00ABDD9F /* Roundbutton.m in Sources */ = {isa = PBXBuildFile; fileRef = D6477E551AE5EA4C00ABDD9F /* Roundbutton.m */; };
+		D6477E6F1AE9D27300ABDD9F /* FTPManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D6477E6E1AE9D27300ABDD9F /* FTPManager.m */; };
+		D6477E721AE9D32800ABDD9F /* UploadHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D6477E711AE9D32800ABDD9F /* UploadHelper.m */; };
 		D6492A6C1A8855B3007FC85C /* RotateImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6492A6B1A8855B3007FC85C /* RotateImageViewController.m */; };
 		D6492A6E1A885614007FC85C /* rotate.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D6492A6D1A885614007FC85C /* rotate.jpg */; };
 		D65686511A441BD400576E94 /* CoreGarphicsDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D65686501A441BD400576E94 /* CoreGarphicsDemoViewController.m */; };
@@ -260,6 +263,12 @@
 		D6422CF51A3996D5000D9759 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		D6422CF71A399798000D9759 /* ClassItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassItem.h; sourceTree = "<group>"; };
 		D6422CF81A399798000D9759 /* ClassItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassItem.m; sourceTree = "<group>"; };
+		D6477E541AE5EA4C00ABDD9F /* Roundbutton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Roundbutton.h; sourceTree = "<group>"; };
+		D6477E551AE5EA4C00ABDD9F /* Roundbutton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Roundbutton.m; sourceTree = "<group>"; };
+		D6477E6D1AE9D27300ABDD9F /* FTPManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTPManager.h; sourceTree = "<group>"; };
+		D6477E6E1AE9D27300ABDD9F /* FTPManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTPManager.m; sourceTree = "<group>"; };
+		D6477E701AE9D32800ABDD9F /* UploadHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UploadHelper.h; sourceTree = "<group>"; };
+		D6477E711AE9D32800ABDD9F /* UploadHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UploadHelper.m; sourceTree = "<group>"; };
 		D6492A6A1A8855B3007FC85C /* RotateImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RotateImageViewController.h; sourceTree = "<group>"; };
 		D6492A6B1A8855B3007FC85C /* RotateImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RotateImageViewController.m; sourceTree = "<group>"; };
 		D6492A6D1A885614007FC85C /* rotate.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = rotate.jpg; sourceTree = "<group>"; };
@@ -414,6 +423,7 @@
 		CF2BF0B71ABDAA3C00FED55D /* lib */ = {
 			isa = PBXGroup;
 			children = (
+				D6477E6C1AE9D27300ABDD9F /* FTPManager */,
 				D6D9438C1A3ABD2900898FA3 /* Handler */,
 				CF2BF0C31ABDAA9200FED55D /* JKOrderButton */,
 				CF2BF0C61ABDAA9200FED55D /* JKPickerView */,
@@ -667,6 +677,17 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		D6477E6C1AE9D27300ABDD9F /* FTPManager */ = {
+			isa = PBXGroup;
+			children = (
+				D6477E6D1AE9D27300ABDD9F /* FTPManager.h */,
+				D6477E6E1AE9D27300ABDD9F /* FTPManager.m */,
+				D6477E701AE9D32800ABDD9F /* UploadHelper.h */,
+				D6477E711AE9D32800ABDD9F /* UploadHelper.m */,
+			);
+			path = FTPManager;
+			sourceTree = "<group>";
+		};
 		D6D9438B1A3ABD0600898FA3 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -718,6 +739,8 @@
 				D6B90B101AA05CA500B8A080 /* PictureObject.m */,
 				D6DA9EC81AB7F63C00AF1E96 /* JSONHelper.h */,
 				D6DA9EC91AB7F63C00AF1E96 /* JSONHelper.m */,
+				D6477E541AE5EA4C00ABDD9F /* Roundbutton.h */,
+				D6477E551AE5EA4C00ABDD9F /* Roundbutton.m */,
 				D6DA9ECB1AB7F65800AF1E96 /* test.json */,
 				D619AE471A7727B40001CC97 /* Macros.h */,
 				D6422CF41A3996D5000D9759 /* BaseViewController.h */,
@@ -974,7 +997,9 @@
 				D619AE6B1A7728990001CC97 /* UIImage+Color.m in Sources */,
 				D6D0EACB1A5A6264005C3A5D /* CoreAnimationCAMediaTiming.m in Sources */,
 				CF2BF0BE1ABDAA5A00FED55D /* UIScrollView+SVInfiniteScrolling.m in Sources */,
+				D6477E6F1AE9D27300ABDD9F /* FTPManager.m in Sources */,
 				D619AE6C1A7728990001CC97 /* UIView+Frame.m in Sources */,
+				D6477E721AE9D32800ABDD9F /* UploadHelper.m in Sources */,
 				D6D943941A3AE19B00898FA3 /* RuntimeDynamicMethodResolutionAndDynamicLoading.m in Sources */,
 				D6C3BDF71A591EE400E0D405 /* CoreAnimationDemoTwoViewController.m in Sources */,
 				D6EADF7C1A4A528F00D46981 /* Clipping.m in Sources */,
@@ -990,6 +1015,7 @@
 				D6EADF791A496B5200D46981 /* Gradient.m in Sources */,
 				D6D0EAD81A5B84F8005C3A5D /* CAShapeLayerDrawing.m in Sources */,
 				D634B74A1ABAADEF0061AC15 /* ZYNavigationBarDemo.m in Sources */,
+				D6477E561AE5EA4C00ABDD9F /* Roundbutton.m in Sources */,
 				D63ADF201A415B74009CA874 /* RuntimeDemoTwoViewController.m in Sources */,
 				D634B76E1ABC16450061AC15 /* PracticeViewController.m in Sources */,
 				D65956A51AE0F2A200854962 /* FTPManager.m in Sources */,

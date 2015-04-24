@@ -40,4 +40,20 @@ typedef enum {
 
 + (NSString *)floatFormat:(double)value;
 
+/**
+ * save image to NSDocumentDirectory, YYYYMMdd_HHmmss_flag.jpg
+ */
++ (NSString *)saveImage:(UIImage *)image withFlag:(NSString *)flag;
+
+/**
+ * eg: increase free memory to 200MB
+ */
++ (void)increaseFreeMemoryTo:(int)MB;
+
+/**
+ * 文件大小，单位byte
+ */
++ (unsigned long long)fileSizeAtPath:(NSString *)path;
+
+
 @end

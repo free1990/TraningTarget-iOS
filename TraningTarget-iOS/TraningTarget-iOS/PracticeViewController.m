@@ -36,27 +36,38 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    Roundbutton  *button = [Roundbutton buttonWithType:UIButtonTypeCustom];
+    button.redValue = 0.2;
+    button.greenValue = 0.3;
+    button.blueValue = 0.5;
+    button.frame = CGRectMake(100, 100, 80, 25);
+    [button setTitle:@"醉了" forState:UIControlStateNormal];
+    [button setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+    
+    [self.view addSubview:button];
+    
 
-    ScanTitleView *temp = [[ScanTitleView alloc] initWithFrame:CGRectMake(200, 200, 110, 44)];
-    
-    [temp setLableBadgeViewWithNum:1000];
-    
-//    [temp setCenter:self.view.center];
-    
-    [self.view addSubview:temp];
+//    ScanTitleView *temp = [[ScanTitleView alloc] initWithFrame:CGRectMake(200, 200, 110, 44)];
+//    
+//    [temp setLableBadgeViewWithNum:1000];
+//    
+////    [temp setCenter:self.view.center];
+//    
+//    [self.view addSubview:temp];
     
     
 //    ZYButton *button = [[ZYButton alloc] initWithFrame:CGRectMake(0, 0, 100, 80)];
 //    button.center = self.view.center;
 //    [self.view addSubview:button];
     
-    ZYSegmentView *mySeg = [[ZYSegmentView alloc] initWithFrame:CGRectMake(0, 0, 200, 70)];
-    
-    [mySeg displayContent];
-    
-    mySeg.center = self.view.center;
-    
-    [self.view addSubview:mySeg];
+//    ZYSegmentView *mySeg = [[ZYSegmentView alloc] initWithFrame:CGRectMake(0, 0, 200, 70)];
+//    
+//    [mySeg displayContent];
+//    
+//    mySeg.center = self.view.center;
+//    
+//    [self.view addSubview:mySeg];
     
 //    //the upload request needs the input data to be NSData
 //    //so we first convert the image to NSData

@@ -68,6 +68,7 @@
 		D6477E561AE5EA4C00ABDD9F /* Roundbutton.m in Sources */ = {isa = PBXBuildFile; fileRef = D6477E551AE5EA4C00ABDD9F /* Roundbutton.m */; };
 		D6492A6C1A8855B3007FC85C /* RotateImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6492A6B1A8855B3007FC85C /* RotateImageViewController.m */; };
 		D6492A6E1A885614007FC85C /* rotate.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D6492A6D1A885614007FC85C /* rotate.jpg */; };
+		D64FC9A11AF89AA500541AAB /* GCDDeepUse.m in Sources */ = {isa = PBXBuildFile; fileRef = D64FC9A01AF89AA500541AAB /* GCDDeepUse.m */; };
 		D65686511A441BD400576E94 /* CoreGarphicsDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D65686501A441BD400576E94 /* CoreGarphicsDemoViewController.m */; };
 		D65956A51AE0F2A200854962 /* FTPManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D65956A41AE0F2A200854962 /* FTPManager.m */; };
 		D65AD0BF1A3EC6AA00D6E193 /* EmptyClass.m in Sources */ = {isa = PBXBuildFile; fileRef = D65AD0BE1A3EC6AA00D6E193 /* EmptyClass.m */; };
@@ -270,6 +271,8 @@
 		D6492A6A1A8855B3007FC85C /* RotateImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RotateImageViewController.h; sourceTree = "<group>"; };
 		D6492A6B1A8855B3007FC85C /* RotateImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RotateImageViewController.m; sourceTree = "<group>"; };
 		D6492A6D1A885614007FC85C /* rotate.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = rotate.jpg; sourceTree = "<group>"; };
+		D64FC99F1AF89AA500541AAB /* GCDDeepUse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDDeepUse.h; sourceTree = "<group>"; };
+		D64FC9A01AF89AA500541AAB /* GCDDeepUse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDDeepUse.m; sourceTree = "<group>"; };
 		D656864F1A441BD400576E94 /* CoreGarphicsDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreGarphicsDemoViewController.h; sourceTree = "<group>"; };
 		D65686501A441BD400576E94 /* CoreGarphicsDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreGarphicsDemoViewController.m; sourceTree = "<group>"; };
 		D65956A31AE0F2A200854962 /* FTPManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTPManager.h; sourceTree = "<group>"; };
@@ -729,6 +732,8 @@
 				D60D40261ABFA1E700FA2317 /* PullAndScrollRefreshViewController.m */,
 				D6FC79911AC93B430058AC9E /* SaveDataToLocalViewController.h */,
 				D6FC79921AC93B430058AC9E /* SaveDataToLocalViewController.m */,
+				D64FC99F1AF89AA500541AAB /* GCDDeepUse.h */,
+				D64FC9A01AF89AA500541AAB /* GCDDeepUse.m */,
 				D65956A31AE0F2A200854962 /* FTPManager.h */,
 				D65956A41AE0F2A200854962 /* FTPManager.m */,
 				CF2BF0AD1AB9AF8A00FED55D /* ScanView.h */,
@@ -983,6 +988,7 @@
 				D616686F1A490BCB0067C179 /* Arcs.m in Sources */,
 				D6A9E76D1A49021F001448C0 /* QuartzView.m in Sources */,
 				D616686C1A49038B0067C179 /* Line.m in Sources */,
+				D64FC9A11AF89AA500541AAB /* GCDDeepUse.m in Sources */,
 				D6EADF761A49646F00D46981 /* Pattern.m in Sources */,
 				CFEAB54B1A597D2B00696D42 /* CoreAnimationImplicitCA.m in Sources */,
 				CF2BF14A1AC4332200FED55D /* Base64ViewController.m in Sources */,

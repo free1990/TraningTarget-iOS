@@ -47,7 +47,10 @@
     
     [self.view addSubview:button];
     
-
+    
+    
+    
+    
 //    ScanTitleView *temp = [[ScanTitleView alloc] initWithFrame:CGRectMake(200, 200, 110, 44)];
 //    
 //    [temp setLableBadgeViewWithNum:1000];

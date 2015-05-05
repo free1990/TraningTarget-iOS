@@ -70,44 +70,44 @@
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
-    DLOG(@"index = %ld", buttonIndex);
-    if (buttonIndex == 1) {
-        [self benginUpload:@"正在上传 1/1 学生阅卷信息..."];
-        _isSqlUploadSuccess = NO;
-        _isZipUploadSuccess = NO;
-        
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-            
-            DLOG(@"开始长传");
-            _isSqlUploadSuccess = [self uploadFileWithPath:[DataPersistentceHelper localSqlFilePath:self.recInfo]];
-            _isZipUploadSuccess = [self uploadFileWithPath:[DataPersistentceHelper localZipFilePath:self.recInfo]];
-            DLOG(@"开始完成");
-            
-            dispatch_async(dispatch_get_main_queue(), ^{
-                
-                [self endUpload];
-                
-                [DataPersistentceHelper deleteAllStudentRecPaperInfoWith:self.recInfo];
-                NSString *resultString = nil;
-                if (_isSqlUploadSuccess && _isZipUploadSuccess) {
-                    DLOG(@"成功");
-                    resultString = NSLocalizedString(@"上传成功", nil);
-                    if ([self.delegate respondsToSelector:@selector(uploadManagerCompleteUploadWith:)]) {
-                        [self.delegate uploadManagerCompleteUploadWith:self.recInfo];
-                    }
-                }else {
-                    DLOG(@"失败");
-                    resultString = NSLocalizedString(@"上传失败", nil);
-                    if ([self.delegate respondsToSelector:@selector(uploadManagerCompleteUploadFailedWith:)]) {
-                        [self.delegate uploadManagerCompleteUploadFailedWith:self.recInfo];
-                    }
-                }
-                
-                AppDelegate *delegate = [UIApplication sharedApplication].delegate;
-                [delegate.window.rootViewController showHint:resultString];
-            });
-        });
-    }
+//    DLOG(@"index = %ld", buttonIndex);
+//    if (buttonIndex == 1) {
+//        [self benginUpload:@"正在上传 1/1 学生阅卷信息..."];
+//        _isSqlUploadSuccess = NO;
+//        _isZipUploadSuccess = NO;
+//        
+//        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+//            
+//            DLOG(@"开始长传");
+//            _isSqlUploadSuccess = [self uploadFileWithPath:[DataPersistentceHelper localSqlFilePath:self.recInfo]];
+//            _isZipUploadSuccess = [self uploadFileWithPath:[DataPersistentceHelper localZipFilePath:self.recInfo]];
+//            DLOG(@"开始完成");
+//            
+//            dispatch_async(dispatch_get_main_queue(), ^{
+//                
+//                [self endUpload];
+//                
+//                [DataPersistentceHelper deleteAllStudentRecPaperInfoWith:self.recInfo];
+//                NSString *resultString = nil;
+//                if (_isSqlUploadSuccess && _isZipUploadSuccess) {
+//                    DLOG(@"成功");
+//                    resultString = NSLocalizedString(@"上传成功", nil);
+//                    if ([self.delegate respondsToSelector:@selector(uploadManagerCompleteUploadWith:)]) {
+//                        [self.delegate uploadManagerCompleteUploadWith:self.recInfo];
+//                    }
+//                }else {
+//                    DLOG(@"失败");
+//                    resultString = NSLocalizedString(@"上传失败", nil);
+//                    if ([self.delegate respondsToSelector:@selector(uploadManagerCompleteUploadFailedWith:)]) {
+//                        [self.delegate uploadManagerCompleteUploadFailedWith:self.recInfo];
+//                    }
+//                }
+//                
+//                AppDelegate *delegate = [UIApplication sharedApplication].delegate;
+//                [delegate.window.rootViewController showHint:resultString];
+//            });
+//        });
+//    }
 }
 
 

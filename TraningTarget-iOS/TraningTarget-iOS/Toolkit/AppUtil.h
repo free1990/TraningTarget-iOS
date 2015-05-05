@@ -43,7 +43,7 @@ typedef enum {
 /**
  * save image to NSDocumentDirectory, YYYYMMdd_HHmmss_flag.jpg
  */
-+ (NSString *)saveImage:(UIImage *)image withFlag:(NSString *)flag;
+//+ (NSString *)saveImage:(UIImage *)image withFlag:(NSString *)flag;
 
 /**
  * eg: increase free memory to 200MB

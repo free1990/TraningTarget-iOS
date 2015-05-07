@@ -76,6 +76,8 @@
 		D65DDE671A885911005F3AB5 /* UIImage+Rotate.m in Sources */ = {isa = PBXBuildFile; fileRef = D65DDE661A885911005F3AB5 /* UIImage+Rotate.m */; };
 		D663E16E1AC1520D00A3AA9E /* UIView+MGBadgeView.m in Sources */ = {isa = PBXBuildFile; fileRef = D663E16D1AC1520D00A3AA9E /* UIView+MGBadgeView.m */; };
 		D6684DC21AFB3A8000E59C4B /* PthreadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6684DC11AFB3A8000E59C4B /* PthreadViewController.m */; };
+		D6684DC51AFB479600E59C4B /* FindMinMaxThread.m in Sources */ = {isa = PBXBuildFile; fileRef = D6684DC41AFB479600E59C4B /* FindMinMaxThread.m */; };
+		D6684DC81AFB492900E59C4B /* ThreadUseCase.m in Sources */ = {isa = PBXBuildFile; fileRef = D6684DC71AFB492900E59C4B /* ThreadUseCase.m */; };
 		D674FDD21A81F2DC00CAE789 /* MyRequestProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = D674FDD11A81F2DC00CAE789 /* MyRequestProtocol.m */; };
 		D68411861A5CCA560078A807 /* test.png in Resources */ = {isa = PBXBuildFile; fileRef = D68411851A5CCA560078A807 /* test.png */; };
 		D6A9E76D1A49021F001448C0 /* QuartzView.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A9E76C1A49021F001448C0 /* QuartzView.m */; };
@@ -288,6 +290,10 @@
 		D663E16D1AC1520D00A3AA9E /* UIView+MGBadgeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MGBadgeView.m"; sourceTree = "<group>"; };
 		D6684DC01AFB3A8000E59C4B /* PthreadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PthreadViewController.h; sourceTree = "<group>"; };
 		D6684DC11AFB3A8000E59C4B /* PthreadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PthreadViewController.m; sourceTree = "<group>"; };
+		D6684DC31AFB479600E59C4B /* FindMinMaxThread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindMinMaxThread.h; sourceTree = "<group>"; };
+		D6684DC41AFB479600E59C4B /* FindMinMaxThread.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindMinMaxThread.m; sourceTree = "<group>"; };
+		D6684DC61AFB492900E59C4B /* ThreadUseCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThreadUseCase.h; sourceTree = "<group>"; };
+		D6684DC71AFB492900E59C4B /* ThreadUseCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThreadUseCase.m; sourceTree = "<group>"; };
 		D674FDD01A81F2DC00CAE789 /* MyRequestProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyRequestProtocol.h; sourceTree = "<group>"; };
 		D674FDD11A81F2DC00CAE789 /* MyRequestProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyRequestProtocol.m; sourceTree = "<group>"; };
 		D68411851A5CCA560078A807 /* test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test.png; sourceTree = "<group>"; };
@@ -739,6 +745,10 @@
 				D64FC9A01AF89AA500541AAB /* GCDDeepUse.m */,
 				D6684DC01AFB3A8000E59C4B /* PthreadViewController.h */,
 				D6684DC11AFB3A8000E59C4B /* PthreadViewController.m */,
+				D6684DC31AFB479600E59C4B /* FindMinMaxThread.h */,
+				D6684DC41AFB479600E59C4B /* FindMinMaxThread.m */,
+				D6684DC61AFB492900E59C4B /* ThreadUseCase.h */,
+				D6684DC71AFB492900E59C4B /* ThreadUseCase.m */,
 				D65956A31AE0F2A200854962 /* FTPManager.h */,
 				D65956A41AE0F2A200854962 /* FTPManager.m */,
 				CF2BF0AD1AB9AF8A00FED55D /* ScanView.h */,
@@ -973,6 +983,7 @@
 				D6EB75191AA7FE4F00801853 /* PaperInfoResponse.m in Sources */,
 				CF2BF14E1AC4334900FED55D /* FBEncryptorAES.m in Sources */,
 				D619AE771A772AAD0001CC97 /* AppUtil.m in Sources */,
+				D6684DC81AFB492900E59C4B /* ThreadUseCase.m in Sources */,
 				D63ADF1D1A413007009CA874 /* RuntimeDemoOneViewController.m in Sources */,
 				D619AE4A1A77286B0001CC97 /* VersionResponse.m in Sources */,
 				D6D0EAD01A5A7386005C3A5D /* CoreAnimationCAMediaTimingFunction.m in Sources */,
@@ -983,6 +994,7 @@
 				CF19102A1ADAB06D001750FB /* ZYSegmentView.m in Sources */,
 				D6422CCB1A397E85000D9759 /* RootViewController.m in Sources */,
 				D61668781A49459F0067C179 /* Blend.m in Sources */,
+				D6684DC51AFB479600E59C4B /* FindMinMaxThread.m in Sources */,
 				D65AD0BF1A3EC6AA00D6E193 /* EmptyClass.m in Sources */,
 				D6422CC81A397E85000D9759 /* AppDelegate.m in Sources */,
 				D63ADF231A416B8E009CA874 /* RuntimeDemoThreeViewController.m in Sources */,

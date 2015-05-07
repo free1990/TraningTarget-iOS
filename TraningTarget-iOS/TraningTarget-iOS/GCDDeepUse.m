@@ -53,6 +53,8 @@ static dispatch_queue_t test_processing_queue() {
         NSLog(@"**********************");
         dispatch_resume(test_processing_queue());
     });
+    
+    dispatch_cancel(void *object);
 }
 
 //@interface Canceller

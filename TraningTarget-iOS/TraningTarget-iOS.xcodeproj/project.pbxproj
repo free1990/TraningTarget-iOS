@@ -78,6 +78,10 @@
 		D6684DC21AFB3A8000E59C4B /* PthreadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6684DC11AFB3A8000E59C4B /* PthreadViewController.m */; };
 		D6684DC51AFB479600E59C4B /* FindMinMaxThread.m in Sources */ = {isa = PBXBuildFile; fileRef = D6684DC41AFB479600E59C4B /* FindMinMaxThread.m */; };
 		D6684DC81AFB492900E59C4B /* ThreadUseCase.m in Sources */ = {isa = PBXBuildFile; fileRef = D6684DC71AFB492900E59C4B /* ThreadUseCase.m */; };
+		D6684DCA1AFC9E7500E59C4B /* Clarissa Harlowe.txt in Resources */ = {isa = PBXBuildFile; fileRef = D6684DC91AFC9E7500E59C4B /* Clarissa Harlowe.txt */; };
+		D6684DCF1AFC9E9700E59C4B /* NSData+EnumerateComponents.m in Sources */ = {isa = PBXBuildFile; fileRef = D6684DCC1AFC9E9700E59C4B /* NSData+EnumerateComponents.m */; };
+		D6684DD01AFC9E9700E59C4B /* Reader.m in Sources */ = {isa = PBXBuildFile; fileRef = D6684DCE1AFC9E9700E59C4B /* Reader.m */; };
+		D6684DD31AFC9EF100E59C4B /* NSInputStreamDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = D6684DD21AFC9EF100E59C4B /* NSInputStreamDemo.m */; };
 		D674FDD21A81F2DC00CAE789 /* MyRequestProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = D674FDD11A81F2DC00CAE789 /* MyRequestProtocol.m */; };
 		D68411861A5CCA560078A807 /* test.png in Resources */ = {isa = PBXBuildFile; fileRef = D68411851A5CCA560078A807 /* test.png */; };
 		D6A9E76D1A49021F001448C0 /* QuartzView.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A9E76C1A49021F001448C0 /* QuartzView.m */; };
@@ -294,6 +298,13 @@
 		D6684DC41AFB479600E59C4B /* FindMinMaxThread.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindMinMaxThread.m; sourceTree = "<group>"; };
 		D6684DC61AFB492900E59C4B /* ThreadUseCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThreadUseCase.h; sourceTree = "<group>"; };
 		D6684DC71AFB492900E59C4B /* ThreadUseCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThreadUseCase.m; sourceTree = "<group>"; };
+		D6684DC91AFC9E7500E59C4B /* Clarissa Harlowe.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Clarissa Harlowe.txt"; sourceTree = "<group>"; };
+		D6684DCB1AFC9E9700E59C4B /* NSData+EnumerateComponents.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+EnumerateComponents.h"; sourceTree = "<group>"; };
+		D6684DCC1AFC9E9700E59C4B /* NSData+EnumerateComponents.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+EnumerateComponents.m"; sourceTree = "<group>"; };
+		D6684DCD1AFC9E9700E59C4B /* Reader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reader.h; sourceTree = "<group>"; };
+		D6684DCE1AFC9E9700E59C4B /* Reader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reader.m; sourceTree = "<group>"; };
+		D6684DD11AFC9EF100E59C4B /* NSInputStreamDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSInputStreamDemo.h; sourceTree = "<group>"; };
+		D6684DD21AFC9EF100E59C4B /* NSInputStreamDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSInputStreamDemo.m; sourceTree = "<group>"; };
 		D674FDD01A81F2DC00CAE789 /* MyRequestProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyRequestProtocol.h; sourceTree = "<group>"; };
 		D674FDD11A81F2DC00CAE789 /* MyRequestProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyRequestProtocol.m; sourceTree = "<group>"; };
 		D68411851A5CCA560078A807 /* test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test.png; sourceTree = "<group>"; };
@@ -664,6 +675,7 @@
 		D6422CC21A397E85000D9759 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D6684DC91AFC9E7500E59C4B /* Clarissa Harlowe.txt */,
 				CF4423401AC6F0F1001B712C /* images */,
 				CF2BF0B71ABDAA3C00FED55D /* lib */,
 			);
@@ -749,6 +761,8 @@
 				D6684DC41AFB479600E59C4B /* FindMinMaxThread.m */,
 				D6684DC61AFB492900E59C4B /* ThreadUseCase.h */,
 				D6684DC71AFB492900E59C4B /* ThreadUseCase.m */,
+				D6684DD11AFC9EF100E59C4B /* NSInputStreamDemo.h */,
+				D6684DD21AFC9EF100E59C4B /* NSInputStreamDemo.m */,
 				D65956A31AE0F2A200854962 /* FTPManager.h */,
 				D65956A41AE0F2A200854962 /* FTPManager.m */,
 				CF2BF0AD1AB9AF8A00FED55D /* ScanView.h */,
@@ -767,6 +781,10 @@
 				CF1910261ADAA8EC001750FB /* ZYButton.m */,
 				CF1910281ADAB06D001750FB /* ZYSegmentView.h */,
 				CF1910291ADAB06D001750FB /* ZYSegmentView.m */,
+				D6684DCB1AFC9E9700E59C4B /* NSData+EnumerateComponents.h */,
+				D6684DCC1AFC9E9700E59C4B /* NSData+EnumerateComponents.m */,
+				D6684DCD1AFC9E9700E59C4B /* Reader.h */,
+				D6684DCE1AFC9E9700E59C4B /* Reader.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -912,6 +930,7 @@
 				D6EA5D041AA6A9D300BA68D4 /* allPhoto.png in Resources */,
 				CF2BF0B21ABB090300FED55D /* QRScanLine@2x.png in Resources */,
 				D6EA5CF91AA59A1800BA68D4 /* barcode.png in Resources */,
+				D6684DCA1AFC9E7500E59C4B /* Clarissa Harlowe.txt in Resources */,
 				D6EA5D101AA6AF6B00BA68D4 /* A4.jpg in Resources */,
 				D6492A6E1A885614007FC85C /* rotate.jpg in Resources */,
 				D6EA5D0A1AA6AB8300BA68D4 /* 1.jpg in Resources */,
@@ -979,6 +998,7 @@
 				D6EADF711A4952AB00D46981 /* ImageAndTiling.m in Sources */,
 				CF2BF0AC1AB5D2A400FED55D /* PopLearnViewController.m in Sources */,
 				D619AE691A7728990001CC97 /* NSString+MD5.m in Sources */,
+				D6684DD01AFC9E9700E59C4B /* Reader.m in Sources */,
 				D6B90B0C1AA03FBA00B8A080 /* AssetsLibraryViewController.m in Sources */,
 				D6EB75191AA7FE4F00801853 /* PaperInfoResponse.m in Sources */,
 				CF2BF14E1AC4334900FED55D /* FBEncryptorAES.m in Sources */,
@@ -998,6 +1018,7 @@
 				D65AD0BF1A3EC6AA00D6E193 /* EmptyClass.m in Sources */,
 				D6422CC81A397E85000D9759 /* AppDelegate.m in Sources */,
 				D63ADF231A416B8E009CA874 /* RuntimeDemoThreeViewController.m in Sources */,
+				D6684DD31AFC9EF100E59C4B /* NSInputStreamDemo.m in Sources */,
 				CF2BF1471AC432FC00FED55D /* NSData+Base64.m in Sources */,
 				D61668751A493EC10067C179 /* RectView.m in Sources */,
 				D65CC5FD1A78CC4E003AD059 /* TipTestViewController.m in Sources */,
@@ -1028,6 +1049,7 @@
 				D619AE671A7728990001CC97 /* JSONUtil.m in Sources */,
 				D6422CF61A3996D5000D9759 /* BaseViewController.m in Sources */,
 				CF2BF1541AC4366900FED55D /* NSData+Encryption.m in Sources */,
+				D6684DCF1AFC9E9700E59C4B /* NSData+EnumerateComponents.m in Sources */,
 				D6F2254E1A400B0E00E3FCB2 /* TestCustomAlertViewController.m in Sources */,
 				D619AE461A7725300001CC97 /* AFDemoViewController.m in Sources */,
 				CF2BF0AF1AB9AF8A00FED55D /* ScanView.m in Sources */,

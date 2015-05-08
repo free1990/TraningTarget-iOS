@@ -48,13 +48,12 @@ static dispatch_queue_t test_processing_queue() {
     };
     
     dispatch_async(test_processing_queue(), block);
-    
+
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         NSLog(@"**********************");
         dispatch_resume(test_processing_queue());
     });
     
-    dispatch_cancel(void *object);
 }
 
 //@interface Canceller

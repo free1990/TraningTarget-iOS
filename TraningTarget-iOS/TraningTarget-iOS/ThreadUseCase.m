@@ -48,6 +48,9 @@
     [[NSOperationQueue mainQueue] addOperationWithBlock:^{
         // 代码...
     }];
+    
+    
+    NSInputStream *stream = [[NSInputStream alloc] init];
 }
 
 - (void)didReceiveMemoryWarning {

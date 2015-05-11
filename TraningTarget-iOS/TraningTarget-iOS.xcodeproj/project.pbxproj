@@ -84,6 +84,8 @@
 		D6684DD31AFC9EF100E59C4B /* NSInputStreamDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = D6684DD21AFC9EF100E59C4B /* NSInputStreamDemo.m */; };
 		D674FDD21A81F2DC00CAE789 /* MyRequestProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = D674FDD11A81F2DC00CAE789 /* MyRequestProtocol.m */; };
 		D68411861A5CCA560078A807 /* test.png in Resources */ = {isa = PBXBuildFile; fileRef = D68411851A5CCA560078A807 /* test.png */; };
+		D6A843A31B00AD0100CE13D4 /* JNWThrottledBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A843A21B00AD0100CE13D4 /* JNWThrottledBlock.m */; };
+		D6A843A61B00AEEE00CE13D4 /* SampleClass.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A843A51B00AEEE00CE13D4 /* SampleClass.m */; };
 		D6A9E76D1A49021F001448C0 /* QuartzView.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A9E76C1A49021F001448C0 /* QuartzView.m */; };
 		D6B90B0C1AA03FBA00B8A080 /* AssetsLibraryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B90B0B1AA03FBA00B8A080 /* AssetsLibraryViewController.m */; };
 		D6B90B0E1AA03FCE00B8A080 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6B90B0D1AA03FCE00B8A080 /* AssetsLibrary.framework */; };
@@ -308,6 +310,10 @@
 		D674FDD01A81F2DC00CAE789 /* MyRequestProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyRequestProtocol.h; sourceTree = "<group>"; };
 		D674FDD11A81F2DC00CAE789 /* MyRequestProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyRequestProtocol.m; sourceTree = "<group>"; };
 		D68411851A5CCA560078A807 /* test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test.png; sourceTree = "<group>"; };
+		D6A843A11B00AD0100CE13D4 /* JNWThrottledBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JNWThrottledBlock.h; sourceTree = "<group>"; };
+		D6A843A21B00AD0100CE13D4 /* JNWThrottledBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JNWThrottledBlock.m; sourceTree = "<group>"; };
+		D6A843A41B00AEEE00CE13D4 /* SampleClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SampleClass.h; sourceTree = "<group>"; };
+		D6A843A51B00AEEE00CE13D4 /* SampleClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SampleClass.m; sourceTree = "<group>"; };
 		D6A9E76B1A49021F001448C0 /* QuartzView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuartzView.h; sourceTree = "<group>"; };
 		D6A9E76C1A49021F001448C0 /* QuartzView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuartzView.m; sourceTree = "<group>"; };
 		D6B90B0A1AA03FBA00B8A080 /* AssetsLibraryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AssetsLibraryViewController.h; sourceTree = "<group>"; };
@@ -755,6 +761,10 @@
 				D6FC79921AC93B430058AC9E /* SaveDataToLocalViewController.m */,
 				D64FC99F1AF89AA500541AAB /* GCDDeepUse.h */,
 				D64FC9A01AF89AA500541AAB /* GCDDeepUse.m */,
+				D6A843A11B00AD0100CE13D4 /* JNWThrottledBlock.h */,
+				D6A843A21B00AD0100CE13D4 /* JNWThrottledBlock.m */,
+				D6A843A41B00AEEE00CE13D4 /* SampleClass.h */,
+				D6A843A51B00AEEE00CE13D4 /* SampleClass.m */,
 				D6684DC01AFB3A8000E59C4B /* PthreadViewController.h */,
 				D6684DC11AFB3A8000E59C4B /* PthreadViewController.m */,
 				D6684DC31AFB479600E59C4B /* FindMinMaxThread.h */,
@@ -1006,6 +1016,7 @@
 				D6684DC81AFB492900E59C4B /* ThreadUseCase.m in Sources */,
 				D63ADF1D1A413007009CA874 /* RuntimeDemoOneViewController.m in Sources */,
 				D619AE4A1A77286B0001CC97 /* VersionResponse.m in Sources */,
+				D6A843A61B00AEEE00CE13D4 /* SampleClass.m in Sources */,
 				D6D0EAD01A5A7386005C3A5D /* CoreAnimationCAMediaTimingFunction.m in Sources */,
 				CF2BF0D51ABDAA9200FED55D /* JKOrderButton.m in Sources */,
 				D619AE6A1A7728990001CC97 /* PathUtil.m in Sources */,
@@ -1086,6 +1097,7 @@
 				D6492A6C1A8855B3007FC85C /* RotateImageViewController.m in Sources */,
 				D6D943901A3AC7E900898FA3 /* RuntimePropertyAndFunction.m in Sources */,
 				D6D0EADB1A5B896F005C3A5D /* DrawingView.m in Sources */,
+				D6A843A31B00AD0100CE13D4 /* JNWThrottledBlock.m in Sources */,
 				D619AE681A7728990001CC97 /* NSDate+Utilities.m in Sources */,
 				D663E16E1AC1520D00A3AA9E /* UIView+MGBadgeView.m in Sources */,
 				D60D40271ABFA1E700FA2317 /* PullAndScrollRefreshViewController.m in Sources */,

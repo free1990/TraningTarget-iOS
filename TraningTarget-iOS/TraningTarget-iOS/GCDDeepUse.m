@@ -243,12 +243,10 @@ static dispatch_queue_t test_processing_queue() {
 //                 withIdentifier:@"timer"
 //                       throttle:3.0f];
 
-    SampleClass *timerTest = [[SampleClass alloc] init];
-    
-    [timerTest startTimer];
+//    SampleClass *timerTest = [[SampleClass alloc] init];
+//    [timerTest startTimer];
     
     NSLog(@"Managing Dispatch Data Objects----------------*/");
-    
     
     
 }

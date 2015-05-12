@@ -9,6 +9,11 @@
 #import "GCDDeepUse.h"
 #import "JNWThrottledBlock.h"
 #import "SampleClass.h"//timer source
+#import <objc/runtime.h>
+
+//dispatch_benchmark函数是libdispatch (Grand Central Dispatch) 的一部分，这个方法并没有被公开声明，所以必须要自己声明。
+//在app里面会被拒
+extern uint64_t dispatch_benchmark(size_t count, void (^block)(void));
 
 static dispatch_queue_t test_processing_queue() {
     static dispatch_queue_t test_processing_queue;
@@ -65,7 +70,6 @@ static dispatch_queue_t test_processing_queue() {
     dispatch_apply(5, dispatch_get_global_queue(0, 0), ^(size_t index){
         NSLog(@"copy-%ld", index);
     });
-    
     
     NSLog(@"group----------------/*");
     NSLog(@"dispatch_group_enter(group)/dispatch_group_leave(group);");
@@ -248,7 +252,17 @@ static dispatch_queue_t test_processing_queue() {
     
     NSLog(@"Managing Dispatch Data Objects----------------*/");
     
-    
+    size_t const objectCount = 1000;
+    uint64_t n = dispatch_benchmark(10, ^{
+        @autoreleasepool {
+            id obj = @42;
+            NSMutableArray *array = [NSMutableArray array];
+            for (size_t i = 0; i < objectCount; ++i) {
+                [array addObject:obj];
+            }
+        }
+    });
+    NSLog(@"-[NSMutableArray addObject:] : %llu ns", n);
 }
 
 - (void)computeInBackground:(int)no completion:(void (^)(void))block {
@@ -323,7 +337,6 @@ void myreleaseFunc(void *temp)
             });
         }
     }
-    
 }
 
 void makeCall(dispatch_queue_t queue, NSString *caller, NSArray *callees) {

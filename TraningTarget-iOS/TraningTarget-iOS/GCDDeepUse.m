@@ -34,7 +34,7 @@ static dispatch_queue_t test_processing_queue() {
 
 - (id)init{
     if (self = [super init]) {
-        self.className   = @"Practice";
+        self.className   = @"GCDDeepUse";
     }
     return self;
 }
@@ -251,7 +251,6 @@ static dispatch_queue_t test_processing_queue() {
 //    [timerTest startTimer];
     
     NSLog(@"Managing Dispatch Data Objects----------------*/");
-    
     size_t const objectCount = 1000;
     uint64_t n = dispatch_benchmark(10, ^{
         @autoreleasepool {

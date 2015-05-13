@@ -310,10 +310,10 @@
 		D674FDD01A81F2DC00CAE789 /* MyRequestProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyRequestProtocol.h; sourceTree = "<group>"; };
 		D674FDD11A81F2DC00CAE789 /* MyRequestProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyRequestProtocol.m; sourceTree = "<group>"; };
 		D68411851A5CCA560078A807 /* test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test.png; sourceTree = "<group>"; };
-		D6A843A11B00AD0100CE13D4 /* JNWThrottledBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JNWThrottledBlock.h; sourceTree = "<group>"; };
-		D6A843A21B00AD0100CE13D4 /* JNWThrottledBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JNWThrottledBlock.m; sourceTree = "<group>"; };
-		D6A843A41B00AEEE00CE13D4 /* SampleClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SampleClass.h; sourceTree = "<group>"; };
-		D6A843A51B00AEEE00CE13D4 /* SampleClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SampleClass.m; sourceTree = "<group>"; };
+		D6A843A11B00AD0100CE13D4 /* JNWThrottledBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JNWThrottledBlock.h; path = ../JNWThrottledBlock.h; sourceTree = "<group>"; };
+		D6A843A21B00AD0100CE13D4 /* JNWThrottledBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JNWThrottledBlock.m; path = ../JNWThrottledBlock.m; sourceTree = "<group>"; };
+		D6A843A41B00AEEE00CE13D4 /* SampleClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SampleClass.h; path = ../SampleClass.h; sourceTree = "<group>"; };
+		D6A843A51B00AEEE00CE13D4 /* SampleClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SampleClass.m; path = ../SampleClass.m; sourceTree = "<group>"; };
 		D6A9E76B1A49021F001448C0 /* QuartzView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuartzView.h; sourceTree = "<group>"; };
 		D6A9E76C1A49021F001448C0 /* QuartzView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuartzView.m; sourceTree = "<group>"; };
 		D6B90B0A1AA03FBA00B8A080 /* AssetsLibraryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AssetsLibraryViewController.h; sourceTree = "<group>"; };
@@ -450,6 +450,7 @@
 		CF2BF0B71ABDAA3C00FED55D /* lib */ = {
 			isa = PBXGroup;
 			children = (
+				D6E738DB1B01EE8000E1294A /* help */,
 				D6477E6C1AE9D27300ABDD9F /* FTPManager */,
 				D6D9438C1A3ABD2900898FA3 /* Handler */,
 				CF2BF0C31ABDAA9200FED55D /* JKOrderButton */,
@@ -761,10 +762,6 @@
 				D6FC79921AC93B430058AC9E /* SaveDataToLocalViewController.m */,
 				D64FC99F1AF89AA500541AAB /* GCDDeepUse.h */,
 				D64FC9A01AF89AA500541AAB /* GCDDeepUse.m */,
-				D6A843A11B00AD0100CE13D4 /* JNWThrottledBlock.h */,
-				D6A843A21B00AD0100CE13D4 /* JNWThrottledBlock.m */,
-				D6A843A41B00AEEE00CE13D4 /* SampleClass.h */,
-				D6A843A51B00AEEE00CE13D4 /* SampleClass.m */,
 				D6684DC01AFB3A8000E59C4B /* PthreadViewController.h */,
 				D6684DC11AFB3A8000E59C4B /* PthreadViewController.m */,
 				D6684DC31AFB479600E59C4B /* FindMinMaxThread.h */,
@@ -807,6 +804,17 @@
 			);
 			name = Handler;
 			path = ..;
+			sourceTree = "<group>";
+		};
+		D6E738DB1B01EE8000E1294A /* help */ = {
+			isa = PBXGroup;
+			children = (
+				D6A843A11B00AD0100CE13D4 /* JNWThrottledBlock.h */,
+				D6A843A21B00AD0100CE13D4 /* JNWThrottledBlock.m */,
+				D6A843A41B00AEEE00CE13D4 /* SampleClass.h */,
+				D6A843A51B00AEEE00CE13D4 /* SampleClass.m */,
+			);
+			name = help;
 			sourceTree = "<group>";
 		};
 		D6F225501A400DCF00E3FCB2 /* View */ = {

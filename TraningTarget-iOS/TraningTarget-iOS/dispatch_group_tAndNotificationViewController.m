@@ -28,24 +28,19 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     // Do any additional setup after loading the view.
-    
-    
     dispatch_group_t group = dispatch_group_create();
-    
     dispatch_group_async(group, dispatch_get_main_queue(), ^{
-        
         for (int i = 0; i < 1000; i++) {
             NSLog(@"-----%d",i);
         }
     });
     
     dispatch_group_notify(group, dispatch_get_main_queue(), ^{
-        
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"CapturedImage" object:nil];
-        
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"CapturedImage"
+                                                            object:nil];
     });
-    
 }
 
 - (void)beginRecognize{

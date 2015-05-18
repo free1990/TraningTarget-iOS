@@ -79,7 +79,6 @@ static int allocCount = 0;
     
     [self.view addSubview:_myTableView];
     
-    
 //    NSString *temp = @"33.41";
 //    //float 转成double可以避免运算的时候的干扰
 //    NSLog(@"----------> %f", [temp doubleValue]);
@@ -91,12 +90,9 @@ static int allocCount = 0;
     NSThread *testThread = [[NSThread alloc] initWithTarget:self selector:@selector(testThread) object:nil];
     [testThread start];
     
-    
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(beginRecognize)
                                                  name:@"CapturedImage" object:nil];
-
-    
 }
 
 - (void)beginRecognize{
@@ -122,7 +118,6 @@ static int allocCount = 0;
         }else{
             NSLog(@"我不是主线程，我叫%@", [NSThread currentThread].name);
         }
-        
         
         NSRunLoop *runLoop = [NSRunLoop currentRunLoop];
         

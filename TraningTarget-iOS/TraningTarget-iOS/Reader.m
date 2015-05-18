@@ -65,6 +65,7 @@
             [self emitLineWithData:self.remainder];
             self.remainder = nil;
             [self.inputStream close];
+            [self.inputStream removeFromRunLoop:[NSRunLoop currentRunLoop] forMode:NSDefaultRunLoopMode];
             self.inputStream = nil;
             [self.queue addOperationWithBlock:^{
                 self.completion(self.lineNumber + 1);

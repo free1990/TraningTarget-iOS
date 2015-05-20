@@ -1,4 +1,4 @@
-![BFKit Banner](http://github.fabriziobrancati.com/bfkit/resources/banner.png)
+<p align="center"><img src="http://github.fabriziobrancati.com/bfkit/resources/banner.png" alt="BFKit Banner"></p>
 
 [![Build Status](https://travis-ci.org/FabrizioBrancati/BFKit.svg?branch=master)](https://travis-ci.org/FabrizioBrancati/BFKit)
 [![Version](https://img.shields.io/cocoapods/v/BFKit.svg?style=flat)](http://cocoadocs.org/docsets/BFKit)
@@ -8,9 +8,10 @@
 
 BFKit is a collection of useful classes to **develop Apps faster**.
 
+For example you can use every iOS font with just an enum!
+
 Installing and Usage
 ====================
-
 ###Pod
 - Create a **Podfile** in your **project directory**
 - Write:
@@ -29,7 +30,15 @@ Installing and Usage
 
 ###Manual
 - Copy the **library** folder (**BFKit**) to the project
-- Add the **AudioToolbox** and **LocalAuthentication** (if you want to use **BFTouchID** class) frameworks to the project
+- Add the following frameworks to the project:
+  - **UIKit**
+  - **Foundation**
+  - **CoreImage**
+  - **CoreGraphics**
+  - **QuartzCore**
+  - **Accelerate**
+  - **AudioToolbox** (if you want to use **BFSystemSound** class)
+  - **LocalAuthentication** (if you want to use **BFTouchID** class, and set it as weak if your App runs on iOS 7)
 - Import the file "**BFKit.h**"
 - Enjoy!
 
@@ -40,11 +49,18 @@ Requirements
 
 Language support
 ================
-```English(en), Italian(it), Russian(ru), Ukrainian(uk), Indonesian(id), Chinese Simplified(zh)```
+- English (en)
+- Indonesian (id)
+- Italian (it)
+- Russian (ru)
+- Simplified Chinese (zh-Hans)
+- Traditional Chinese (zh-Hant)
+- Ukrainian (uk)
+- Vietnamese (vi)
 
 What does it do?
 ================
-Adds some useful method to some classes.
+Adds some useful method to some classes like:
 
 ###Foundation:
 - NSArray
@@ -53,6 +69,7 @@ Adds some useful method to some classes.
 - NSMutableArray
 - NSMutableDictionary
 - NSNumber
+- NSObject
 - NSProcessInfo
 - NSString
 - NSThread
@@ -68,25 +85,25 @@ Adds some useful method to some classes.
 - UIScrollView
 - UITableView
 - UITextField
+- UITextView
 - UIView
 - UIWebView
 - UIWindow
 
 ###BFKit:
 - BFApp
+- BFButton
 - BFLog
 - BFPassword
 - BFSystemSound
-- BFTouchID (Require iOS 8)
+- BFTouchID (iOS 8)
 
 Documentation
 =============
-
-###[CocoaDocs](http://cocoadocs.org/docsets/BFKit)
+###[CocoaDocs](http://cocoadocs.org/docsets/BFKit) - 100% Documented
 
 Changelog
 =========
-
 To see what has changed in recent version of BFKit, see the **[CHANGELOG](https://github.com/FabrizioBrancati/BFKit/blob/master/CHANGELOG.md)**
 
 Todo
@@ -106,3 +123,14 @@ Author
 License
 =======
 BFKit is available under the MIT license. See the **[LICENSE](https://github.com/FabrizioBrancati/BFKit/blob/master/LICENSE)** file for more info.
+
+Contributing :octocat:
+======================
+I'd love to see your ideas for improving this library.
+
+The best way to contribute is by submitting a pull request.
+I'll do my best to respond to you as soon as possible.
+
+You can also submit a new Github issue if you find bugs or have questions.
+
+Please make sure to follow my general coding style for new features!

@@ -25,9 +25,9 @@
 //  SOFTWARE.
 
 /**
- *  Here is some useful defined variables
+ *  Here is some BFKit defined variables
  */
-#define BFKIT_VERSION @"1.2.0"
+#define BFKIT_VERSION @"1.4.0"
 #define BFKIT_AUTHOR @"Fabrizio Brancati"
 
 /**
@@ -40,6 +40,7 @@
 #import "NSMutableArray+BFKit.h"
 #import "NSMutableDictionary+BFKit.h"
 #import "NSNumber+BFKit.h"
+#import "NSObject+BFKit.h"
 #import "NSProcessInfo+BFKit.h"
 #import "NSString+BFKit.h"
 #import "NSThread+BFKit.h"
@@ -57,6 +58,7 @@
 #import "UIScrollView+BFKit.h"
 #import "UITableView+BFKit.h"
 #import "UITextField+BFKit.h"
+#import "UITextView+BFKit.h"
 #import "UIView+BFKit.h"
 #import "UIWebView+BFKit.h"
 #import "UIWindow+BFKit.h"
@@ -65,6 +67,7 @@
  *  BFKit Classes
  */
 #import "BFApp.h"
+#import "BFButton.h"
 #import "BFLog.h"
 #import "BFPassword.h"
 #import "BFSystemSound.h"

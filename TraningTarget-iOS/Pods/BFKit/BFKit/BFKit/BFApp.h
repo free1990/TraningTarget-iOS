@@ -24,10 +24,7 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 //  SOFTWARE.
 
-/**
- *  This class add some useful methods to retrive the App info
- */
-@interface BFApp : NSObject
+@import Foundation;
 
 /**
  *  Get App name
@@ -54,5 +51,10 @@
  *  Get AppDelegate
  */
 #define APP_DELEGATE ((AppDelegate *)[[UIApplication sharedApplication] delegate])
+
+/**
+ *  This class add some useful methods to retrive the App info
+ */
+@interface BFApp : NSObject
 
 @end

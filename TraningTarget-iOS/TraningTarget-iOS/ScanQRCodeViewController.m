@@ -26,6 +26,7 @@
 
 @end
 
+
 @implementation ScanQRCodeViewController
 
 +(void)load
@@ -205,6 +206,7 @@
     } else {
         
         UIImageWriteToSavedPhotosAlbum(image, self, nil, NULL);
+        
         NSLog(@"error:%@", error);
     }
     

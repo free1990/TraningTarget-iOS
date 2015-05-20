@@ -124,7 +124,6 @@
             [self handleRequestResult:operation];
         }];
         request.requestOperation = operation;
-        operation.responseSerializer = _manager.responseSerializer;
         [_manager.operationQueue addOperation:operation];
     } else {
         if (method == YTKRequestMethodGet) {

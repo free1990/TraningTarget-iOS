@@ -24,40 +24,17 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 //  SOFTWARE.
 
-@import Foundation;
-
 /**
  *  Password strength level enum, from 0 (min) to 6 (max)
  */
 typedef NS_ENUM(NSInteger, PasswordStrengthLevel)
 {
-    /**
-     *  Password strength very weak
-     */
     PasswordStrengthLevelVeryWeak = 0,
-    /**
-     *  Password strength weak
-     */
     PasswordStrengthLevelWeak,
-    /**
-     *  Password strength average
-     */
     PasswordStrengthLevelAverage,
-    /**
-     *  Password strength strong
-     */
     PasswordStrengthLevelStrong,
-    /**
-     *  Password strength very strong
-     */
     PasswordStrengthLevelVeryStrong,
-    /**
-     *  Password strength secure
-     */
     PasswordStrengthLevelSecure,
-    /**
-     *  Password strength very secure
-     */
     PasswordStrengthLevelVerySecure
 };
 

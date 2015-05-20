@@ -24,16 +24,6 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 //  SOFTWARE.
 
-@import Foundation;
-
-/**
- *  Exented NSLog
- *
- *  @param file         File
- *  @param lineNumber   Line number
- *  @param functionName Function name
- *  @param format       Format
- */
 void ExtendNSLog(const char *file, int lineNumber, const char *functionName, NSString *format, ...);
 
 /**
@@ -42,34 +32,16 @@ void ExtendNSLog(const char *file, int lineNumber, const char *functionName, NSS
 @interface BFLog : NSObject
 
 /**
- *  BFLog only if in DEBUG mode
+ *  NSLog only if in DEBUG mode
  */
 #ifdef DEBUG
-
-/**
- *  Exented NSLog
- */
 #define BFLog(args ...) ExtendNSLog(__FILE__, __LINE__, __PRETTY_FUNCTION__, args);
-/**
- *  Log string
- */
 #define BFLogString [BFLog logString]
-/**
- *  Detailed log string
- */
-#define BFLogDetailedString [BFLog logDetailedString]
-/**
- *  Clear the log string
- */
 #define BFLogClear [BFLog clearLog]
-
 #else
-
 #define BFLog(args ...)
 #define BFLogString
-#define BFLogDetailedString
 #define BFLogClear
-
 #endif
 
 /**
@@ -85,13 +57,5 @@ void ExtendNSLog(const char *file, int lineNumber, const char *functionName, NSS
  *  @return Return the log string
  */
 + (NSString *)logString;
-
-/**
- *  Get the detailed log string.
- *  You can call it with the BFLogDetailedString macro
- *
- *  @return Return the detailed log string
- */
-+ (NSString *)logDetailedString;
 
 @end

@@ -1,1 +1,1 @@
-../../../BFKit/BFKit/Additions/UIKit/UIImageView+BFKit.h
+../../../BFKit/BFKit/Additions/UIKit Additions/UIImageView+BFKit.h

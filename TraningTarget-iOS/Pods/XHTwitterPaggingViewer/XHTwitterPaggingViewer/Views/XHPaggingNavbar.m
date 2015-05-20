@@ -14,11 +14,7 @@
 
 #define kXHLabelBaseTag 1000
 
-#define kXHRadie 3.2
-
-@interface XHPaggingNavbar () {
-    CGFloat _mainScreenWidth;
-}
+@interface XHPaggingNavbar ()
 
 /**
  *  分页指示器
@@ -46,7 +42,7 @@
     }];
     
     [self.titles enumerateObjectsUsingBlock:^(NSString *title, NSUInteger idx, BOOL *stop) {
-        CGRect titleLabelFrame = CGRectMake((idx * (kXHiPad ? 240 : _mainScreenWidth / kXHRadie)), 8, CGRectGetWidth(self.bounds), 20);
+        CGRect titleLabelFrame = CGRectMake((idx * (kXHiPad ? 240 : 100)), 8, CGRectGetWidth(self.bounds), 20);
         NSInteger tag = kXHLabelBaseTag + idx;
         UILabel *titleLabel = (UILabel *)[self viewWithTag: tag];
         if (!titleLabel) {
@@ -98,7 +94,7 @@
             
             // frame
             CGRect titleLabelFrame = titleLabel.frame;
-            titleLabelFrame.origin.x = (idx * (kXHiPad ? 240 : _mainScreenWidth / kXHRadie)) - xOffset / kXHRadie;
+            titleLabelFrame.origin.x = (idx * (kXHiPad ? 240 : 100)) - xOffset / 3.2;
             titleLabel.frame = titleLabelFrame;
             
             // alpha
@@ -141,8 +137,6 @@
     if (self) {
         // Initialization code
         self.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-        _mainScreenWidth = [[UIScreen mainScreen] bounds].size.width;
-        
         [self addSubview:self.pageControl];
     }
     return self;

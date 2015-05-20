@@ -1074,7 +1074,6 @@ static RACDisposable *subscribeForever (RACSignal *signal, void (^next)(id), voi
 
 	return [[RACSignal createSignal:^(id<RACSubscriber> subscriber) {
 		NSMutableDictionary *groups = [NSMutableDictionary dictionary];
-		NSMutableArray *orderedGroups = [NSMutableArray array];
 
 		return [self subscribeNext:^(id x) {
 			id<NSCopying> key = keyBlock(x);
@@ -1084,7 +1083,6 @@ static RACDisposable *subscribeForever (RACSignal *signal, void (^next)(id), voi
 				if (groupSubject == nil) {
 					groupSubject = [RACGroupedSignal signalWithKey:key];
 					groups[key] = groupSubject;
-					[orderedGroups addObject:groupSubject];
 					[subscriber sendNext:groupSubject];
 				}
 			}
@@ -1093,11 +1091,11 @@ static RACDisposable *subscribeForever (RACSignal *signal, void (^next)(id), voi
 		} error:^(NSError *error) {
 			[subscriber sendError:error];
 
-			[orderedGroups makeObjectsPerformSelector:@selector(sendError:) withObject:error];
+			[groups.allValues makeObjectsPerformSelector:@selector(sendError:) withObject:error];
 		} completed:^{
 			[subscriber sendCompleted];
 
-			[orderedGroups makeObjectsPerformSelector:@selector(sendCompleted)];
+			[groups.allValues makeObjectsPerformSelector:@selector(sendCompleted)];
 		}];
 	}] setNameWithFormat:@"[%@] -groupBy:transform:", self.name];
 }

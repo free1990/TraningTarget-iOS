@@ -1,1 +1,1 @@
-../../../BFKit/BFKit/Additions/UIKit/UIDevice+BFKit.h
+../../../BFKit/BFKit/Additions/UIKit Additions/UIDevice+BFKit.h

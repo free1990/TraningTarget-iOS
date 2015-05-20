@@ -60,7 +60,7 @@
         [self startNextRequest];
         [[YTKChainRequestAgent sharedInstance] addChainRequest:self];
     } else {
-        YTKLog(@"Error! Chain request array is empty.");
+        YTKLog(@"Error! China request array is empty.");
     }
 }
 

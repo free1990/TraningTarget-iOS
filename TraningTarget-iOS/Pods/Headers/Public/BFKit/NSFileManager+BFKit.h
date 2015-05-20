@@ -1,1 +1,1 @@
-../../../BFKit/BFKit/Additions/Foundation/NSFileManager+BFKit.h
+../../../BFKit/BFKit/Additions/Foundation Additions/NSFileManager+BFKit.h

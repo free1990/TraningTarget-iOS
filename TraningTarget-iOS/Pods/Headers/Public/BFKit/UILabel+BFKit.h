@@ -1,1 +1,1 @@
-../../../BFKit/BFKit/Additions/UIKit/UILabel+BFKit.h
+../../../BFKit/BFKit/Additions/UIKit Additions/UILabel+BFKit.h

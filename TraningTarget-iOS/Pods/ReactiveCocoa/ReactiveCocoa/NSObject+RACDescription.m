@@ -40,11 +40,7 @@
 @implementation RACTuple (RACDescription)
 
 - (NSString *)rac_description {
-	if (getenv("RAC_DEBUG_SIGNAL_NAMES") != NULL) {
-		return self.allObjects.description;
-	} else {
-		return @"(description skipped)";
-	}
+	return self.allObjects.description;
 }
 
 @end

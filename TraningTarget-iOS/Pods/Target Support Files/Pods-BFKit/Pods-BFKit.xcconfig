@@ -1,1 +1,1 @@
-PODS_BFKIT_OTHER_LDFLAGS = -framework "Accelerate" -framework "AudioToolbox" -framework "CoreGraphics" -framework "CoreImage" -framework "Foundation" -framework "QuartzCore" -framework "UIKit" -weak_framework "LocalAuthentication"
+PODS_BFKIT_OTHER_LDFLAGS = -framework "AudioToolbox" -framework "CoreGraphics" -framework "Foundation" -framework "UIKit" -weak_framework "LocalAuthentication"

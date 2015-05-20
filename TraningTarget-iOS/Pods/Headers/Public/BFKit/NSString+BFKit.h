@@ -1,1 +1,1 @@
-../../../BFKit/BFKit/Additions/Foundation/NSString+BFKit.h
+../../../BFKit/BFKit/Additions/Foundation Additions/NSString+BFKit.h

@@ -1,1 +1,1 @@
-../../../BFKit/BFKit/Additions/UIKit/UIWindow+BFKit.h
+../../../BFKit/BFKit/Additions/UIKit Additions/UIWindow+BFKit.h

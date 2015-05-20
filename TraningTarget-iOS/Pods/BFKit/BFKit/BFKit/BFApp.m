@@ -1,5 +1,5 @@
 //
-//  BFApp.m
+//  BFApp.h
 //  BFKit
 //
 //  The MIT License (MIT)

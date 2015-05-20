@@ -1,1 +1,1 @@
-../../../BFKit/BFKit/Additions/Foundation/NSThread+BFKit.h
+../../../BFKit/BFKit/Additions/Foundation Additions/NSThread+BFKit.h

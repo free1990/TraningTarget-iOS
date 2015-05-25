@@ -57,6 +57,12 @@ static int allocCount = 0;
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    NSString *nullString = nil;
+    
+    nullString = (NSString *)[NSNull null];
+    
+    NSLog(@"----------%d", [@"<null>" length]);
+    
     int a=1,b=2;
     printf("%f\n",S(a+b));
     

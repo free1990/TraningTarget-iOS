@@ -84,6 +84,7 @@
 		D6684DD31AFC9EF100E59C4B /* NSInputStreamDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = D6684DD21AFC9EF100E59C4B /* NSInputStreamDemo.m */; };
 		D674FDD21A81F2DC00CAE789 /* MyRequestProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = D674FDD11A81F2DC00CAE789 /* MyRequestProtocol.m */; };
 		D68411861A5CCA560078A807 /* test.png in Resources */ = {isa = PBXBuildFile; fileRef = D68411851A5CCA560078A807 /* test.png */; };
+		D6A5D0941B1300F1000B15D3 /* NSObject+JudgeNil.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A5D0931B1300F1000B15D3 /* NSObject+JudgeNil.m */; };
 		D6A843A31B00AD0100CE13D4 /* JNWThrottledBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A843A21B00AD0100CE13D4 /* JNWThrottledBlock.m */; };
 		D6A843A61B00AEEE00CE13D4 /* SampleClass.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A843A51B00AEEE00CE13D4 /* SampleClass.m */; };
 		D6A9E76D1A49021F001448C0 /* QuartzView.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A9E76C1A49021F001448C0 /* QuartzView.m */; };
@@ -310,6 +311,8 @@
 		D674FDD01A81F2DC00CAE789 /* MyRequestProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyRequestProtocol.h; sourceTree = "<group>"; };
 		D674FDD11A81F2DC00CAE789 /* MyRequestProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyRequestProtocol.m; sourceTree = "<group>"; };
 		D68411851A5CCA560078A807 /* test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test.png; sourceTree = "<group>"; };
+		D6A5D0921B1300F1000B15D3 /* NSObject+JudgeNil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+JudgeNil.h"; sourceTree = "<group>"; };
+		D6A5D0931B1300F1000B15D3 /* NSObject+JudgeNil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+JudgeNil.m"; sourceTree = "<group>"; };
 		D6A843A11B00AD0100CE13D4 /* JNWThrottledBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JNWThrottledBlock.h; path = ../JNWThrottledBlock.h; sourceTree = "<group>"; };
 		D6A843A21B00AD0100CE13D4 /* JNWThrottledBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JNWThrottledBlock.m; path = ../JNWThrottledBlock.m; sourceTree = "<group>"; };
 		D6A843A41B00AEEE00CE13D4 /* SampleClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SampleClass.h; path = ../SampleClass.h; sourceTree = "<group>"; };
@@ -640,6 +643,8 @@
 				CF2BF1531AC4366900FED55D /* NSData+Encryption.m */,
 				D6FC798E1AC93ACD0058AC9E /* ZYSandBoxCache.m */,
 				D6FC798F1AC93ACD0058AC9E /* ZYSandBoxCache.h */,
+				D6A5D0921B1300F1000B15D3 /* NSObject+JudgeNil.h */,
+				D6A5D0931B1300F1000B15D3 /* NSObject+JudgeNil.m */,
 			);
 			path = Toolkit;
 			sourceTree = "<group>";
@@ -1075,6 +1080,7 @@
 				D6EADF791A496B5200D46981 /* Gradient.m in Sources */,
 				D6D0EAD81A5B84F8005C3A5D /* CAShapeLayerDrawing.m in Sources */,
 				D634B74A1ABAADEF0061AC15 /* ZYNavigationBarDemo.m in Sources */,
+				D6A5D0941B1300F1000B15D3 /* NSObject+JudgeNil.m in Sources */,
 				D6477E561AE5EA4C00ABDD9F /* Roundbutton.m in Sources */,
 				D63ADF201A415B74009CA874 /* RuntimeDemoTwoViewController.m in Sources */,
 				D634B76E1ABC16450061AC15 /* PracticeViewController.m in Sources */,

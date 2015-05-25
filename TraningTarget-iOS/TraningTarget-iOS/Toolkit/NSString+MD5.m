@@ -2,7 +2,7 @@
 //  NSString+MD5.m
 //  Teacher
 //
-//  Created by zhangkai on 10/9/14.
+//  Created by work on 10/9/14.
 //  Copyright (c) 2014 FClassroom. All rights reserved.
 //
 

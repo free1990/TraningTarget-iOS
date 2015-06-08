@@ -18,7 +18,7 @@
 
 @implementation ZXParsedResult
 
-- (id)initWithMyType:(ZXParsedResultType)type {
+- (id)initWithType:(ZXParsedResultType)type {
   if (self = [super init]) {
     _type = type;
   }
@@ -27,7 +27,8 @@
 }
 
 + (id)parsedResultWithType:(ZXParsedResultType)type {
-  return [[self alloc] initWithMyType:type];
+
+  return [[self alloc] init];
 }
 
 - (NSString *)displayResult {

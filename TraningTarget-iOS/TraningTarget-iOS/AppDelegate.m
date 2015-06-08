@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "ClassSet.h"
+#import "MethodTest.h"
 
 @interface AppDelegate ()
 
@@ -26,6 +27,27 @@
                                                            [UIColor whiteColor], NSForegroundColorAttributeName,
                                                            [UIFont systemFontOfSize:21], NSFontAttributeName, nil]];
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+    
+//    if ([[NSString class] respondsToSelector:@selector(init)]) {
+//        NSLog(@"可以执行");
+//    }else{
+//        NSLog(@"不可以执行");
+//    }
+    
+    // 对于类方法返回的class实例来说，能够响应类方法
+    if ([[MethodTest class] respondsToSelector:@selector(testClassMethod)]) {
+        NSLog(@"testClassMethod");
+    }else{
+        NSLog(@"no - testClassMethod");
+    }
+    
+     // 对于类方法返回的class实例来说，不能响应实例方法，因为实例方法必须进行注册
+    if ([[MethodTest class] respondsToSelector:@selector(testInstanceMethod)]) {
+        NSLog(@"testInstanceMethod");
+    }else{
+        NSLog(@"no - testInstanceMethod");
+    }
+    
     
     return YES;
 }

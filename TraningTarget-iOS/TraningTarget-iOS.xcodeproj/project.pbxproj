@@ -65,6 +65,7 @@
 		D6422CF01A399587000D9759 /* ClassSet.m in Sources */ = {isa = PBXBuildFile; fileRef = D6422CEF1A399587000D9759 /* ClassSet.m */; };
 		D6422CF61A3996D5000D9759 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6422CF51A3996D5000D9759 /* BaseViewController.m */; };
 		D6422CF91A399798000D9759 /* ClassItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D6422CF81A399798000D9759 /* ClassItem.m */; };
+		D64513CB1B257E1B00C367BD /* MethodTest.m in Sources */ = {isa = PBXBuildFile; fileRef = D64513CA1B257E1B00C367BD /* MethodTest.m */; };
 		D6477E561AE5EA4C00ABDD9F /* Roundbutton.m in Sources */ = {isa = PBXBuildFile; fileRef = D6477E551AE5EA4C00ABDD9F /* Roundbutton.m */; };
 		D6492A6C1A8855B3007FC85C /* RotateImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6492A6B1A8855B3007FC85C /* RotateImageViewController.m */; };
 		D6492A6E1A885614007FC85C /* rotate.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D6492A6D1A885614007FC85C /* rotate.jpg */; };
@@ -272,6 +273,8 @@
 		D6422CF51A3996D5000D9759 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		D6422CF71A399798000D9759 /* ClassItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassItem.h; sourceTree = "<group>"; };
 		D6422CF81A399798000D9759 /* ClassItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassItem.m; sourceTree = "<group>"; };
+		D64513C91B257E1B00C367BD /* MethodTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MethodTest.h; sourceTree = "<group>"; };
+		D64513CA1B257E1B00C367BD /* MethodTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MethodTest.m; sourceTree = "<group>"; };
 		D6477E541AE5EA4C00ABDD9F /* Roundbutton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Roundbutton.h; sourceTree = "<group>"; };
 		D6477E551AE5EA4C00ABDD9F /* Roundbutton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Roundbutton.m; sourceTree = "<group>"; };
 		D6477E6D1AE9D27300ABDD9F /* FTPManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTPManager.h; sourceTree = "<group>"; };
@@ -797,6 +800,8 @@
 				D6684DCC1AFC9E9700E59C4B /* NSData+EnumerateComponents.m */,
 				D6684DCD1AFC9E9700E59C4B /* Reader.h */,
 				D6684DCE1AFC9E9700E59C4B /* Reader.m */,
+				D64513C91B257E1B00C367BD /* MethodTest.h */,
+				D64513CA1B257E1B00C367BD /* MethodTest.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -1063,6 +1068,7 @@
 				D619AE6B1A7728990001CC97 /* UIImage+Color.m in Sources */,
 				D6D0EACB1A5A6264005C3A5D /* CoreAnimationCAMediaTiming.m in Sources */,
 				CF2BF0BE1ABDAA5A00FED55D /* UIScrollView+SVInfiniteScrolling.m in Sources */,
+				D64513CB1B257E1B00C367BD /* MethodTest.m in Sources */,
 				D619AE6C1A7728990001CC97 /* UIView+Frame.m in Sources */,
 				D6D943941A3AE19B00898FA3 /* RuntimeDynamicMethodResolutionAndDynamicLoading.m in Sources */,
 				D6C3BDF71A591EE400E0D405 /* CoreAnimationDemoTwoViewController.m in Sources */,

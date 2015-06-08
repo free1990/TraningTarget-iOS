@@ -9,13 +9,14 @@
 #import "PracticeViewController.h"
 #import "ScanTitleView.h"
 #import "UIView+MGBadgeView.h"
-#import "GRRequestsManager.h"
+//#import "GRRequestsManager.h"
 #import "ZYButton.h"
 #import "ZYSegmentView.h"
 
-@interface PracticeViewController ()< GRRequestsManagerDelegate>
+@interface PracticeViewController ()
+//< GRRequestsManagerDelegate>
 
-@property (nonatomic, strong) GRRequestsManager *requestsManager;
+//@property (nonatomic, strong) GRRequestsManager *requestsManager;
 
 @end
 
@@ -47,10 +48,6 @@
     
     [self.view addSubview:button];
     
-    
-    
-    
-    
 //    ScanTitleView *temp = [[ScanTitleView alloc] initWithFrame:CGRectMake(200, 200, 110, 44)];
 //    
 //    [temp setLableBadgeViewWithNum:1000];
@@ -76,8 +73,7 @@
 //    //so we first convert the image to NSData
 //    UIImage * ourImage = [UIImage imageNamed:@"space.jpg"];
 //    NSData * ourImageData = UIImageJPEGRepresentation(ourImage, 100);
-//    
-//    
+//
 //    //we create the upload request
 //    //we don't autorelease the object so that it will be around when the callback gets called
 //    //this is not a good practice, in real life development you should use a retain property to store a reference to the request
@@ -98,7 +94,6 @@
 //    
 //    //we start the request
 //    [uploadImage start];
-    
 //    self.requestsManager = [[GRRequestsManager alloc] initWithHostname:@"SIP"
 //                                                                  user:@"yizhong"
 //                                                              password:@"admin"];

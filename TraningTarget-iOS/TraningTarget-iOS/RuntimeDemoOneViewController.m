@@ -57,6 +57,17 @@
     
     //类添加方法
     [self addMethod];
+    
+    
+//    Obj-C的方法（method）就是一个至少需要两个参数（self，_cmd）的C函数
+//    IMP有点类似函数指针，指向具体的Method实现。
+//    向一个类动态添加方法
+//    BOOL class_addMethod(Class cls, SEL name, IMP imp, const char *types)
+//    参数说明：
+//    cls：被添加方法的类
+//    name：可以理解为方法名
+//    imp：实现这个方法的函数
+//    types：一个定义该函数返回值类型和参数类型的字符串
 }
 
 - (void) objectCopy{
@@ -101,7 +112,7 @@
 - (void) getClass
 {
     CustomClass *obj = [CustomClass new];
-    Class aLogClass =object_getClass(obj);
+    Class aLogClass = object_getClass(obj);
     NSLog(@"%@",NSStringFromClass(aLogClass));
 }
 

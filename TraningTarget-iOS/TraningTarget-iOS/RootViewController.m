@@ -20,6 +20,9 @@ static int allocCount = 0;
 
 @implementation RootViewController
 
+@synthesize foo;
+@synthesize _foo;
+
 // initialize 和 load
 //    在不考虑开发者主动使用的情况下，系统最多会调用一次
 //    如果父类和子类都被调用，父类的调用一定在子类之前
@@ -60,9 +63,57 @@ static int allocCount = 0;
     int a=1,b=2;
     printf("%f\n",S(a+b));
     
+#pragma mark - viewDidLoad串行的提交任务
+    // 死锁测试
+    NSLog(@"死锁测试");
+    // sync到当前线程的block将会引起死锁，所以只会Log出1来后主线程就进入死锁状态，不会继续执行。
+    //究其原因，还要看dispatch_sync做的事，它将一个block插入到queue中，这点和async没有区别，区别在于sync会等待到这个block执行完成后才回到调用点继续执行，而这个block的执行还依仗着主线程中dispatch_sync调用的结束，所以造成了循环等待，导致死锁。
+    dispatch_queue_t main = dispatch_get_main_queue();
+//    dispatch_sync(main, ^{
+//        NSLog(@"John在测试....");
+//    });
+    
+    
+#pragma mark -vip give me a point
+    // 之前居然把这个问题看成了在viewDidLoad里面去串行的向主线程提交任务
+    NSLog(@"异步提交串行的任务测试");
+    
+    // 异步提交后，main线程会等待空闲的时机来执行这个提交的任务，然后就木有然后了，然后就卡主了。
+    // 形成死锁，和上面原因是一样的
+//    dispatch_async(main, ^{
+//        
+//        NSLog(@"是否异步提交");
+//        dispatch_sync(main, ^{
+//            NSLog(@"John在测试....");
+//        });
+//        NSLog(@"哈哈哈哈哈");
+//    });
+    
+    
+    // 会卡主这个线程
+//    dispatch_queue_t queue = dispatch_queue_create("com.zhaoyang.gcd.test", NULL);
+//    dispatch_async(queue, ^{
+//
+//        NSLog(@"是否异步提交");
+//        dispatch_sync(queue, ^{
+//            NSLog(@"John在测试....");
+//        });
+//        NSLog(@"哈哈哈哈哈");
+//    });
+    
+    
     //5.5 * 1 + 2*1 +2;宏，全部乘开
     
 //    [self.navigationController setNavigationBarHidden:YES];
+    
+    NSArray *fixedWords = @[@"Eeny", @"Meeny", @"Miny", @"Moe", @"Catch", @"A", @"Tiger", @"By", @"His", @"Toe"];
+    NSMutableArray *mutWords = [[NSMutableArray alloc] initWithArray:fixedWords];
+    self.words = [mutWords copy];
+    
+    NSLog(@"self.words = %@", [self.words class]);
+    
+    
+    NSLog(@"foo = %@",[_foo class]);
     
     self.title = @"Tree New bee";
     

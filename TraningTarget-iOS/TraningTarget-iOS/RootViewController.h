@@ -13,5 +13,9 @@
     UITableView         *_myTableView;
 }
 
+@property (copy, nonatomic) NSMutableArray *words;
+@property (strong, nonatomic) NSString *foo;
+@property (strong, nonatomic) NSArray *_foo;
+
 @end
 

@@ -9,13 +9,14 @@
 #import "PracticeViewController.h"
 #import "ScanTitleView.h"
 #import "UIView+MGBadgeView.h"
-#import "GRRequestsManager.h"
+//#import "GRRequestsManager.h"
 #import "ZYButton.h"
 #import "ZYSegmentView.h"
 
-@interface PracticeViewController ()< GRRequestsManagerDelegate>
+@interface PracticeViewController ()
+//< GRRequestsManagerDelegate>
 
-@property (nonatomic, strong) GRRequestsManager *requestsManager;
+//@property (nonatomic, strong) GRRequestsManager *requestsManager;
 
 @end
 
@@ -36,34 +37,43 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-
-    ScanTitleView *temp = [[ScanTitleView alloc] initWithFrame:CGRectMake(200, 200, 110, 44)];
     
-    [temp setLableBadgeViewWithNum:1000];
+    Roundbutton  *button = [Roundbutton buttonWithType:UIButtonTypeCustom];
+    button.redValue = 0.2;
+    button.greenValue = 0.3;
+    button.blueValue = 0.5;
+    button.frame = CGRectMake(100, 100, 80, 25);
+    [button setTitle:@"醉了" forState:UIControlStateNormal];
+    [button setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
     
-//    [temp setCenter:self.view.center];
+    [self.view addSubview:button];
     
-    [self.view addSubview:temp];
+//    ScanTitleView *temp = [[ScanTitleView alloc] initWithFrame:CGRectMake(200, 200, 110, 44)];
+//    
+//    [temp setLableBadgeViewWithNum:1000];
+//    
+////    [temp setCenter:self.view.center];
+//    
+//    [self.view addSubview:temp];
     
     
 //    ZYButton *button = [[ZYButton alloc] initWithFrame:CGRectMake(0, 0, 100, 80)];
 //    button.center = self.view.center;
 //    [self.view addSubview:button];
     
-    ZYSegmentView *mySeg = [[ZYSegmentView alloc] initWithFrame:CGRectMake(0, 0, 200, 70)];
-    
-    [mySeg displayContent];
-    
-    mySeg.center = self.view.center;
-    
-    [self.view addSubview:mySeg];
+//    ZYSegmentView *mySeg = [[ZYSegmentView alloc] initWithFrame:CGRectMake(0, 0, 200, 70)];
+//    
+//    [mySeg displayContent];
+//    
+//    mySeg.center = self.view.center;
+//    
+//    [self.view addSubview:mySeg];
     
 //    //the upload request needs the input data to be NSData
 //    //so we first convert the image to NSData
 //    UIImage * ourImage = [UIImage imageNamed:@"space.jpg"];
 //    NSData * ourImageData = UIImageJPEGRepresentation(ourImage, 100);
-//    
-//    
+//
 //    //we create the upload request
 //    //we don't autorelease the object so that it will be around when the callback gets called
 //    //this is not a good practice, in real life development you should use a retain property to store a reference to the request
@@ -84,7 +94,6 @@
 //    
 //    //we start the request
 //    [uploadImage start];
-    
 //    self.requestsManager = [[GRRequestsManager alloc] initWithHostname:@"SIP"
 //                                                                  user:@"yizhong"
 //                                                              password:@"admin"];

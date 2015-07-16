@@ -26,9 +26,16 @@
   return self;
 }
 
+<<<<<<< HEAD
 //+ (id)parsedResultWithType:(ZXParsedResultType)type {
 //  return [[self alloc] initWithType:type];
 //}
+=======
++ (id)parsedResultWithType:(ZXParsedResultType)type {
+
+  return [[self alloc] init];
+}
+>>>>>>> origin/Testing
 
 - (NSString *)displayResult {
   @throw [NSException exceptionWithName:NSInternalInconsistencyException

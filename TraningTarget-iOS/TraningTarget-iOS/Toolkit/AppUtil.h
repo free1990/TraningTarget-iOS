@@ -2,7 +2,7 @@
 //  AppUtil.h
 //  Template
 //
-//  Created by zhangkai on 9/4/14.
+//  Created by work on 9/4/14.
 //  Copyright (c) 2014 Kai Zhang. All rights reserved.
 //
 
@@ -39,5 +39,21 @@ typedef enum {
 + (float)contentScaleFactor;
 
 + (NSString *)floatFormat:(double)value;
+
+/**
+ * save image to NSDocumentDirectory, YYYYMMdd_HHmmss_flag.jpg
+ */
+//+ (NSString *)saveImage:(UIImage *)image withFlag:(NSString *)flag;
+
+/**
+ * eg: increase free memory to 200MB
+ */
++ (void)increaseFreeMemoryTo:(int)MB;
+
+/**
+ * 文件大小，单位byte
+ */
++ (unsigned long long)fileSizeAtPath:(NSString *)path;
+
 
 @end

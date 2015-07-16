@@ -27,8 +27,9 @@
     //交换系统方法
     [self methodExchange];
     
-    //自定义方法实现
+    //自定义类的方法实现部分替换
     [self methodSetImplementation];
+    
     [self justLog2];
     [self justLog1];
     

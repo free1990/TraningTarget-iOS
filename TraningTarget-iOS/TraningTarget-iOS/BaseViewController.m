@@ -48,7 +48,7 @@
  
     self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc]
                                              initWithTitle:@""
-                                             style:UIBarButtonItemStylePlain
+                                             style:UIBarButtonItemStyleDone
                                              target:self
                                              action:nil];
     

@@ -24,6 +24,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
 /*
     //类里面的属性的结构体类型
     typedef struct objc_property *Property;
@@ -73,7 +74,6 @@
      The property is eligible for garbage collection.
      t<encoding>
      Specifies the type using old-style encoding.
- 
  */
     
     id baseViewController = objc_getClass("BaseViewController");
@@ -89,7 +89,6 @@
         
         NSLog(@"%s  ---  %s", property_getName(property), property_getAttributes(property));
     }
-    
 }
 
 - (void)didReceiveMemoryWarning {

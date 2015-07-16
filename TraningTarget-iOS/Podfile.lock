@@ -35,15 +35,14 @@ PODS:
     - FlurrySDK/FlurrySDK (= 5.4.0)
   - FlurrySDK/FlurrySDK (5.4.0)
   - FXImageView (1.3.5)
-  - GoldRaccoon (1.0.2)
   - HMSegmentedControl (1.4.0)
   - JSONModel (1.0.2)
   - MagicalRecord (2.2):
     - MagicalRecord/Core (= 2.2)
   - MagicalRecord/Core (2.2)
-  - Mantle (1.5.4):
-    - Mantle/extobjc (= 1.5.4)
-  - Mantle/extobjc (1.5.4)
+  - Mantle (2.0.2):
+    - Mantle/extobjc (= 2.0.2)
+  - Mantle/extobjc (2.0.2)
   - MBProgressHUD (0.9)
   - NYXImagesKit (2.3)
   - pop (1.0.7)
@@ -75,11 +74,10 @@ DEPENDENCIES:
   - FlatUIKit
   - FlurrySDK (~> 5.3)
   - FXImageView (~> 1.3)
-  - GoldRaccoon
   - HMSegmentedControl (~> 1.4)
   - JSONModel (~> 1.0.2)
   - MagicalRecord (~> 2.2)
-  - Mantle (~> 1.5.4)
+  - Mantle
   - MBProgressHUD
   - NYXImagesKit (~> 2.3)
   - pop (~> 1.0)
@@ -91,28 +89,27 @@ DEPENDENCIES:
   - ZXingObjC (~> 3.0)
 
 SPEC CHECKSUMS:
-  AFDownloadRequestOperation: e223a65bc56fb8e6ae5d289b649c7bcc6b307f0d
-  AFNetworking: 0f54cb5d16ce38c1b76948faffb8d5fb705021c7
-  BFKit: b7c470c851666cccc9d3e8f09f32b2e3d3506d9f
-  CocoaLumberjack: 205769c032b5fef85b92472046bcc8b7e7c8a817
-  CrashlyticsFramework: 4e91082f3019bea7e718e1b67b0a3b56729dbc5d
-  FastImageCache: f0897a850a1479a95b1415eb88ed1fdce708353a
-  FlatUIKit: 48b78e6d026c2f2c8a733425aaa5015c99ffc079
-  FlurrySDK: bed9e5598353f867508d164795a451e3ada92cb6
-  FXImageView: be49853e2f7ac281ad9312ead922edafa19cdd5c
-  GoldRaccoon: d113e556626b0887b1210ee3838e549dc40a4dbc
-  HMSegmentedControl: c0517a8d4b80c978b8386f863f1c44729cfd7d6f
-  JSONModel: cbdef0fdff1cc70e913a860861d3072860efd3a1
-  MagicalRecord: 2b471584fc9e3137f3d0a56967917baa4979e224
-  Mantle: d5fbaf30fbc58031223af13812c060e15934a1fe
-  MBProgressHUD: 2038dbcf3dce73215abed6001657043d53aa79a8
-  NYXImagesKit: 1c9f228ae78fab475d267b3b3a1308e0fba11731
-  pop: 2f14a1ea61339767af9e66741b418c831b3844df
-  ReactiveCocoa: 31119068e3dde866bd257cf74e1f06b4023bf387
-  SDWebImage: 116e88633b5b416ea0ca4b334a4ac59cf72dd38d
-  SVProgressHUD: da7a49e789af645d9279ffbca62318945a832438
-  XHTwitterPaggingViewer: 5fd6b5cd85e460de8d00934fd4b774c0ca606722
-  YTKNetwork: a01d2ac5bc03171917adf2856ec0fca2b0d00f8b
-  ZXingObjC: 1eebdf4334b7de660ae42ddd23bd97b6d777b07d
+  AFDownloadRequestOperation: 748a1643423e1ddb23f2178f778087d4f0ae8ac7
+  AFNetworking: 96ac9bf3eda33582701cb1fcc5b896aa1e20311e
+  BFKit: a830e8ec319771a0fa1d9d9619eeda791aa229cf
+  CocoaLumberjack: 628fca2e88ef06f7cf6817309aa405f325d9a6fa
+  CrashlyticsFramework: c4476108c87948b72835a5a26db90e8d6249da62
+  FastImageCache: 25f214fd46405daca3d1995d783fb83b9036c62e
+  FlatUIKit: a59c93fe2fde5329dfb71dd9317b1b0386d6a178
+  FlurrySDK: 7f929b68dea38ce735979fb039229f62c0b697b5
+  FXImageView: 7d84722b37f0afea9a64f12fdd4a6c7f9ecc4b16
+  HMSegmentedControl: c2fffcd5f391c1bcd3db510b1bea645fce4e08e5
+  JSONModel: 6ffcb4ffa3659c9e9a2e5d45d6c7705bab187c03
+  MagicalRecord: f8a56bb87ab6552f20c4bb8681a1958a197ea3cd
+  Mantle: 967fd31ea0220890b2e76589198996b534bb3fb1
+  MBProgressHUD: d8e7ea388dc1549a42e0d219067cf5f2c898fb66
+  NYXImagesKit: 8163e3335a40eaa173ca5bbbf81fafb57d3947eb
+  pop: 628ffc631644601567ee8bfaaaea493ebd7d0923
+  ReactiveCocoa: cbe3b5eae464aa72a348a7323996b171728a9e71
+  SDWebImage: ed3095af2ff88b436426037444979b917f6c5575
+  SVProgressHUD: 3afb875b9eb23acd1bed9b82495695c68621a8b2
+  XHTwitterPaggingViewer: c26e63522354edc04fff8c5c341519b4b3889901
+  YTKNetwork: 8adc811cb3877e0d2993aa873d9869ac058bdb84
+  ZXingObjC: 35c985cd9b95e82dc3681f0bbb239a5d22b8f3f3
 
-COCOAPODS: 0.35.0
+COCOAPODS: 0.37.1
